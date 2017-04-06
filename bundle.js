@@ -25773,6 +25773,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+var _this = this;
+
 //
 //
 //
@@ -25858,6 +25860,20 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
   methods: {
     formatter: function formatter(row, column) {
       return row.address;
+    },
+
+    /**
+     * @desc 过滤数据，待优化
+     */
+    dataFilter: function dataFilter(val) {
+      // console.log(val);
+      for (var i = 0; i < val.length; i++) {
+        for (var key in val[i]) {
+          if (key.indexOf(_this.input2) != -1) {
+            _this.list.push({ key: val[i][key] });
+          }
+        }
+      }
     }
   }
 });
