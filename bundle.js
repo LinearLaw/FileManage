@@ -20889,7 +20889,7 @@ var Component = __webpack_require__(3)(
   /* cssModules */
   null
 )
-Component.options.__file = "E:\\Can_we_found_zzz\\Dragon_Kill_Set\\img\\2017-04-03（自定义页面）\\text_278_vue_自定义通用框架\\src\\component\\App.vue"
+Component.options.__file = "E:\\Can_we_found_zzz\\Dragon_Kill_Set\\img\\20170331_0409_Vue\\2017-04-03（自定义页面）\\text_278_vue_自定义通用框架\\src\\component\\App.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] App.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -20927,7 +20927,7 @@ var Component = __webpack_require__(3)(
   /* cssModules */
   null
 )
-Component.options.__file = "E:\\Can_we_found_zzz\\Dragon_Kill_Set\\img\\2017-04-03（自定义页面）\\text_278_vue_自定义通用框架\\src\\component\\Login.vue"
+Component.options.__file = "E:\\Can_we_found_zzz\\Dragon_Kill_Set\\img\\20170331_0409_Vue\\2017-04-03（自定义页面）\\text_278_vue_自定义通用框架\\src\\component\\Login.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Login.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -20965,7 +20965,7 @@ var Component = __webpack_require__(3)(
   /* cssModules */
   null
 )
-Component.options.__file = "E:\\Can_we_found_zzz\\Dragon_Kill_Set\\img\\2017-04-03（自定义页面）\\text_278_vue_自定义通用框架\\src\\component\\pages\\AddDocument.vue"
+Component.options.__file = "E:\\Can_we_found_zzz\\Dragon_Kill_Set\\img\\20170331_0409_Vue\\2017-04-03（自定义页面）\\text_278_vue_自定义通用框架\\src\\component\\pages\\AddDocument.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] AddDocument.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -21003,7 +21003,7 @@ var Component = __webpack_require__(3)(
   /* cssModules */
   null
 )
-Component.options.__file = "E:\\Can_we_found_zzz\\Dragon_Kill_Set\\img\\2017-04-03（自定义页面）\\text_278_vue_自定义通用框架\\src\\component\\pages\\Avatar.vue"
+Component.options.__file = "E:\\Can_we_found_zzz\\Dragon_Kill_Set\\img\\20170331_0409_Vue\\2017-04-03（自定义页面）\\text_278_vue_自定义通用框架\\src\\component\\pages\\Avatar.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Avatar.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -21041,7 +21041,7 @@ var Component = __webpack_require__(3)(
   /* cssModules */
   null
 )
-Component.options.__file = "E:\\Can_we_found_zzz\\Dragon_Kill_Set\\img\\2017-04-03（自定义页面）\\text_278_vue_自定义通用框架\\src\\component\\pages\\Chart-1.vue"
+Component.options.__file = "E:\\Can_we_found_zzz\\Dragon_Kill_Set\\img\\20170331_0409_Vue\\2017-04-03（自定义页面）\\text_278_vue_自定义通用框架\\src\\component\\pages\\Chart-1.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Chart-1.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -21079,7 +21079,7 @@ var Component = __webpack_require__(3)(
   /* cssModules */
   null
 )
-Component.options.__file = "E:\\Can_we_found_zzz\\Dragon_Kill_Set\\img\\2017-04-03（自定义页面）\\text_278_vue_自定义通用框架\\src\\component\\pages\\Chart-2.vue"
+Component.options.__file = "E:\\Can_we_found_zzz\\Dragon_Kill_Set\\img\\20170331_0409_Vue\\2017-04-03（自定义页面）\\text_278_vue_自定义通用框架\\src\\component\\pages\\Chart-2.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Chart-2.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -21117,7 +21117,7 @@ var Component = __webpack_require__(3)(
   /* cssModules */
   null
 )
-Component.options.__file = "E:\\Can_we_found_zzz\\Dragon_Kill_Set\\img\\2017-04-03（自定义页面）\\text_278_vue_自定义通用框架\\src\\component\\pages\\Contact.vue"
+Component.options.__file = "E:\\Can_we_found_zzz\\Dragon_Kill_Set\\img\\20170331_0409_Vue\\2017-04-03（自定义页面）\\text_278_vue_自定义通用框架\\src\\component\\pages\\Contact.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Contact.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -21155,7 +21155,7 @@ var Component = __webpack_require__(3)(
   /* cssModules */
   null
 )
-Component.options.__file = "E:\\Can_we_found_zzz\\Dragon_Kill_Set\\img\\2017-04-03（自定义页面）\\text_278_vue_自定义通用框架\\src\\component\\pages\\Document.vue"
+Component.options.__file = "E:\\Can_we_found_zzz\\Dragon_Kill_Set\\img\\20170331_0409_Vue\\2017-04-03（自定义页面）\\text_278_vue_自定义通用框架\\src\\component\\pages\\Document.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Document.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -21193,7 +21193,7 @@ var Component = __webpack_require__(3)(
   /* cssModules */
   null
 )
-Component.options.__file = "E:\\Can_we_found_zzz\\Dragon_Kill_Set\\img\\2017-04-03（自定义页面）\\text_278_vue_自定义通用框架\\src\\component\\pages\\Main.vue"
+Component.options.__file = "E:\\Can_we_found_zzz\\Dragon_Kill_Set\\img\\20170331_0409_Vue\\2017-04-03（自定义页面）\\text_278_vue_自定义通用框架\\src\\component\\pages\\Main.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Main.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -21231,7 +21231,7 @@ var Component = __webpack_require__(3)(
   /* cssModules */
   null
 )
-Component.options.__file = "E:\\Can_we_found_zzz\\Dragon_Kill_Set\\img\\2017-04-03（自定义页面）\\text_278_vue_自定义通用框架\\src\\component\\pages\\Personal.vue"
+Component.options.__file = "E:\\Can_we_found_zzz\\Dragon_Kill_Set\\img\\20170331_0409_Vue\\2017-04-03（自定义页面）\\text_278_vue_自定义通用框架\\src\\component\\pages\\Personal.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Personal.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -21269,7 +21269,7 @@ var Component = __webpack_require__(3)(
   /* cssModules */
   null
 )
-Component.options.__file = "E:\\Can_we_found_zzz\\Dragon_Kill_Set\\img\\2017-04-03（自定义页面）\\text_278_vue_自定义通用框架\\src\\component\\pages\\Setting.vue"
+Component.options.__file = "E:\\Can_we_found_zzz\\Dragon_Kill_Set\\img\\20170331_0409_Vue\\2017-04-03（自定义页面）\\text_278_vue_自定义通用框架\\src\\component\\pages\\Setting.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Setting.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -21307,7 +21307,7 @@ var Component = __webpack_require__(3)(
   /* cssModules */
   null
 )
-Component.options.__file = "E:\\Can_we_found_zzz\\Dragon_Kill_Set\\img\\2017-04-03（自定义页面）\\text_278_vue_自定义通用框架\\src\\component\\pages\\Table-1.vue"
+Component.options.__file = "E:\\Can_we_found_zzz\\Dragon_Kill_Set\\img\\20170331_0409_Vue\\2017-04-03（自定义页面）\\text_278_vue_自定义通用框架\\src\\component\\pages\\Table-1.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Table-1.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -21345,7 +21345,7 @@ var Component = __webpack_require__(3)(
   /* cssModules */
   null
 )
-Component.options.__file = "E:\\Can_we_found_zzz\\Dragon_Kill_Set\\img\\2017-04-03（自定义页面）\\text_278_vue_自定义通用框架\\src\\component\\pages\\Table-2.vue"
+Component.options.__file = "E:\\Can_we_found_zzz\\Dragon_Kill_Set\\img\\20170331_0409_Vue\\2017-04-03（自定义页面）\\text_278_vue_自定义通用框架\\src\\component\\pages\\Table-2.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Table-2.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -25173,6 +25173,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
 
 /***/ }),
 /* 56 */
@@ -27637,7 +27641,7 @@ var Component = __webpack_require__(3)(
   /* cssModules */
   null
 )
-Component.options.__file = "E:\\Can_we_found_zzz\\Dragon_Kill_Set\\img\\2017-04-03（自定义页面）\\text_278_vue_自定义通用框架\\node_modules\\vue-quill-editor\\editor.vue"
+Component.options.__file = "E:\\Can_we_found_zzz\\Dragon_Kill_Set\\img\\20170331_0409_Vue\\2017-04-03（自定义页面）\\text_278_vue_自定义通用框架\\node_modules\\vue-quill-editor\\editor.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] editor.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -27675,7 +27679,7 @@ var Component = __webpack_require__(3)(
   /* cssModules */
   null
 )
-Component.options.__file = "E:\\Can_we_found_zzz\\Dragon_Kill_Set\\img\\2017-04-03（自定义页面）\\text_278_vue_自定义通用框架\\src\\component\\Footer.vue"
+Component.options.__file = "E:\\Can_we_found_zzz\\Dragon_Kill_Set\\img\\20170331_0409_Vue\\2017-04-03（自定义页面）\\text_278_vue_自定义通用框架\\src\\component\\Footer.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Footer.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -27713,7 +27717,7 @@ var Component = __webpack_require__(3)(
   /* cssModules */
   null
 )
-Component.options.__file = "E:\\Can_we_found_zzz\\Dragon_Kill_Set\\img\\2017-04-03（自定义页面）\\text_278_vue_自定义通用框架\\src\\component\\Header.vue"
+Component.options.__file = "E:\\Can_we_found_zzz\\Dragon_Kill_Set\\img\\20170331_0409_Vue\\2017-04-03（自定义页面）\\text_278_vue_自定义通用框架\\src\\component\\Header.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Header.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -27751,7 +27755,7 @@ var Component = __webpack_require__(3)(
   /* cssModules */
   null
 )
-Component.options.__file = "E:\\Can_we_found_zzz\\Dragon_Kill_Set\\img\\2017-04-03（自定义页面）\\text_278_vue_自定义通用框架\\src\\component\\Navrouter.vue"
+Component.options.__file = "E:\\Can_we_found_zzz\\Dragon_Kill_Set\\img\\20170331_0409_Vue\\2017-04-03（自定义页面）\\text_278_vue_自定义通用框架\\src\\component\\Navrouter.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Navrouter.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -28024,10 +28028,12 @@ if (false) {
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _vm._m(0)
-},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', [_c('h2', [_vm._v("This is footer!")])])
-}]}
+  return _c('div', [_c('h2', [_vm._v("This is footer!")]), _vm._v(" "), _c('router-link', {
+    attrs: {
+      "to": "xxx"
+    }
+  }, [_vm._v(".....")]), _vm._v(" "), _c('router-view')], 1)
+},staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
   module.hot.accept()
