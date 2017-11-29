@@ -14,8 +14,10 @@
   <div id="app">
   
   </div>
+  <script>
+    if(!localStorage.getItem('ms_username')){
+      location.href="/#/login"
+    }
+  </script>
 <script type="text/javascript" src="bundle.js"></script></body>
-<script>
-  // location.href="/#!/login"
-</script>
 </html>
