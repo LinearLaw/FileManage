@@ -29374,8 +29374,10 @@ if (!window.Quill) {
 
 /***/ }),
 /* 101 */
-/***/ (function(module, exports) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
@@ -29396,6 +29398,16 @@ if (!window.Quill) {
  * 在这里可以定义非路由组件，
  * 也可以写路由的标签入口和配置组件显示位置
  */
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {};
+  },
+  mounted: function mounted() {
+    if (!localStorage.getItem('ms_username')) {
+      this.$router.push({ "name": "login" });
+    }
+  }
+});
 
 /***/ }),
 /* 102 */
@@ -31761,7 +31773,7 @@ __WEBPACK_IMPORTED_MODULE_2_vue__["default"].use(__WEBPACK_IMPORTED_MODULE_1_ele
 __WEBPACK_IMPORTED_MODULE_2_vue__["default"].prototype.CONFIG = __WEBPACK_IMPORTED_MODULE_24__js_config_vue__["config"];
 
 var router = new __WEBPACK_IMPORTED_MODULE_3_vue_router__["a" /* default */]({
-  routes: [{ path: '/login', component: __WEBPACK_IMPORTED_MODULE_13__component_Login_vue___default.a }, {
+  routes: [{ path: '/login', name: 'login', component: __WEBPACK_IMPORTED_MODULE_13__component_Login_vue___default.a }, {
     path: '/home', component: __WEBPACK_IMPORTED_MODULE_11__component_Home_vue___default.a,
     children: [{ path: '', component: __WEBPACK_IMPORTED_MODULE_12__component_pages_Main_vue___default.a }, { path: 'chart_1', name: 'chart_1', component: __WEBPACK_IMPORTED_MODULE_14__component_pages_Chart_1_vue___default.a }, { path: 'chart_2', name: 'chart_2', component: __WEBPACK_IMPORTED_MODULE_15__component_pages_Chart_2_vue___default.a }, { path: 'table_1', name: 'table_1', component: __WEBPACK_IMPORTED_MODULE_16__component_pages_Table_1_vue___default.a }, { path: 'table_2', name: 'table_2', component: __WEBPACK_IMPORTED_MODULE_17__component_pages_Table_2_vue___default.a }, { path: 'setting', name: 'setting', component: __WEBPACK_IMPORTED_MODULE_18__component_pages_Setting_vue___default.a }, {
       path: 'document', name: 'document', component: __WEBPACK_IMPORTED_MODULE_19__component_pages_Document_vue___default.a,
@@ -37090,6 +37102,8 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   return _c('div', {
     staticClass: "login-wrap"
   }, [_c('div', {
+    staticClass: "ms-title"
+  }, [_vm._v("后台管理系统")]), _vm._v(" "), _c('div', {
     staticClass: "ms-login"
   }, [_c('el-form', {
     ref: "ruleForm",
@@ -37153,11 +37167,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "line-height": "30px",
       "color": "#999"
     }
-  }, [_vm._v("Tips : 用户名和密码都是admin。")])], 1), _vm._v(" "), _c('Location', {
-    on: {
-      "locationInput": _vm.locationInput
-    }
-  })], 1)])
+  }, [_vm._v("Tips : 用户名和密码都是admin。")])], 1)], 1)])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
