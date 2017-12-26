@@ -22100,7 +22100,8 @@ __WEBPACK_IMPORTED_MODULE_0_vue__["default"].use(__WEBPACK_IMPORTED_MODULE_1_vue
 var state = {
     msg: [],
     candidatePop: {
-        showCandidateCriteriaIndustry: false
+        showCandidateCriteriaIndustry: false,
+        showCandidateCriteriaFunction: false
     }
     /**
      * @desc 外界要传值给store，则调用actions里的方法
@@ -22135,6 +22136,16 @@ var mutations = {
     },
     hideCriteriaIndustryDropdown: function hideCriteriaIndustryDropdown(state) {
         state.candidatePop.showCandidateCriteriaIndustry = false;
+    },
+
+    /**
+     * @desc 搜索控制function
+     */
+    showCriteriaFunctionDropdown: function showCriteriaFunctionDropdown(state) {
+        state.candidatePop.showCandidateCriteriaFunction = true;
+    },
+    hideCriteriaFunctionDropdown: function hideCriteriaFunctionDropdown(state) {
+        state.candidatePop.showCandidateCriteriaFunction = false;
     }
 };
 /**
@@ -22178,7 +22189,7 @@ staticClass:"el-progress-circle",style:{height:e.width+"px",width:e.width+"px"}}
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(183);
+var content = __webpack_require__(163);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // add the styles to the DOM
 var update = __webpack_require__(7)(content, {});
@@ -22204,7 +22215,7 @@ if(false) {
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(184);
+var content = __webpack_require__(164);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // add the styles to the DOM
 var update = __webpack_require__(7)(content, {});
@@ -22241,22 +22252,6 @@ var Component = __webpack_require__(1)(
   /* cssModules */
   null
 )
-Component.options.__file = "E:\\Linear\\Example_project\\background_frame-master\\background_frame\\src\\component\\App.vue"
-if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
-if (Component.options.functional) {console.error("[vue-loader] App.vue: functional components are not supported with templates, they should use render functions.")}
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-d8544b42", Component.options)
-  } else {
-    hotAPI.reload("data-v-d8544b42", Component.options)
-  }
-})()}
 
 module.exports = Component.exports
 
@@ -22279,22 +22274,6 @@ var Component = __webpack_require__(1)(
   /* cssModules */
   null
 )
-Component.options.__file = "E:\\Linear\\Example_project\\background_frame-master\\background_frame\\src\\component\\Home.vue"
-if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
-if (Component.options.functional) {console.error("[vue-loader] Home.vue: functional components are not supported with templates, they should use render functions.")}
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-f22182de", Component.options)
-  } else {
-    hotAPI.reload("data-v-f22182de", Component.options)
-  }
-})()}
 
 module.exports = Component.exports
 
@@ -22317,22 +22296,6 @@ var Component = __webpack_require__(1)(
   /* cssModules */
   null
 )
-Component.options.__file = "E:\\Linear\\Example_project\\background_frame-master\\background_frame\\src\\component\\Login.vue"
-if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
-if (Component.options.functional) {console.error("[vue-loader] Login.vue: functional components are not supported with templates, they should use render functions.")}
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-74dd7a27", Component.options)
-  } else {
-    hotAPI.reload("data-v-74dd7a27", Component.options)
-  }
-})()}
 
 module.exports = Component.exports
 
@@ -22355,22 +22318,6 @@ var Component = __webpack_require__(1)(
   /* cssModules */
   null
 )
-Component.options.__file = "E:\\Linear\\Example_project\\background_frame-master\\background_frame\\src\\component\\pages\\AddDocument.vue"
-if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
-if (Component.options.functional) {console.error("[vue-loader] AddDocument.vue: functional components are not supported with templates, they should use render functions.")}
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-7ef158cf", Component.options)
-  } else {
-    hotAPI.reload("data-v-7ef158cf", Component.options)
-  }
-})()}
 
 module.exports = Component.exports
 
@@ -22393,22 +22340,6 @@ var Component = __webpack_require__(1)(
   /* cssModules */
   null
 )
-Component.options.__file = "E:\\Linear\\Example_project\\background_frame-master\\background_frame\\src\\component\\pages\\Avatar.vue"
-if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
-if (Component.options.functional) {console.error("[vue-loader] Avatar.vue: functional components are not supported with templates, they should use render functions.")}
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-7e6e8994", Component.options)
-  } else {
-    hotAPI.reload("data-v-7e6e8994", Component.options)
-  }
-})()}
 
 module.exports = Component.exports
 
@@ -22431,22 +22362,6 @@ var Component = __webpack_require__(1)(
   /* cssModules */
   null
 )
-Component.options.__file = "E:\\Linear\\Example_project\\background_frame-master\\background_frame\\src\\component\\pages\\Chart-1.vue"
-if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
-if (Component.options.functional) {console.error("[vue-loader] Chart-1.vue: functional components are not supported with templates, they should use render functions.")}
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-6499c716", Component.options)
-  } else {
-    hotAPI.reload("data-v-6499c716", Component.options)
-  }
-})()}
 
 module.exports = Component.exports
 
@@ -22469,22 +22384,6 @@ var Component = __webpack_require__(1)(
   /* cssModules */
   null
 )
-Component.options.__file = "E:\\Linear\\Example_project\\background_frame-master\\background_frame\\src\\component\\pages\\Chart-2.vue"
-if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
-if (Component.options.functional) {console.error("[vue-loader] Chart-2.vue: functional components are not supported with templates, they should use render functions.")}
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-647d9814", Component.options)
-  } else {
-    hotAPI.reload("data-v-647d9814", Component.options)
-  }
-})()}
 
 module.exports = Component.exports
 
@@ -22507,22 +22406,6 @@ var Component = __webpack_require__(1)(
   /* cssModules */
   null
 )
-Component.options.__file = "E:\\Linear\\Example_project\\background_frame-master\\background_frame\\src\\component\\pages\\Contact.vue"
-if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
-if (Component.options.functional) {console.error("[vue-loader] Contact.vue: functional components are not supported with templates, they should use render functions.")}
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-45b0a393", Component.options)
-  } else {
-    hotAPI.reload("data-v-45b0a393", Component.options)
-  }
-})()}
 
 module.exports = Component.exports
 
@@ -22545,22 +22428,6 @@ var Component = __webpack_require__(1)(
   /* cssModules */
   null
 )
-Component.options.__file = "E:\\Linear\\Example_project\\background_frame-master\\background_frame\\src\\component\\pages\\Document.vue"
-if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
-if (Component.options.functional) {console.error("[vue-loader] Document.vue: functional components are not supported with templates, they should use render functions.")}
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-61ed8690", Component.options)
-  } else {
-    hotAPI.reload("data-v-61ed8690", Component.options)
-  }
-})()}
 
 module.exports = Component.exports
 
@@ -22583,22 +22450,6 @@ var Component = __webpack_require__(1)(
   /* cssModules */
   null
 )
-Component.options.__file = "E:\\Linear\\Example_project\\background_frame-master\\background_frame\\src\\component\\pages\\Main.vue"
-if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
-if (Component.options.functional) {console.error("[vue-loader] Main.vue: functional components are not supported with templates, they should use render functions.")}
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-f5c40654", Component.options)
-  } else {
-    hotAPI.reload("data-v-f5c40654", Component.options)
-  }
-})()}
 
 module.exports = Component.exports
 
@@ -22621,22 +22472,6 @@ var Component = __webpack_require__(1)(
   /* cssModules */
   null
 )
-Component.options.__file = "E:\\Linear\\Example_project\\background_frame-master\\background_frame\\src\\component\\pages\\Personal.vue"
-if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
-if (Component.options.functional) {console.error("[vue-loader] Personal.vue: functional components are not supported with templates, they should use render functions.")}
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-176d775d", Component.options)
-  } else {
-    hotAPI.reload("data-v-176d775d", Component.options)
-  }
-})()}
 
 module.exports = Component.exports
 
@@ -22659,22 +22494,6 @@ var Component = __webpack_require__(1)(
   /* cssModules */
   null
 )
-Component.options.__file = "E:\\Linear\\Example_project\\background_frame-master\\background_frame\\src\\component\\pages\\Setting.vue"
-if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
-if (Component.options.functional) {console.error("[vue-loader] Setting.vue: functional components are not supported with templates, they should use render functions.")}
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-3bf7f5c3", Component.options)
-  } else {
-    hotAPI.reload("data-v-3bf7f5c3", Component.options)
-  }
-})()}
 
 module.exports = Component.exports
 
@@ -22697,22 +22516,6 @@ var Component = __webpack_require__(1)(
   /* cssModules */
   null
 )
-Component.options.__file = "E:\\Linear\\Example_project\\background_frame-master\\background_frame\\src\\component\\pages\\Table-1.vue"
-if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
-if (Component.options.functional) {console.error("[vue-loader] Table-1.vue: functional components are not supported with templates, they should use render functions.")}
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-0e60cc65", Component.options)
-  } else {
-    hotAPI.reload("data-v-0e60cc65", Component.options)
-  }
-})()}
 
 module.exports = Component.exports
 
@@ -22735,22 +22538,6 @@ var Component = __webpack_require__(1)(
   /* cssModules */
   null
 )
-Component.options.__file = "E:\\Linear\\Example_project\\background_frame-master\\background_frame\\src\\component\\pages\\Table-2.vue"
-if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
-if (Component.options.functional) {console.error("[vue-loader] Table-2.vue: functional components are not supported with templates, they should use render functions.")}
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-0e6ee3e6", Component.options)
-  } else {
-    hotAPI.reload("data-v-0e6ee3e6", Component.options)
-  }
-})()}
 
 module.exports = Component.exports
 
@@ -22769,21 +22556,6 @@ var Component = __webpack_require__(1)(
   /* cssModules */
   null
 )
-Component.options.__file = "E:\\Linear\\Example_project\\background_frame-master\\background_frame\\src\\js\\config.vue"
-if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-4b84feb8", Component.options)
-  } else {
-    hotAPI.reload("data-v-4b84feb8", Component.options)
-  }
-})()}
 
 module.exports = Component.exports
 
@@ -28101,20 +27873,7 @@ var content = __webpack_require__(193);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(2)("1234ed27", content, false);
-// Hot Module Replacement
-if(false) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("!!../../node_modules/style-loader/index.js!../../node_modules/css-loader/index.js!../../node_modules/less-loader/dist/cjs.js!./common.less", function() {
-     var newContent = require("!!../../node_modules/style-loader/index.js!../../node_modules/css-loader/index.js!../../node_modules/less-loader/dist/cjs.js!./common.less");
-     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
+var update = __webpack_require__(2)("1234ed27", content, true);
 
 /***/ }),
 /* 78 */
@@ -29746,6 +29505,10 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
                 industryError: {
                     content: this.$t('candidate_profile.notice_msg.can_criteria_msg_selectind'),
                     controler: false
+                },
+                functionError: {
+                    content: this.$t('candidate_profile.notice_msg.can_criteria_msg_selectfunc'),
+                    controler: false
                 }
             }
         };
@@ -31364,7 +31127,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
     },
     created: function created() {
         var that = this;
-        var tempConfig = JSON.parse(localStorage.config).result;
+        var tempConfig = this.CONFIG.result;
         this.hideCriteriaIndustryDropdown();
         this.config = tempConfig;
         this.configSector = [];
@@ -31552,14 +31315,20 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
                         industry: value.actualKey,
                         sector: []
                     };
+                    var tempSector = [];
+                    var tempStr = "";
                     that.configSector[index].map(function (secVal, secIndex) {
                         if (secVal.sectorSelect == true) {
-                            str = str + secVal.sectorValue + ", ";
+                            tempStr = tempStr + secVal.sectorValue + ", ";
                             secStr = secStr + secVal.sectorValue + ", ";
-                            sectorArr.push(secVal.sectorKey);
+                            tempSector.push(secVal.sectorKey);
                             tempSearchItem.sector.push(secVal.sectorKey);
                         }
                     });
+                    sectorArr.push.apply(sectorArr, tempSector);
+                    if (tempSector.length != that.configSector[index].length) {
+                        str = str + tempStr;
+                    }
                 }
                 if (tempSearchItem.industry) {
                     multiIndustry.push(tempSearchItem);
@@ -35038,7 +34807,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, "\n*[data-v-077b66bf] {\n  box-sizing: border-box;\n}\n.head[data-v-077b66bf] {\n  /*// padding:10px 20px;      */\n  height: 100%;\n  background-color: #242f42;\n  margin-left: 300px;\n}\n.head #logo[data-v-077b66bf] {\n  height: 100%;\n  width: 300px;\n  position: absolute;\n  top: 0;\n  left: 0;\n  background: #77869f;\n  padding: 15px;\n}\n.head #logo > .avatar[data-v-077b66bf] {\n  height: 90px;\n  width: 90px;\n  border-radius: 50%;\n  border: 4px solid #f0f0f0;\n  margin-left: 20px;\n  float: left;\n  overflow: hidden;\n}\n.head #logo > .avatar img[data-v-077b66bf] {\n  height: 100%;\n  width: 100%;\n}\n.head #logo > .username[data-v-077b66bf] {\n  float: left;\n  padding: 20px 30px;\n  font-size: 20px;\n  line-height: 30px;\n  color: #f0f0f0;\n}\n.head #header_right[data-v-077b66bf] {\n  float: right;\n}\n.head #header_right > .personal[data-v-077b66bf],\n.head #header_right .logout[data-v-077b66bf] {\n  float: left;\n}\n.head #header_right > .personal > a[data-v-077b66bf] {\n  /*// color:#1f2d3d;*/\n  line-height: 44px;\n  color: #a9b0c2;\n}\n.head #header_right > .el-button[data-v-077b66bf] {\n  font-size: 16px;\n  line-height: 24px;\n  margin-left: 20px;\n  margin-right: 20px;\n}\n.head #header_right > .el-button--text[data-v-077b66bf] {\n  color: #a9b0c2;\n}\n.head #header_right a[data-v-077b66bf] {\n  display: block;\n}\n", ""]);
+exports.push([module.i, "@font-face {\r\n  font-family: 'icomoon';\r\n  src:  url(" + __webpack_require__(53) + ");\r\n  src:  url(" + __webpack_require__(53) + "#iefix) format('embedded-opentype'),\r\n    url(" + __webpack_require__(188) + ") format('truetype'),\r\n    url(" + __webpack_require__(189) + ") format('woff'),\r\n    url(" + __webpack_require__(187) + "#icomoon) format('svg');\r\n  font-weight: normal;\r\n  font-style: normal;\r\n}\r\n\r\n[class^=\"icon-\"], [class*=\" icon-\"] {\r\n  /* use !important to prevent issues with browser extensions that change fonts */\r\n  font-family: 'icomoon' !important;\r\n  speak: none;\r\n  font-style: normal;\r\n  font-weight: normal;\r\n  font-variant: normal;\r\n  text-transform: none;\r\n  line-height: 1;\r\n\r\n  /* Better Font Rendering =========== */\r\n  -webkit-font-smoothing: antialiased;\r\n  -moz-osx-font-smoothing: grayscale;\r\n}\r\n\r\n.icon-facebook2:before {\r\n  content: \"\\E933\";\r\n  color: #2b5995;\r\n}\r\n.icon-email:before {\r\n  content: \"\\E934\";\r\n  color: #626262;\r\n}\r\n.icon-addmember:before {\r\n  content: \"\\E92E\";\r\n  color: #fff;\r\n}\r\n.icon-ic-job-placeholder:before {\r\n  content: \"\\E926\";\r\n  color: #445cb3;\r\n}\r\n.icon-big-profile .path1:before {\r\n  content: \"\\E927\";\r\n  color: rgb(237, 237, 237);\r\n}\r\n.icon-big-profile .path2:before {\r\n  content: \"\\E928\";\r\n  margin-left: -0.9384765625em;\r\n  color: rgb(191, 191, 191);\r\n}\r\n.icon-brand:before {\r\n  content: \"\\E929\";\r\n  color: #0077b5;\r\n}\r\n.icon-error:before {\r\n  content: \"\\E922\";\r\n  color: #f5f5f7;\r\n}\r\n.icon-tick:before {\r\n  content: \"\\E923\";\r\n  color: #f5f5f7;\r\n}\r\n.icon-spin:before {\r\n  content: \"\\E924\";\r\n  color: #fff;\r\n}\r\n.icon-attachment:before {\r\n  content: \"\\E925\";\r\n  color: #445cb3;\r\n}\r\n.icon-shape:before {\r\n  content: \"\\E921\";\r\n  color: #fff;\r\n}\r\n.icon-user_single:before {\r\n  content: \"\\E91E\";\r\n}\r\n.icon-paypal:before {\r\n  content: \"\\E91A\";\r\n  color: #bac1cc;\r\n}\r\n.icon-amex:before {\r\n  content: \"\\E91B\";\r\n  color: #bac1cc;\r\n}\r\n.icon-mastercard:before {\r\n  content: \"\\E91C\";\r\n  color: #bac1cc;\r\n}\r\n.icon-visa:before {\r\n  content: \"\\E91D\";\r\n  color: #bac1cc;\r\n}\r\n.icon-group:before {\r\n  content: \"\\E916\";\r\n}\r\n.icon-job_edit:before {\r\n  content: \"\\E911\";\r\n}\r\n.icon-minus:before {\r\n  content: \"\\E910\";\r\n}\r\n.icon-plus:before {\r\n  content: \"\\E913\";\r\n}\r\n.icon-deselected-copy:before {\r\n  content: \"\\E90C\";\r\n  color: #e2e2e1;\r\n}\r\n.icon-arrow:before {\r\n  content: \"\\E900\";\r\n}\r\n.icon-arrowright:before {\r\n  content: \"\\E90D\";\r\n}\r\n.icon-cancel:before {\r\n  content: \"\\E90E\";\r\n}\r\n.icon-share:before {\r\n  content: \"\\E901\";\r\n}\r\n.icon-heart:before {\r\n  content: \"\\E902\";\r\n}\r\n.icon-badge:before {\r\n  content: \"\\E903\";\r\n}\r\n.icon-ecommerce-finance-coin-money-cash-dollar:before {\r\n  content: \"\\E904\";\r\n}\r\n.icon-facebook:before {\r\n  content: \"\\E905\";\r\n}\r\n.icon-printer:before {\r\n  content: \"\\E906\";\r\n}\r\n.icon-mail:before {\r\n  content: \"\\E907\";\r\n}\r\n.icon-briefcase:before {\r\n  content: \"\\E908\";\r\n}\r\n.icon-pointer:before {\r\n  content: \"\\E909\";\r\n}\r\n.icon-phone:before {\r\n  content: \"\\E90A\";\r\n}\r\n.icon-arrowside-copy:before {\r\n  content: \"\\E919\";\r\n}\r\n.icon-attach:before {\r\n  content: \"\\E92A\";\r\n  color: #fff;\r\n}\r\n.icon-radio:before {\r\n  content: \"\\E92C\";\r\n  color: #445cb3;\r\n}\r\n.icon-radio-selected:before {\r\n  content: \"\\E92D\";\r\n  color: #445cb3;\r\n}\r\n.icon-ic-apply:before {\r\n  content: \"\\E932\";\r\n  color: #f2770d;\r\n}\r\n.icon-delete:before {\r\n  content: \"\\E936\";\r\n  color: #7e7e7e;\r\n}\r\n.icon-bookmarked:before {\r\n  content: \"\\E937\";\r\n  color: #445cb3;\r\n}\r\n.icon-bookmark:before {\r\n  content: \"\\E938\";\r\n  color: #7e7e7e;\r\n}\r\n.icon-clip:before {\r\n  content: \"\\E918\";\r\n}\r\n.icon-send:before {\r\n  content: \"\\E935\";\r\n}\r\n.icon-people:before {\r\n  content: \"\\E915\";\r\n}\r\n.icon-edit:before {\r\n  content: \"\\E914\";\r\n}\r\n.icon-search:before {\r\n  content: \"\\E912\";\r\n}\r\n.icon-check_box_outline_blank:before {\r\n  content: \"\\E90B\";\r\n}\r\n.icon-check_box:before {\r\n  content: \"\\E90F\";\r\n}\r\n.icon-arrow_drop_up:before {\r\n  content: \"\\E91F\";\r\n}\r\n.icon-arrow_drop_down:before {\r\n  content: \"\\E920\";\r\n}\r\n.icon-shopping_cart:before {\r\n  content: \"\\E92B\";\r\n}\r\n.icon-arrow_upward:before {\r\n  content: \"\\E930\";\r\n}\r\n.icon-arrow_downward:before {\r\n  content: \"\\E931\";\r\n}\r\n.icon-chevrons-left:before {\r\n  content: \"\\E939\";\r\n}\r\n.icon-chevrons-right:before {\r\n  content: \"\\E93A\";\r\n}\r\n.icon-dots-three-horizontal:before {\r\n  content: \"\\E92F\";\r\n}\r\n.icon-cross:before {\r\n  content: \"\\E917\";\r\n}\r\n.icon-quotes-left:before {\r\n  content: \"\\E977\";\r\n}\r\n.icon-quotes-right:before {\r\n  content: \"\\E978\";\r\n}\r\n.icon-phone2:before {\r\n  content: \"\\E942\";\r\n}\r\n", ""]);
 
 // exports
 
@@ -35052,7 +34821,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, "\n.table_info[data-v-0e60cc65] {\n  margin-bottom: 20px;\n}\n.table_main[data-v-0e60cc65] {\n  margin-bottom: 20px;\n}\n.table_page > .block > .el-pagination .btn-prev[data-v-0e60cc65] {\n  float: right;\n}\n.table_page > .block > .el-pagination button[data-v-0e60cc65],\n.table_page > .block > .el-pagination ul[data-v-0e60cc65],\n.table_page > .block > .el-pagination span[data-v-0e60cc65] {\n  float: right;\n}\n", ""]);
+exports.push([module.i, "@charset \"utf-8\";\r\nhtml,body {\r\n    width: 100%;\r\n    height: 100%;\r\n    -webkit-user-select: none;\r\n    user-select: none;\r\n    -webkit-text-size-adjust: none;\r\n    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);\r\n}\r\nhtml {-webkit-text-size-adjust: none;}\r\nbody {font-family:\"PingFang TC\" ,\"\\5137\\9ED1   Pro\", \"Microsoft JhengHei\", \"\\5FAE\\8EDF\\6B63\\9ED1\\9AD4\", STHeiti,\"Heiti TC Medium\", Apple LiGothic, Helvetica, Helvetica Neue, Arial,\"PMingLiu\", \"\\65B0\\7D30\\660E\\9AD4\";color: #333;}\r\nbody,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,input,textarea,p,th,td,button {margin: 0;padding: 0;}\r\ninput[type=\"button\"],input[type=\"submit\"],input[type=\"reset\"] {-webkit-appearance: none;}\r\na,img,li {-webkit-touch-callout: none;touch-callout: none;}\r\na,button,input,textarea {-webkit-tap-highlight-color: transparent;}\r\nbutton {font-weight: 600 !important;}\r\nimg {border: 0 none;max-width: 100%;}\r\na,a:hover {text-decoration: none;}\r\nem,i {font-style: normal;}\r\nli {list-style: none;}\r\n.btn-default:hover,.btn-default:active:focus {background-color: #445cb3;color: #fff;}\r\n.btn-default.focus,.btn-default:focus {background: #445cb3;}\r\nheader,footer,section,aside,article,nav,dialog,figure {display: block;}\r\ninput:focus {outline: none;}\r\ninput:-webkit-autofill,textarea:-webkit-autofill,select:-webkit-autofill {-webkit-box-shadow: 0 0 0 1000px white inset;}\r\ninput[type=text]:focus,input[type=password]:focus,textarea:focus {-webkit-box-shadow: 0 0 0 1000px white inset;}\r\n/* IE 滚动条 */\r\nbody,div,p,textarea,section,ul,iframe {\r\n    scrollbar-face-color: #F3F3F3;\r\n    /*颜色*/\r\n    scrollbar-arrow-color: #C0C0C0;\r\n    /*箭头*/\r\n    scrollbar-3dlight-color: #C0C0C0;\r\n    /*最外左*/\r\n    scrollbar-highlight-color: #FFFFFF;\r\n    /*左二*/\r\n    scrollbar-shadow-color: #FFFFFF;\r\n    /*右二*/\r\n    scrollbar-darkshadow-color: #C0C0C0;\r\n    /*右一*/\r\n    scrollbar-track-color: #F5F5F5;\r\n    /*滑道*/\r\n}\r\n/* chrome 滚动条 */\r\nbody::-webkit-scrollbar,\r\ndiv::-webkit-scrollbar,\r\np::-webkit-scrollbar,\r\ntextarea::-webkit-scrollbar,\r\nsection::-webkit-scrollbar,\r\nul::-webkit-scrollbar,\r\niframe::-webkit-scrollbar,\r\nselect::-webkit-scrollbar-thumb,\r\noption::-webkit-scrollbar-thumb {width: 9px;height: 12px;-webkit-border-radius: 3px;}\r\nbody::-webkit-scrollbar {width: 8px;}\r\nbody::-webkit-scrollbar-track,\r\ndiv::-webkit-scrollbar-track,\r\np::-webkit-scrollbar-track,\r\ntextarea::-webkit-scrollbar-track,\r\nsection::-webkit-scrollbar-track,\r\nul::-webkit-scrollbar-track,\r\nselect::-webkit-scrollbar-thumb,\r\noption::-webkit-scrollbar-thumb {background: #FFF;}\r\nbody::-webkit-scrollbar-thumb,\r\ndiv::-webkit-scrollbar-thumb,\r\np::-webkit-scrollbar-thumb,\r\ntextarea::-webkit-scrollbar-thumb,\r\nsection::-webkit-scrollbar-thumb,\r\nul::-webkit-scrollbar-thumb,\r\nselect::-webkit-scrollbar-thumb,\r\noption::-webkit-scrollbar-thumb {background: #cfcfcf;-webkit-border-radius: 3px;}\r\n.no_scroll {position: absolute;left: 0;top: 0;height: 100%;overflow: hidden;}\r\n.row {height: 100%;}\r\n.clearfix:after {content: \" \";visibility: hidden;display: block;clear: both;height: 0;font-size: 0}\r\n.clearfix {clear: both;}\r\n.tl {text-align: left}\r\n.tc {text-align: center}\r\n.tr {text-align: right}\r\n.fl {float: left}\r\n.fr {float: right}\r\n.ti {text-indent: -150%;overflow: hidden}\r\n.c_b_b {border: 0;background: none;color: #fff;}\r\n.c_b_b .navbar-nav li>a {color: #fff;font-size: 0.21rem;padding: 0 0.2rem;}\r\n.router-link-active,.router-link-exact-active{text-decoration: none;}/*清除路由默认样式*/\r\n.router-link-active:focus,.router-link-exact-active:focus{text-decoration: none;}/*清除路由默认样式*/\r\n\r\n.search_content {padding-top: 1.1rem;font-size: 0.3rem;color: #fff;}\r\n.search_content .input-lg,\r\n.search_content .form-control {border-radius: 0;margin: 0.06rem 0;height: 0.46rem;padding: 0.15rem 16px;font-size: 0.15rem;line-height: 1;color: #95989a;border: none;border-right: 1px solid #ccc;font-family:\"PingFang TC\" ,\"\\5137\\9ED1   Pro\", \"Microsoft JhengHei\", \"\\5FAE\\8EDF\\6B63\\9ED1\\9AD4\", STHeiti,\"Heiti TC Medium\", Apple LiGothic, Helvetica, Helvetica Neue, Arial,\"PMingLiu\", \"\\65B0\\7D30\\660E\\9AD4\";}\r\n.search_content .col-md-6,\r\n.search_content .col-md-4 {padding: 0;}\r\n.search_content .search_form {background: #2e344b;color: #fff;border: none;text-align: center;border-radius: 0.1rem;cursor: pointer;}\r\n@media screen and (min-width: 320px) and (max-width: 568px) {\r\n    .logo {width: 6rem;}\r\n    .search_content .input-lg,\r\n    .search_content .form-control {height: auto;padding: 0.6rem 16px;font-size: 0.18rem;line-height: 1;color: #95989a;border: none;margin: 0.1rem 0;}\r\n}\r\n@media screen and (min-width: 320px) and (max-width: 768px) {\r\n    .article_detail_wrap{text-align: center;}\r\n    .c_b_b .collapsed {margin-top: 1.6rem;}\r\n    .search_content {padding-top: 2.4rem;padding-bottom: 2.2rem;}\r\n    .skip_content,\r\n    .resetpassword_content {width: 80% !important;}\r\n    .status,\r\n    .skip_title,\r\n    .resetpassword_title,\r\n    .skip_submit,\r\n    .resetpassword_submit,\r\n    .login_submit,\r\n    .signup_submit,\r\n    .login_account input {font-size: 16px !important;}\r\n    .skip_account .icon-check_box {font-size: 22px !important;}\r\n    .employer_profile_content {padding-bottom: 22% !important;}\r\n    .employer_profile_button_fixed {left: 10px !important;width: 93%;}\r\n}\r\n@media screen and (orientation: landscape) {\r\n    .c_b_b .collapsed {margin-top: 0.6rem;}\r\n}\r\n@media screen and (min-width: 970px) {\r\n    /* #component{width: 970px;} */\r\n    .component{width:970px;margin:0 auto;}\r\n}\r\n.footer {width: 100%;padding: 0.16rem 0rem;color: #fff;text-align: center;background: #264a61;display: flex;display: -webkit-box;display: -moz-box;display: -ms-flexbox;display: -webkit-flex;align-items: center;}\r\n#component {margin: 0 auto;font-family: \"PingFang TC\" ,\"\\5137\\9ED1   Pro\", \"Microsoft JhengHei\", \"\\5FAE\\8EDF\\6B63\\9ED1\\9AD4\", STHeiti,\"Heiti TC Medium\", Apple LiGothic, Helvetica, Helvetica Neue, Arial,\"PMingLiu\", \"\\65B0\\7D30\\660E\\9AD4\";color: #264a61;}\r\n.hotjobs_page_change {width: 0.1rem;height: 0.1rem;display: inline-block;margin-right: 0.1rem;border-radius: 50%;background: #688193;}\r\n.change_active {background: #2e344b;}\r\n.logo {background: #fff;}\r\n/* sskip  reset login signup*/\r\n.logo_all_same {margin-bottom: 20px;}\r\n.skip_content,\r\n.resetpassword_content {width: 57%;background-color: #ffffff;border: solid 1px #e2e2e1;color: #264a61;padding: 0.33rem 0.61rem;margin: 0.77rem auto;}\r\n.skip_title,.resetpassword_title {margin-top: 0.22rem;font-size: 0.2rem;}\r\n.skip_submit,\r\n.resetpassword_submit,\r\n.login_submit,\r\n.signup_submit,\r\n.employer_profile_submit,.hiring_submit {width: 90%;border-radius:6px;background-color: #445cb3;border: none;font-size: 0.21rem;padding: 0.14rem 0;color: #fff;}\r\n.skip_account,\r\n.resetpassword_account {text-align: center;}\r\n/* login  reset*/\r\n.login_account {margin: 0.36rem 0.514rem 0.34rem 0.74rem;}\r\n.login_account input {margin: 0 auto;border-style: none none solid none;border-radius: 0;box-shadow: none;-webkit-box-shadow: none;-moz-box-shadow: none;text-shadow: none;border-bottom-color: #e2e2e1;border-width: 1px;font-size: 16px;}\r\n.login_account .input_wrap {margin: 0 auto 8%;}\r\n/*reset*/\r\n.error_same {font-size: 12px;font-weight: 500;line-height: 1.8;float: left;color: #ff3333;}\r\n/* login  signup*/\r\n.loginIn,\r\n.signup,\r\n.email_activate,\r\n.forget_pass,\r\n.employer_profile {width: 100%;height: 100%;position: fixed;left: 0;top: 0;background: rgba(0, 0, 0, 0.4);z-index: 999;}\r\n/* 暂存，要删掉 */\r\n.delay_pop{width: 100%;height: 100%;position: fixed;left: 0;top: 0;z-index: 999999;}\r\n.el-icon-loading{font-size: 0.8rem;position: absolute;left: 50%;top:50%;z-index: 9999}\r\n.login_content,\r\n.signup_content,\r\n.employer_profile_content {position: relative;z-index: 9999;background: #fff;margin-top: 2%;max-height: 94%;overflow: auto;}\r\n.signup_entrance,\r\n.login_entrance {margin: 0.6rem auto 0.36rem;font-size:14px;font-weight: 500;color: #4a4a4a;text-align: center;}\r\n.signup_entrance a,\r\n.login_entrance a {color: #445cb3;}\r\n.icon-tick-copy {border: 1px solid #e2e2e1;}\r\n.remember_account {color: rgba(68, 92, 179, 0.9);margin:0 auto 0.4rem;font-size: 0.16rem;display: flex;align-items: baseline;}\r\n.remember_account a,\r\n.remember_account span {width: 50%;display: inline-block;}\r\n.remember_account a {text-align: right !important;}\r\n.remember_account i {margin-right: 0.1rem}\r\n.icon-mail {margin: 0 0.2rem 0 0.28rem;font-size: 0.20rem;}\r\n.icon-cancel {cursor: pointer;}\r\n\r\n/* error_tip */\r\n.red_border_tip {\r\n    border-bottom-color: red !important;\r\n}\r\n/* checkbox */\r\n.icon-check_box {\r\n    color: #445cb3;\r\n    border: none;\r\n    font-size: 0.26rem\r\n}\r\n.icon-check_box_outline_blank {\r\n    font-size: 0.26rem\r\n}\r\n/* 轮播图滚动 */\r\n.swiper-pagination {\r\n    text-align: right;\r\n    padding-right: 3%\r\n}\r\n.swiper-pagination-bullet {\r\n    background: #688193;\r\n}\r\n.swiper-pagination-bullet-active {\r\n    background: #2e344b;\r\n}\r\n.finish_room2 {\r\n    width: 100%;\r\n    height: auto;\r\n    padding-top: 15px;\r\n    padding-bottom: 15px;\r\n    display: flex;\r\n    align-items: center;\r\n}\r\n.finish_room2 .room_img {\r\n    width: 0.75rem;\r\n    height: 0.75rem;\r\n    margin-right: 10px;\r\n    position: relative;\r\n    overflow: hidden;\r\n}\r\n.finish_room2 .room_img img {\r\n    width: 100%;\r\n    height: 100%;\r\n}\r\n\r\n.finish_room2>.room_img span {\r\n    position: absolute;\r\n    width: auto;\r\n    height: auto;\r\n    right: 5px;\r\n    bottom: 3px;\r\n}\r\n\r\n.room_add_img {\r\n    width: 0.75rem;\r\n    height: 0.75rem;\r\n    border: 1px solid #e1e1e1;\r\n    display: flex;\r\n    flex-direction: column;\r\n    align-items: center;\r\n    justify-content: space-between;\r\n    position: relative;\r\n}\r\n\r\n.room_add_img>span:nth-child(1) {\r\n    overflow: hidden;\r\n}\r\n\r\n.room_add_img>span:nth-child(2) {\r\n    margin-bottom: 10px;\r\n}\r\n\r\n.room_add_img input,\r\n#upload_file,\r\n.add_img_company input {\r\n    position: absolute;\r\n    top: 0px;\r\n    left: 0px;\r\n    width: 100%;\r\n    height: 100%;\r\n    z-index: 99999;\r\n    opacity: 0;\r\n}\r\n\r\n.swiper-pagination-fraction,\r\n.swiper-pagination-custom,\r\n.swiper-container-horizontal>.swiper-pagination-bullets {\r\n    top: 4rem;\r\n}\r\n\r\n.job_listings_item_title{line-height: 0.5rem;font-family: Arial;font-size: 16px;color: rgba(0, 0, 0, 0.7);font-weight: 600;opacity: 0.7;}\r\n\r\n/*\r\n * @desc profile样式\r\n */\r\n\r\n#profile {\r\n    height: auto;\r\n    font-family: \"PingFang TC\" ,\"\\5137\\9ED1   Pro\", \"Microsoft JhengHei\", \"\\5FAE\\8EDF\\6B63\\9ED1\\9AD4\", STHeiti,\"Heiti TC Medium\", Apple LiGothic, Helvetica, Helvetica Neue, Arial,\"PMingLiu\", \"\\65B0\\7D30\\660E\\9AD4\";\r\n    margin-top: 0.5rem;\r\n    margin-bottom: 0.92rem;\r\n}\r\n\r\n#profile .profile_main {\r\n    width: 100%;\r\n    margin: 0 auto;\r\n}\r\n\r\n#profile .profile_main>.profile_left>.profile_title {\r\n    padding: 0.25rem 0.36rem 0 0.25rem;\r\n    background-color: #fff;\r\n}\r\n\r\n\r\n#profile .profile_main>.profile_left>.profile_title>.profile_title_avatar {\r\n    width: 1.04rem;\r\n    height: 1.04rem;\r\n    cursor: pointer;\r\n    border-radius: 50%;\r\n    overflow: hidden;\r\n    margin-top: -1rem;\r\n}\r\n\r\n#profile .profile_main>.profile_left>.profile_title>.profile_title_avatar>.profile_notice_avatar {\r\n    height: 104px;\r\n    background-size: contain;\r\n}\r\n\r\n#profile .profile_main>.profile_left>.profile_title>.profile_title_avatar>img {\r\n    width: 100%;\r\n    height: 100%;\r\n}\r\n\r\n#profile .profile_main>.profile_left>.profile_title>.profile_title_avatar>.profile_notice_avatar>p {\r\n    text-align: center;\r\n    font-size: 18px;\r\n    color: #fff;\r\n}\r\n\r\n#profile .profile_main>.profile_left>.profile_title>.profile_head_edit>div {\r\n    cursor: pointer;\r\n}\r\n\r\n#profile .profile_main>.profile_left>.profile_title>.profile_head_edit>div>.icon-edit {\r\n    font-size: 0.25rem;\r\n    line-height: 0.4rem;\r\n}\r\n\r\n.profile_title_name{margin-left: 1.5rem;padding-top: 0.38rem;}\r\n#profile .profile_title_name>.basic_info {font-family: \"MHeiHK-X\",\"PingFang TC\" ,\"\\5137\\9ED1   Pro\", \"Microsoft JhengHei\", \"\\5FAE\\8EDF\\6B63\\9ED1\\9AD4\", STHeiti,\"Heiti TC Medium\", Apple LiGothic, Helvetica, Helvetica Neue, Arial,\"PMingLiu\", \"\\65B0\\7D30\\660E\\9AD4\";font-size: 13px;color: #fff;}\r\n#profile .profile_title_name>.basic_info_title{font-size:0.25rem;font-weight: bold;}\r\n#profile .profile_main>.profile_left>.profile_title>.profile_title_name>.basic_info_salary {\r\n    margin-top: 0.25rem;\r\n    font-size: 0.22rem;\r\n}\r\n\r\n#profile .profile_main>.profile_left>.profile_notice {\r\n    font-family: \"PingFang TC\" ,\"\\5137\\9ED1   Pro\", \"Microsoft JhengHei\", \"\\5FAE\\8EDF\\6B63\\9ED1\\9AD4\", STHeiti,\"Heiti TC Medium\", Apple LiGothic, Helvetica, Helvetica Neue, Arial,\"PMingLiu\", \"\\65B0\\7D30\\660E\\9AD4\";\r\n    padding-top: 0.15rem;\r\n    padding-bottom: 0.2rem;\r\n    background-color: #e2e2e1;\r\n    text-align: center;\r\n}\r\n\r\n#profile .profile_main>.profile_left>.profile_notice>.profile_notice_title {\r\n    font-size: 0.24rem;\r\n    font-weight: 900;\r\n    margin: 0.05rem 0;\r\n    /*line-height: 0.34rem;*/\r\n    color: #264a61;\r\n}\r\n\r\n#profile .profile_main>.profile_left>.profile_notice>.profile_notice_content {\r\n    /*line-height: 0.32rem;*/\r\n    margin: 0.05rem 0;\r\n    font-size: 0.22rem;\r\n    color: #264a61;\r\n}\r\n#profile .profile_main>.profile_left>.profile_info{padding: 0 0.19rem 0.56rem 0.35rem;}\r\n#profile .profile_main>.profile_left>.profile_info>.profile_item_content>ul>li>.item_title {\r\n    /*line-height: 0.32rem;*/\r\n    margin: 0.05rem 0;\r\n    font-family: \"PingFang TC\" ,\"\\5137\\9ED1   Pro\", \"Microsoft JhengHei\", \"\\5FAE\\8EDF\\6B63\\9ED1\\9AD4\", STHeiti,\"Heiti TC Medium\", Apple LiGothic, Helvetica, Helvetica Neue, Arial,\"PMingLiu\", \"\\65B0\\7D30\\660E\\9AD4\";\r\n    font-size: 0.21rem;\r\n    font-weight: 500;\r\n    color: #264a61;\r\n}\r\n\r\n#profile .profile_main>.profile_left>.profile_info>.profile_item_content>ul>li>.item_title>div {\r\n    float: right;\r\n    cursor: pointer;\r\n}\r\n\r\n#profile .profile_main>.profile_left>.profile_info>.profile_item_content>ul>li>.item_title>div>.icon-edit {\r\n    line-height: 0.32rem;\r\n    float: right;\r\n    font-size: 0.25rem;\r\n    font-weight: 500;\r\n    color: #264a61;\r\n}\r\n#profile .profile_left>.profile_info>.profile_item_content>ul{margin-bottom: 0.53rem;}\r\n#profile .profile_left>.profile_info>.profile_item_content>ul>li>.item_content {\r\n    font-family: \"MHeiHK\",\"PingFang TC\" ,\"\\5137\\9ED1   Pro\", \"Microsoft JhengHei\", \"\\5FAE\\8EDF\\6B63\\9ED1\\9AD4\", STHeiti,\"Heiti TC Medium\", Apple LiGothic, Helvetica, Helvetica Neue, Arial,\"PMingLiu\", \"\\65B0\\7D30\\660E\\9AD4\";\r\n    font-size: 15px;\r\n    font-weight: 500;\r\n    line-height: 1.33;\r\n    color: #2c2f3e;\r\n}\r\n\r\n#profile .profile_main>.profile_right {\r\n    padding-left: 2%;\r\n}\r\n\r\n#profile .profile_main>.profile_right>.profile_right_content {\r\n    width: 300px;\r\n}\r\n\r\n#profile .profile_main>.profile_right>.profile_right_content>.profile_recent {\r\n    /*height: 3.28rem;*/\r\n    padding: 0.1rem;\r\n    padding-top: 0.15rem;\r\n    background-color: #688193;\r\n}\r\n\r\n#profile .profile_main>.profile_right>.profile_right_content>.profile_recent>.profile_recent_title {\r\n    padding-left: 0.1rem;\r\n    padding-bottom: 0.2rem;\r\n    font-size: 0.18rem;\r\n    font-weight: 900;\r\n    color: #ffffff;\r\n}\r\n\r\n#profile .profile_main>.profile_right>.profile_right_content>.profile_recent>.profile_recent_content>ul>li {\r\n    height: 0.8rem;\r\n    background-color: #fff;\r\n}\r\n\r\n#profile .profile_main>.profile_right>.profile_right_content>.profile_recent>.profile_recent_content>ul>li+li {\r\n    margin-top: 0.1rem;\r\n}\r\n\r\n#profile .profile_main>.profile_right>.profile_right_content>.profile_job_update {\r\n    margin-top: 0.2rem;\r\n    padding: 0.2rem 0.1rem 0.34rem;\r\n    background-color: #688193;\r\n}\r\n\r\n#profile .profile_main>.profile_right>.profile_right_content>.profile_job_update>.profile_update_title {\r\n    padding-left: 0.1rem;\r\n    font-size: 0.18rem;\r\n    font-weight: 900;\r\n    line-height: 0.28rem;\r\n    color: #ffffff;\r\n}\r\n\r\n#profile .profile_main>.profile_right>.profile_right_content>.profile_job_update>.profile_update_content {\r\n    padding-left: 0.1rem;\r\n    font-size: 16px;\r\n    font-weight: 500;\r\n    color: #ffffff;\r\n}\r\n\r\n#profile .profile_main>.profile_right>.profile_right_content>.profile_job_update>.profile_update_btn {\r\n    margin-top: 0.24rem;\r\n    text-align: center;\r\n    background-color: #445cb3;\r\n}\r\n\r\n#profile .profile_main>.profile_right>.profile_right_content>.profile_job_update>.profile_update_btn>a {\r\n    display: block;\r\n    height: 0.4rem;\r\n    line-height: 0.4rem;\r\n    font-size: 16px;\r\n    font-weight: 900;\r\n    color: #264a61;\r\n}\r\n\r\n#profile .profile_main>.profile_right>.profile_right_content>.profile_downapps {\r\n    height: 0.4rem;\r\n    text-align: center;\r\n    line-height: 0.4rem;\r\n    margin-top: 0.2rem;\r\n    border-radius: 0.1rem;\r\n    background-color: #264a61;\r\n}\r\n\r\n#profile .profile_main>.profile_right>.profile_right_content>.profile_downapps>.download_app {\r\n    font-size: 16px;\r\n    color: #fff;\r\n}\r\n\r\n#profile .profile_main>.profile_right>.profile_right_content>.profile_downapps>.download_app>i {\r\n    font-size: 0.27rem;\r\n    vertical-align: middle;\r\n    margin-left: 15px;\r\n}\r\n\r\n.icon_job_edit {\r\n    width: 2.36rem;\r\n    position: absolute;\r\n    z-index: 9999;\r\n    top: 0.04rem;\r\n    right: 0;\r\n    background: #ffffff;\r\n    border: solid 1px #e2e2e1;\r\n    border-bottom: none\r\n}\r\n\r\n.icon_job_edit li {\r\n    padding: 0.17rem;\r\n    border-bottom: solid 1px #e2e2e1;\r\n    text-align: left;\r\n    cursor: pointer;\r\n}\r\n\r\n\r\n/* .el-switch__core, .el-switch__label {width: 0.7rem;height: 0.3rem;} */\r\n\r\n.el-switch__core .el-switch__button {\r\n    /* width:0.26rem;height:0.26rem; */\r\n    background-color: #ffffff;\r\n    border: solid 1px #95989a;\r\n}\r\n.auto_btn .el-switch__core{\r\n    background-color: #e2e2e1;\r\n}\r\n.el-switch__core {\r\n    border: 1px solid #ffffff;\r\n    background: #ffffff;\r\n}\r\n\r\n.el-switch.is-checked .el-switch__core {\r\n    border-color: #0fbb0f;\r\n    background-color: #0fbb0f;\r\n}\r\n\r\n.skill_item_tags_wrap span {\r\n    background: #fff;\r\n    border-radius: 3px;\r\n    border: solid 1px #4e55a0;\r\n    font-size: 14px;\r\n    text-align: left;\r\n    color: #445cb4;\r\n    padding:6px 10px;\r\n    display: inline-block;\r\n    margin-right: 0.1rem;\r\n    margin-bottom: 0.1rem;\r\n    font-weight: bold;\r\n}\r\n\r\n.skill_item_tags_wrap {\r\n    margin-top: 0.18rem;\r\n    margin-right: 0.3rem;\r\n    margin-left: 15px;\r\n    width: 62%\r\n}\r\n\r\n.icon-cross {\r\n    font-size: 0.24rem;\r\n    color: #264a61;\r\n    margin-left: 8px;\r\n}\r\n\r\n.el-date-editor.el-input {\r\n    width: auto;\r\n}\r\n\r\n.date_picker,\r\n.salary_range_wrap {\r\n    border-radius: 10px;\r\n    border: solid 1px #e0e0e0;\r\n    font-size: 14px;\r\n    text-align: left;\r\n    color: #333333;\r\n    background: #fff;\r\n}\r\n.company_image_style .el-input__icon + .el-input__inner{\r\n    width:100%;\r\n}\r\n/* .date_picker_width .el-input__icon + .el-input__inner{\r\n    width:1.1rem;\r\n} */\r\n.company_image_style ::-moz-placeholder { color: #000000;}\r\n.company_image_style ::-webkit-input-placeholder { color: #000000;}\r\n.company_image_style :-ms-input-placeholder { color: #000000;}\r\n\r\n.date_picker_width ::-moz-placeholder { color: #333333;}\r\n.date_picker_width ::-webkit-input-placeholder { color: #333333;}\r\n.date_picker_width :-ms-input-placeholder { color: #333333;}\r\n.walkin_time_style ::-moz-placeholder { color: #333333;}\r\n.walkin_time_style ::-webkit-input-placeholder { color: #333333;}\r\n.walkin_time_style :-ms-input-placeholder { color: #333333;}\r\n.mt007{margin-top: 0.07rem;}\r\n.salary_range_wrap {\r\n    padding: 4px 13px;\r\n    display: inline-block;\r\n}\r\n\r\n.salary_range_wrap input {\r\n    border: none !important;\r\n}\r\n\r\n\r\n/*\r\n * @desc 输入框input类型为number时，去掉上下箭头方式  \r\n */\r\n\r\ninput::-webkit-outer-spin-button,\r\ninput::-webkit-inner-spin-button {\r\n    -webkit-appearance: none;\r\n}\r\n\r\ninput[type=\"number\"] {\r\n    -moz-appearance: textfield;\r\n}\r\n\r\n.date_picker input {\r\n    border: none;\r\n    padding-right: 0px !important;\r\n    text-align: center;\r\n}\r\n\r\n.el-input__icon+.el-input__inner {\r\n    padding-right: 0px !important;\r\n    border-color: #95989a\r\n}\r\n.el-input__inner{font-size: 14px;text-align: left;color: #333333;height: auto;font-size: 14px;text-align: left;color: #333333;}\r\n.date_picker i,\r\n.el-date-editor i {\r\n    display: none;\r\n}\r\n\r\n.el-input__inner {\r\n    padding: 0px;\r\n}\r\n\r\n.walkin_time_style input {\r\n    width: 0.5rem;\r\n    text-align: center;\r\n    border-radius: 10px;\r\n}\r\n.walkin_time_style input{width:80px; }\r\n.employer_profile_drop_down {\r\n    background-color: #ffffff;\r\n    padding-bottom: 4%;\r\n    display: none;\r\n    box-shadow: 0px 3px 3.3px 0.7px rgba(0, 0, 0, 0.2);\r\n}\r\n/*\r\n * @desc 分页样式\r\n */\r\n.el-pagination>.btn-prev,\r\n.el-pagination>.btn-next {\r\n    margin: 0 0.1rem;\r\n    background: transparent;\r\n    border: 0;\r\n}\r\n.el-pagination>.el-pager>li.number,\r\n.el-pagination>.el-pager>li.active .el-pagination>.el-pager>li,\r\n.el-pagination>.el-pager>li {\r\n    margin: 0 0.1rem;\r\n    color: #264a61;\r\n    background: transparent;\r\n    border: 1px solid #d9d9d9;\r\n    border-radius: 2px;\r\n    min-width: 36px;\r\n    height: 35px;\r\n    line-height: 35px;\r\n    font-family: \"PingFang TC\" ,\"\\5137\\9ED1   Pro\", \"Microsoft JhengHei\", \"\\5FAE\\8EDF\\6B63\\9ED1\\9AD4\", STHeiti,\"Heiti TC Medium\", Apple LiGothic, Helvetica, Helvetica Neue, Arial,\"PMingLiu\", \"\\65B0\\7D30\\660E\\9AD4\";\r\n  \tfont-size:0.19rem;\r\n  \tfont-weight: 500;\r\n  \tcolor: #333333;\r\n}\r\n.el-pagination button.disabled {\r\n    background: transparent;\r\n}\r\n\r\n.el-pagination>.el-pager>li.active {\r\n    background: #4e55a0;\r\n    color: #fff;\r\n\tborder-radius: 2px;\r\n\tborder:none;\r\n}\r\n\r\n\r\n/*\r\n * @desc el-radio样式\r\n */\r\n\r\n.el-radio__inner::after {\r\n    width:14px;\r\n    height:14px;\r\n    background-color: #445cb3;\r\n    border: 2px solid #fff;\r\n}\r\n\r\n.el-radio__input.is-checked .el-radio__inner {\r\n    border-color: #445cb3;\r\n    background: #445cb3;\r\n}\r\n\r\n.el-radio__inner {\r\n    border: 2px solid #445cb3;\r\n}\r\n\r\n.el-radio__inner:hover {\r\n    border-color: #445cb3;\r\n}\r\n\r\n.el-switch.is-checked .el-switch__core {\r\n    border-color: #0fbb0f;\r\n    background-color: #0fbb0f;\r\n}\r\n/*\r\n * @desc joblist样式\r\n */\r\n#candidatejoblist .job_search {\r\n    margin-top: 1.2rem;\r\n}\r\n#candidatejoblist .job_filter {\r\n    margin-bottom: 0.36rem;\r\n    background-color: #f0f0f0;\r\n    border-bottom: solid 1px #e2e2e1;\r\n}\r\n#candidatejoblist .job_filter .job_filter_top {\r\n    padding: 0.12rem 0.45rem;\r\n    border-bottom: solid 1px #e2e2e1;\r\n}\r\n#candidatejoblist .job_filter .job_filter_main {\r\n    padding: 0.12rem 0.45rem;\r\n}\r\n#candidatejoblist .job_filter .job_filter_main ul li {\r\n    float: left;\r\n    margin-right: 0.15rem;\r\n    font-family: \"PingFang TC\" ,\"\\5137\\9ED1   Pro\", \"Microsoft JhengHei\", \"\\5FAE\\8EDF\\6B63\\9ED1\\9AD4\", STHeiti,\"Heiti TC Medium\", Apple LiGothic, Helvetica, Helvetica Neue, Arial,\"PMingLiu\", \"\\65B0\\7D30\\660E\\9AD4\";\r\n    line-height: 0.4rem;\r\n    font-size: 0.18rem;\r\n    color: #264a61;\r\n}\r\n\r\n#candidatejoblist .job_filter .job_filter_main ul li .filter_title {\r\n    margin-right: 0.05rem;\r\n}\r\n\r\n#candidatejoblist .job_filter .job_filter_main ul li .filter_select select {\r\n    width: 2rem;\r\n    height: 0.4rem;\r\n    outline: 0;\r\n    background-color: #ffffff;\r\n    border: solid 1px #e2e2e1;\r\n}\r\n\r\n#candidatejoblist .job_filter .job_filter_main>.pull-right {\r\n    padding-top: 0.1rem;\r\n    font-size: 0.18rem;\r\n    color: #95989a;\r\n}\r\n\r\n#candidatejoblist .job_filter .job_filter_main>.pull-right .page-count {\r\n    margin: 0 0.2rem;\r\n}\r\n\r\n#candidatejoblist .job_filter .job_filter_main>.pull-right .page-count>.current_page {\r\n    font-weight: 900;\r\n    color: #264a61;\r\n}\r\n\r\n#candidatejoblist .job_filter .job_filter_main>.pull-right .nextAndPrev {\r\n    color: #264a61;\r\n    cursor: pointer;\r\n}\r\n\r\n#candidatejoblist .job_display .profile_left {\r\n    position: relative;\r\n}\r\n\r\n#candidatejoblist .job_display .profile_left .job_list_tab {\r\n    width: 100%;\r\n}\r\n\r\n#candidatejoblist .job_display .profile_left .job_list_tab>ul {\r\n    border  : solid 1px #e2e2e1;\r\n}\r\n#candidatejoblist .job_display .profile_left .job_list_tab>ul .job_tab_item {\r\n    float: left;\r\n    width: 25%;\r\n    padding: 0.16rem 0.1rem;\r\n     height: 0.6rem; \r\n    /* line-height: 0.6rem; */\r\n    font-size: 0.18rem;\r\n    text-align: center;\r\n    position: relative;\r\n    white-space:nowrap;\r\n    overflow:hidden;\r\n    text-overflow:ellipsis;\r\n}\r\n#candidatejoblist .job_display .profile_left .job_list_tab>ul .job_tab_item+.job_tab_item {\r\n    cursor: pointer;\r\n    border-left: solid 1px #e2e2e1;\r\n}\r\n#candidatejoblist .job_display .profile_left .job_list_tab>ul .job_tab_item>img {\r\n    width: 0.25rem;\r\n    height: 0.25rem;\r\n    cursor: pointer;\r\n    margin-right: 0.1rem;\r\n    vertical-align: middle;\r\n}\r\n#candidatejoblist .job_display .profile_left .job_list_tab>ul .job_tab_item:hover {\r\n    background-color: #e2e2e1;\r\n}\r\n#candidatejoblist .job_display .profile_left .job_list_tab>ul .job_tab_item.active {\r\n    background-color: #9cc4e0;\r\n}\r\n#candidatejoblist .job_display .profile_left .job_list_tab>ul .job_tab_item>a {\r\n    font-size: 0.18rem;\r\n    color: #264a61;\r\n}\r\n#candidatejoblist .job_display .profile_left .job_list_tab>ul .job_tab_item>a,span{\r\n    vertical-align: middle;\r\n}\r\n#candidatejoblist .job_display .profile_left .job_list_tab>ul .job_tab_item:nth-chlid(2)>a {\r\n    vertical-align: top;\r\n}\r\n\r\n#candidatejoblist .job_display .profile_left .job_list_tab>ul .job_tab_item>.icon-arrow {\r\n    font-size: 12px;\r\n    cursor: pointer;\r\n}\r\n#candidatejoblist .job_display .profile_left .job_list_tab>ul .job_tab_item>.icon-heart {\r\n    font-size: 0.25rem;\r\n    padding-top: 0.02rem;\r\n}\r\n#candidatejoblist .job_display .profile_left .job_list_tab>ul .detailJobTitle {\r\n    width: 24%;\r\n    position: absolute;\r\n    top: 0.6rem;\r\n    background: #fff;\r\n    border: 1px solid #e2e2e1;\r\n    z-index: 50;\r\n}\r\n#candidatejoblist .job_display .profile_left .job_list_tab>ul .detailJobTitle ul li {\r\n    white-space: nowrap;\r\n    overflow: hidden;\r\n    text-overflow: ellipsis;\r\n    padding: 0 0.2rem;\r\n    height: 0.6rem;\r\n    line-height: 0.6rem;\r\n    cursor: pointer;\r\n}\r\n#candidatejoblist .job_display .profile_left .job_list_tab>ul .detailJobTitle ul li+li {\r\n    border-top: solid 1px #e2e2e1;\r\n}\r\n\r\n#candidatejoblist .job_display .profile_left .job_list_tab>ul .detailJobTitle ul li:hover {\r\n    background-color: #9cc4e0;\r\n}\r\n\r\n#candidatejoblist .job_display .profile_left .job_list_content {\r\n    width: 100%;\r\n    /* margin-bottom: 0.35rem; */\r\n}\r\n\r\n#candidatejoblist .job_display .profile_left .job_list_content .job_list_item {\r\n    border-bottom: solid 1px #e2e2e1;\r\n    width: 100%;\r\n    margin-bottom: 0.1rem;\r\n    padding: 0.18rem 0.1rem 0.16rem 0.48rem;\r\n}\r\n#candidatejoblist .job_display .profile_left .job_list_content .job_list_item:last-child {\r\n    margin-bottom:0;\r\n}\r\n#candidatejoblist .job_display .profile_left .job_list_content .job_list_item .item_pics {\r\n    margin-right: 0.2rem;\r\n    max-width: 140px;\r\n    height: 100%;\r\n}\r\n\r\n#candidatejoblist .job_list_content .job_list_item .item_pics>.imgBox {\r\n    display: block;\r\n    width: 1.4rem;\r\n    height: 1.4rem;\r\n    border: solid 1px #e2e2e1;\r\n}\r\n\r\n#candidatejoblist .job_list_content .job_list_item .item_pics img {\r\n    width: 1.4rem;\r\n    height: 1.4rem;\r\n}\r\n\r\n#candidatejoblist .job_list_content .job_list_item .item_info {\r\n    padding: 0;\r\n}\r\n\r\n#candidatejoblist .job_list_content .job_list_item .item_info .item_info_top {\r\n    width: 100%;\r\n    margin-bottom: 0.1rem;\r\n}\r\n#candidatejoblist .item_info .item_info_top .col-md-8 {\r\n    padding-left: 0;\r\n}\r\n#candidatejoblist .employer_info {\r\n    padding: 0;\r\n}\r\n#candidatejoblist .item_info_top .top_title {\r\n    overflow: hidden;\r\n    white-space: nowrap;\r\n    text-overflow: ellipsis;\r\n}\r\n#candidatejoblist .item_info_top .top_title>.job_title {\r\n    max-width: 60%;\r\n    display: inline-block;\r\n    overflow: hidden;\r\n    white-space: nowrap;\r\n    text-overflow: ellipsis;\r\n    vertical-align: middle;\r\n    margin-right: 0.18rem;\r\n    font-size: 0.21rem;\r\n    font-weight: 900;\r\n    color: #2e344b;\r\n    padding-right: 0.1rem;\r\n}\r\n#candidatejoblist .item_info_top .job_date {\r\n    font-size: 0.21rem;\r\n    font-weight: 900;\r\n    color: #95989a;\r\n    line-height: 0.35rem;\r\n    vertical-align: middle;\r\n}\r\n\r\n#candidatejoblist .item_info .item_info_top .require_salary {\r\n    font-size: 0.21rem;\r\n    font-weight: 900;\r\n    color: #7e7e7e;\r\n}\r\n#candidatejoblist .item_info .require_year {\r\n    font-size: 14px;\r\n    color: #7e7e7e;\r\n}\r\n#candidatejoblist .item_info .item_info_bottom .info_skill_item {\r\n    cursor: pointer;\r\n    padding: 2px 5px;\r\n    border-radius: 3px;\r\n    border: solid 1px #4e55a0;\r\n    margin-right: 0.05rem;\r\n}\r\n#candidatejoblist .job_display>.profile_left .block {\r\n    margin-bottom: 0.6rem;\r\n    position: absolute;\r\n    left: 50%;\r\n    transform: translateX(-50%);\r\n}\r\n\r\n.background_upload_after {\r\n    padding-right: 0.3rem;\r\n    background: #2e344b;\r\n    border-radius: 17px;\r\n    color: #fff;\r\n    border: none;\r\n    font-weight: bold;\r\n}\r\n\r\n.icon-clip {\r\n    font-size: 0.21rem;\r\n    margin-left: 0.14rem;\r\n}\r\n\r\n.new_resume_count {\r\n    display: inline-block;\r\n    position: absolute;\r\n    top: -0.12rem;\r\n    right: -0.12rem;\r\n    width: 0.2rem;\r\n    height: 0.2rem;\r\n    background: #ff3333;\r\n    border-radius: 50%;\r\n    font-size: 10px;\r\n    color: #fff;\r\n    font-weight: normal;\r\n}\r\n\r\n.loginAndSignUp {\r\n    padding: 1.28rem 0 1.53rem;\r\n    background-color: #e2e2e1;\r\n    box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.35);\r\n}\r\n@media screen and (min-width: 768px){}\r\n.carousel-indicators {\r\n    top: 34%;\r\n}\r\n.carousel-indicators {\r\n    top: 34%;\r\n    left: 50%;\r\n    width: auto;\r\n    margin-left: 0;\r\n    height: 20px;\r\n}\r\n#carousle_pic .main{ width:100%; margin:0 auto;}\r\n.mod18{position:relative;background: #000;}\r\n.mod18 .btn{position:absolute;cursor:pointer;z-index:99;font-size:0.36rem;font-weight:bold;}\r\n.mod18 .prev{left:0.1rem;}\r\n.mod18 #prevTop,.mod18 #nextTop{top:32%;height:48px;color: #fff;}\r\n.mod18 #prev,.mod18 #next{top: 88%;font-size: 0.22rem;color: #fff;}\r\n.mod18 .next{right:0.1rem;}\r\n.mod18 li{float: left;}\r\n.mod18 .cf li{position:relative;color:#fff;}\r\n.mod18 .cf a{display:block;width:526px;height:377px;position:absolute;color:#fff;text-align: center;}\r\n.mod18 .cf li span{display:block;width:100%;position:absolute;left:0;bottom:20px;padding:10px 20px;line-height:22px;text-align:left;background:rgba(0,0,0,0.6);}\r\n.mod18 .picBox{ width:526px; height:394px; padding-left:75px; padding-right:76px;position:relative;overflow:hidden; background:#0D0D0D;margin: 0 auto;}\r\n.mod18 .picBox ul{height:377px;position:absolute; left:0;}\r\n.mod18 .picBox li{padding-right:1px; width:526px;height:377px;}\r\n.mod18 .listBox{height:100px;margin:0 auto;position:relative; padding-top:15px;overflow:hidden;}\r\n.mod18 .listBox ul{height:88px;position:absolute; padding-left:12px;}\r\n.mod18 .listBox li{width:127px;height:77px;cursor:pointer;position:relative; padding:5px 0 0 0;text-align: center;}\r\n.mod18 .listBox li i{display:none;}\r\n.mod18 .listBox li a{display:block;width:108px;height:77px;}\r\n.mod18 .listBox img{border:3px solid #fff;opacity: 0.6}\r\n.mod18 .listBox .on img{opacity:1}\r\n.mod18 .listBox .on { opacity:1;background: rgba(0,0,0,0.2);}\r\n.mod18 .listBox .on i{display:block;}\r\n.el-pagination>.btn-prev, .el-pagination>.btn-next {border: 1px solid #d9d9d9;border-radius: 2px;min-width: 36px;height: 35px;line-height: 35px;color: #333333;}\r\n.article_h3_title{padding:6px 8px 24px 14px !important;border-left: 5px solid #445cb3;font-size:18.5px;font-weight: 600;text-align: left;color: #000000;height: 0.3rem;font-family:\"PingFang TC\" ,\"\\5137\\9ED1   Pro\", \"Microsoft JhengHei\", \"\\5FAE\\8EDF\\6B63\\9ED1\\9AD4\", STHeiti,\"Heiti TC Medium\", Apple LiGothic, Helvetica, Helvetica Neue, Arial,\"PMingLiu\", \"\\65B0\\7D30\\660E\\9AD4\";}\r\n.multiSelectStyle ul{height:276px;overflow: auto;margin-right: 4%;padding-left: 0;}\r\nspan.quote_capital{text-transform: capitalize;font-size:0.22rem;letter-spacing:-1px;vertical-align: baseline;}\r\nspan.quote_en_last{font-size: 14px;}\r\nspan.quote_cn{font-size: 32px;vertical-align: sub;}\r\nspan.quote_cn_last{font-size: 15px;font-family: PingFangTC;}\r\nspan.author_cn{font-size: 14px;}\r\n.status_active{color:#24bd1e;}\r\n.status_deactive{color:#ca001d;}\r\n.status_expired{color: #96999b}\r\n.job_listings_all{\r\n    line-height: 0.4rem;\r\n    background: #2e344b;\r\n    padding: 0.14rem 0.16rem 0.14rem 0.27rem;\r\n    border-top-left-radius:4px;\r\n    border-top-right-radius:4px;\r\n    font-size: 16px;\r\n    font-weight:600;\r\n    color: #fff;\r\n}\r\n.employer_job_lists_header{padding: 0.13rem 0.3rem 0.15rem 0.26rem;background-color: #2e344b;border-top-left-radius: 4px;border-top-right-radius: 4px;line-height: 200%}\r\n.employer_job_lists_header h3{padding-top: 13px;font-size: 13.9px;font-weight: 600;text-align: left;color: #fff;}\r\n.buy_job{display: inline-block;padding: 10px 0.38rem;margin-right:0.2rem;border-radius: 4px;background-color: #3c9ccf;}\r\n.icon-shopping_cart{font-size: 16px;padding-right:0.12rem;}\r\n.add_job_title{font-size: 16px !important;letter-spacing:0;font-family:\"PingFang TC\" ,\"\\5137\\9ED1   Pro\", \"Microsoft JhengHei\", \"\\5FAE\\8EDF\\6B63\\9ED1\\9AD4\", STHeiti,\"Heiti TC Medium\", Apple LiGothic, Helvetica, Helvetica Neue, Arial,\"PMingLiu\", \"\\65B0\\7D30\\660E\\9AD4\";}\r\n#select_job_list{width:2.93rem;border-radius: 10px;padding: 0.12rem 0.16rem;font-size: 0.2rem;border:none;margin-left:0.2rem;}\r\n.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {background-color: #fff;opacity: 1;}\r\n.itCanClick{cursor:pointer;}\r\n.select_file_mask input{font-size: 14px;}\r\n.none_pic_display{height: 106px;padding:0 27px; line-height:106px;background-color: #ffffff;border:dashed 2px #95a3bf;display: inline-block;color: #2e344b;font-size: 15px;text-align: center;cursor: pointer;}\r\n.mt25{margin-top: 0.25rem !important}\r\n.mt2px{margin:2px 0 !important;}\r\n.minw12{min-width:12em;display: inline-block;}\r\n.ml_employer_profile_drop_down,.function_employer_profile_drop_down{padding-left: 0.22rem}\r\n.jobList_drop_down span{padding: 0.16rem 0 0.12rem 0.24rem !important;}\r\n.jobList_drop_down li:hover{background-color: rgba(45,52,75,0.1);}\r\n.shadow_box{position:fixed;top:0;left:0;z-index:999999;width:100%;height:100%;background:rgba(0, 0, 0, 0.33);}\r\n.shadow_content{width:115px;height:125px;padding-top:20px;background:#fff;position:fixed;top:40%;left:50%;transform:translate(-50%,-50%);text-align:center;font-size:30px;color: #4e55a0;z-index:9999999;border-radius: 3px;}\r\n.el-icon-loading{position:static;font-size:0.54rem;}\r\n.shadow_loading{font-size:13px;}\r\ninput,button,a {outline:0 none !important;}\r\n.error_tips{display: none; position: fixed;bottom: 0;left: 0;padding:10px 0; background: #ca001d;width: 100%;text-align: center;color: #fff;}\r\n.left-enter-active, .left-leave-active,.left-enter,.left-leave {-webkit-transition: all .5s;transform: translateY(0px);}\r\n.left-enter, .left-leave-active {opacity: 0;transform: translateY(10px);}\r\n.account_info_wrap{width:4.24rem;position: absolute;top:40%;left:38%;padding:23px 26px 30px; border-radius: 3px;background-color: #ffffff;box-shadow: 0px 5px 8px 0 rgba(0, 0, 0, 0.33);z-index: 9999;text-align: center;font-weight: normal;}\r\n.account_info{text-align: center;padding: 0.4rem 0 0.6rem;font-size: 0.162rem;line-height: 2.18;color: #000000;}\r\n.back_to_page_style,.back_to_page_style:hover{width:80%;min-width:80%;border-radius: 6px;background-color: #445cb3;border:none;font-family: PingFangHK;font-size:15px;letter-spacing: 0.8px;text-align: center;color: #ffffff;padding:0.13rem 0;font-weight: normal !important;}\r\n#close_ssl{display: none;}\r\n.employer_register_right_ad{font-size: 21.8px !important;text-align: center;display: inline-block;width: 100%;}\r\nSUP{font-weight: bold;}\r\n.employer_register_right_ad_font{font-size: 16px !important;}\r\n\r\n/** Edit By AHA Technocrats :::: Date 13/10/2017 **/\r\n.header_logo, .header_tab, .header_login, .header_login_left, .header_login_right, .btn_top, \r\n.dropdown-toggle-drop, .employer_job_lists_header .add_job_title, .search_hotwords.less_item ul li,\r\n.company_logo_wrap, .add_img_company, .company_left, .jobinfo_header{ float: left; }\r\n\r\n.header_psninfo, .header_lang, .job_listings_search_jobtitle, .free_trail, \r\n.employer_job_lists_header .credits_no, .employer_job_lists_header .buy_job_btn, \r\n.select_file_mask, .add_employer_profile_wrap, .right_align, .employer_setting{ float: right; }\r\n\r\n\r\n.employer_setting_item_content .icon-radio:before,\r\n.employer_setting_item_content .icon-radio-selected:before{ top: 1px; position: relative;  font-weight: normal!important; }\r\n.employer_setting_item_content .icon-radio,\r\n.employer_setting_item_content .icon-radio-selected{ display: inline-block; margin-left: 10px;  font-weight: 600;}\r\n.employer_setting_item_content .opnCoz{ display: inline-block; padding-right: 5px; padding-left: 5px;font-family:\"PingFang TC\" ,\"\\5137\\9ED1   Pro\", \"Microsoft JhengHei\", \"\\5FAE\\8EDF\\6B63\\9ED1\\9AD4\", STHeiti,\"Heiti TC Medium\", Apple LiGothic, Helvetica, Helvetica Neue, Arial,\"PMingLiu\", \"\\65B0\\7D30\\660E\\9AD4\"!important;}\r\n\r\n#profile.row{ margin-right: 0 !important; margin-left: 0 !important;}\r\n.hot_wrap.row{margin-right: 0 !important; margin-left: 0 !important;}\r\n#footer .about_us div.footer-links span.devider{ width: 12px; display: inline-block; vertical-align: top!important; text-align: center; }\r\n.setting_change.drop_down .dropArrow{ display: none; }\r\n.tab_main_position.drop_down .dropArrow{ display: none; }\r\n.closeMenu{ display: none; }\r\n.cv_box .body_item_btn.have_cv{font-size: 16px; letter-spacing: 0.4px; border-radius: 50px; display:block!important;}\r\n\r\n::-webkit-input-placeholder{ font-size: 16px!important;}\r\n::-moz-placeholder { font-size: 16px!important;}\r\n:-ms-input-placeholder { font-size: 16px!important;}\r\n:-moz-placeholder { font-size: 16px!important;}\r\n\r\n@media(max-width:767px){\r\n/* add account user mobile */\r\n.profile_left{padding-left: 15px !important;}\r\n.account_send_invite_btn{width: 100%!important;margin:38px 0 1.15rem 0!important;border-radius: 20px!important;} \r\n.account_invite_email{width:100%!important;}\r\n.account_listings_item_content{padding: 24px 16px!important;}\r\n.pagination>li>a, .pagination>li>span {margin: 0px 2px !important;}\r\n.header_tab .container-fluid > .navbar-collapse .navbar-nav[data-v-0fe90b04] {\r\n    margin-left: 0px !important;\r\n}\r\n.header_logo { padding-top: 0 !important; }\r\n.header_logo > img{width: 70px !important; margin-top: 17px;}\r\n.header_tab{position: absolute; width: 100% !important; padding:0 !important;  left: 0; right: 0; top: 0; z-index: 9999; }\r\n.header_tab .navbar-default{background:none !important; min-height: inherit !important; }\r\n.header_tab .navbar-default .navbar-collapse{ background: #FFFFFF; padding-right: 0 !important; padding-left: 0!important; border-top:none!important;}\r\n.header_tab .navbar-default .navbar-collapse .navbar-nav{ margin: 0; border-bottom: solid 1px #eaeaed; padding-top:80px; }\r\n.header_tab .container-fluid{padding-right: 15px !important; padding-left: 15px !important;}\r\n.header_tab .container-fluid > .navbar-collapse .navbar-nav > li{ margin-right: 0px !important; }\r\n.header_tab .container-fluid > .navbar-collapse .navbar-nav > li > a{ padding-left: 40px !important; font-size: 18px!important; padding-top:12px!important; padding-bottom:12px!important;  text-align: left !important; height: auto !important; border-bottom:none; /*border-left: solid 4px transparent;*/}\r\n.header_tab .container-fluid > .navbar-collapse .navbar-nav > li > a:hover{color:#323232; background: #eaeaed; border-bottom: none !important; position: relative;}\r\n.header_tab .container-fluid > .navbar-collapse .navbar-nav > li > a:hover:before{ position: absolute; left:0px; height: 78%; top:5px; bottom: 5px; content: \"\";  background: #2e344b; width: 4px;}\r\n.header_tab .container-fluid > .navbar-collapse .navbar-nav > li.active > a.router-link-exact-active.router-link-active:before{ position: absolute; left:0px; height: 78%; top:5px; bottom: 5px; content: \"\";  background: #2e344b; width: 4px;}\r\n.header_tab .container-fluid > .navbar-collapse .navbar-nav > li.active > a.router-link-exact-active.router-link-active{color:#323232; background: #eaeaed; border-bottom: none !important; position: relative;}\r\n\r\n.header_tab .navbar{min-height:inherit !important;   margin-bottom:0;  }\r\n.navbar-header{ float: left; }\r\n.navbar-header .navbar-toggle{ margin-right: 0 !important; }\r\n.navbar-toggle .icon-bar{ background: #445cb3;}\r\n.header_psninfo > .header_login{ padding-top: 5px !important; }\r\n.header_login_right a, .header_login_right span{ font-size: 12px !important;}\r\n\r\n.login_already_header{ display: none; }\r\n.btn_top{ width:7rem; padding: 8px 0; }\r\n.btn_top li{ width:50%; margin-left: 0!important; }\r\n.btn_top li a p span{ display: none !important; font-size: 14px !important; }\r\n\r\n.search_btn{ width: 90%; background:none !important; float: left; z-index: 99;}\r\n.search_bar .open_more_item{ padding:16px 0.24rem !important;  }\r\n.search_btn > .search_input{width: 100% !important; border-radius: 5px; padding: 15px!important}\r\n.search_btn > .search_input .glyphicon.glyphicon-search{font-size: 16px !important; right: 15px!important;}\r\n.open_more_words span:first-child{display: none;}\r\n.open_more_words .glyphicon{ padding-left: 12px; }\r\n.search_location.search_item{ display: none; }\r\n.search_hotwords.less_item{ padding: 20px 0.04rem 0.04rem 0.04rem !important; }\r\n.search_hotwords.less_item ul li{ line-height:1;}\r\n.about_us{ padding-left: 15px!important; padding-right: 15px!important;}\r\n.about_us.paddNone{ padding-left: 0px!important; padding-right: 0px!important;}\r\n.about_us_item{margin-top: 30px !important;}\r\n.more_search_wrap{ z-index: 1; }\r\n.job_title_drop_down{ width: 100% !important; }\r\n\r\n.class_header{ padding-right: 0; }\r\n.class_header .class_inner{ box-shadow: 0px 1px 2px 1px #ccc; border-radius:  3px; overflow: hidden; margin-bottom: 15px;}\r\n.class_header .class_inner .class_header_tab .industry_tab{width: 50%;text-align: center;}\r\n.class_content{padding: 20px !important;}\r\n/* .class_content.class_content_spec{ display: none; }\r\n.company_info_main{ height: auto; margin-top: 15px!important; }\r\n.company_info_main:last-child{margin-bottom: 15px!important; }\r\n.company_info_main .company_left{ margin-top: 5px!important; } */\r\n.el-pagination > .el-pager > li{ font-size: 13px!important; }\r\n\r\n\r\n.hot_wrap{ padding-right: 0 !important; margin-bottom: 15px;}\r\n.hot_wrap.row{padding-right: 0 !important; padding-left: 0 !important;}\r\n.hot_wrap h3.article_h3_title, .article_h3_title, .job_header{ font-size: 19px; height: auto; padding:3px 10px 3px 10px !important;}\r\n.job_header{ margin-top: 20px; }\r\n.article_list_mobile_wrap{display: flex !important;margin-bottom: 14px !important;}\r\n.article_list_mobile_wrap .article_list_img{flex:1;}\r\n.article_list_mobile_wrap .article_right{flex: 1.5 !important;margin-left: 16px;}\r\n.homepage .hot_wrap.row{margin-right: -15px !important; margin-left: -15px!important; padding-left: 15px !important; padding-right: 15px !important;}\r\n\r\n.article_list_img{display: block !important; text-align: center;}\r\n.article_list_wrap .article_list_img{margin-right: 20px;width: 100px;}\r\n.article_right{flex:none;}\r\n.article_right_first{ padding:0 !important; }\r\n.article_list_img_bottom img{height:auto !important;}\r\n.article_list_title{ font-size: 14px !important; }\r\n.article_title_in_img, .article_list_img_bottom{font-size: 14px !important;}\r\n.article_list_img img, .article_list_img_bottom img,.article_list_img_first{ max-height: inherit !important; width: 100% !important; margin-bottom: 10px;}\r\n.article_list_time{font-size: 14px !important;}\r\n\r\n\r\n/*.hot_content_style{ padding-right: 15px !important; padding-left: 15px !important; }*/\r\n/*#profile{ margin-right: 0!important; margin-left: 0!important; }*/\r\n/* .profile_right { display: none; } */\r\n.profile_right.col-md-4{ padding-right: 15px !important; }\r\n#profile .profile_main > .profile_right{padding-left: 10px !important; }\r\n.profile_right_content{ width: auto !important; }\r\n.facebook{ text-align: center; margin-bottom: 15px !important;}\r\n.facebook .fb_iframe_widget span{ width: 270px!important; }\r\n.facebook .fb_iframe_widget span iframe{width: 100%!important; }\r\n.download_box{width: 100% !important;}\r\n.download_box .top_box .word_position{font-size: 14px !important; left: 25% !important;}\r\n/* .superior_company_wrap{margin-top: 50px !important; margin-bottom: 15px;} */\r\n.superior_company_wrap.marginNone{ margin-top: 0!important;}\r\n.superior_company_wrap.marginNone .superior_company_content ul li{ margin-top: 0!important; }\r\n.superior_company_title{font-size:14px!important;height: auto!important; text-align: left !important; padding: 5px 10px;}\r\n.superior_company_content ul li{padding-top: 10px;height:auto!important;text-align:center!important;}\r\n.superior_company_content ul li:last-child{padding-bottom: 15px !important;}\r\n.superior_company_content ul li img{ height: 35px !important; }\r\n.superior_company_content ul li.paddNone{padding-bottom: 15px !important;}\r\n.superior_company_wrap.marginNone .superior_company_content ul li:last-child{padding-bottom: 0px !important;}\r\n\r\n/*.superior_company_content ul{ margin-right: -15px; margin-left:-15px;  }*/\r\n.quote_wrap{ margin: 5px auto 15px auto !important;}\r\n.el-pagination {white-space:pre-line !important; padding: 10px 5px 5px 5px !important;}\r\n\r\n.loginIn .login_title { font-size: 14px!important; line-height: normal !important; color: #000000; font-weight: 600!important;}\r\n.login_content{ padding: 20px 10px !important;margin-left: -5px; width: 86.5%; border-radius: 4px; }\r\n.login_content .login_account{padding: 15px 5px !important; margin: 0!important;}\r\n.login_account .input_wrap{ margin: 15px auto 0px auto; }\r\n.icon-check_box, .icon-check_box_outline_blank{ font-size:28px !important; position: relative; top: 7px;}\r\n.logo_all_same{ width: 45px; margin-bottom: 20px!important;}\r\n.remove_logo_all_same_style{width: auto;margin-bottom:0!important;}\r\n.icon_cancel_mobile_style{margin-top: -1.2rem!important;margin-right: 10px!important;}\r\n\r\n.status, .skip_title, .resetpassword_title, \r\n.skip_submit, .resetpassword_submit, \r\n.login_submit, .signup_submit, .login_account input{font-size: 14px!important; font-weight: 600;}\r\n\r\n\r\n.status::-webkit-input-placeholder{color: #848484!important;}\r\n.status::-moz-placeholder{color: #848484!important;}\r\n.status:-ms-input-placeholder{color: #848484!important;}\r\n.status:-moz-placeholder{color: #848484!important;}\r\n.skip_title::-webkit-input-placeholder{color: #848484!important;}\r\n.skip_title::-moz-placeholder{color: #848484!important;}\r\n.skip_title:-ms-input-placeholder{color: #848484!important;}\r\n.skip_title:-moz-placeholder{color: #848484!important;}\r\n.resetpassword_title::-moz-placeholder{color: #848484!important;}\r\n.resetpassword_title::-webkit-input-placeholder{color: #848484!important;}\r\n.resetpassword_title:-ms-input-placeholder{color: #848484!important;}\r\n.resetpassword_title:-moz-placeholder{color: #848484!important;} \r\n.skip_submit::-webkit-input-placeholder{color: #848484!important;}\r\n.skip_submit::-moz-placeholder{color: #848484!important;}\r\n.skip_submit:-ms-input-placeholder{color: #848484!important;}\r\n.skip_submit:-moz-placeholder{color: #848484!important;}\r\n.resetpassword_submit::-webkit-input-placeholder{color: #848484!important;}\r\n.resetpassword_submit::-moz-placeholder{color: #848484!important;}\r\n.resetpassword_submit:-ms-input-placeholder{color: #848484!important;}\r\n.resetpassword_submit:-moz-placeholder{color: #848484!important;} \r\n.login_submit::-webkit-input-placeholder{color: #848484!important;}\r\n.login_submit::-moz-placeholder{color: #848484!important;}\r\n.login_submit:-ms-input-placeholder{color: #848484!important;}\r\n.login_submit:-ms-input-placeholder{color: #848484!important;}\r\n.signup_submit:-moz-placeholder{color: #848484!important;}\r\n.form-control::-webkit-input-placeholder{color: #848484!important;}\r\n.form-control::-moz-placeholder{color: #848484!important;}\r\n.form-control:-ms-input-placeholder{color: #848484!important;}\r\n.form-control:-moz-placeholder{color: #848484!important;} \r\n.login_account input::-webkit-input-placeholder{color: #848484!important;}\r\n.login_account input::-moz-placeholder{color: #848484!important;}\r\n.login_account input:-ms-input-placeholder{color: #848484!important;}\r\n.login_account input:-moz-placeholder{color: #848484!important;}\r\n.profile_info_content.invite_user .account_listings_item_content input.account_invite_email::-webkit-input-placeholder{color: #2a3043!important;}\r\n.profile_info_content.invite_user .account_listings_item_content input.account_invite_email::-moz-placeholder{color: #2a3043!important;}\r\n.profile_info_content.invite_user .account_listings_item_content input.account_invite_email:-ms-input-placeholder{color: #2a3043!important;}\r\n.profile_info_content.invite_user .account_listings_item_content input.account_invite_email:-moz-placeholder{color: #2a3043!important;}\r\n\r\n.loginIn .login_title .icon-mail{font-size: 12px!important; position: relative; top: 2px; margin: 0 8px 0 5px!important;}\r\n.loginIn .login_title .icon-cancel{font-size: 16px!important; position: absolute; top: 4%; right: 0%; font-weight: bold!important; margin-top:0!important; color: #a2a2a3;margin-right: 22px;}\r\n.remember_account{font-size: 16px!important; font-weight: bold !important; padding:5px 0!important;}\r\n.resetPassword{font-size: 14px!important; font-weight: bold !important; padding:5px 0!important; color: #737373!important;}\r\n.signup_entrance{font-size: 14px!important; margin-top: 50px; }\r\n.loginAndSignUp .remember_account, .loginAndSignUp .resetPassword{ padding:0px 0!important;}\r\n.clear_margin_bottom{ margin-bottom: 0 !important; }\r\n.login_account .login_submit, .login_account .signup_submit{ padding: 15px 10px !important; padding-left: 0; margin-top: 30px; border-radius: 6px!important; width: 100%!important;}\r\n\r\n.signup .signup_title {font-size: 13px!important; line-height: normal !important; color: #000000!important; font-weight: 600!important;}\r\n.signup_content{ padding: 20px 10px !important; margin-left: -5px; width: 86.5%; border-radius: 4px;  }\r\n.signup_account { margin: 15px 5px !important; }\r\n.signup .signup_title .icon-cancel{font-size: 16px!important; position: absolute; top: 50%; right: 10px;transform:translateY(-50%); font-weight: bold!important; margin-top:0!important; color: #a2a2a3;}\r\n.signup_content .change_candidate_employer h3{font-size: 18px!important; color: #000000!important;}\r\n.signup .signup_title .icon-mail{font-size: 12px!important; position: relative; top: 2px; margin: 0 8px 0 5px!important;}\r\n.signup_account .input_wrap{ margin: 10px auto 0px auto !important;}\r\n.signup .agree_policy{font-size: 12px!important;}\r\n.signup .signup_account .signup_submit{ padding: 10px 10px !important; padding-left: 0; margin-top: 30px;}\r\n\r\n.search_left{ padding-left: 15px!important; }\r\n.search_item li{ max-width: 100% !important; line-height: 16px;}\r\n.search_item li .icon-cancel::before{ font-size: 10px!important; }\r\n.search_item li span{margin-top: 0px;}\r\n.search_item.search_item_result{ margin: 15px 0 15px 15px!important; }\r\n.search_item.search_item_result li{border-radius: 50px!important;}\r\n.search_item.search_item_result li .icon-cancel{line-height: 1px;}\r\n.search_data_display.search_data_display ul{ max-height: inherit!important; height:auto!important; margin-right: 0!important;}\r\n.search_data_display.search_data_display li{padding: 12px 10px 0px 40px !important;}\r\n.search_data_display.locatoin_area li.location_block_style{padding: 12px 10px 12px 40px !important;}\r\n.search_data_display.search_data_display li.location_block_style{ margin-left: 0!important;}\r\n.search_data_display.multiSelectStyle li.location_block_style:last-child{border-bottom: none!important;}\r\n\r\n.search_btn .search_data_display li .glyphicon-triangle-bottom, \r\n.search_btn .search_data_display li .glyphicon-triangle-top{top: 22px!important;}\r\n\r\n/*.location_border_style.sectorStr.third-drop ul li span{ font-size: 14px!important }*/\r\n\r\n.location_border_style{margin-top: 10px; padding: 0px!important;}\r\n\r\n.profile_left{ padding-right: 10px!important; padding-left: 10px!important; }\r\n.boxshadow{ box-shadow: 0px 1px 2px 1px #ccc; border-radius:  3px; background-color: #ffffff;}\r\n.vue-map-container{ width: 90% !important; margin-bottom: 15px; margin-left: 15px;}\r\n\r\n.employer_job_lists{ margin-left: 0!important; }\r\n.employer_job_lists_header, .job_listings_all{ padding: 15px 15px !important; }\r\n.employer_job_lists_header.employer_job_lists_padd{ padding: 8px 15px !important;}\r\n.employer_job_lists_header.employer_job_lists_padd.pddLR{ padding-left:5px!important; padding-right:5px!important;}\r\n.employer_job_lists_header h3{ margin-right: 0; padding: 8px 10px; }\r\n.employer_job_lists_header h3.add_job_title{ font-size: 14px !important; }\r\n.select_job_list input{ width: 80%; }\r\n.job_listings_all{line-height: 26px; font-size: 14px;}\r\n\r\n\r\n.job_listings_all.offline_job{ line-height: 18px;}\r\n.offline_shadow.profile_info{box-shadow: 0px 1px 2px 1px #ccc; border-radius:  3px;}\r\n\r\n.profile_info .job_listings_info.offline_text{ padding: 15px 10px 40px 10px; }\r\n.profile_info .job_listings_info.offline_text .text{ color: #00000a!important; font-weight: 600; font-size: 14px !important; line-height: 18px; font-family:\"PingFang TC\" ,\"\\5137\\9ED1   Pro\", \"Microsoft JhengHei\", \"\\5FAE\\8EDF\\6B63\\9ED1\\9AD4\", STHeiti,\"Heiti TC Medium\", Apple LiGothic, Helvetica, Helvetica Neue, Arial,\"PMingLiu\", \"\\65B0\\7D30\\660E\\9AD4\"!important;}\r\n.profile_info .job_listings_info.offline_text .text:nth-child(2){ padding-top: 15px; padding-bottom: 15px; }\r\n\r\n.profile_info_content.invite_user .job_listings_all{ line-height: 18px;}\r\n.profile_info_content.invite_user .account_listings_item_content{padding: 15px 10px 40px 10px!important; }\r\n.profile_info_content.invite_user .account_listings_item_content p{ color: #00000a!important;  font-size: 14px!important; line-height: 18px; font-family:\"PingFang TC\" ,\"\\5137\\9ED1   Pro\", \"Microsoft JhengHei\", \"\\5FAE\\8EDF\\6B63\\9ED1\\9AD4\", STHeiti,\"Heiti TC Medium\", Apple LiGothic, Helvetica, Helvetica Neue, Arial,\"PMingLiu\", \"\\65B0\\7D30\\660E\\9AD4\"!important;}\r\n.profile_info_content.invite_user .account_listings_item_content .account_invite_email{width:100% !important; margin:30px 0!important;  padding: 10px 15px 5px 0px!important; color: #838383!important; font-size: 16px!important; line-height: 18px; font-family:\"PingFang TC\" ,\"\\5137\\9ED1   Pro\", \"Microsoft JhengHei\", \"\\5FAE\\8EDF\\6B63\\9ED1\\9AD4\", STHeiti,\"Heiti TC Medium\", Apple LiGothic, Helvetica, Helvetica Neue, Arial,\"PMingLiu\", \"\\65B0\\7D30\\660E\\9AD4\"!important;}\r\n.profile_info_content.invite_user .account_listings_item_content .account_send_invite_btn{ width:93% !important; font-weight: 600!important; margin: 20px 10px!important; font-size: 14px !important; padding: 8px !important; border-radius: 50px!important; font-family:\"PingFang TC\" ,\"\\5137\\9ED1   Pro\", \"Microsoft JhengHei\", \"\\5FAE\\8EDF\\6B63\\9ED1\\9AD4\", STHeiti,\"Heiti TC Medium\", Apple LiGothic, Helvetica, Helvetica Neue, Arial,\"PMingLiu\", \"\\65B0\\7D30\\660E\\9AD4\"!important;}\r\n.profile_info_content.invite_user .account_listings_item_content .account_send_invite_btn:hover{color: #fff!important;background: #f2770d!important;}\r\n\r\n\r\n.job_listings_all.padd{ padding: 10px 15px !important; }\r\n.job_listings_search_jobtitle.{width: 84%;}\r\n.job_listings_search_jobtitle input{ padding: 10px 5px 5px 0!important; width: 87% !important;}\r\n.post_job_entrance{margin-right: 5px;}\r\n.job_lists_head{padding: 5px 0px!important;}\r\n.job_lists_head .select_job_list{padding: 8px 15px!important;}\r\n.select_job_list .icon-arrow_drop_down, .job_listings_search_jobtitle .icon-search{ font-size: 18px!important; }\r\n.hot_job_content{margin-bottom: 15px !important; box-shadow: 0px 1px 2px 1px #ccc; border-radius:  3px;}\r\n.account_invite_entrance{ padding: 5px 5px !important; font-size: 10.9px!important;}\r\n.account_invite_entrance a{font-size: 10.9px!important;}\r\n\r\n.job_listings_item_title{line-height:18px; font-size: 13px; padding-top: 15px !important; padding-bottom: 15px !important; padding-left: 10px !important; padding-right: 10px !important;}\r\n\r\n.account_listings_item_table li:nth-child(1){ font-size: 11px !important; }\r\n.account_listings_item_table li{ padding-top: 10px !important; padding-bottom: 10px !important; padding-left: 10px !important; padding-right: 10px !important; display: block!important;}\r\n.account_listings_item_table li span:first-child{ display: inline-block; width: 70px; vertical-align: top; padding-left: 0;}\r\n.account_listings_item_table li span.name_color{padding-left: 7px;}\r\n.account_listings_item_table li span{ display: inline-block;  width: 70%; vertical-align: middle; padding-left: 80px;}\r\n\r\n.mobile_position_style{position: relative;}\r\n.account_listings_item_table li .mobile_edit_style{position: absolute;top:14px;right: 0;width: 20%;padding-left: 0;}\r\n.icon_job_edit{width:180px;}\r\n.account_listings_item_table .mobile_title_hidden{ display: none !important;}\r\n\r\n.account_info_wrap{ margin-top:5px !important; }\r\n.account_info_fixed{ font-size: 14px!important; width: 100%!important; padding-right: 10px; padding-left: 10px;}\r\n.setting_change ul a{font-size: 14px!important; padding: 18px 15px !important; width:100%; line-height: 16px; text-align: left!important; text-decoration: none; border-top: #dcddec solid 1px; font-weight: 600!important;}\r\n.setting_change ul:last-child a{border-bottom: #dcddec solid 1px;}\r\n.setting_change ul li a.active{border-bottom:0px solid #4e55a0!important; }\r\n.position_change{border-top: 4px solid #DDDEED!important; margin-top: 0px!important;}\r\n\r\n.employer_setting_item_content .no_info_notice{font-size: 13.3px !important;}\r\n.employer_setting_item_content h3{font-size: 14px!important; padding: 22px 15px 10px 15px !important; font-weight: 600!important;}\r\n.employer_setting_item_content .login_account{ margin: 0 !important;}\r\n.employer_setting_item_content a{ margin: 10px 15px 0px 15px !important; font-weight: 600!important;}\r\n.employer_setting_item_content p{ margin: 0px 15px 0px 15px !important; font-weight: 600!important;}\r\n.employer_setting_item_content p, .employer_setting_item_content a{font-size:14px !important;}\r\n.employer_change_email_btn{ width:93% !important; margin: 20px 10px!important; font-size: 14px !important; padding: 8px !important; border-radius: 50px!important;}\r\n.employer_job_lists_content ul li{  padding: 15px 10px !important; display: block!important; float: left; width: 100%;}\r\n.employer_job_lists_content ul li .icon_job_edit{top: 100%!important;right: 0!important; width: 150px!important; padding: 15px!important;}\r\n.employer_job_lists_content ul li .icon_job_edit a li,\r\n.employer_job_lists_content ul li .icon_job_edit li{ padding:8px 5px!important; font-size: 16px!important;}\r\n.employer_job_lists_content ul li p{flex: none!important; display: inline-block; vertical-align: middle; font-size: 14px!important; margin-right: -3px;}\r\n.employer_job_lists_content ul li p:nth-child(1){width: 25%!important;}\r\n.employer_job_lists_content ul li p:nth-child(2){width: 35%!important; padding-left: 5px; padding-right: 5px;}\r\n.employer_job_lists_content ul li p:nth-child(3){width: 30%!important; padding-left: 5px; padding-right: 5px;}\r\n.employer_job_lists_content ul li p:nth-child(4){width: 5%!important;}\r\n.employer_job_lists_content ul li.job_list_title p.job_title{width: 25%;}\r\n\r\n.employer_job_lists_content ul li:first-child{padding: 12px 10px !important;}\r\n.employer_job_lists_content ul li .apply_count{ position: relative; padding-left:0px!important;}\r\n.employer_job_lists_content ul li .apply_count:before{left:-10px; margin-top: 10px!important;}\r\n\r\n.employer_job_lists_content ul li .apply_count.none_apply_count{ position: relative; padding-left:0px!important;}\r\n.employer_job_lists_content ul li .apply_count.none_apply_count:before{left:-10px;}\r\n.employer_job_lists_content ul li i{ margin-right:0!important; display: block; }\r\n\r\n.employer_job_lists_content ul li p span.active_style.status_active{ line-height: 54px; }\r\n.employer_job_lists_content ul li.job_style_edit p:nth-child(1){width: 100%!important;line-height: 18px!important; }\r\n.employer_job_lists_content ul li.job_style_edit a{ display: block; margin-top: 10px; margin-bottom: 50px;}\r\n.employer_job_lists_content ul li.job_style_edit a .add_job_entrance{ margin: 15px!important; padding:10px 15px !important; max-width: 185px; width: 100%; text-align: center;}\r\n.change_email_content{ padding: 0!important; }\r\n.employer_setting_item_content{}\r\n.w_bg .employer_setting_item_content{ background:none!important; padding-bottom: 60px!important;}\r\n.boxshadow{box-shadow: 0px 1px 2px 1px #ccc; border-radius: 3px; background-color: #ffffff; overflow: hidden;}\r\n.employer_setting_item_content .forget_pwd{font-size: 14px !important; padding-bottom: 30px!important;}\r\n.setting_change_email_title{font-size: 14px !important; }\r\n\r\n.employer_setting_item_content .status, \r\n.employer_setting_item_content .skip_title, \r\n.employer_setting_item_content .resetpassword_title, \r\n.employer_setting_item_content .skip_submit, \r\n.employer_setting_item_content .resetpassword_submit, \r\n.employer_setting_item_content .login_submit, \r\n.employer_setting_item_content .signup_submit, \r\n.employer_setting_item_content .login_account input{font-size: 14px!important; font-weight: normal; padding: 22px 15px 8px 15px !important}\r\n\r\n\r\n.employer_setting_item_content  input::-webkit-input-placeholder{font-size: 14px !important;}\r\n.employer_setting_item_content  input::-moz-placeholder{font-size: 14px !important;}\r\n.employer_setting_item_content  input:-ms-input-placeholder{font-size: 14px !important;}\r\n.employer_setting_item_content  input:-moz-placeholder{font-size: 14px !important;}\r\n\r\n\r\n.change_email_content .form-control{ padding: 15px 15px !important; height: auto!important; font-size: 14px !important;}\r\n.change_email_content .login_account .input_wrap{margin:0px auto 0px auto !important;}\r\n.change_email_content.popUp{margin-top: 50px!important; padding: 20px 15px !important; border-radius: 3px;}\r\n.change_email_content.popUp .logo_all_same{margin-bottom:0px !important;}\r\n.change_email_content.popUp .login_account{margin:0px 0!important;}\r\n.change_email_content.popUp .setting_change_email_title{ margin: 0!important; text-align: center!important; padding:15px 0px 5px 0px!important;}\r\n.change_email_content.popUp .login_account .input_wrap .form-control{padding: 20px 0px 10px 0px!important;}\r\n.change_email_content.popUp .login_account .login_submit, \r\n.change_email_content.popUp .login_account .signup_submit{ padding: 10px 10px!important; margin-top: 20px!important;}\r\n.change_email_content.popUp .loginIn .login_title .icon-cancel{top: 18px!important;right: 10px!important;}\r\n.change_email_content.popUp .icon-cancel{font-size: 16px!important; position: absolute; top: 20px; right:10px; font-weight: bold!important; margin-top:0!important; color: #a2a2a3;}\r\n.change_email_content.popUp .change_email_content .form-control{ padding:18px 0px 10px 0px !important;}\r\n.change_email_content.popUp .signup_entrance{margin-top: 20px!important;}\r\n.change_email_content.popUp .forget_pass_title{width: 100%!important; margin-top: 15px; text-align: left!important;}\r\n.employer_profile.popUp .account_info_wrap{ width: auto!important; left: 10px!important; right: 10px!important; padding: 15px!important;}\r\n.employer_profile.popUp .account_info_wrap .account_info{ clear: both; font-size: 16px!important; padding: 15px!important; font-family:\"PingFang TC\" ,\"\\5137\\9ED1   Pro\", \"Microsoft JhengHei\", \"\\5FAE\\8EDF\\6B63\\9ED1\\9AD4\", STHeiti,\"Heiti TC Medium\", Apple LiGothic, Helvetica, Helvetica Neue, Arial,\"PMingLiu\", \"\\65B0\\7D30\\660E\\9AD4\"!important;}\r\n.employer_profile.popUp .back_to_page_style{padding: 10px 10px !important; width: 100%!important; font-weight: 600 !important; font-family:\"PingFang TC\" ,\"\\5137\\9ED1   Pro\", \"Microsoft JhengHei\", \"\\5FAE\\8EDF\\6B63\\9ED1\\9AD4\", STHeiti,\"Heiti TC Medium\", Apple LiGothic, Helvetica, Helvetica Neue, Arial,\"PMingLiu\", \"\\65B0\\7D30\\660E\\9AD4\"!important;}\r\n\r\n.select_job_list.job_listing,.job_listings_search_jobtitle{ display: inline-block; width:100%;border-bottom: 1px solid rgba(90,91,93,0.2);border-right:none!important}\r\n\r\n.job_listings_item_content .pay_methods_title{ padding:15px!important; font-size: 14px!important; color: #838383!important;}\r\n.job_listings_item_content .pay_methods_content > .icon-radio,\r\n.job_listings_item_content .pay_methods_content > .icon-radio-selected,\r\n.job_listings_item_content .pay_methods_content > .cardname{padding: 8px 0!important; line-height: 1; text-align: center; width: 30%!important; font-size: 14px!important; color:#838383!important;}\r\n.job_listings_item_content .pay_methods_content > .icon-radio,\r\n.job_listings_item_content .pay_methods_content > .icon-radio-selected{ width: 20px!important; }\r\n\r\n.employer_setting_item_content.billing_setting_view .job_listings_item_table li{ padding: 15px!important;}\r\n/* .employer_setting_item_content.billing_setting_view .job_listings_item_table li span{ text-align:left!important; } */\r\n\r\n\r\n.select_pay_methods .pay_methods_content.payment-row{ padding:10px 15px 15px 15px !important;}\r\n.select_pay_methods .pay_methods_content.payment-row:last-child{ padding:5px 15px 10px 15px!important;}\r\n\r\n.job_listings_info_content{ box-shadow: 0px 1px 2px 1px #ccc; border-radius:  6px;}\r\n.job_listings_info_content .job_listings_item_content{border-radius: 6px;}\r\n.job_listings_item_content .form_data li{ padding-left: 15px; padding-right: 15px; width: 100%!important;}\r\n.job_listings_item_content .form_data li.acount_cv_code .acount_cv_code_no{ width: 30%!important; display: inline-block; }\r\n.job_listings_item_content .form_data li.acount_cv_code .cvv_pic{ position: relative; top: -3px; display: inline-block; vertical-align: bottom; margin-left: 10px!important;}\r\n.job_listings_item_content .form_data li .input_box.input_spec_box{ width: 60% !important; }\r\n.job_listings_item_content .form_data li.acount_cv_code .data_title,\r\n.job_listings_item_content .form_data li.acount_cv_code .input_box{ width: 100%!important;}\r\n.job_listings_info_content.buy_job_payment .form_data li .data_title{ font-size: 14px!important; color:#838383!important; margin-bottom: 8px;}\r\n.job_listings_info_content.buy_job_payment .form_data li.acount_cv_code #cvv{ margin-top: -5px; }\r\n.job_listings_info_content.buy_job_payment .form_data li .input_box{ font-size: 18px!important; height: 30px!important; font-weight: bold;}\r\n.job_listings_info_content.buy_job_payment .form_data li .input_box .data_input{color:#838383!important;}\r\n.job_listings_info_content.buy_job_payment .form_data li .input_box .data_input::-webkit-input-placeholder{ font-size: 14px!important; color:#323232!important;}\r\n.job_listings_info_content.buy_job_payment .form_data li .input_box .data_input::-moz-placeholder { font-size: 14px!important; color:#323232!important;}\r\n.job_listings_info_content.buy_job_payment .form_data li .input_box .data_input:-ms-input-placeholder { font-size: 14px!important; color:#323232!important;}\r\n.job_listings_info_content.buy_job_payment .form_data li .input_box .data_input:-moz-placeholder { font-size: 14px!important; color:#323232!important;}\r\n\r\n.job_listings_item_content .form_data li .data_title,\r\n.job_listings_item_content .form_data li .input_box{width: 100%!important; text-align: left!important;}\r\n.job_listings_item_content > .buy_btn > .buy_btn_main{ width: 100%!important; }\r\n.job_listings_item_content > .buy_btn > .buy_btn_main button{ width:93% !important; margin: 20px 10px!important; font-size: 14px !important; padding: 8px !important; border-radius: 50px!important;}\r\n.job_listings_item_content > .buy_btn.buybtn{padding:25px 0px!important; display: block;;}\r\n.job_listings_item_content > .buy_btn.buybtn .buy_btn_main button{ padding: 10px 10px !important; margin: 0px 0!important;}\r\n.job_listings_item_content > .buy_btn.buybtn .buy_btn_main:first-child{margin: 0px 0 15px 0!important;}\r\n\r\n.employer_setting_item_content .auto_title{font-size: 14px !important; padding: 10px 15px!important}\r\n.employer_setting_item_content .auto_title i{ padding:0 5px !important;}\r\n\r\n.header_login .dropdown-menu{ left: auto;; right: 0; }\r\n.loginAndSignUp{ padding: 10px  10px  0px  10px !important; box-shadow:none!important; background-position:-6px center;}\r\n.loginAndSignUp .employer_login_right_ad{ background-color: #f4f4f6; padding-bottom: 60px; font-family:\"PingFang TC\" ,\"\\5137\\9ED1   Pro\", \"Microsoft JhengHei\", \"\\5FAE\\8EDF\\6B63\\9ED1\\9AD4\", STHeiti,\"Heiti TC Medium\", Apple LiGothic, Helvetica, Helvetica Neue, Arial,\"PMingLiu\", \"\\65B0\\7D30\\660E\\9AD4\"!important;}\r\n.employer_login_right_ad{padding-right: 40px !important; padding-left: 40px !important; color: #333333!important; background: #FFFFFF; padding-bottom: 10px; margin-right: -10px!important; margin-left: -10px!important;}\r\n.employer_login_right_ad h3{ font-size: 18px!important; font-family:\"PingFang TC\" ,\"\\5137\\9ED1   Pro\", \"Microsoft JhengHei\", \"\\5FAE\\8EDF\\6B63\\9ED1\\9AD4\", STHeiti,\"Heiti TC Medium\", Apple LiGothic, Helvetica, Helvetica Neue, Arial,\"PMingLiu\", \"\\65B0\\7D30\\660E\\9AD4\"!important;}\r\n.employer_login_right_ad h3 span{ font-size: 30px!important; }\r\n.employer_login_right_ad h3 span.none_bold{ font-size: 18px!important; }\r\n.employer_login_right_ad h3 i{font-size: 21px!important; }\r\n.employer_login_right_ad p{padding-right: 20px;}\r\n\r\n.hiring_submit{ background-color: #e96f1b!important; font-size: 16px !important; margin-top: 30px!important; padding: 10px 0 10px 0!important; width: 100%!important; border-radius: 3px!important;}\r\n#login_content{ margin-left: 0 !important; }\r\n#login_content .login_account{ padding:40px 20px 30px 20px !important; margin-bottom: 20px;}\r\n#footer .relate_website ul > li > a{ font-size: 14px!important;}\r\n#footer .about_us > .copyright{margin-left: 0!important; margin-top: 15px; width: 100%;}\r\n#footer .about_us{padding-left: 0 !important; margin-top: 5px!important; padding-right:0px!important;}\r\n.right_footer{ position: absolute; right: 5%; top: 0; padding: 26px 0!important;}\r\n.right_footer:last-child a{ padding-left:15px;}\r\n.left_footer{ padding-bottom: 20px; padding-right:15px!important;}\r\n#footer .relate_website ul{ margin-top: 25px!important; }\r\n\r\n.search{ background: none !important; position: relative;}\r\n.search_main{ padding: 10px!important; }\r\n.search:before{background-color: #445cb3; position: absolute; left: 0; right: 0; content: \"\"; width: 100%; height: 73px;}\r\n.search_hotwords > ul > li a{ color: #445cb3 !important; font-size: 16px!important; font-weight: bold!important; text-decoration: underline !important;}\r\n.search_hotwords > ul > li + li{ margin-left: 20px!important; }\r\n.search_intro{ display: none;}\r\n\r\n.search_employer{ background: none !important; position: relative;}\r\n.search_employer .search_main{ padding: 10px!important; }\r\n.search_employer:before{background-color: #2e344b; position: absolute; left: 0; right: 0; content: \"\"; width: 100%; height: 73px;}\r\n.search_employer .search_hotwords > ul > li a{color: #2e344b!important;}\r\n.search_employer .search_btn > .search_input .glyphicon.glyphicon-search{color: #2e344b!important;}\r\n/*.employer_menu_btn.navbar-toggle .icon-bar{background: #2e344b !important; }*/\r\n\r\n#profile .profile_right_content{ padding-left: 0; padding-right: 0; }\r\n#profile .facebook .fb_iframe_widget span{ width: 300px !important; }\r\n\r\n.faq_sec .about_us_item { margin-top: 40px !important; padding-right: 30px; font-size: 16px!important;}\r\n.faq_sec .about_us_item .title{ font-size: 20px!important; }\r\n.faq_sec .right_content{padding-right: 20px;}\r\n.switch_faq{ margin-top: 15px; }\r\n.switch_faq .switch_btn{ padding: 8px 25px !important; margin-left:15px; font-size: 16px!important;}\r\n.left_count{ padding: 7px 0!important; }\r\n.left_count:before { bottom: -12px; left: 50%;  border: solid transparent; content: \" \";  height: 0; width: 0; position: absolute;\r\n    pointer-events: none;  border-top-color:#4e55a0;  border-width: 6px;  margin-left: -6px;}\r\n\r\n.closeMenu{ position: absolute; display: block; left: 15px; right: 15px; z-index: 9999; padding-top:15px;  }\r\n.closeMenu .closeArrow{ font-size: 16px; float: left; color:#445cb3!important; cursor: pointer; width: 25px; height: 25px; }\r\n.closeMenu .header_lang_main{float: right; color:#445cb3!important;}\r\n.closeMenu .header_lang_main a{color:#445cb3!important; font-size: 16px!important; text-decoration: none;}\r\n\r\n.class_local{ height: auto!important; }\r\n.search_more_left{ padding: 10px!important; border-radius: 5px;} \r\n.more_search_wrap .search_more_left div{ margin-bottom: 10px!important; margin-top: 10px; } \r\n.more_search_wrap .search_more_left div.superior_company_content{margin-top: 10px;  margin-bottom: 0px!important;}\r\n.search_more_left, .search_more_right{ width: 100%!important; }\r\n.open_more_item{ position: absolute; right: 10px; top: 8px; }\r\n.search_more_right{margin-top: 8px!important;}\r\n.search_more_right .search_item{ padding: 15px 15px!important; border-radius: 5px!important; margin-bottom: 8px!important;}\r\n.search_btn .search_item .item_text{ margin-left: 0px!important; max-width: 100%!important; }\r\n.search_btn .search_item.multiple_items .item_text{margin-left: 5px!important;}\r\n.search_item.salary_item .salary_float_right{margin-left: 105px;  width: 60%;}\r\n.search_btn .salary_item .item_text{left: 15px!important;}\r\n.search_btn .search_item .glyphicon-triangle-bottom, .search_btn .search_item .glyphicon-triangle-top{right: 15px!important;}\r\n.job_type_style{ padding-left:0px !important; min-width: 49.5%!important;}\r\n.job_type_style .icon-check_box, .job_type_style .icon-check_box_outline_blank{ position: relative!important; left: auto; }\r\n.search_btn .search_item.multiple_items .job_type_style span{vertical-align: middle !important;}\r\n.search_more_left h5{font-size: 14px!important;}\r\n.hot_tag_style li{font-size: 13px!important; padding: 10px 20px!important; border-radius: 50px!important;}\r\n/* .hot_tag_style li:hover{ background-color: #445cb3!important; color: #FFFFFF!important; } */\r\n\r\n#footer .about_us > .footer-links{position: relative; padding-right: 3%;}\r\n#footer .about_us > .footer-links + .footer-links{padding-right: 3%; padding-left: 3%; position: relative;}\r\n#footer .about_us div.footer-links span.devider{position: absolute; right: -1px; width: auto;}\r\n#footer .relate_website ul > li + li{ margin-left: 4% !important; }\r\n.copyright span{ display: block; width: 100%; }\r\n\r\n.loginAndSignUp .status, \r\n.loginAndSignUp .skip_title, \r\n.loginAndSignUp .resetpassword_title, \r\n.loginAndSignUp .skip_submit, \r\n.loginAndSignUp .resetpassword_submit, \r\n.loginAndSignUp .login_submit, \r\n.loginAndSignUp .signup_submit, \r\n.loginAndSignUp .login_account input{font-size: 16px!important; font-weight: bold;}\r\n.free_trail{ float: none!important; display: block; text-align: right; color: #FFFFFF!important; font-weight: normal!important;}\r\n.change_email_content .skip_account{ padding: 15px; }\r\n.change_email_content .skip_submit{ margin-top: 15px!important; padding: 10px 0px!important; }\r\n\r\n.pagination{ position: relative; float: none; text-align: center; width: 100%; margin:0!important; padding: 15px 0!important; }\r\n.el-pagination{ padding: 0!important; text-align: center;display: flex;align-items: center;justify-content: center;}\r\n.el-pagination button.disabled{color: #323232!important;}\r\n.el-pagination > .btn-prev, .pagination .el-pagination > .btn-next{ margin:0 10px!important; border:none!important; }\r\n.el-pagination > .el-pager > li{margin:10px 5px!important; border-radius: 3px!important;}\r\n\r\n\r\n.job_post_content.job_post_content_padd .input_wrap{ padding-left: 0!important; padding-right: 0!important; margin:15px 0 20px 0!important; }\r\n.job_post_content.job_post_content_padd .input_wrap.marginless{ margin-top: -12px!important; }\r\n.job_post_content.job_post_content_padd .input_wrap .minw12{min-width: 59%!important; font-size: 14px!important;}\r\n.job_post_content.job_post_content_padd .input_wrap .radio{ margin-right: 0!important; }\r\n.job_post_content.job_post_content_padd .input_wrap .textarera_sec{color: #2e344b!important;  font-size: 14px!important;  max-height: 100px; border-radius: 6px!important;}\r\n.job_post_content.job_post_content_padd .employer_profile_drop_down ul{ max-height: 250px !important; height: 100%!important; margin-right: 0!important;}\r\n.job_post_content.job_post_content_padd .employer_profile_drop_down ul li{ margin: 0!important; }\r\n.job_post_content.job_post_content_padd .employer_profile_drop_down ul li span{ padding:10px 15px!important; }\r\n.job_post_content.job_post_content_padd .employer_profile_drop_down ul li span span{ padding:0px 0px!important; }\r\n.job_post_content.job_post_content_padd .input_wrap span.job_discrp{ font-size: 14px!important; color: #2e344b!important; }\r\n.job_post_content.job_post_content_padd .input_wrap input{font-size: 14px!important;}\r\n.job_post_content.job_post_content_padd .input_wrap .to_style{font-size: 14px!important; display: inline-block!important; padding: 0 5px!important;}\r\n.job_post_content.job_post_content_padd .input_wrap .upload_style .icon-attachment{ font-size: 14px!important;  }\r\n.job_post_content.job_post_content_padd .input_wrap .upload_style .icon-attachment::before{color: #2e344b!important;}\r\n.job_post_content.job_post_content_padd .input_wrap .upload_file .upload_style{ padding: 4px 15px!important;  color: #2e344b!important; }\r\n.job_post_content.job_post_content_padd .recruitment_day_wrap{ margin: -20px 0 0 0!important; padding: 10px!important;}\r\n.job_post_content.job_post_content_padd .recruitment_day_wrap .input_wrap{margin:5px 0 5px 0!important;}\r\n.job_post_content.job_post_content_padd .recruitment_day_wrap .input_wrap .remove_padding_bootstrap{font-size: 14px!important; margin-right: 10px; width: 30%;}\r\n/* .job_post_content.job_post_content_padd .recruitment_day_wrap .input_wrap .el-date-editor.el-input{ width: 120px; } */\r\n.walkin_time_style .el-date-editor.el-input{ width: 4rem; }\r\n.job_post_content.job_post_content_padd .recruitment_day_wrap .input_wrap .el-date-editor.el-input .el-input__icon + .el-input__inner{ width: 100%!important; }\r\n.job_post_content.job_post_content_padd .recruitment_day_wrap .input_wrap .job_discrp{ font-size: 14px!important; color: #2e344b!important; }\r\n.job_post_content.job_post_content_padd .recruitment_day_wrap.walk_interview .input_wrap .remove_padding_bootstrap{font-size: 14px!important; margin-right: 10px; width: 30%;}\r\n/* .job_post_content.job_post_content_padd .recruitment_day_wrap.walk_interview .el-date-editor.salary_range_wrap{ width: 65px!important; } */\r\n/* .job_post_content.job_post_content_padd .recruitment_day_wrap.walk_interview .date_picker_width_large .el-date-editor.salary_range_wrap{ width: 120px!important; } */\r\n.job_post_content.job_post_content_padd .icon-arrow_drop_down{ font-size: 24px!important; }\r\n.select_file_mask{ float: none; }\r\n.select_file_mask.salaery_rane_sec{margin-top: 8px;}\r\n.select_file_mask.salaery_rane_sec .salary_range_wrap{ padding: 2px 13px!important;}\r\n.job_post_content.job_post_content_padd .work_years_wrap.work_years_wrap_padd{display: block!important; padding-left: 0!important; padding-right: 0!important; }\r\n.job_post_content.job_post_content_padd .work_years_wrap.work_years_wrap_padd .work_years_of_experience{ display: block; font-size: 14px!important;}\r\n.job_post_content.job_post_content_padd .work_years_wrap.work_years_wrap_padd .work_years{ margin-top: 8px; margin-left:0!important; padding: 2px 13px!important; }\r\n.job_post_content.job_post_content_padd .work_years_wrap.work_years_wrap_padd .work_years input{ text-align: center; max-width: 30px;}\r\n.job_post_content.job_post_content_padd .input_wrap .skills_add{ color: #2e344b!important; font-size: 14px!important;}\r\n.job_post_content.job_post_content_padd .post_job_button{ padding: 25px 15px 35px 15px!important; margin-top: 0!important; margin-bottom:  }\r\n.job_post_content.job_post_content_padd .post_job_button .post_job_submit{padding: 8px 10px !important;border-radius: 50px!important; font-size: 16px!important; width: 100%; font-weight: bold!important}\r\n.job_post_content.job_post_content_padd .skill_item_tags_wrap{ margin-top: 10px!important; margin-right: 0!important;  }\r\n.job_post_content.job_post_content_padd .skill_item_tags_wrap span{ padding:3px 10px!important;  }\r\n.job_post_content.job_post_content_padd .skill_item_tags_wrap span .icon-cancel{ opacity: 100!important; color: #445cb4!important;}\r\n.el-pagination > .btn-prev, .el-pagination > .btn-next{ background:none!important; border:none!important;   }\r\n\r\n.setting_change.drop_down{ position: relative; min-height: 54px; height: 54px;}\r\n.setting_change.drop_down .dropArrow{position: absolute; right:0px; z-index: 999; width: 30px; text-align: center; height: 95%;  cursor: pointer; display: block;}\r\n.setting_change.drop_down .dropArrow i{ font-size: 10px; line-height: 54px; color: #626262!important;}\r\n.setting_change.drop_down ul{ position: absolute; width: 100%; top: 0; background: #FFFFFF; z-index: 9;}\r\n/* .setting_change.drop_down ul li a{ display: none; } */\r\n.setting_change.drop_down ul li a.router-link-exact-active.router-link-active.active{ display: block; }\r\n\r\n.tab_main_position.drop_down{ position: relative; min-height: 54px; padding: 0!important;}\r\n.tab_main_position.drop_down .dropArrow{position: absolute; right:0px; z-index: 999; width: 30px; text-align: center; height: 95%;  cursor: pointer; display: block;}\r\n.tab_main_position.drop_down .dropArrow i{ font-size: 10px; line-height: 54px; color: #626262!important;}\r\n.tab_main_position.drop_down .tab_main{margin-left: 0!important;max-width: 100% !important; float: none !important; padding:15px!important; min-height: 54px; text-align: left!important; text-decoration: none; border-top: #dcddec solid 1px; font-weight: 600!important;}\r\n/* .tab_main_position.drop_down .tab_main:last-child{ border: none; } */\r\n.tab_main_position.drop_down .tab_main.active{ display: block; border-bottom:0px solid #4e55a0;}\r\n.tab_main_position.drop_down .tab_main.tabDeactive{display: block;}\r\n\r\n.dropNav{ position:absolute; top:0; width: 100%; z-index: 9; background-color: #ffffff;}\r\n\r\n.component.rowNone{ margin-left: 0; margin-right: 0; }\r\n.employer_profile_content{ margin: 10px!important;}\r\n.employer_profile_account.add_employer_profile_account{margin:0px!important; display: block!important; padding: 10px 15px!important; }\r\n.employer_profile_content .logo_all_same.employer_profile_title{ margin-left:0!important; padding: 15px!important; font-size: 16px!important; width: 100%!important; margin-bottom: 0!important;}\r\n.employer_profile_content .finish_room2{ width: 100%!important; }\r\n.employer_profile_content .logo_room_add_img{ width: 80px!important; height: 80px!important; }\r\n.employer_profile_content .add_employer_profile_wrap{margin: 0 !important; width: 100%;}\r\n.employer_profile_content .add_employer_profile_wrap .input_wrap input{ padding: 8px 0!important; }\r\n.employer_profile_content .add_employer_profile_wrap .input_wrap:nth-child(1){ margin-top:-28%; padding-left: 30%; }\r\n.employer_profile_content .add_employer_profile_wrap .input_wrap:nth-child(2){ padding-left: 30%; }\r\n.employer_profile_content .add_employer_profile_wrap .input_wrap:nth-child(3){  margin-top:0px; }\r\n.employer_profile_content .add_employer_profile_wrap .input_wrap:nth-child(4){  margin-top:0px; }\r\n.employer_profile_content .add_employer_profile_wrap .input_wrap .employer_profile_drop_down ul{height: 130px!important; max-height: 130px!important;}\r\n.employer_profile_content .add_employer_profile_wrap .input_wrap .employer_profile_drop_down ul li{ padding: 0px 10px!important; }\r\n.employer_profile_content .add_employer_profile_wrap .input_wrap .employer_profile_drop_down ul li span{padding:5px 5px!important;}\r\n.finish_room2.company_pic_border{ border-bottom: 0!important; padding-bottom:0!important;  }\r\n.finish_room2 .company_pic{ width: 48%!important;margin-right: 0px!important; height: 100px!important; }\r\n.finish_room2 .company_pic:nth-child(odd){ margin-right: 10px!important; }\r\n.finish_room2 .company_pic:nth-child(even){ margin-bottom: 10px; }\r\n.finish_room2 .company_pic:nth-child(2n+2){margin-right: 0px!important;}\r\n.finish_room2 .company_pic img{ position: relative!important; max-width: 100%;}\r\n.finish_room2 .icon-cross{font-size: 24px!important; bottom: auto!important; right: -8px!important; top:-8px!important; }\r\n.finish_room2 .icon-cross:before{z-index: 9;  position: relative;}\r\n.finish_room2 .icon-cross:after{ position: absolute; background-color: #FFFFFF; top: 1px; right: 1px; width: 20px; height: 20px; content:\"\"; z-index: 0; border-radius: 100%;}\r\n\r\n.add_employer_profile_wrap .company_image_style .company_image_wrap{ padding: 5px 0!important; }\r\n.select_file_mask .imgwrap .btn.btn-default{ padding: 3px 15px!important; }\r\n.company_image_style .el-date-editor.el-input{line-height: 1;}\r\n.company_image_style .el-input__icon + .el-input__inner{ width: 100px!important; }\r\n.employer_profile_button_fixed{ display: block; width: 86%; }\r\n.right_align{ float: none; margin-right: 0!important; text-align: right;}\r\n.right_align .btn.btn-default.add_employer_save{ width: 100%; max-width: 120px; margin-left: 25px;}\r\n.finish_room2 .add_img_company{ width: 48%!important; }\r\n.finish_room2 .add_img_company .none_pic_display{ width: 100%!important; height: 100px!important;}\r\n\r\n.profile_main.Profile_own .profile_head_height{ padding:5px 15px;}\r\n.profile_main.Profile_own .profile_title_name{ float: none; margin-left: 100px !important; padding-top: 30px!important;}\r\n.profile_main.Profile_own .basic_info_title {font-size: 20px!important;}\r\n.profile_main.Profile_own .basic_info .dot_style{ display: block; }\r\n.profile_main.Profile_own .profile_title_avatar{ margin-top: -70px!important; width: 85px!important; height: 85px!important; margin-left: 10px;}\r\n.profile_title_avatar img{ background-color: #ffffff; border-radius: 100%; box-shadow: 0px 1px 2px 1px #ccc; padding: 5px;}\r\n.profile_main.Profile_own .profile_item_content.company_content_style{ padding-left: 110px; margin-top:-10px!important; margin-bottom: 30px;}\r\n.profile_main.Profile_own .article_h3_title span{font-size: 18px!important; display: block;}\r\n.profile_main.Profile_own .background_upload_after{ padding: 5px 25px!important; }\r\n.profile_main.Profile_own .icon-clip{font-size: 14px!important; margin-right: 5px;}\r\n.profile_main.Profile_own .profile_item_content.profile_register_content{ margin-bottom: 50px; margin-top: 10px; }\r\n.profile_main.Profile_own .company_environmental_photo .carousel-inner{ height: 145px; }\r\n.profile_main.Profile_own .company_environmental_photo .carousel-indicators { top: auto!important; bottom: 15px; left: 45%!important; }\r\n.profile_main.Profile_own .company_environmental_photo .carousel-indicators li{ border: none!important; background-color: #ccc; }\r\n.profile_main.Profile_own .company_environmental_photo .carousel-indicators li.active{ background-color: #f69343!important; }\r\n\r\n#candidatejoblist .job_display .profile_left .job_list_content.margNone{ margin-top: 0!important; }\r\n#candidatejoblist .job_display .profile_left .block{ padding: 15px!important;}\r\n#candidatejoblist .job_display .profile_left .job_list_content .job_list_item{ padding-left: 80px!important; padding-top: 15px; padding-bottom:15px; }\r\n#candidatejoblist .job_display > .profile_left .job_list_content .job_list_item .item_pics{margin-right: 0!important; top: 20px!important; left: 15px!important; max-width: 50px!important; max-height: 50px!important;}\r\n#candidatejoblist .job_display > .profile_left .job_list_content .job_list_item .item_pics .imgBox{width: 55px!important;height: 55px!important;}\r\n#candidatejoblist .item_info_top .top_title > .job_title,\r\n#candidatejoblist .item_info .item_info_top .require_salary,\r\n#candidatejoblist .item_info .item_info_top .require_year{ font-size: 14px!important;line-height: 16px; }\r\n#candidatejoblist .job_list_content .job_list_item .item_info .item_info_top .col-md-6{ padding-left: 0!important; padding-right: 0!important; }\r\n#candidatejoblist .item_info .item_info_bottom .info_skill_item{padding: 1px 10px!important; margin: 2px;border-radius: 6px!important;}\r\n#candidatejoblist .item_info .item_info_bottom .info_skill_item a{color: #3a58a8!important;}\r\n#candidatejoblist .el-pagination{ margin-top: 15px; margin-bottom: 15px;}\r\n\r\n.candidate_header_top.userProfile_sec{ position: relative; padding: 15px!important;}\r\n.candidate_header_top.userProfile_sec .candidate_avatar{ height: 85px!important; width: 85px!important; box-shadow: 0px 1px 2px 1px #545454; left: 15px!important; bottom:-5px!important; border: 3px solid #fff;}\r\n.candidate_header_top.userProfile_sec .candidate_name{margin-left: 100px!important; padding: 30px 0 0 0!important; }\r\n.candidate_header_top.userProfile_sec .candidate_name .is_save > .glyphicon{ font-size: 14px!important; }\r\n.candidate_header_top.userProfile_sec .candidate_name .candidate_current_job{line-height: 15px;}\r\n.candidate_header_top.userProfile_sec .candidate_name .candidate_name_main{font-size: 22px!important;line-height: 22px;}\r\n.candidate_header_bottom.userProfile_sec{padding: 15px 15px 15px 100px!important;}\r\n.candidate_header_bottom.userProfile_sec .candidate_btm_right{ text-align: left!important;}\r\n.candidate_header_bottom.userProfile_sec .good_match{min-width: 150px!important; padding-right: 0px!important; margin-top: 20px; margin-bottom: 10px!important;}\r\n.candidate_header_bottom.userProfile_sec .good_match > .good_match_main > .good_match_main_green{ background-color: #8bc34a!important; }\r\n.candidate_body_content.userProfile_sec .every_item .detail_title{text-align: left!important;}\r\n.cv_box .body_item_btn.have_cv{ display: inline-block!important; min-width: 130px; padding: 8px 50px!important; margin: 25px 0; }\r\n.operate_btn.Op_btns{ padding:5px 15px!important;}\r\n.operate_btn.Op_btns > .btn_box{ display: block; margin-top: 20px; margin-bottom:10px;}\r\n.operate_btn.Op_btns > .btn_box button{ width: 100%!important; margin-top:5px;}\r\n.operate_btn.Op_btns > .btn_box .send_btn{ margin:5px 0 0 0!important;}\r\n\r\n.candidate_body_content.userProfile_sec{ position: relative;}\r\n.candidate_body_content.userProfile_sec .company_info_main .company_left{ width: 30px!important; height: 30px; }\r\n.candidate_body_content.userProfile_sec .company_info_main .jobinfo_header{ width: 100%!important; }\r\n.account_info_wrap {margin-top: 5px !important;width: 90%;left: 5%;}\r\n}\r\n\r\n\r\n@media(max-width:415px) {\r\n#footer .about_us > .footer-links{position: relative; padding-right: 2%;}\r\n#footer .about_us > .footer-links + .footer-links{padding-right: 2%; padding-left: 2%; position: relative;}\r\n#footer .relate_website ul > li + li{ margin-left: 2%!important; }\r\n}\r\n\r\n@media(max-width:480px){\r\n.search_btn{ width: 90%;}\r\n.profile_right_content #banner1 iframe{ width: 100%;}\r\n.account_listings_item_table li:nth-child(1) span{ display: inherit !important; }\r\n#footer .relate_website ul > li + li{margin-left: 1.7% !important;}\r\n}\r\n\r\n\r\n\r\n@media(max-width:375px){\r\n.employer_login_right_ad{  padding-right:20px !important;  padding-left: 20px !important;}\r\n::-webkit-input-placeholder{ font-size: 14px!important;}\r\n::-moz-placeholder { font-size: 14px!important;}\r\n:-ms-input-placeholder { font-size: 14px!important;}\r\n:-moz-placeholder { font-size: 14px!important;}\r\n.loginAndSignUp .status, \r\n.loginAndSignUp .skip_title, \r\n.loginAndSignUp .resetpassword_title, \r\n.loginAndSignUp .skip_submit, \r\n.loginAndSignUp .resetpassword_submit, \r\n.loginAndSignUp .login_submit, \r\n.loginAndSignUp .signup_submit, \r\n.loginAndSignUp .login_account input{font-size:14px!important;}\r\n.remember_account{font-size:14px!important;}\r\n.resetPassword{font-size:12px!important;}\r\n.employer_login_right_ad h3 span {    font-size: 26px !important;}\r\n\r\n.employer_job_lists_content ul li p:first-child{ padding-left: 0!important; }\r\n.employer_job_lists_content ul li p:last-child{text-align: right!important;}\r\n.employer_job_lists_content ul li p span.active_style,.employer_job_lists_content ul li p span.active_style.status_deactive{ font-size: 12px!important; line-height: 54px!important; letter-spacing: -0.7px!important;}\r\n.employer_job_lists_content ul li p:nth-child(2){width: 38%!important;}\r\n.employer_job_lists_content ul li p:nth-child(3){width: 31%!important;}\r\n}\r\n\r\n@media(max-width:360px){\r\n.job_listings_item_title.job_listings_search .icon-radio{ display:none; }\r\n.employer_job_lists_header h3{font-size: 12px !important;}\r\n.employer_job_lists_header h3.add_job_title { font-size: 12px !important;}\r\n.employer_job_lists_header h3.craditNo{ font-size: 12px!important; }\r\n/*.job_listings_all{ font-size: 13px!important; }*/\r\n.employer_setting_item_content.billing_setting_view .job_listings_item_table li{ min-height: 172px;}\r\n.employer_profile_content .logo_room_add_img{ width: 60px!important; height: 60px!important; }\r\n.profile_main.Profile_own .profile_title_avatar{ margin-top: -80px!important; width: 90px!important; height: 90px!important; }\r\n.candidate_header_top.userProfile_sec {padding: 15px 15px 20px 15px !important;}\r\n.candidate_header_top.userProfile_sec .candidate_avatar{bottom: 10px!important;  height: 66px !important; width: 66px !important; left: 10px !important;}\r\n.candidate_header_top.userProfile_sec .candidate_name { margin-left: 70px !important;    padding: 10px 0 0 0 !important;}\r\n.candidate_header_top.userProfile_sec .candidate_name .candidate_name_main {font-size: 18px !important;    line-height: 18px;}\r\n.candidate_header_bottom.userProfile_sec { padding: 15px 15px 15px 80px !important;}\r\n.candidate_header_bottom.userProfile_sec .candidate_btm_left.col-md-6,\r\n.candidate_header_bottom.userProfile_sec .candidate_btm_right.col-md-6{ padding-right: 0; padding-left: 0; }\r\n\r\n\r\n/*.current_position{ display: block;}*/\r\n#footer .relate_website ul > li > a{ font-size: 12px!important;}\r\n/*#footer .about_us div.footer-links{ margin-left: -2px; margin-right: -2px}*/\r\n#footer .about_us div.footer-links:first-child{ margin-right: 0; margin-left: 0; }\r\n#footer .about_us div > a, #footer .about_us{ font-size: 12px!important;}\r\n}  \r\n.notification_wrap .el-radio .el-radio__input{margin-right: 17px;}\r\n@media screen and (width: 320px){\r\n.job_post_content.job_post_content_padd .input_wrap .minw12 {\r\n    min-width: 50%!important;}\r\n}\r\n\r\n#article_pagination .el-pagination>.btn-prev,#article_pagination .el-pagination>.btn-next, #article_pagination .el-pagination>.el-pager>li.number,#article_pagination .el-pagination>.el-pager>li{background: #fff!important;border: solid 1px #d9d9d9!important;}\r\n#article_pagination .el-pagination>.el-pager>li.active {\r\n    background: #4e55a0!important;\r\n    color: #fff;\r\n    border: none!important;\r\n}\r\n\r\n.pagination>li>a, .pagination>li>span {\r\n    padding: 0px 12px;\r\n    margin-left: -1px;\r\n    line-height: 35px ;\r\n    color: #337ab7;\r\n    border:1px solid #d9d9d9;\r\n    min-width: 36px;\r\n    height: 35px;\r\n    line-height: 35px;\r\n    font-size: 19px;\r\n    font-weight: 500;\r\n    color: rgb(51, 51, 51);\r\n    margin: 0px 0.07rem;\r\n    border-radius: 2px;\r\n}\r\n.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover {\r\n    background-color: #4e55a0;\r\n    border-color: #4e55a0;\r\n    border-radius: 2px;\r\n    border: none;\r\n}\r\n.pagination>li:first-child>a, .pagination>li:first-child>span,.pagination>li:last-child>a, .pagination>li:last-child>span {\r\n    border-radius: 2px;\r\n}\r\n#article_pagination >ul .job_tab_item>a,span{vertical-align: top;}\r\n#article_pagination .page-link{display: flex;align-items: center;}\r\n#article_pagination{width: 100%;display: flex;justify-content: center;}\r\n.profile_right span.quote_cn_last{vertical-align: middle !important}\r\n.profile_right span.quote_en_last{vertical-align: baseline !important}\r\n.no_margin_top .el-radio__input{vertical-align: super;}\r\n.vertical_align_middle .to_style{vertical-align: middle;}\r\n\r\n", ""]);
 
 // exports
 
@@ -35066,7 +34835,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, "\n.personal_title[data-v-0e6ee3e6]{\n    margin-bottom:20px;\n}\n", ""]);
+exports.push([module.i, "[data-v-077b66bf]{box-sizing:border-box}.head[data-v-077b66bf]{height:100%;background-color:#242f42;margin-left:300px}.head #logo[data-v-077b66bf]{height:100%;width:300px;position:absolute;top:0;left:0;background:#77869f;padding:15px}.head #logo>.avatar[data-v-077b66bf]{height:90px;width:90px;border-radius:50%;border:4px solid #f0f0f0;margin-left:20px;float:left;overflow:hidden}.head #logo>.avatar img[data-v-077b66bf]{height:100%;width:100%}.head #logo>.username[data-v-077b66bf]{float:left;padding:20px 30px;font-size:20px;line-height:30px;color:#f0f0f0}.head #header_right[data-v-077b66bf]{float:right}.head #header_right .logout[data-v-077b66bf],.head #header_right>.personal[data-v-077b66bf]{float:left}.head #header_right>.personal>a[data-v-077b66bf]{line-height:44px;color:#a9b0c2}.head #header_right>.el-button[data-v-077b66bf]{font-size:16px;line-height:24px;margin-left:20px;margin-right:20px}.head #header_right>.el-button--text[data-v-077b66bf]{color:#a9b0c2}.head #header_right a[data-v-077b66bf]{display:block}", ""]);
 
 // exports
 
@@ -35080,7 +34849,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, "\n.error_same[data-v-13ad299a] {\n  position: absolute;\n  top: 100%;\n  left: 10px;\n  line-height: 1.5;\n}\n.icon-check_box[data-v-13ad299a] {\n  color: #a0c5e0;\n  font-size: 0.28rem;\n}\n.glyphicon[data-v-13ad299a] {\n  font-size: 10px;\n  color: #626262;\n  padding-top: 5px;\n}\n.search_data_display[data-v-13ad299a] {\n  width: 100%;\n  padding: 0.15rem 0 0.34rem 0.34rem;\n  position: absolute;\n  top: 100%;\n  left: 0;\n  z-index: 9999;\n  background: #fff;\n  border: 1px solid #e2e2e1;\n}\n.search_data_display li[data-v-13ad299a] {\n  padding: 0.05rem 0;\n  cursor: pointer;\n}\n.search_data_display li span[data-v-13ad299a] {\n  padding: 0 0.1rem;\n  color: #333;\n}\n.icon-check_box_outline_blank[data-v-13ad299a] {\n  color: #445cb3;\n}\n.icon-check_box[data-v-13ad299a],\n.icon-check_box_outline_blank[data-v-13ad299a] {\n  font-size: 16px;\n  color: #445cb3;\n}\n.location_border_style[data-v-13ad299a] {\n  border-top: 1px solid #cfcfcf;\n  padding: 0.15rem 0 0 0.3rem;\n  margin-top: 0.1rem;\n}\n.location_border_style ul[data-v-13ad299a] {\n  overflow: unset;\n  height: auto;\n}\n.industry_block_style[data-v-13ad299a] {\n  padding: 0;\n}\n", ""]);
+exports.push([module.i, ".table_info[data-v-0e60cc65],.table_main[data-v-0e60cc65]{margin-bottom:20px}.table_page>.block>.el-pagination .btn-prev[data-v-0e60cc65],.table_page>.block>.el-pagination button[data-v-0e60cc65],.table_page>.block>.el-pagination span[data-v-0e60cc65],.table_page>.block>.el-pagination ul[data-v-0e60cc65]{float:right}", ""]);
 
 // exports
 
@@ -35094,7 +34863,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, "\n.personal_title[data-v-176d775d]{\n    margin-bottom:20px;\n}\n", ""]);
+exports.push([module.i, ".personal_title[data-v-0e6ee3e6]{margin-bottom:20px}", ""]);
 
 // exports
 
@@ -35108,7 +34877,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, "\ndiv[data-v-186c486a] {\n  width: 100%;\n  height: 100%;\n}\ndiv > .el-col > .el-menu[data-v-186c486a] {\n  /*background-color:#48576a;*/\n}\ndiv > .el-col > .el-menu > .el-submenu > li[data-v-186c486a] {\n  color: #bfcbd9;\n}\ndiv > .el-col > .el-menu > .el-submenu > ul[data-v-186c486a] {\n  background-color: #48576a;\n}\ndiv > .el-col > .el-menu > .el-submenu .el-menu > .el-menu-item-group > ul > .el-menu-item > a[data-v-186c486a] {\n  padding: 20px;\n  padding-right: 162px;\n  color: #48576a;\n}\ndiv > .el-col > .el-menu > .el-submenu .el-menu > .el-menu-item-group > ul > .el-menu-item[data-v-186c486a]:hover {\n  background-color: #fff;\n}\ndiv > .el-col > .el-menu > .el-menu-item > a[data-v-186c486a] {\n  padding: 20px;\n  padding-right: 125px;\n  padding-left: 0;\n  color: #48576a;\n}\ndiv .el-menu-item[data-v-186c486a],\ndiv .el-submenu__title[data-v-186c486a] {\n  color: #bfcbd9;\n}\n", ""]);
+exports.push([module.i, ".error_same[data-v-13ad299a]{position:absolute;top:100%;left:10px;line-height:1.5}.icon-check_box[data-v-13ad299a]{color:#a0c5e0;font-size:.28rem}.glyphicon[data-v-13ad299a]{font-size:10px;color:#626262;padding-top:5px}.search_data_display[data-v-13ad299a]{width:100%;padding:.15rem 0 .34rem .34rem;position:absolute;top:100%;left:0;z-index:9999;background:#fff;border:1px solid #e2e2e1}.search_data_display li[data-v-13ad299a]{padding:.05rem 0;cursor:pointer}.search_data_display li span[data-v-13ad299a]{padding:0 .1rem;color:#333}.icon-check_box_outline_blank[data-v-13ad299a]{color:#445cb3}.icon-check_box[data-v-13ad299a],.icon-check_box_outline_blank[data-v-13ad299a]{font-size:16px;color:#445cb3}.location_border_style[data-v-13ad299a]{border-top:1px solid #cfcfcf;padding:.15rem 0 0 .3rem;margin-top:.1rem}.location_border_style ul[data-v-13ad299a]{overflow:unset;height:auto}.industry_block_style[data-v-13ad299a]{padding:0}", ""]);
 
 // exports
 
@@ -35122,7 +34891,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, "\n#footer[data-v-336dfa66] {\n  width: 100%;\n  height: 30px;\n  padding: 4px 10px;\n}\n#footer > div[data-v-336dfa66] {\n  font-size: 12px;\n}\n", ""]);
+exports.push([module.i, ".personal_title[data-v-176d775d]{margin-bottom:20px}", ""]);
 
 // exports
 
@@ -35136,7 +34905,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, "\n.setInfo{\n    margin-bottom: 20px;\n}\n", ""]);
+exports.push([module.i, "div[data-v-186c486a]{width:100%;height:100%}div>.el-col>.el-menu>.el-submenu>li[data-v-186c486a]{color:#bfcbd9}div>.el-col>.el-menu>.el-submenu>ul[data-v-186c486a]{background-color:#48576a}div>.el-col>.el-menu>.el-submenu .el-menu>.el-menu-item-group>ul>.el-menu-item>a[data-v-186c486a]{padding:20px;padding-right:162px;color:#48576a}div>.el-col>.el-menu>.el-submenu .el-menu>.el-menu-item-group>ul>.el-menu-item[data-v-186c486a]:hover{background-color:#fff}div>.el-col>.el-menu>.el-menu-item>a[data-v-186c486a]{padding:20px;padding-right:125px;padding-left:0;color:#48576a}div .el-menu-item[data-v-186c486a],div .el-submenu__title[data-v-186c486a]{color:#bfcbd9}", ""]);
 
 // exports
 
@@ -35150,7 +34919,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, "\n.contactInfo{\n    margin-bottom:20px;\n}\n.search{\n  width: 200px;\n  margin-bottom:20px;\n}\n", ""]);
+exports.push([module.i, "#footer[data-v-336dfa66]{width:100%;height:30px;padding:4px 10px}#footer>div[data-v-336dfa66]{font-size:12px}", ""]);
 
 // exports
 
@@ -35164,7 +34933,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, "\n.search[data-v-5247c3f1]{background-color: #445cb3;\n}\n.search_item[data-v-5247c3f1] {padding: 0.21rem 0.25rem;background: #fff;position: relative;float: left;\n}\n.search_item[data-v-5247c3f1] {float: none;margin-bottom: 0.08rem;box-shadow: 0px 3px 5px 0 rgba(0, 0, 0, 0.19);padding: 0.2rem 0.25rem;border-radius: 3px;\n}\n.search_item + .search_item[data-v-5247c3f1] {border-left: solid 1px #d8dbf6;\n}\n.search_item input[data-v-5247c3f1] {\n  width: 100%;\n  border: 0;\n  outline: 0;\n  padding-right:0.3rem;\n  font-size: 16px;color: #36404a;\n}\n.search_item > span[data-v-5247c3f1] {vertical-align: middle;font-size: 16px;\n}\n.item_text[data-v-5247c3f1] {\n  /* max-width: 90%; */\n  padding-right:15px;\n  font-size: 16px;\n  white-space: nowrap;overflow: hidden;text-overflow: ellipsis;\n}\n.search_item .glyphicon-triangle-bottom[data-v-5247c3f1],.search_item .glyphicon-triangle-top[data-v-5247c3f1]{\n  font-size: 12px;\n  position: absolute;\n  right: 0.25rem;\n  top:50%;\n  transform:translateY(-50%);\n}\n.search_location[data-v-5247c3f1] {width:100%;cursor: pointer;\n}\n.search_location .search_data_display[data-v-5247c3f1]{ width:150%;\n}\n.open_more_item[data-v-5247c3f1] {padding: 0.23rem 0.24rem;padding-right:0;font-size: 15px;cursor: pointer;\n}\n.open_more_item span[data-v-5247c3f1] {line-height: 0.16rem;vertical-align: middle;color: #ffffff;\n}\n.glyphicon[data-v-5247c3f1] {font-size: 12px;line-height: none;color: #626262;\n}\n.search_data_display[data-v-5247c3f1],.job_title_drop_down[data-v-5247c3f1]{width: 100%; position: absolute;top:100%;left: 0;z-index: 9999;background: #fff;box-shadow: 0px 5px 3.3px 0.7px rgba(0, 0, 0, 0.33);z-index: 9999;border-top:1px solid #d9dcf6;\n}\n.search_data_display[data-v-5247c3f1]{padding:0.15rem 0 0.34rem 0.34rem;\n}\n.search_data_display li[data-v-5247c3f1]{padding: 0.05rem 0;padding-left:25px;position:relative;cursor: pointer;\n}\n.search_data_display li .glyphicon-triangle-bottom[data-v-5247c3f1],.search_btn .search_data_display li .glyphicon-triangle-top[data-v-5247c3f1]{\n  top:0.2rem;\n}\n.salary_item[data-v-5247c3f1]{\n  padding-left:calc(80px + 0.25rem);\n}\n.salary_item .item_text[data-v-5247c3f1]{\n  max-width:70px;\n  padding:0;\n  white-space: normal;\n  position: absolute;\n  left:0.25rem;\n  top:50%;\n  transform:translateY(-50%);\n}\n.icon-check_box_outline_blank[data-v-5247c3f1]{color: #445cb3;\n}\n.icon-check_box[data-v-5247c3f1],.icon-check_box_outline_blank[data-v-5247c3f1]{\n  font-size: 22px;\n  color: #445cb3;\n  position: absolute;\n  left:0;\n}\nspan[data-v-5247c3f1]{vertical-align: top;\n}\nli.location_block_style[data-v-5247c3f1]{\n  margin-left: 0.3rem;\n  padding:0;\n  padding-top:0.1rem;\n  padding-left:25px;\n  position:relative;\n  border-bottom:1px solid #cfcfcf;\n}\n.location_border_style[data-v-5247c3f1]{border-top:1px solid #cfcfcf;padding:0.15rem 0 0 0.3rem;\n}\n.location_border_style ul[data-v-5247c3f1]{overflow: unset;height: auto;\n}\n.location_all_style[data-v-5247c3f1]{margin-bottom: 0.1rem;\n}\nul.height_auto[data-v-5247c3f1]{height: auto;\n}\n@media screen and (max-width:768px){\n}\n", ""]);
+exports.push([module.i, ".setInfo{margin-bottom:20px}", ""]);
 
 // exports
 
@@ -35178,7 +34947,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, "\n.add_doc[data-v-61ed8690] {\n  width: 100%;\n  height: 100%;\n}\n.documentInfo[data-v-61ed8690] {\n  margin-bottom: 20px;\n}\n.add_doc_btn[data-v-61ed8690] {\n  margin-bottom: 20px;\n}\n.doc_content[data-v-61ed8690] {\n  width: 100%;\n  height: 80%;\n}\n.doc_content > ul[data-v-61ed8690] {\n  width: 100%;\n  height: 100%;\n  border: 1px solid #f0f0f0;\n}\n.doc_content > ul > .pages[data-v-61ed8690] {\n  margin-top: 20px;\n  float: right;\n}\n.doc_content > ul > li[data-v-61ed8690] {\n  width: 100%;\n  height: 50px;\n  border-bottom: 1px solid #f0f0f0;\n  line-height: 50px;\n}\n.doc_content > ul > li div[data-v-61ed8690],\n.doc_content > ul > li span[data-v-61ed8690],\n.doc_content > ul > li a[data-v-61ed8690] {\n  float: left;\n  margin-left: 20px;\n}\n.doc_content > ul > li > span[data-v-61ed8690] {\n  color: #999;\n  font-size: 12px;\n}\n.doc_content > ul > li > .title[data-v-61ed8690] {\n  width: 65%;\n  display: inline-block;\n  color: #999;\n  cursor: pointer;\n}\n.doc_content > ul > li > .title[data-v-61ed8690]:hover {\n  color: #ff4400;\n}\n", ""]);
+exports.push([module.i, ".contactInfo,.search{margin-bottom:20px}.search{width:200px}", ""]);
 
 // exports
 
@@ -35192,7 +34961,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, "\n.title[data-v-647d9814] {\n  margin-bottom: 30px;\n}\n.echarts[data-v-647d9814] {\n  width: 400px;\n  height: 400px;\n  float: left;\n}\n", ""]);
+exports.push([module.i, ".search[data-v-5247c3f1]{background-color:#445cb3}.search_item[data-v-5247c3f1]{padding:.21rem .25rem;background:#fff;position:relative;float:left;float:none;margin-bottom:.08rem;box-shadow:0 3px 5px 0 rgba(0,0,0,.19);padding:.2rem .25rem;border-radius:3px}.search_item+.search_item[data-v-5247c3f1]{border-left:1px solid #d8dbf6}.search_item input[data-v-5247c3f1]{width:100%;border:0;outline:0;padding-right:.3rem;font-size:16px;color:#36404a}.search_item>span[data-v-5247c3f1]{vertical-align:middle;font-size:16px}.item_text[data-v-5247c3f1]{padding-right:15px;font-size:16px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.search_item .glyphicon-triangle-bottom[data-v-5247c3f1],.search_item .glyphicon-triangle-top[data-v-5247c3f1]{font-size:12px;position:absolute;right:.25rem;top:50%;transform:translateY(-50%)}.search_location[data-v-5247c3f1]{width:100%;cursor:pointer}.search_location .search_data_display[data-v-5247c3f1]{width:150%}.open_more_item[data-v-5247c3f1]{padding:.23rem .24rem;padding-right:0;font-size:15px;cursor:pointer}.open_more_item span[data-v-5247c3f1]{line-height:.16rem;vertical-align:middle;color:#fff}.glyphicon[data-v-5247c3f1]{font-size:12px;line-height:none;color:#626262}.job_title_drop_down[data-v-5247c3f1],.search_data_display[data-v-5247c3f1]{width:100%;position:absolute;top:100%;left:0;background:#fff;box-shadow:0 5px 3.3px .7px rgba(0,0,0,.33);z-index:9999;border-top:1px solid #d9dcf6}.search_data_display[data-v-5247c3f1]{padding:.15rem 0 .34rem .34rem}.search_data_display li[data-v-5247c3f1]{padding:.05rem 0;padding-left:25px;position:relative;cursor:pointer}.search_btn .search_data_display li .glyphicon-triangle-top[data-v-5247c3f1],.search_data_display li .glyphicon-triangle-bottom[data-v-5247c3f1]{top:.2rem}.salary_item[data-v-5247c3f1]{padding-left:calc(80px + .25rem)}.salary_item .item_text[data-v-5247c3f1]{max-width:70px;padding:0;white-space:normal;position:absolute;left:.25rem;top:50%;transform:translateY(-50%)}.icon-check_box_outline_blank[data-v-5247c3f1]{color:#445cb3}.icon-check_box[data-v-5247c3f1],.icon-check_box_outline_blank[data-v-5247c3f1]{font-size:22px;color:#445cb3;position:absolute;left:0}span[data-v-5247c3f1]{vertical-align:top}li.location_block_style[data-v-5247c3f1]{margin-left:.3rem;padding:0;padding-top:.1rem;padding-left:25px;position:relative;border-bottom:1px solid #cfcfcf}.location_border_style[data-v-5247c3f1]{border-top:1px solid #cfcfcf;padding:.15rem 0 0 .3rem}.location_border_style ul[data-v-5247c3f1]{overflow:unset;height:auto}.location_all_style[data-v-5247c3f1]{margin-bottom:.1rem}ul.height_auto[data-v-5247c3f1]{height:auto}", ""]);
 
 // exports
 
@@ -35206,7 +34975,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, "\n.page11[data-v-6499c716] {\n  /*padding:30px;*/\n}\nheader[data-v-6499c716] {\n  margin-bottom: 20px;\n}\n.echarts[data-v-6499c716] {\n  width: 600px;\n  height: 400px;\n}\n.echarts > button[data-v-6499c716] {\n  width: 80px;\n  height: 30px;\n  outline: none;\n  border: 0;\n}\n", ""]);
+exports.push([module.i, ".add_doc[data-v-61ed8690]{width:100%;height:100%}.add_doc_btn[data-v-61ed8690],.documentInfo[data-v-61ed8690]{margin-bottom:20px}.doc_content[data-v-61ed8690]{width:100%;height:80%}.doc_content>ul[data-v-61ed8690]{width:100%;height:100%;border:1px solid #f0f0f0}.doc_content>ul>.pages[data-v-61ed8690]{margin-top:20px;float:right}.doc_content>ul>li[data-v-61ed8690]{width:100%;height:50px;border-bottom:1px solid #f0f0f0;line-height:50px}.doc_content>ul>li a[data-v-61ed8690],.doc_content>ul>li div[data-v-61ed8690],.doc_content>ul>li span[data-v-61ed8690]{float:left;margin-left:20px}.doc_content>ul>li>span[data-v-61ed8690]{color:#999;font-size:12px}.doc_content>ul>li>.title[data-v-61ed8690]{width:65%;display:inline-block;color:#999;cursor:pointer}.doc_content>ul>li>.title[data-v-61ed8690]:hover{color:#f40}", ""]);
 
 // exports
 
@@ -35220,7 +34989,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, "\n.login-wrap[data-v-74dd7a27]{\n    position: relative;\n    width:100%;\n    height:100%;\n}\n.ms-title[data-v-74dd7a27]{\n    position: absolute;\n    top:50%;\n    width:100%;\n    margin-top: -230px;\n    text-align: center;\n    font-size:30px;\n    color: #000;\n}\n.ms-login[data-v-74dd7a27]{\n    position: absolute;\n    left:50%;\n    top:40%;\n    width:400px;\n    height:160px;\n    margin:-150px 0 0 -190px;\n    padding:40px;\n    border-radius: 5px;\n    background: #fff;\n}\n.login-btn[data-v-74dd7a27]{\n    text-align: center;\n}\n.login-btn button[data-v-74dd7a27]{\n    width:100%;\n    height:36px;\n}\n", ""]);
+exports.push([module.i, ".title[data-v-647d9814]{margin-bottom:30px}.echarts[data-v-647d9814]{width:400px;height:400px;float:left}", ""]);
 
 // exports
 
@@ -35234,7 +35003,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, "\n.avatar_uploads[data-v-7e6e8994] {\n  width: 100%;\n  height: 100%;\n}\n.avatarInfo[data-v-7e6e8994] {\n  margin-bottom: 20px;\n}\n.avatar_button[data-v-7e6e8994] {\n  position: absolute;\n  bottom: 0;\n  right: 0;\n  margin-bottom: 50px;\n  margin-right: 80px;\n}\n.saying[data-v-7e6e8994] {\n  width: 100%;\n  height: 50px;\n  padding-left: 30px;\n  border-bottom: 1px solid #f0f0f0;\n}\n.saying > .el-icon-picture[data-v-7e6e8994] {\n  float: left;\n  line-height: 50px;\n}\n.saying > span[data-v-7e6e8994] {\n  font-size: 20px;\n  line-height: 50px;\n  margin-left: 10px;\n  float: left;\n  color: #3c3c3c;\n}\n.upload_area[data-v-7e6e8994] {\n  padding: 3px;\n  border: 3px dashed #f0f0f0;\n  margin: 50px;\n  float: left;\n}\n.avatar_notice[data-v-7e6e8994] {\n  width: 500px;\n  margin-top: 100px;\n  margin-left: 50px;\n  line-height: 30px;\n  color: #777;\n  font-size: 14px;\n}\n.avatar-uploader .el-upload[data-v-7e6e8994] {\n  border: 1px dashed #d9d9d9;\n  border-radius: 6px;\n  cursor: pointer;\n  position: relative;\n  overflow: hidden;\n}\n.avatar-uploader .el-upload[data-v-7e6e8994]:hover {\n  border-color: #20a0ff;\n}\n.avatar-uploader-icon[data-v-7e6e8994] {\n  font-size: 28px;\n  color: #8c939d;\n  width: 178px;\n  height: 178px;\n  line-height: 178px;\n  text-align: center;\n}\n.avatar[data-v-7e6e8994] {\n  width: 178px;\n  height: 178px;\n  display: block;\n}\n.shade[data-v-7e6e8994] {\n  width: 178px;\n  height: 178px;\n  position: absolute;\n  display: none;\n  background-color: rgba(0, 0, 0, 0.5);\n  transition: all 0.5s;\n}\n.shade > span[data-v-7e6e8994] {\n  text-align: center;\n  line-height: 178px;\n  color: #f0f0f0;\n}\n.el-upload:hover .shade[data-v-7e6e8994] {\n  display: block;\n}\n", ""]);
+exports.push([module.i, "header[data-v-6499c716]{margin-bottom:20px}.echarts[data-v-6499c716]{width:600px;height:400px}.echarts>button[data-v-6499c716]{width:80px;height:30px;outline:none;border:0}", ""]);
 
 // exports
 
@@ -35248,7 +35017,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, "\n.documentInfo[data-v-7ef158cf] {\n  margin-bottom: 20px;\n}\n.adddoc[data-v-7ef158cf] {\n  width: 100%;\n  height: 70%;\n}\n.adddoc .quill-editor[data-v-7ef158cf] {\n  margin-bottom: 20px;\n}\n", ""]);
+exports.push([module.i, ".login-wrap[data-v-74dd7a27]{position:relative;width:100%;height:100%}.ms-title[data-v-74dd7a27]{position:absolute;top:50%;width:100%;margin-top:-230px;text-align:center;font-size:30px;color:#000}.ms-login[data-v-74dd7a27]{position:absolute;left:50%;top:40%;width:400px;height:160px;margin:-150px 0 0 -190px;padding:40px;border-radius:5px;background:#fff}.login-btn[data-v-74dd7a27]{text-align:center}.login-btn button[data-v-74dd7a27]{width:100%;height:36px}", ""]);
 
 // exports
 
@@ -35262,7 +35031,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, "\n.quill-editor img {\n  max-width: 100%;\n}\n", ""]);
+exports.push([module.i, ".avatar_uploads[data-v-7e6e8994]{width:100%;height:100%}.avatarInfo[data-v-7e6e8994]{margin-bottom:20px}.avatar_button[data-v-7e6e8994]{position:absolute;bottom:0;right:0;margin-bottom:50px;margin-right:80px}.saying[data-v-7e6e8994]{width:100%;height:50px;padding-left:30px;border-bottom:1px solid #f0f0f0}.saying>.el-icon-picture[data-v-7e6e8994]{float:left;line-height:50px}.saying>span[data-v-7e6e8994]{font-size:20px;line-height:50px;margin-left:10px;float:left;color:#3c3c3c}.upload_area[data-v-7e6e8994]{padding:3px;border:3px dashed #f0f0f0;margin:50px;float:left}.avatar_notice[data-v-7e6e8994]{width:500px;margin-top:100px;margin-left:50px;line-height:30px;color:#777;font-size:14px}.avatar-uploader .el-upload[data-v-7e6e8994]{border:1px dashed #d9d9d9;border-radius:6px;cursor:pointer;position:relative;overflow:hidden}.avatar-uploader .el-upload[data-v-7e6e8994]:hover{border-color:#20a0ff}.avatar-uploader-icon[data-v-7e6e8994]{font-size:28px;color:#8c939d;width:178px;height:178px;line-height:178px;text-align:center}.avatar[data-v-7e6e8994]{width:178px;height:178px;display:block}.shade[data-v-7e6e8994]{width:178px;height:178px;position:absolute;display:none;background-color:rgba(0,0,0,.5);transition:all .5s}.shade>span[data-v-7e6e8994]{text-align:center;line-height:178px;color:#f0f0f0}.el-upload:hover .shade[data-v-7e6e8994]{display:block}", ""]);
 
 // exports
 
@@ -35276,7 +35045,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, "\n#index[data-v-d8544b42] {\n  width: 100%;\n  height: 100%;\n  padding-top: 120px;\n}\n", ""]);
+exports.push([module.i, ".documentInfo[data-v-7ef158cf]{margin-bottom:20px}.adddoc[data-v-7ef158cf]{width:100%;height:70%}.adddoc .quill-editor[data-v-7ef158cf]{margin-bottom:20px}", ""]);
 
 // exports
 
@@ -35290,7 +35059,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, "\n#header[data-v-f22182de] {\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 120px;\n}\n#router[data-v-f22182de] {\n  height: 100%;\n  width: 300px;\n  position: fixed;\n  left: 0;\n  top: 120px;\n  float: left;\n  background-color: #eef1f6;\n}\n#routerView[data-v-f22182de] {\n  float: left;\n  width: 70%;\n  height: 100%;\n  margin-left: 300px;\n  padding: 30px 40px;\n}\n#footer[data-v-f22182de] {\n  position: fixed;\n  bottom: 0;\n  left: 0;\n  float: left;\n  width: 100%;\n  height: 30px;\n  background-color: #cdd2da;\n}\n", ""]);
+exports.push([module.i, ".quill-editor img{max-width:100%}", ""]);
 
 // exports
 
@@ -35304,7 +35073,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, "\n.main > .welcome[data-v-f5c40654] {\n  width: 200px;\n  height: 50px;\n  border-bottom: 1px solid #f0f0f0;\n  margin-bottom: 20px;\n}\n.main > .welcome > span[data-v-f5c40654] {\n  font-size: 30px;\n  line-height: 50px;\n}\n.main > .main_title[data-v-f5c40654] {\n  width: 100%;\n  height: 100%;\n  margin-bottom: 20px;\n}\n.main > .main_title > .box[data-v-f5c40654] {\n  width: 24%;\n  height: 100px;\n  float: left;\n  border-radius: 10px;\n  text-align: center;\n  cursor: pointer;\n}\n.main > .main_title > .box + .box[data-v-f5c40654] {\n  margin-left: 10px;\n}\n.main > .main_title > .box > [class^=\"el-icon\"][data-v-f5c40654] {\n  color: #fff;\n  font-size: 30px;\n  line-height: 80px;\n  transition: all 0.5s;\n}\n.main > .main_title > .box > div[data-v-f5c40654] {\n  color: #fff;\n  margin-top: -15px;\n  transition: all 0.5s;\n}\n.main > .main_title > .box:hover [class^=\"el-icon\"][data-v-f5c40654] {\n  font-size: 50px;\n}\n.main > .main_title > .box:hover div[data-v-f5c40654] {\n  display: none;\n}\n.main > .main_title > .box1[data-v-f5c40654] {\n  background-color: #5EC55C;\n}\n.main > .main_title > .box2[data-v-f5c40654] {\n  background-color: #f1b760;\n}\n.main > .main_title > .box3[data-v-f5c40654] {\n  background-color: #48629e;\n}\n.main > .main_title > .box4[data-v-f5c40654] {\n  background-color: #f3774a;\n}\n.main > .carou[data-v-f5c40654] {\n  width: 350px;\n  height: 300px;\n  position: relative;\n  top: 120px;\n}\n.main > .carou > .carou_left > .block[data-v-f5c40654] {\n  width: 350px;\n  height: 300px;\n  position: absolute;\n}\n.main > .carou .el-carousel__item > img[data-v-f5c40654] {\n  width: 350px;\n  height: 250px;\n}\n.main > .carou > .carou_right[data-v-f5c40654] {\n  border: 1px solid #f0f0f0;\n  position: absolute;\n  left: 400px;\n  top: 20px;\n  width: 400px;\n  padding: 10px;\n}\n.main > .carou > .carou_right > .content > ul > li[data-v-f5c40654] {\n  line-height: 30px;\n}\n.main > .carou > .carou_right > .content > ul > li > .el-icon-arrow-right[data-v-f5c40654] {\n  float: right;\n  line-height: 30px;\n  font-size: 12px;\n  color: #a9a9a9;\n}\n.main > .carou > .carou_right > .content > ul > li > a[data-v-f5c40654] {\n  color: #3c3c3c;\n  font-size: 14px;\n}\n.main > .carou > .carou_right > .content > ul > li + li[data-v-f5c40654] {\n  border-top: 1px solid #f0f0f0;\n}\n", ""]);
+exports.push([module.i, "#index[data-v-d8544b42]{width:100%;height:100%;padding-top:120px}", ""]);
 
 // exports
 
@@ -35318,7 +35087,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, "@font-face {\r\n  font-family: 'icomoon';\r\n  src:  url(" + __webpack_require__(53) + ");\r\n  src:  url(" + __webpack_require__(53) + "#iefix) format('embedded-opentype'),\r\n    url(" + __webpack_require__(188) + ") format('truetype'),\r\n    url(" + __webpack_require__(189) + ") format('woff'),\r\n    url(" + __webpack_require__(187) + "#icomoon) format('svg');\r\n  font-weight: normal;\r\n  font-style: normal;\r\n}\r\n\r\n[class^=\"icon-\"], [class*=\" icon-\"] {\r\n  /* use !important to prevent issues with browser extensions that change fonts */\r\n  font-family: 'icomoon' !important;\r\n  speak: none;\r\n  font-style: normal;\r\n  font-weight: normal;\r\n  font-variant: normal;\r\n  text-transform: none;\r\n  line-height: 1;\r\n\r\n  /* Better Font Rendering =========== */\r\n  -webkit-font-smoothing: antialiased;\r\n  -moz-osx-font-smoothing: grayscale;\r\n}\r\n\r\n.icon-facebook2:before {\r\n  content: \"\\E933\";\r\n  color: #2b5995;\r\n}\r\n.icon-email:before {\r\n  content: \"\\E934\";\r\n  color: #626262;\r\n}\r\n.icon-addmember:before {\r\n  content: \"\\E92E\";\r\n  color: #fff;\r\n}\r\n.icon-ic-job-placeholder:before {\r\n  content: \"\\E926\";\r\n  color: #445cb3;\r\n}\r\n.icon-big-profile .path1:before {\r\n  content: \"\\E927\";\r\n  color: rgb(237, 237, 237);\r\n}\r\n.icon-big-profile .path2:before {\r\n  content: \"\\E928\";\r\n  margin-left: -0.9384765625em;\r\n  color: rgb(191, 191, 191);\r\n}\r\n.icon-brand:before {\r\n  content: \"\\E929\";\r\n  color: #0077b5;\r\n}\r\n.icon-error:before {\r\n  content: \"\\E922\";\r\n  color: #f5f5f7;\r\n}\r\n.icon-tick:before {\r\n  content: \"\\E923\";\r\n  color: #f5f5f7;\r\n}\r\n.icon-spin:before {\r\n  content: \"\\E924\";\r\n  color: #fff;\r\n}\r\n.icon-attachment:before {\r\n  content: \"\\E925\";\r\n  color: #445cb3;\r\n}\r\n.icon-shape:before {\r\n  content: \"\\E921\";\r\n  color: #fff;\r\n}\r\n.icon-user_single:before {\r\n  content: \"\\E91E\";\r\n}\r\n.icon-paypal:before {\r\n  content: \"\\E91A\";\r\n  color: #bac1cc;\r\n}\r\n.icon-amex:before {\r\n  content: \"\\E91B\";\r\n  color: #bac1cc;\r\n}\r\n.icon-mastercard:before {\r\n  content: \"\\E91C\";\r\n  color: #bac1cc;\r\n}\r\n.icon-visa:before {\r\n  content: \"\\E91D\";\r\n  color: #bac1cc;\r\n}\r\n.icon-group:before {\r\n  content: \"\\E916\";\r\n}\r\n.icon-job_edit:before {\r\n  content: \"\\E911\";\r\n}\r\n.icon-minus:before {\r\n  content: \"\\E910\";\r\n}\r\n.icon-plus:before {\r\n  content: \"\\E913\";\r\n}\r\n.icon-deselected-copy:before {\r\n  content: \"\\E90C\";\r\n  color: #e2e2e1;\r\n}\r\n.icon-arrow:before {\r\n  content: \"\\E900\";\r\n}\r\n.icon-arrowright:before {\r\n  content: \"\\E90D\";\r\n}\r\n.icon-cancel:before {\r\n  content: \"\\E90E\";\r\n}\r\n.icon-share:before {\r\n  content: \"\\E901\";\r\n}\r\n.icon-heart:before {\r\n  content: \"\\E902\";\r\n}\r\n.icon-badge:before {\r\n  content: \"\\E903\";\r\n}\r\n.icon-ecommerce-finance-coin-money-cash-dollar:before {\r\n  content: \"\\E904\";\r\n}\r\n.icon-facebook:before {\r\n  content: \"\\E905\";\r\n}\r\n.icon-printer:before {\r\n  content: \"\\E906\";\r\n}\r\n.icon-mail:before {\r\n  content: \"\\E907\";\r\n}\r\n.icon-briefcase:before {\r\n  content: \"\\E908\";\r\n}\r\n.icon-pointer:before {\r\n  content: \"\\E909\";\r\n}\r\n.icon-phone:before {\r\n  content: \"\\E90A\";\r\n}\r\n.icon-arrowside-copy:before {\r\n  content: \"\\E919\";\r\n}\r\n.icon-attach:before {\r\n  content: \"\\E92A\";\r\n  color: #fff;\r\n}\r\n.icon-radio:before {\r\n  content: \"\\E92C\";\r\n  color: #445cb3;\r\n}\r\n.icon-radio-selected:before {\r\n  content: \"\\E92D\";\r\n  color: #445cb3;\r\n}\r\n.icon-ic-apply:before {\r\n  content: \"\\E932\";\r\n  color: #f2770d;\r\n}\r\n.icon-delete:before {\r\n  content: \"\\E936\";\r\n  color: #7e7e7e;\r\n}\r\n.icon-bookmarked:before {\r\n  content: \"\\E937\";\r\n  color: #445cb3;\r\n}\r\n.icon-bookmark:before {\r\n  content: \"\\E938\";\r\n  color: #7e7e7e;\r\n}\r\n.icon-clip:before {\r\n  content: \"\\E918\";\r\n}\r\n.icon-send:before {\r\n  content: \"\\E935\";\r\n}\r\n.icon-people:before {\r\n  content: \"\\E915\";\r\n}\r\n.icon-edit:before {\r\n  content: \"\\E914\";\r\n}\r\n.icon-search:before {\r\n  content: \"\\E912\";\r\n}\r\n.icon-check_box_outline_blank:before {\r\n  content: \"\\E90B\";\r\n}\r\n.icon-check_box:before {\r\n  content: \"\\E90F\";\r\n}\r\n.icon-arrow_drop_up:before {\r\n  content: \"\\E91F\";\r\n}\r\n.icon-arrow_drop_down:before {\r\n  content: \"\\E920\";\r\n}\r\n.icon-shopping_cart:before {\r\n  content: \"\\E92B\";\r\n}\r\n.icon-arrow_upward:before {\r\n  content: \"\\E930\";\r\n}\r\n.icon-arrow_downward:before {\r\n  content: \"\\E931\";\r\n}\r\n.icon-chevrons-left:before {\r\n  content: \"\\E939\";\r\n}\r\n.icon-chevrons-right:before {\r\n  content: \"\\E93A\";\r\n}\r\n.icon-dots-three-horizontal:before {\r\n  content: \"\\E92F\";\r\n}\r\n.icon-cross:before {\r\n  content: \"\\E917\";\r\n}\r\n.icon-quotes-left:before {\r\n  content: \"\\E977\";\r\n}\r\n.icon-quotes-right:before {\r\n  content: \"\\E978\";\r\n}\r\n.icon-phone2:before {\r\n  content: \"\\E942\";\r\n}\r\n", ""]);
+exports.push([module.i, "#header[data-v-f22182de]{position:fixed;top:0;left:0;width:100%;height:120px}#router[data-v-f22182de]{height:100%;width:300px;position:fixed;left:0;top:120px;float:left;background-color:#eef1f6}#routerView[data-v-f22182de]{float:left;width:70%;height:100%;margin-left:300px;padding:30px 40px}#footer[data-v-f22182de]{position:fixed;bottom:0;left:0;float:left;width:100%;height:30px;background-color:#cdd2da}", ""]);
 
 // exports
 
@@ -35332,7 +35101,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, "@charset \"utf-8\";\r\nhtml,body {\r\n    width: 100%;\r\n    height: 100%;\r\n    -webkit-user-select: none;\r\n    user-select: none;\r\n    -webkit-text-size-adjust: none;\r\n    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);\r\n}\r\nhtml {-webkit-text-size-adjust: none;}\r\nbody {font-family:\"PingFang TC\" ,\"\\5137\\9ED1   Pro\", \"Microsoft JhengHei\", \"\\5FAE\\8EDF\\6B63\\9ED1\\9AD4\", STHeiti,\"Heiti TC Medium\", Apple LiGothic, Helvetica, Helvetica Neue, Arial,\"PMingLiu\", \"\\65B0\\7D30\\660E\\9AD4\";color: #333;}\r\nbody,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,input,textarea,p,th,td,button {margin: 0;padding: 0;}\r\ninput[type=\"button\"],input[type=\"submit\"],input[type=\"reset\"] {-webkit-appearance: none;}\r\na,img,li {-webkit-touch-callout: none;touch-callout: none;}\r\na,button,input,textarea {-webkit-tap-highlight-color: transparent;}\r\nbutton {font-weight: 600 !important;}\r\nimg {border: 0 none;max-width: 100%;}\r\na,a:hover {text-decoration: none;}\r\nem,i {font-style: normal;}\r\nli {list-style: none;}\r\n.btn-default:hover,.btn-default:active:focus {background-color: #445cb3;color: #fff;}\r\n.btn-default.focus,.btn-default:focus {background: #445cb3;}\r\nheader,footer,section,aside,article,nav,dialog,figure {display: block;}\r\ninput:focus {outline: none;}\r\ninput:-webkit-autofill,textarea:-webkit-autofill,select:-webkit-autofill {-webkit-box-shadow: 0 0 0 1000px white inset;}\r\ninput[type=text]:focus,input[type=password]:focus,textarea:focus {-webkit-box-shadow: 0 0 0 1000px white inset;}\r\n/* IE 滚动条 */\r\nbody,div,p,textarea,section,ul,iframe {\r\n    scrollbar-face-color: #F3F3F3;\r\n    /*颜色*/\r\n    scrollbar-arrow-color: #C0C0C0;\r\n    /*箭头*/\r\n    scrollbar-3dlight-color: #C0C0C0;\r\n    /*最外左*/\r\n    scrollbar-highlight-color: #FFFFFF;\r\n    /*左二*/\r\n    scrollbar-shadow-color: #FFFFFF;\r\n    /*右二*/\r\n    scrollbar-darkshadow-color: #C0C0C0;\r\n    /*右一*/\r\n    scrollbar-track-color: #F5F5F5;\r\n    /*滑道*/\r\n}\r\n/* chrome 滚动条 */\r\nbody::-webkit-scrollbar,\r\ndiv::-webkit-scrollbar,\r\np::-webkit-scrollbar,\r\ntextarea::-webkit-scrollbar,\r\nsection::-webkit-scrollbar,\r\nul::-webkit-scrollbar,\r\niframe::-webkit-scrollbar,\r\nselect::-webkit-scrollbar-thumb,\r\noption::-webkit-scrollbar-thumb {width: 9px;height: 12px;-webkit-border-radius: 3px;}\r\nbody::-webkit-scrollbar {width: 8px;}\r\nbody::-webkit-scrollbar-track,\r\ndiv::-webkit-scrollbar-track,\r\np::-webkit-scrollbar-track,\r\ntextarea::-webkit-scrollbar-track,\r\nsection::-webkit-scrollbar-track,\r\nul::-webkit-scrollbar-track,\r\nselect::-webkit-scrollbar-thumb,\r\noption::-webkit-scrollbar-thumb {background: #FFF;}\r\nbody::-webkit-scrollbar-thumb,\r\ndiv::-webkit-scrollbar-thumb,\r\np::-webkit-scrollbar-thumb,\r\ntextarea::-webkit-scrollbar-thumb,\r\nsection::-webkit-scrollbar-thumb,\r\nul::-webkit-scrollbar-thumb,\r\nselect::-webkit-scrollbar-thumb,\r\noption::-webkit-scrollbar-thumb {background: #cfcfcf;-webkit-border-radius: 3px;}\r\n.no_scroll {position: absolute;left: 0;top: 0;height: 100%;overflow: hidden;}\r\n.row {height: 100%;}\r\n.clearfix:after {content: \" \";visibility: hidden;display: block;clear: both;height: 0;font-size: 0}\r\n.clearfix {clear: both;}\r\n.tl {text-align: left}\r\n.tc {text-align: center}\r\n.tr {text-align: right}\r\n.fl {float: left}\r\n.fr {float: right}\r\n.ti {text-indent: -150%;overflow: hidden}\r\n.c_b_b {border: 0;background: none;color: #fff;}\r\n.c_b_b .navbar-nav li>a {color: #fff;font-size: 0.21rem;padding: 0 0.2rem;}\r\n.router-link-active,.router-link-exact-active{text-decoration: none;}/*清除路由默认样式*/\r\n.router-link-active:focus,.router-link-exact-active:focus{text-decoration: none;}/*清除路由默认样式*/\r\n\r\n.search_content {padding-top: 1.1rem;font-size: 0.3rem;color: #fff;}\r\n.search_content .input-lg,\r\n.search_content .form-control {border-radius: 0;margin: 0.06rem 0;height: 0.46rem;padding: 0.15rem 16px;font-size: 0.15rem;line-height: 1;color: #95989a;border: none;border-right: 1px solid #ccc;font-family:\"PingFang TC\" ,\"\\5137\\9ED1   Pro\", \"Microsoft JhengHei\", \"\\5FAE\\8EDF\\6B63\\9ED1\\9AD4\", STHeiti,\"Heiti TC Medium\", Apple LiGothic, Helvetica, Helvetica Neue, Arial,\"PMingLiu\", \"\\65B0\\7D30\\660E\\9AD4\";}\r\n.search_content .col-md-6,\r\n.search_content .col-md-4 {padding: 0;}\r\n.search_content .search_form {background: #2e344b;color: #fff;border: none;text-align: center;border-radius: 0.1rem;cursor: pointer;}\r\n@media screen and (min-width: 320px) and (max-width: 568px) {\r\n    .logo {width: 6rem;}\r\n    .search_content .input-lg,\r\n    .search_content .form-control {height: auto;padding: 0.6rem 16px;font-size: 0.18rem;line-height: 1;color: #95989a;border: none;margin: 0.1rem 0;}\r\n}\r\n@media screen and (min-width: 320px) and (max-width: 768px) {\r\n    .article_detail_wrap{text-align: center;}\r\n    .c_b_b .collapsed {margin-top: 1.6rem;}\r\n    .search_content {padding-top: 2.4rem;padding-bottom: 2.2rem;}\r\n    .skip_content,\r\n    .resetpassword_content {width: 80% !important;}\r\n    .status,\r\n    .skip_title,\r\n    .resetpassword_title,\r\n    .skip_submit,\r\n    .resetpassword_submit,\r\n    .login_submit,\r\n    .signup_submit,\r\n    .login_account input {font-size: 16px !important;}\r\n    .skip_account .icon-check_box {font-size: 22px !important;}\r\n    .employer_profile_content {padding-bottom: 22% !important;}\r\n    .employer_profile_button_fixed {left: 10px !important;width: 93%;}\r\n}\r\n@media screen and (orientation: landscape) {\r\n    .c_b_b .collapsed {margin-top: 0.6rem;}\r\n}\r\n@media screen and (min-width: 970px) {\r\n    /* #component{width: 970px;} */\r\n    .component{width:970px;margin:0 auto;}\r\n}\r\n.footer {width: 100%;padding: 0.16rem 0rem;color: #fff;text-align: center;background: #264a61;display: flex;display: -webkit-box;display: -moz-box;display: -ms-flexbox;display: -webkit-flex;align-items: center;}\r\n#component {margin: 0 auto;font-family: \"PingFang TC\" ,\"\\5137\\9ED1   Pro\", \"Microsoft JhengHei\", \"\\5FAE\\8EDF\\6B63\\9ED1\\9AD4\", STHeiti,\"Heiti TC Medium\", Apple LiGothic, Helvetica, Helvetica Neue, Arial,\"PMingLiu\", \"\\65B0\\7D30\\660E\\9AD4\";color: #264a61;}\r\n.hotjobs_page_change {width: 0.1rem;height: 0.1rem;display: inline-block;margin-right: 0.1rem;border-radius: 50%;background: #688193;}\r\n.change_active {background: #2e344b;}\r\n.logo {background: #fff;}\r\n/* sskip  reset login signup*/\r\n.logo_all_same {margin-bottom: 20px;}\r\n.skip_content,\r\n.resetpassword_content {width: 57%;background-color: #ffffff;border: solid 1px #e2e2e1;color: #264a61;padding: 0.33rem 0.61rem;margin: 0.77rem auto;}\r\n.skip_title,.resetpassword_title {margin-top: 0.22rem;font-size: 0.2rem;}\r\n.skip_submit,\r\n.resetpassword_submit,\r\n.login_submit,\r\n.signup_submit,\r\n.employer_profile_submit,.hiring_submit {width: 90%;border-radius:6px;background-color: #445cb3;border: none;font-size: 0.21rem;padding: 0.14rem 0;color: #fff;}\r\n.skip_account,\r\n.resetpassword_account {text-align: center;}\r\n/* login  reset*/\r\n.login_account {margin: 0.36rem 0.514rem 0.34rem 0.74rem;}\r\n.login_account input {margin: 0 auto;border-style: none none solid none;border-radius: 0;box-shadow: none;-webkit-box-shadow: none;-moz-box-shadow: none;text-shadow: none;border-bottom-color: #e2e2e1;border-width: 1px;font-size: 16px;}\r\n.login_account .input_wrap {margin: 0 auto 8%;}\r\n/*reset*/\r\n.error_same {font-size: 12px;font-weight: 500;line-height: 1.8;float: left;color: #ff3333;}\r\n/* login  signup*/\r\n.loginIn,\r\n.signup,\r\n.email_activate,\r\n.forget_pass,\r\n.employer_profile {width: 100%;height: 100%;position: fixed;left: 0;top: 0;background: rgba(0, 0, 0, 0.4);z-index: 999;}\r\n/* 暂存，要删掉 */\r\n.delay_pop{width: 100%;height: 100%;position: fixed;left: 0;top: 0;z-index: 999999;}\r\n.el-icon-loading{font-size: 0.8rem;position: absolute;left: 50%;top:50%;z-index: 9999}\r\n.login_content,\r\n.signup_content,\r\n.employer_profile_content {position: relative;z-index: 9999;background: #fff;margin-top: 2%;max-height: 94%;overflow: auto;}\r\n.signup_entrance,\r\n.login_entrance {margin: 0.6rem auto 0.36rem;font-size:14px;font-weight: 500;color: #4a4a4a;text-align: center;}\r\n.signup_entrance a,\r\n.login_entrance a {color: #445cb3;}\r\n.icon-tick-copy {border: 1px solid #e2e2e1;}\r\n.remember_account {color: rgba(68, 92, 179, 0.9);margin:0 auto 0.4rem;font-size: 0.16rem;display: flex;align-items: baseline;}\r\n.remember_account a,\r\n.remember_account span {width: 50%;display: inline-block;}\r\n.remember_account a {text-align: right !important;}\r\n.remember_account i {margin-right: 0.1rem}\r\n.icon-mail {margin: 0 0.2rem 0 0.28rem;font-size: 0.20rem;}\r\n.icon-cancel {cursor: pointer;}\r\n\r\n/* error_tip */\r\n.red_border_tip {\r\n    border-bottom-color: red !important;\r\n}\r\n/* checkbox */\r\n.icon-check_box {\r\n    color: #445cb3;\r\n    border: none;\r\n    font-size: 0.26rem\r\n}\r\n.icon-check_box_outline_blank {\r\n    font-size: 0.26rem\r\n}\r\n/* 轮播图滚动 */\r\n.swiper-pagination {\r\n    text-align: right;\r\n    padding-right: 3%\r\n}\r\n.swiper-pagination-bullet {\r\n    background: #688193;\r\n}\r\n.swiper-pagination-bullet-active {\r\n    background: #2e344b;\r\n}\r\n.finish_room2 {\r\n    width: 100%;\r\n    height: auto;\r\n    padding-top: 15px;\r\n    padding-bottom: 15px;\r\n    display: flex;\r\n    align-items: center;\r\n}\r\n.finish_room2 .room_img {\r\n    width: 0.75rem;\r\n    height: 0.75rem;\r\n    margin-right: 10px;\r\n    position: relative;\r\n    overflow: hidden;\r\n}\r\n.finish_room2 .room_img img {\r\n    width: 100%;\r\n    height: 100%;\r\n}\r\n\r\n.finish_room2>.room_img span {\r\n    position: absolute;\r\n    width: auto;\r\n    height: auto;\r\n    right: 5px;\r\n    bottom: 3px;\r\n}\r\n\r\n.room_add_img {\r\n    width: 0.75rem;\r\n    height: 0.75rem;\r\n    border: 1px solid #e1e1e1;\r\n    display: flex;\r\n    flex-direction: column;\r\n    align-items: center;\r\n    justify-content: space-between;\r\n    position: relative;\r\n}\r\n\r\n.room_add_img>span:nth-child(1) {\r\n    overflow: hidden;\r\n}\r\n\r\n.room_add_img>span:nth-child(2) {\r\n    margin-bottom: 10px;\r\n}\r\n\r\n.room_add_img input,\r\n#upload_file,\r\n.add_img_company input {\r\n    position: absolute;\r\n    top: 0px;\r\n    left: 0px;\r\n    width: 100%;\r\n    height: 100%;\r\n    z-index: 99999;\r\n    opacity: 0;\r\n}\r\n\r\n.swiper-pagination-fraction,\r\n.swiper-pagination-custom,\r\n.swiper-container-horizontal>.swiper-pagination-bullets {\r\n    top: 4rem;\r\n}\r\n\r\n.job_listings_item_title{line-height: 0.5rem;font-family: Arial;font-size: 16px;color: rgba(0, 0, 0, 0.7);font-weight: 600;opacity: 0.7;}\r\n\r\n/*\r\n * @desc profile样式\r\n */\r\n\r\n#profile {\r\n    height: auto;\r\n    font-family: \"PingFang TC\" ,\"\\5137\\9ED1   Pro\", \"Microsoft JhengHei\", \"\\5FAE\\8EDF\\6B63\\9ED1\\9AD4\", STHeiti,\"Heiti TC Medium\", Apple LiGothic, Helvetica, Helvetica Neue, Arial,\"PMingLiu\", \"\\65B0\\7D30\\660E\\9AD4\";\r\n    margin-top: 0.5rem;\r\n    margin-bottom: 0.92rem;\r\n}\r\n\r\n#profile .profile_main {\r\n    width: 100%;\r\n    margin: 0 auto;\r\n}\r\n\r\n#profile .profile_main>.profile_left>.profile_title {\r\n    padding: 0.25rem 0.36rem 0 0.25rem;\r\n    background-color: #fff;\r\n}\r\n\r\n\r\n#profile .profile_main>.profile_left>.profile_title>.profile_title_avatar {\r\n    width: 1.04rem;\r\n    height: 1.04rem;\r\n    cursor: pointer;\r\n    border-radius: 50%;\r\n    overflow: hidden;\r\n    margin-top: -1rem;\r\n}\r\n\r\n#profile .profile_main>.profile_left>.profile_title>.profile_title_avatar>.profile_notice_avatar {\r\n    height: 104px;\r\n    background-size: contain;\r\n}\r\n\r\n#profile .profile_main>.profile_left>.profile_title>.profile_title_avatar>img {\r\n    width: 100%;\r\n    height: 100%;\r\n}\r\n\r\n#profile .profile_main>.profile_left>.profile_title>.profile_title_avatar>.profile_notice_avatar>p {\r\n    text-align: center;\r\n    font-size: 18px;\r\n    color: #fff;\r\n}\r\n\r\n#profile .profile_main>.profile_left>.profile_title>.profile_head_edit>div {\r\n    cursor: pointer;\r\n}\r\n\r\n#profile .profile_main>.profile_left>.profile_title>.profile_head_edit>div>.icon-edit {\r\n    font-size: 0.25rem;\r\n    line-height: 0.4rem;\r\n}\r\n\r\n.profile_title_name{margin-left: 1.5rem;padding-top: 0.38rem;}\r\n#profile .profile_title_name>.basic_info {font-family: \"MHeiHK-X\",\"PingFang TC\" ,\"\\5137\\9ED1   Pro\", \"Microsoft JhengHei\", \"\\5FAE\\8EDF\\6B63\\9ED1\\9AD4\", STHeiti,\"Heiti TC Medium\", Apple LiGothic, Helvetica, Helvetica Neue, Arial,\"PMingLiu\", \"\\65B0\\7D30\\660E\\9AD4\";font-size: 13px;color: #fff;}\r\n#profile .profile_title_name>.basic_info_title{font-size:0.25rem;font-weight: bold;}\r\n#profile .profile_main>.profile_left>.profile_title>.profile_title_name>.basic_info_salary {\r\n    margin-top: 0.25rem;\r\n    font-size: 0.22rem;\r\n}\r\n\r\n#profile .profile_main>.profile_left>.profile_notice {\r\n    font-family: \"PingFang TC\" ,\"\\5137\\9ED1   Pro\", \"Microsoft JhengHei\", \"\\5FAE\\8EDF\\6B63\\9ED1\\9AD4\", STHeiti,\"Heiti TC Medium\", Apple LiGothic, Helvetica, Helvetica Neue, Arial,\"PMingLiu\", \"\\65B0\\7D30\\660E\\9AD4\";\r\n    padding-top: 0.15rem;\r\n    padding-bottom: 0.2rem;\r\n    background-color: #e2e2e1;\r\n    text-align: center;\r\n}\r\n\r\n#profile .profile_main>.profile_left>.profile_notice>.profile_notice_title {\r\n    font-size: 0.24rem;\r\n    font-weight: 900;\r\n    margin: 0.05rem 0;\r\n    /*line-height: 0.34rem;*/\r\n    color: #264a61;\r\n}\r\n\r\n#profile .profile_main>.profile_left>.profile_notice>.profile_notice_content {\r\n    /*line-height: 0.32rem;*/\r\n    margin: 0.05rem 0;\r\n    font-size: 0.22rem;\r\n    color: #264a61;\r\n}\r\n#profile .profile_main>.profile_left>.profile_info{padding: 0 0.19rem 0.56rem 0.35rem;}\r\n#profile .profile_main>.profile_left>.profile_info>.profile_item_content>ul>li>.item_title {\r\n    /*line-height: 0.32rem;*/\r\n    margin: 0.05rem 0;\r\n    font-family: \"PingFang TC\" ,\"\\5137\\9ED1   Pro\", \"Microsoft JhengHei\", \"\\5FAE\\8EDF\\6B63\\9ED1\\9AD4\", STHeiti,\"Heiti TC Medium\", Apple LiGothic, Helvetica, Helvetica Neue, Arial,\"PMingLiu\", \"\\65B0\\7D30\\660E\\9AD4\";\r\n    font-size: 0.21rem;\r\n    font-weight: 500;\r\n    color: #264a61;\r\n}\r\n\r\n#profile .profile_main>.profile_left>.profile_info>.profile_item_content>ul>li>.item_title>div {\r\n    float: right;\r\n    cursor: pointer;\r\n}\r\n\r\n#profile .profile_main>.profile_left>.profile_info>.profile_item_content>ul>li>.item_title>div>.icon-edit {\r\n    line-height: 0.32rem;\r\n    float: right;\r\n    font-size: 0.25rem;\r\n    font-weight: 500;\r\n    color: #264a61;\r\n}\r\n#profile .profile_left>.profile_info>.profile_item_content>ul{margin-bottom: 0.53rem;}\r\n#profile .profile_left>.profile_info>.profile_item_content>ul>li>.item_content {\r\n    font-family: \"MHeiHK\",\"PingFang TC\" ,\"\\5137\\9ED1   Pro\", \"Microsoft JhengHei\", \"\\5FAE\\8EDF\\6B63\\9ED1\\9AD4\", STHeiti,\"Heiti TC Medium\", Apple LiGothic, Helvetica, Helvetica Neue, Arial,\"PMingLiu\", \"\\65B0\\7D30\\660E\\9AD4\";\r\n    font-size: 15px;\r\n    font-weight: 500;\r\n    line-height: 1.33;\r\n    color: #2c2f3e;\r\n}\r\n\r\n#profile .profile_main>.profile_right {\r\n    padding-left: 2%;\r\n}\r\n\r\n#profile .profile_main>.profile_right>.profile_right_content {\r\n    width: 300px;\r\n}\r\n\r\n#profile .profile_main>.profile_right>.profile_right_content>.profile_recent {\r\n    /*height: 3.28rem;*/\r\n    padding: 0.1rem;\r\n    padding-top: 0.15rem;\r\n    background-color: #688193;\r\n}\r\n\r\n#profile .profile_main>.profile_right>.profile_right_content>.profile_recent>.profile_recent_title {\r\n    padding-left: 0.1rem;\r\n    padding-bottom: 0.2rem;\r\n    font-size: 0.18rem;\r\n    font-weight: 900;\r\n    color: #ffffff;\r\n}\r\n\r\n#profile .profile_main>.profile_right>.profile_right_content>.profile_recent>.profile_recent_content>ul>li {\r\n    height: 0.8rem;\r\n    background-color: #fff;\r\n}\r\n\r\n#profile .profile_main>.profile_right>.profile_right_content>.profile_recent>.profile_recent_content>ul>li+li {\r\n    margin-top: 0.1rem;\r\n}\r\n\r\n#profile .profile_main>.profile_right>.profile_right_content>.profile_job_update {\r\n    margin-top: 0.2rem;\r\n    padding: 0.2rem 0.1rem 0.34rem;\r\n    background-color: #688193;\r\n}\r\n\r\n#profile .profile_main>.profile_right>.profile_right_content>.profile_job_update>.profile_update_title {\r\n    padding-left: 0.1rem;\r\n    font-size: 0.18rem;\r\n    font-weight: 900;\r\n    line-height: 0.28rem;\r\n    color: #ffffff;\r\n}\r\n\r\n#profile .profile_main>.profile_right>.profile_right_content>.profile_job_update>.profile_update_content {\r\n    padding-left: 0.1rem;\r\n    font-size: 16px;\r\n    font-weight: 500;\r\n    color: #ffffff;\r\n}\r\n\r\n#profile .profile_main>.profile_right>.profile_right_content>.profile_job_update>.profile_update_btn {\r\n    margin-top: 0.24rem;\r\n    text-align: center;\r\n    background-color: #445cb3;\r\n}\r\n\r\n#profile .profile_main>.profile_right>.profile_right_content>.profile_job_update>.profile_update_btn>a {\r\n    display: block;\r\n    height: 0.4rem;\r\n    line-height: 0.4rem;\r\n    font-size: 16px;\r\n    font-weight: 900;\r\n    color: #264a61;\r\n}\r\n\r\n#profile .profile_main>.profile_right>.profile_right_content>.profile_downapps {\r\n    height: 0.4rem;\r\n    text-align: center;\r\n    line-height: 0.4rem;\r\n    margin-top: 0.2rem;\r\n    border-radius: 0.1rem;\r\n    background-color: #264a61;\r\n}\r\n\r\n#profile .profile_main>.profile_right>.profile_right_content>.profile_downapps>.download_app {\r\n    font-size: 16px;\r\n    color: #fff;\r\n}\r\n\r\n#profile .profile_main>.profile_right>.profile_right_content>.profile_downapps>.download_app>i {\r\n    font-size: 0.27rem;\r\n    vertical-align: middle;\r\n    margin-left: 15px;\r\n}\r\n\r\n.icon_job_edit {\r\n    width: 2.36rem;\r\n    position: absolute;\r\n    z-index: 9999;\r\n    top: 0.04rem;\r\n    right: 0;\r\n    background: #ffffff;\r\n    border: solid 1px #e2e2e1;\r\n    border-bottom: none\r\n}\r\n\r\n.icon_job_edit li {\r\n    padding: 0.17rem;\r\n    border-bottom: solid 1px #e2e2e1;\r\n    text-align: left;\r\n    cursor: pointer;\r\n}\r\n\r\n\r\n/* .el-switch__core, .el-switch__label {width: 0.7rem;height: 0.3rem;} */\r\n\r\n.el-switch__core .el-switch__button {\r\n    /* width:0.26rem;height:0.26rem; */\r\n    background-color: #ffffff;\r\n    border: solid 1px #95989a;\r\n}\r\n.auto_btn .el-switch__core{\r\n    background-color: #e2e2e1;\r\n}\r\n.el-switch__core {\r\n    border: 1px solid #ffffff;\r\n    background: #ffffff;\r\n}\r\n\r\n.el-switch.is-checked .el-switch__core {\r\n    border-color: #0fbb0f;\r\n    background-color: #0fbb0f;\r\n}\r\n\r\n.skill_item_tags_wrap span {\r\n    background: #fff;\r\n    border-radius: 3px;\r\n    border: solid 1px #4e55a0;\r\n    font-size: 14px;\r\n    text-align: left;\r\n    color: #445cb4;\r\n    padding:6px 10px;\r\n    display: inline-block;\r\n    margin-right: 0.1rem;\r\n    margin-bottom: 0.1rem;\r\n    font-weight: bold;\r\n}\r\n\r\n.skill_item_tags_wrap {\r\n    margin-top: 0.18rem;\r\n    margin-right: 0.3rem;\r\n    margin-left: 15px;\r\n    width: 62%\r\n}\r\n\r\n.icon-cross {\r\n    font-size: 0.24rem;\r\n    color: #264a61;\r\n    margin-left: 8px;\r\n}\r\n\r\n.el-date-editor.el-input {\r\n    width: auto;\r\n}\r\n\r\n.date_picker,\r\n.salary_range_wrap {\r\n    border-radius: 10px;\r\n    border: solid 1px #e0e0e0;\r\n    font-size: 14px;\r\n    text-align: left;\r\n    color: #333333;\r\n    background: #fff;\r\n}\r\n.company_image_style .el-input__icon + .el-input__inner{\r\n    width:100%;\r\n}\r\n/* .date_picker_width .el-input__icon + .el-input__inner{\r\n    width:1.1rem;\r\n} */\r\n.company_image_style ::-moz-placeholder { color: #000000;}\r\n.company_image_style ::-webkit-input-placeholder { color: #000000;}\r\n.company_image_style :-ms-input-placeholder { color: #000000;}\r\n\r\n.date_picker_width ::-moz-placeholder { color: #333333;}\r\n.date_picker_width ::-webkit-input-placeholder { color: #333333;}\r\n.date_picker_width :-ms-input-placeholder { color: #333333;}\r\n.walkin_time_style ::-moz-placeholder { color: #333333;}\r\n.walkin_time_style ::-webkit-input-placeholder { color: #333333;}\r\n.walkin_time_style :-ms-input-placeholder { color: #333333;}\r\n.mt007{margin-top: 0.07rem;}\r\n.salary_range_wrap {\r\n    padding: 4px 13px;\r\n    display: inline-block;\r\n}\r\n\r\n.salary_range_wrap input {\r\n    border: none !important;\r\n}\r\n\r\n\r\n/*\r\n * @desc 输入框input类型为number时，去掉上下箭头方式  \r\n */\r\n\r\ninput::-webkit-outer-spin-button,\r\ninput::-webkit-inner-spin-button {\r\n    -webkit-appearance: none;\r\n}\r\n\r\ninput[type=\"number\"] {\r\n    -moz-appearance: textfield;\r\n}\r\n\r\n.date_picker input {\r\n    border: none;\r\n    padding-right: 0px !important;\r\n    text-align: center;\r\n}\r\n\r\n.el-input__icon+.el-input__inner {\r\n    padding-right: 0px !important;\r\n    border-color: #95989a\r\n}\r\n.el-input__inner{font-size: 14px;text-align: left;color: #333333;height: auto;font-size: 14px;text-align: left;color: #333333;}\r\n.date_picker i,\r\n.el-date-editor i {\r\n    display: none;\r\n}\r\n\r\n.el-input__inner {\r\n    padding: 0px;\r\n}\r\n\r\n.walkin_time_style input {\r\n    width: 0.5rem;\r\n    text-align: center;\r\n    border-radius: 10px;\r\n}\r\n.walkin_time_style input{width:80px; }\r\n.employer_profile_drop_down {\r\n    background-color: #ffffff;\r\n    padding-bottom: 4%;\r\n    display: none;\r\n    box-shadow: 0px 3px 3.3px 0.7px rgba(0, 0, 0, 0.2);\r\n}\r\n/*\r\n * @desc 分页样式\r\n */\r\n.el-pagination>.btn-prev,\r\n.el-pagination>.btn-next {\r\n    margin: 0 0.1rem;\r\n    background: transparent;\r\n    border: 0;\r\n}\r\n.el-pagination>.el-pager>li.number,\r\n.el-pagination>.el-pager>li.active .el-pagination>.el-pager>li,\r\n.el-pagination>.el-pager>li {\r\n    margin: 0 0.1rem;\r\n    color: #264a61;\r\n    background: transparent;\r\n    border: 1px solid #d9d9d9;\r\n    border-radius: 2px;\r\n    min-width: 36px;\r\n    height: 35px;\r\n    line-height: 35px;\r\n    font-family: \"PingFang TC\" ,\"\\5137\\9ED1   Pro\", \"Microsoft JhengHei\", \"\\5FAE\\8EDF\\6B63\\9ED1\\9AD4\", STHeiti,\"Heiti TC Medium\", Apple LiGothic, Helvetica, Helvetica Neue, Arial,\"PMingLiu\", \"\\65B0\\7D30\\660E\\9AD4\";\r\n  \tfont-size:0.19rem;\r\n  \tfont-weight: 500;\r\n  \tcolor: #333333;\r\n}\r\n.el-pagination button.disabled {\r\n    background: transparent;\r\n}\r\n\r\n.el-pagination>.el-pager>li.active {\r\n    background: #4e55a0;\r\n    color: #fff;\r\n\tborder-radius: 2px;\r\n\tborder:none;\r\n}\r\n\r\n\r\n/*\r\n * @desc el-radio样式\r\n */\r\n\r\n.el-radio__inner::after {\r\n    width:14px;\r\n    height:14px;\r\n    background-color: #445cb3;\r\n    border: 2px solid #fff;\r\n}\r\n\r\n.el-radio__input.is-checked .el-radio__inner {\r\n    border-color: #445cb3;\r\n    background: #445cb3;\r\n}\r\n\r\n.el-radio__inner {\r\n    border: 2px solid #445cb3;\r\n}\r\n\r\n.el-radio__inner:hover {\r\n    border-color: #445cb3;\r\n}\r\n\r\n.el-switch.is-checked .el-switch__core {\r\n    border-color: #0fbb0f;\r\n    background-color: #0fbb0f;\r\n}\r\n/*\r\n * @desc joblist样式\r\n */\r\n#candidatejoblist .job_search {\r\n    margin-top: 1.2rem;\r\n}\r\n#candidatejoblist .job_filter {\r\n    margin-bottom: 0.36rem;\r\n    background-color: #f0f0f0;\r\n    border-bottom: solid 1px #e2e2e1;\r\n}\r\n#candidatejoblist .job_filter .job_filter_top {\r\n    padding: 0.12rem 0.45rem;\r\n    border-bottom: solid 1px #e2e2e1;\r\n}\r\n#candidatejoblist .job_filter .job_filter_main {\r\n    padding: 0.12rem 0.45rem;\r\n}\r\n#candidatejoblist .job_filter .job_filter_main ul li {\r\n    float: left;\r\n    margin-right: 0.15rem;\r\n    font-family: \"PingFang TC\" ,\"\\5137\\9ED1   Pro\", \"Microsoft JhengHei\", \"\\5FAE\\8EDF\\6B63\\9ED1\\9AD4\", STHeiti,\"Heiti TC Medium\", Apple LiGothic, Helvetica, Helvetica Neue, Arial,\"PMingLiu\", \"\\65B0\\7D30\\660E\\9AD4\";\r\n    line-height: 0.4rem;\r\n    font-size: 0.18rem;\r\n    color: #264a61;\r\n}\r\n\r\n#candidatejoblist .job_filter .job_filter_main ul li .filter_title {\r\n    margin-right: 0.05rem;\r\n}\r\n\r\n#candidatejoblist .job_filter .job_filter_main ul li .filter_select select {\r\n    width: 2rem;\r\n    height: 0.4rem;\r\n    outline: 0;\r\n    background-color: #ffffff;\r\n    border: solid 1px #e2e2e1;\r\n}\r\n\r\n#candidatejoblist .job_filter .job_filter_main>.pull-right {\r\n    padding-top: 0.1rem;\r\n    font-size: 0.18rem;\r\n    color: #95989a;\r\n}\r\n\r\n#candidatejoblist .job_filter .job_filter_main>.pull-right .page-count {\r\n    margin: 0 0.2rem;\r\n}\r\n\r\n#candidatejoblist .job_filter .job_filter_main>.pull-right .page-count>.current_page {\r\n    font-weight: 900;\r\n    color: #264a61;\r\n}\r\n\r\n#candidatejoblist .job_filter .job_filter_main>.pull-right .nextAndPrev {\r\n    color: #264a61;\r\n    cursor: pointer;\r\n}\r\n\r\n#candidatejoblist .job_display .profile_left {\r\n    position: relative;\r\n}\r\n\r\n#candidatejoblist .job_display .profile_left .job_list_tab {\r\n    width: 100%;\r\n}\r\n\r\n#candidatejoblist .job_display .profile_left .job_list_tab>ul {\r\n    border  : solid 1px #e2e2e1;\r\n}\r\n#candidatejoblist .job_display .profile_left .job_list_tab>ul .job_tab_item {\r\n    float: left;\r\n    width: 25%;\r\n    padding: 0.16rem 0.1rem;\r\n     height: 0.6rem; \r\n    /* line-height: 0.6rem; */\r\n    font-size: 0.18rem;\r\n    text-align: center;\r\n    position: relative;\r\n    white-space:nowrap;\r\n    overflow:hidden;\r\n    text-overflow:ellipsis;\r\n}\r\n#candidatejoblist .job_display .profile_left .job_list_tab>ul .job_tab_item+.job_tab_item {\r\n    cursor: pointer;\r\n    border-left: solid 1px #e2e2e1;\r\n}\r\n#candidatejoblist .job_display .profile_left .job_list_tab>ul .job_tab_item>img {\r\n    width: 0.25rem;\r\n    height: 0.25rem;\r\n    cursor: pointer;\r\n    margin-right: 0.1rem;\r\n    vertical-align: middle;\r\n}\r\n#candidatejoblist .job_display .profile_left .job_list_tab>ul .job_tab_item:hover {\r\n    background-color: #e2e2e1;\r\n}\r\n#candidatejoblist .job_display .profile_left .job_list_tab>ul .job_tab_item.active {\r\n    background-color: #9cc4e0;\r\n}\r\n#candidatejoblist .job_display .profile_left .job_list_tab>ul .job_tab_item>a {\r\n    font-size: 0.18rem;\r\n    color: #264a61;\r\n}\r\n#candidatejoblist .job_display .profile_left .job_list_tab>ul .job_tab_item>a,span{\r\n    vertical-align: middle;\r\n}\r\n#candidatejoblist .job_display .profile_left .job_list_tab>ul .job_tab_item:nth-chlid(2)>a {\r\n    vertical-align: top;\r\n}\r\n\r\n#candidatejoblist .job_display .profile_left .job_list_tab>ul .job_tab_item>.icon-arrow {\r\n    font-size: 12px;\r\n    cursor: pointer;\r\n}\r\n#candidatejoblist .job_display .profile_left .job_list_tab>ul .job_tab_item>.icon-heart {\r\n    font-size: 0.25rem;\r\n    padding-top: 0.02rem;\r\n}\r\n#candidatejoblist .job_display .profile_left .job_list_tab>ul .detailJobTitle {\r\n    width: 24%;\r\n    position: absolute;\r\n    top: 0.6rem;\r\n    background: #fff;\r\n    border: 1px solid #e2e2e1;\r\n    z-index: 50;\r\n}\r\n#candidatejoblist .job_display .profile_left .job_list_tab>ul .detailJobTitle ul li {\r\n    white-space: nowrap;\r\n    overflow: hidden;\r\n    text-overflow: ellipsis;\r\n    padding: 0 0.2rem;\r\n    height: 0.6rem;\r\n    line-height: 0.6rem;\r\n    cursor: pointer;\r\n}\r\n#candidatejoblist .job_display .profile_left .job_list_tab>ul .detailJobTitle ul li+li {\r\n    border-top: solid 1px #e2e2e1;\r\n}\r\n\r\n#candidatejoblist .job_display .profile_left .job_list_tab>ul .detailJobTitle ul li:hover {\r\n    background-color: #9cc4e0;\r\n}\r\n\r\n#candidatejoblist .job_display .profile_left .job_list_content {\r\n    width: 100%;\r\n    /* margin-bottom: 0.35rem; */\r\n}\r\n\r\n#candidatejoblist .job_display .profile_left .job_list_content .job_list_item {\r\n    border-bottom: solid 1px #e2e2e1;\r\n    width: 100%;\r\n    margin-bottom: 0.1rem;\r\n    padding: 0.18rem 0.1rem 0.16rem 0.48rem;\r\n}\r\n#candidatejoblist .job_display .profile_left .job_list_content .job_list_item:last-child {\r\n    margin-bottom:0;\r\n}\r\n#candidatejoblist .job_display .profile_left .job_list_content .job_list_item .item_pics {\r\n    margin-right: 0.2rem;\r\n    max-width: 140px;\r\n    height: 100%;\r\n}\r\n\r\n#candidatejoblist .job_list_content .job_list_item .item_pics>.imgBox {\r\n    display: block;\r\n    width: 1.4rem;\r\n    height: 1.4rem;\r\n    border: solid 1px #e2e2e1;\r\n}\r\n\r\n#candidatejoblist .job_list_content .job_list_item .item_pics img {\r\n    width: 1.4rem;\r\n    height: 1.4rem;\r\n}\r\n\r\n#candidatejoblist .job_list_content .job_list_item .item_info {\r\n    padding: 0;\r\n}\r\n\r\n#candidatejoblist .job_list_content .job_list_item .item_info .item_info_top {\r\n    width: 100%;\r\n    margin-bottom: 0.1rem;\r\n}\r\n#candidatejoblist .item_info .item_info_top .col-md-8 {\r\n    padding-left: 0;\r\n}\r\n#candidatejoblist .employer_info {\r\n    padding: 0;\r\n}\r\n#candidatejoblist .item_info_top .top_title {\r\n    overflow: hidden;\r\n    white-space: nowrap;\r\n    text-overflow: ellipsis;\r\n}\r\n#candidatejoblist .item_info_top .top_title>.job_title {\r\n    max-width: 60%;\r\n    display: inline-block;\r\n    overflow: hidden;\r\n    white-space: nowrap;\r\n    text-overflow: ellipsis;\r\n    vertical-align: middle;\r\n    margin-right: 0.18rem;\r\n    font-size: 0.21rem;\r\n    font-weight: 900;\r\n    color: #2e344b;\r\n    padding-right: 0.1rem;\r\n}\r\n#candidatejoblist .item_info_top .job_date {\r\n    font-size: 0.21rem;\r\n    font-weight: 900;\r\n    color: #95989a;\r\n    line-height: 0.35rem;\r\n    vertical-align: middle;\r\n}\r\n\r\n#candidatejoblist .item_info .item_info_top .require_salary {\r\n    font-size: 0.21rem;\r\n    font-weight: 900;\r\n    color: #7e7e7e;\r\n}\r\n#candidatejoblist .item_info .require_year {\r\n    font-size: 14px;\r\n    color: #7e7e7e;\r\n}\r\n#candidatejoblist .item_info .item_info_bottom .info_skill_item {\r\n    cursor: pointer;\r\n    padding: 2px 5px;\r\n    border-radius: 3px;\r\n    border: solid 1px #4e55a0;\r\n    margin-right: 0.05rem;\r\n}\r\n#candidatejoblist .job_display>.profile_left .block {\r\n    margin-bottom: 0.6rem;\r\n    position: absolute;\r\n    left: 50%;\r\n    transform: translateX(-50%);\r\n}\r\n\r\n.background_upload_after {\r\n    padding-right: 0.3rem;\r\n    background: #2e344b;\r\n    border-radius: 17px;\r\n    color: #fff;\r\n    border: none;\r\n    font-weight: bold;\r\n}\r\n\r\n.icon-clip {\r\n    font-size: 0.21rem;\r\n    margin-left: 0.14rem;\r\n}\r\n\r\n.new_resume_count {\r\n    display: inline-block;\r\n    position: absolute;\r\n    top: -0.12rem;\r\n    right: -0.12rem;\r\n    width: 0.2rem;\r\n    height: 0.2rem;\r\n    background: #ff3333;\r\n    border-radius: 50%;\r\n    font-size: 10px;\r\n    color: #fff;\r\n    font-weight: normal;\r\n}\r\n\r\n.loginAndSignUp {\r\n    padding: 1.28rem 0 1.53rem;\r\n    background-color: #e2e2e1;\r\n    box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.35);\r\n}\r\n@media screen and (min-width: 768px){}\r\n.carousel-indicators {\r\n    top: 34%;\r\n}\r\n.carousel-indicators {\r\n    top: 34%;\r\n    left: 50%;\r\n    width: auto;\r\n    margin-left: 0;\r\n    height: 20px;\r\n}\r\n#carousle_pic .main{ width:100%; margin:0 auto;}\r\n.mod18{position:relative;background: #000;}\r\n.mod18 .btn{position:absolute;cursor:pointer;z-index:99;font-size:0.36rem;font-weight:bold;}\r\n.mod18 .prev{left:0.1rem;}\r\n.mod18 #prevTop,.mod18 #nextTop{top:32%;height:48px;color: #fff;}\r\n.mod18 #prev,.mod18 #next{top: 88%;font-size: 0.22rem;color: #fff;}\r\n.mod18 .next{right:0.1rem;}\r\n.mod18 li{float: left;}\r\n.mod18 .cf li{position:relative;color:#fff;}\r\n.mod18 .cf a{display:block;width:526px;height:377px;position:absolute;color:#fff;text-align: center;}\r\n.mod18 .cf li span{display:block;width:100%;position:absolute;left:0;bottom:20px;padding:10px 20px;line-height:22px;text-align:left;background:rgba(0,0,0,0.6);}\r\n.mod18 .picBox{ width:526px; height:394px; padding-left:75px; padding-right:76px;position:relative;overflow:hidden; background:#0D0D0D;margin: 0 auto;}\r\n.mod18 .picBox ul{height:377px;position:absolute; left:0;}\r\n.mod18 .picBox li{padding-right:1px; width:526px;height:377px;}\r\n.mod18 .listBox{height:100px;margin:0 auto;position:relative; padding-top:15px;overflow:hidden;}\r\n.mod18 .listBox ul{height:88px;position:absolute; padding-left:12px;}\r\n.mod18 .listBox li{width:127px;height:77px;cursor:pointer;position:relative; padding:5px 0 0 0;text-align: center;}\r\n.mod18 .listBox li i{display:none;}\r\n.mod18 .listBox li a{display:block;width:108px;height:77px;}\r\n.mod18 .listBox img{border:3px solid #fff;opacity: 0.6}\r\n.mod18 .listBox .on img{opacity:1}\r\n.mod18 .listBox .on { opacity:1;background: rgba(0,0,0,0.2);}\r\n.mod18 .listBox .on i{display:block;}\r\n.el-pagination>.btn-prev, .el-pagination>.btn-next {border: 1px solid #d9d9d9;border-radius: 2px;min-width: 36px;height: 35px;line-height: 35px;color: #333333;}\r\n.article_h3_title{padding:6px 8px 24px 14px !important;border-left: 5px solid #445cb3;font-size:18.5px;font-weight: 600;text-align: left;color: #000000;height: 0.3rem;font-family:\"PingFang TC\" ,\"\\5137\\9ED1   Pro\", \"Microsoft JhengHei\", \"\\5FAE\\8EDF\\6B63\\9ED1\\9AD4\", STHeiti,\"Heiti TC Medium\", Apple LiGothic, Helvetica, Helvetica Neue, Arial,\"PMingLiu\", \"\\65B0\\7D30\\660E\\9AD4\";}\r\n.multiSelectStyle ul{height:276px;overflow: auto;margin-right: 4%;padding-left: 0;}\r\nspan.quote_capital{text-transform: capitalize;font-size:0.22rem;letter-spacing:-1px;vertical-align: baseline;}\r\nspan.quote_en_last{font-size: 14px;}\r\nspan.quote_cn{font-size: 32px;vertical-align: sub;}\r\nspan.quote_cn_last{font-size: 15px;font-family: PingFangTC;}\r\nspan.author_cn{font-size: 14px;}\r\n.status_active{color:#24bd1e;}\r\n.status_deactive{color:#ca001d;}\r\n.status_expired{color: #96999b}\r\n.job_listings_all{\r\n    line-height: 0.4rem;\r\n    background: #2e344b;\r\n    padding: 0.14rem 0.16rem 0.14rem 0.27rem;\r\n    border-top-left-radius:4px;\r\n    border-top-right-radius:4px;\r\n    font-size: 16px;\r\n    font-weight:600;\r\n    color: #fff;\r\n}\r\n.employer_job_lists_header{padding: 0.13rem 0.3rem 0.15rem 0.26rem;background-color: #2e344b;border-top-left-radius: 4px;border-top-right-radius: 4px;line-height: 200%}\r\n.employer_job_lists_header h3{padding-top: 13px;font-size: 13.9px;font-weight: 600;text-align: left;color: #fff;}\r\n.buy_job{display: inline-block;padding: 10px 0.38rem;margin-right:0.2rem;border-radius: 4px;background-color: #3c9ccf;}\r\n.icon-shopping_cart{font-size: 16px;padding-right:0.12rem;}\r\n.add_job_title{font-size: 16px !important;letter-spacing:0;font-family:\"PingFang TC\" ,\"\\5137\\9ED1   Pro\", \"Microsoft JhengHei\", \"\\5FAE\\8EDF\\6B63\\9ED1\\9AD4\", STHeiti,\"Heiti TC Medium\", Apple LiGothic, Helvetica, Helvetica Neue, Arial,\"PMingLiu\", \"\\65B0\\7D30\\660E\\9AD4\";}\r\n#select_job_list{width:2.93rem;border-radius: 10px;padding: 0.12rem 0.16rem;font-size: 0.2rem;border:none;margin-left:0.2rem;}\r\n.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {background-color: #fff;opacity: 1;}\r\n.itCanClick{cursor:pointer;}\r\n.select_file_mask input{font-size: 14px;}\r\n.none_pic_display{height: 106px;padding:0 27px; line-height:106px;background-color: #ffffff;border:dashed 2px #95a3bf;display: inline-block;color: #2e344b;font-size: 15px;text-align: center;cursor: pointer;}\r\n.mt25{margin-top: 0.25rem !important}\r\n.mt2px{margin:2px 0 !important;}\r\n.minw12{min-width:12em;display: inline-block;}\r\n.ml_employer_profile_drop_down,.function_employer_profile_drop_down{padding-left: 0.22rem}\r\n.jobList_drop_down span{padding: 0.16rem 0 0.12rem 0.24rem !important;}\r\n.jobList_drop_down li:hover{background-color: rgba(45,52,75,0.1);}\r\n.shadow_box{position:fixed;top:0;left:0;z-index:999999;width:100%;height:100%;background:rgba(0, 0, 0, 0.33);}\r\n.shadow_content{width:115px;height:125px;padding-top:20px;background:#fff;position:fixed;top:40%;left:50%;transform:translate(-50%,-50%);text-align:center;font-size:30px;color: #4e55a0;z-index:9999999;border-radius: 3px;}\r\n.el-icon-loading{position:static;font-size:0.54rem;}\r\n.shadow_loading{font-size:13px;}\r\ninput,button,a {outline:0 none !important;}\r\n.error_tips{display: none; position: fixed;bottom: 0;left: 0;padding:10px 0; background: #ca001d;width: 100%;text-align: center;color: #fff;}\r\n.left-enter-active, .left-leave-active,.left-enter,.left-leave {-webkit-transition: all .5s;transform: translateY(0px);}\r\n.left-enter, .left-leave-active {opacity: 0;transform: translateY(10px);}\r\n.account_info_wrap{width:4.24rem;position: absolute;top:40%;left:38%;padding:23px 26px 30px; border-radius: 3px;background-color: #ffffff;box-shadow: 0px 5px 8px 0 rgba(0, 0, 0, 0.33);z-index: 9999;text-align: center;font-weight: normal;}\r\n.account_info{text-align: center;padding: 0.4rem 0 0.6rem;font-size: 0.162rem;line-height: 2.18;color: #000000;}\r\n.back_to_page_style,.back_to_page_style:hover{width:80%;min-width:80%;border-radius: 6px;background-color: #445cb3;border:none;font-family: PingFangHK;font-size:15px;letter-spacing: 0.8px;text-align: center;color: #ffffff;padding:0.13rem 0;font-weight: normal !important;}\r\n#close_ssl{display: none;}\r\n.employer_register_right_ad{font-size: 21.8px !important;text-align: center;display: inline-block;width: 100%;}\r\nSUP{font-weight: bold;}\r\n.employer_register_right_ad_font{font-size: 16px !important;}\r\n\r\n/** Edit By AHA Technocrats :::: Date 13/10/2017 **/\r\n.header_logo, .header_tab, .header_login, .header_login_left, .header_login_right, .btn_top, \r\n.dropdown-toggle-drop, .employer_job_lists_header .add_job_title, .search_hotwords.less_item ul li,\r\n.company_logo_wrap, .add_img_company, .company_left, .jobinfo_header{ float: left; }\r\n\r\n.header_psninfo, .header_lang, .job_listings_search_jobtitle, .free_trail, \r\n.employer_job_lists_header .credits_no, .employer_job_lists_header .buy_job_btn, \r\n.select_file_mask, .add_employer_profile_wrap, .right_align, .employer_setting{ float: right; }\r\n\r\n\r\n.employer_setting_item_content .icon-radio:before,\r\n.employer_setting_item_content .icon-radio-selected:before{ top: 1px; position: relative;  font-weight: normal!important; }\r\n.employer_setting_item_content .icon-radio,\r\n.employer_setting_item_content .icon-radio-selected{ display: inline-block; margin-left: 10px;  font-weight: 600;}\r\n.employer_setting_item_content .opnCoz{ display: inline-block; padding-right: 5px; padding-left: 5px;font-family:\"PingFang TC\" ,\"\\5137\\9ED1   Pro\", \"Microsoft JhengHei\", \"\\5FAE\\8EDF\\6B63\\9ED1\\9AD4\", STHeiti,\"Heiti TC Medium\", Apple LiGothic, Helvetica, Helvetica Neue, Arial,\"PMingLiu\", \"\\65B0\\7D30\\660E\\9AD4\"!important;}\r\n\r\n#profile.row{ margin-right: 0 !important; margin-left: 0 !important;}\r\n.hot_wrap.row{margin-right: 0 !important; margin-left: 0 !important;}\r\n#footer .about_us div.footer-links span.devider{ width: 12px; display: inline-block; vertical-align: top!important; text-align: center; }\r\n.setting_change.drop_down .dropArrow{ display: none; }\r\n.tab_main_position.drop_down .dropArrow{ display: none; }\r\n.closeMenu{ display: none; }\r\n.cv_box .body_item_btn.have_cv{font-size: 16px; letter-spacing: 0.4px; border-radius: 50px; display:block!important;}\r\n\r\n::-webkit-input-placeholder{ font-size: 16px!important;}\r\n::-moz-placeholder { font-size: 16px!important;}\r\n:-ms-input-placeholder { font-size: 16px!important;}\r\n:-moz-placeholder { font-size: 16px!important;}\r\n\r\n@media(max-width:767px){\r\n/* add account user mobile */\r\n.profile_left{padding-left: 15px !important;}\r\n.account_send_invite_btn{width: 100%!important;margin:38px 0 1.15rem 0!important;border-radius: 20px!important;} \r\n.account_invite_email{width:100%!important;}\r\n.account_listings_item_content{padding: 24px 16px!important;}\r\n.pagination>li>a, .pagination>li>span {margin: 0px 2px !important;}\r\n.header_tab .container-fluid > .navbar-collapse .navbar-nav[data-v-0fe90b04] {\r\n    margin-left: 0px !important;\r\n}\r\n.header_logo { padding-top: 0 !important; }\r\n.header_logo > img{width: 70px !important; margin-top: 17px;}\r\n.header_tab{position: absolute; width: 100% !important; padding:0 !important;  left: 0; right: 0; top: 0; z-index: 9999; }\r\n.header_tab .navbar-default{background:none !important; min-height: inherit !important; }\r\n.header_tab .navbar-default .navbar-collapse{ background: #FFFFFF; padding-right: 0 !important; padding-left: 0!important; border-top:none!important;}\r\n.header_tab .navbar-default .navbar-collapse .navbar-nav{ margin: 0; border-bottom: solid 1px #eaeaed; padding-top:80px; }\r\n.header_tab .container-fluid{padding-right: 15px !important; padding-left: 15px !important;}\r\n.header_tab .container-fluid > .navbar-collapse .navbar-nav > li{ margin-right: 0px !important; }\r\n.header_tab .container-fluid > .navbar-collapse .navbar-nav > li > a{ padding-left: 40px !important; font-size: 18px!important; padding-top:12px!important; padding-bottom:12px!important;  text-align: left !important; height: auto !important; border-bottom:none; /*border-left: solid 4px transparent;*/}\r\n.header_tab .container-fluid > .navbar-collapse .navbar-nav > li > a:hover{color:#323232; background: #eaeaed; border-bottom: none !important; position: relative;}\r\n.header_tab .container-fluid > .navbar-collapse .navbar-nav > li > a:hover:before{ position: absolute; left:0px; height: 78%; top:5px; bottom: 5px; content: \"\";  background: #2e344b; width: 4px;}\r\n.header_tab .container-fluid > .navbar-collapse .navbar-nav > li.active > a.router-link-exact-active.router-link-active:before{ position: absolute; left:0px; height: 78%; top:5px; bottom: 5px; content: \"\";  background: #2e344b; width: 4px;}\r\n.header_tab .container-fluid > .navbar-collapse .navbar-nav > li.active > a.router-link-exact-active.router-link-active{color:#323232; background: #eaeaed; border-bottom: none !important; position: relative;}\r\n\r\n.header_tab .navbar{min-height:inherit !important;   margin-bottom:0;  }\r\n.navbar-header{ float: left; }\r\n.navbar-header .navbar-toggle{ margin-right: 0 !important; }\r\n.navbar-toggle .icon-bar{ background: #445cb3;}\r\n.header_psninfo > .header_login{ padding-top: 5px !important; }\r\n.header_login_right a, .header_login_right span{ font-size: 12px !important;}\r\n\r\n.login_already_header{ display: none; }\r\n.btn_top{ width:7rem; padding: 8px 0; }\r\n.btn_top li{ width:50%; margin-left: 0!important; }\r\n.btn_top li a p span{ display: none !important; font-size: 14px !important; }\r\n\r\n.search_btn{ width: 90%; background:none !important; float: left; z-index: 99;}\r\n.search_bar .open_more_item{ padding:16px 0.24rem !important;  }\r\n.search_btn > .search_input{width: 100% !important; border-radius: 5px; padding: 15px!important}\r\n.search_btn > .search_input .glyphicon.glyphicon-search{font-size: 16px !important; right: 15px!important;}\r\n.open_more_words span:first-child{display: none;}\r\n.open_more_words .glyphicon{ padding-left: 12px; }\r\n.search_location.search_item{ display: none; }\r\n.search_hotwords.less_item{ padding: 20px 0.04rem 0.04rem 0.04rem !important; }\r\n.search_hotwords.less_item ul li{ line-height:1;}\r\n.about_us{ padding-left: 15px!important; padding-right: 15px!important;}\r\n.about_us.paddNone{ padding-left: 0px!important; padding-right: 0px!important;}\r\n.about_us_item{margin-top: 30px !important;}\r\n.more_search_wrap{ z-index: 1; }\r\n.job_title_drop_down{ width: 100% !important; }\r\n\r\n.class_header{ padding-right: 0; }\r\n.class_header .class_inner{ box-shadow: 0px 1px 2px 1px #ccc; border-radius:  3px; overflow: hidden; margin-bottom: 15px;}\r\n.class_header .class_inner .class_header_tab .industry_tab{width: 50%;text-align: center;}\r\n.class_content{padding: 20px !important;}\r\n/* .class_content.class_content_spec{ display: none; }\r\n.company_info_main{ height: auto; margin-top: 15px!important; }\r\n.company_info_main:last-child{margin-bottom: 15px!important; }\r\n.company_info_main .company_left{ margin-top: 5px!important; } */\r\n.el-pagination > .el-pager > li{ font-size: 13px!important; }\r\n\r\n\r\n.hot_wrap{ padding-right: 0 !important; margin-bottom: 15px;}\r\n.hot_wrap.row{padding-right: 0 !important; padding-left: 0 !important;}\r\n.hot_wrap h3.article_h3_title, .article_h3_title, .job_header{ font-size: 19px; height: auto; padding:3px 10px 3px 10px !important;}\r\n.job_header{ margin-top: 20px; }\r\n.article_list_mobile_wrap{display: flex !important;margin-bottom: 14px !important;}\r\n.article_list_mobile_wrap .article_list_img{flex:1;}\r\n.article_list_mobile_wrap .article_right{flex: 1.5 !important;margin-left: 16px;}\r\n.homepage .hot_wrap.row{margin-right: -15px !important; margin-left: -15px!important; padding-left: 15px !important; padding-right: 15px !important;}\r\n\r\n.article_list_img{display: block !important; text-align: center;}\r\n.article_list_wrap .article_list_img{margin-right: 20px;width: 100px;}\r\n.article_right{flex:none;}\r\n.article_right_first{ padding:0 !important; }\r\n.article_list_img_bottom img{height:auto !important;}\r\n.article_list_title{ font-size: 14px !important; }\r\n.article_title_in_img, .article_list_img_bottom{font-size: 14px !important;}\r\n.article_list_img img, .article_list_img_bottom img,.article_list_img_first{ max-height: inherit !important; width: 100% !important; margin-bottom: 10px;}\r\n.article_list_time{font-size: 14px !important;}\r\n\r\n\r\n/*.hot_content_style{ padding-right: 15px !important; padding-left: 15px !important; }*/\r\n/*#profile{ margin-right: 0!important; margin-left: 0!important; }*/\r\n/* .profile_right { display: none; } */\r\n.profile_right.col-md-4{ padding-right: 15px !important; }\r\n#profile .profile_main > .profile_right{padding-left: 10px !important; }\r\n.profile_right_content{ width: auto !important; }\r\n.facebook{ text-align: center; margin-bottom: 15px !important;}\r\n.facebook .fb_iframe_widget span{ width: 270px!important; }\r\n.facebook .fb_iframe_widget span iframe{width: 100%!important; }\r\n.download_box{width: 100% !important;}\r\n.download_box .top_box .word_position{font-size: 14px !important; left: 25% !important;}\r\n/* .superior_company_wrap{margin-top: 50px !important; margin-bottom: 15px;} */\r\n.superior_company_wrap.marginNone{ margin-top: 0!important;}\r\n.superior_company_wrap.marginNone .superior_company_content ul li{ margin-top: 0!important; }\r\n.superior_company_title{font-size:14px!important;height: auto!important; text-align: left !important; padding: 5px 10px;}\r\n.superior_company_content ul li{padding-top: 10px;height:auto!important;text-align:center!important;}\r\n.superior_company_content ul li:last-child{padding-bottom: 15px !important;}\r\n.superior_company_content ul li img{ height: 35px !important; }\r\n.superior_company_content ul li.paddNone{padding-bottom: 15px !important;}\r\n.superior_company_wrap.marginNone .superior_company_content ul li:last-child{padding-bottom: 0px !important;}\r\n\r\n/*.superior_company_content ul{ margin-right: -15px; margin-left:-15px;  }*/\r\n.quote_wrap{ margin: 5px auto 15px auto !important;}\r\n.el-pagination {white-space:pre-line !important; padding: 10px 5px 5px 5px !important;}\r\n\r\n.loginIn .login_title { font-size: 14px!important; line-height: normal !important; color: #000000; font-weight: 600!important;}\r\n.login_content{ padding: 20px 10px !important;margin-left: -5px; width: 86.5%; border-radius: 4px; }\r\n.login_content .login_account{padding: 15px 5px !important; margin: 0!important;}\r\n.login_account .input_wrap{ margin: 15px auto 0px auto; }\r\n.icon-check_box, .icon-check_box_outline_blank{ font-size:28px !important; position: relative; top: 7px;}\r\n.logo_all_same{ width: 45px; margin-bottom: 20px!important;}\r\n.remove_logo_all_same_style{width: auto;margin-bottom:0!important;}\r\n.icon_cancel_mobile_style{margin-top: -1.2rem!important;margin-right: 10px!important;}\r\n\r\n.status, .skip_title, .resetpassword_title, \r\n.skip_submit, .resetpassword_submit, \r\n.login_submit, .signup_submit, .login_account input{font-size: 14px!important; font-weight: 600;}\r\n\r\n\r\n.status::-webkit-input-placeholder{color: #848484!important;}\r\n.status::-moz-placeholder{color: #848484!important;}\r\n.status:-ms-input-placeholder{color: #848484!important;}\r\n.status:-moz-placeholder{color: #848484!important;}\r\n.skip_title::-webkit-input-placeholder{color: #848484!important;}\r\n.skip_title::-moz-placeholder{color: #848484!important;}\r\n.skip_title:-ms-input-placeholder{color: #848484!important;}\r\n.skip_title:-moz-placeholder{color: #848484!important;}\r\n.resetpassword_title::-moz-placeholder{color: #848484!important;}\r\n.resetpassword_title::-webkit-input-placeholder{color: #848484!important;}\r\n.resetpassword_title:-ms-input-placeholder{color: #848484!important;}\r\n.resetpassword_title:-moz-placeholder{color: #848484!important;} \r\n.skip_submit::-webkit-input-placeholder{color: #848484!important;}\r\n.skip_submit::-moz-placeholder{color: #848484!important;}\r\n.skip_submit:-ms-input-placeholder{color: #848484!important;}\r\n.skip_submit:-moz-placeholder{color: #848484!important;}\r\n.resetpassword_submit::-webkit-input-placeholder{color: #848484!important;}\r\n.resetpassword_submit::-moz-placeholder{color: #848484!important;}\r\n.resetpassword_submit:-ms-input-placeholder{color: #848484!important;}\r\n.resetpassword_submit:-moz-placeholder{color: #848484!important;} \r\n.login_submit::-webkit-input-placeholder{color: #848484!important;}\r\n.login_submit::-moz-placeholder{color: #848484!important;}\r\n.login_submit:-ms-input-placeholder{color: #848484!important;}\r\n.login_submit:-ms-input-placeholder{color: #848484!important;}\r\n.signup_submit:-moz-placeholder{color: #848484!important;}\r\n.form-control::-webkit-input-placeholder{color: #848484!important;}\r\n.form-control::-moz-placeholder{color: #848484!important;}\r\n.form-control:-ms-input-placeholder{color: #848484!important;}\r\n.form-control:-moz-placeholder{color: #848484!important;} \r\n.login_account input::-webkit-input-placeholder{color: #848484!important;}\r\n.login_account input::-moz-placeholder{color: #848484!important;}\r\n.login_account input:-ms-input-placeholder{color: #848484!important;}\r\n.login_account input:-moz-placeholder{color: #848484!important;}\r\n.profile_info_content.invite_user .account_listings_item_content input.account_invite_email::-webkit-input-placeholder{color: #2a3043!important;}\r\n.profile_info_content.invite_user .account_listings_item_content input.account_invite_email::-moz-placeholder{color: #2a3043!important;}\r\n.profile_info_content.invite_user .account_listings_item_content input.account_invite_email:-ms-input-placeholder{color: #2a3043!important;}\r\n.profile_info_content.invite_user .account_listings_item_content input.account_invite_email:-moz-placeholder{color: #2a3043!important;}\r\n\r\n.loginIn .login_title .icon-mail{font-size: 12px!important; position: relative; top: 2px; margin: 0 8px 0 5px!important;}\r\n.loginIn .login_title .icon-cancel{font-size: 16px!important; position: absolute; top: 4%; right: 0%; font-weight: bold!important; margin-top:0!important; color: #a2a2a3;margin-right: 22px;}\r\n.remember_account{font-size: 16px!important; font-weight: bold !important; padding:5px 0!important;}\r\n.resetPassword{font-size: 14px!important; font-weight: bold !important; padding:5px 0!important; color: #737373!important;}\r\n.signup_entrance{font-size: 14px!important; margin-top: 50px; }\r\n.loginAndSignUp .remember_account, .loginAndSignUp .resetPassword{ padding:0px 0!important;}\r\n.clear_margin_bottom{ margin-bottom: 0 !important; }\r\n.login_account .login_submit, .login_account .signup_submit{ padding: 15px 10px !important; padding-left: 0; margin-top: 30px; border-radius: 6px!important; width: 100%!important;}\r\n\r\n.signup .signup_title {font-size: 13px!important; line-height: normal !important; color: #000000!important; font-weight: 600!important;}\r\n.signup_content{ padding: 20px 10px !important; margin-left: -5px; width: 86.5%; border-radius: 4px;  }\r\n.signup_account { margin: 15px 5px !important; }\r\n.signup .signup_title .icon-cancel{font-size: 16px!important; position: absolute; top: 50%; right: 10px;transform:translateY(-50%); font-weight: bold!important; margin-top:0!important; color: #a2a2a3;}\r\n.signup_content .change_candidate_employer h3{font-size: 18px!important; color: #000000!important;}\r\n.signup .signup_title .icon-mail{font-size: 12px!important; position: relative; top: 2px; margin: 0 8px 0 5px!important;}\r\n.signup_account .input_wrap{ margin: 10px auto 0px auto !important;}\r\n.signup .agree_policy{font-size: 12px!important;}\r\n.signup .signup_account .signup_submit{ padding: 10px 10px !important; padding-left: 0; margin-top: 30px;}\r\n\r\n.search_left{ padding-left: 15px!important; }\r\n.search_item li{ max-width: 100% !important; line-height: 16px;}\r\n.search_item li .icon-cancel::before{ font-size: 10px!important; }\r\n.search_item li span{margin-top: 0px;}\r\n.search_item.search_item_result{ margin: 15px 0 15px 15px!important; }\r\n.search_item.search_item_result li{border-radius: 50px!important;}\r\n.search_item.search_item_result li .icon-cancel{line-height: 1px;}\r\n.search_data_display.search_data_display ul{ max-height: inherit!important; height:auto!important; margin-right: 0!important;}\r\n.search_data_display.search_data_display li{padding: 12px 10px 0px 40px !important;}\r\n.search_data_display.locatoin_area li.location_block_style{padding: 12px 10px 12px 40px !important;}\r\n.search_data_display.search_data_display li.location_block_style{ margin-left: 0!important;}\r\n.search_data_display.multiSelectStyle li.location_block_style:last-child{border-bottom: none!important;}\r\n\r\n.search_btn .search_data_display li .glyphicon-triangle-bottom, \r\n.search_btn .search_data_display li .glyphicon-triangle-top{top: 22px!important;}\r\n\r\n/*.location_border_style.sectorStr.third-drop ul li span{ font-size: 14px!important }*/\r\n\r\n.location_border_style{margin-top: 10px; padding: 0px!important;}\r\n\r\n.profile_left{ padding-right: 10px!important; padding-left: 10px!important; }\r\n.boxshadow{ box-shadow: 0px 1px 2px 1px #ccc; border-radius:  3px; background-color: #ffffff;}\r\n.vue-map-container{ width: 90% !important; margin-bottom: 15px; margin-left: 15px;}\r\n\r\n.employer_job_lists{ margin-left: 0!important; }\r\n.employer_job_lists_header, .job_listings_all{ padding: 15px 15px !important; }\r\n.employer_job_lists_header.employer_job_lists_padd{ padding: 8px 15px !important;}\r\n.employer_job_lists_header.employer_job_lists_padd.pddLR{ padding-left:5px!important; padding-right:5px!important;}\r\n.employer_job_lists_header h3{ margin-right: 0; padding: 8px 10px; }\r\n.employer_job_lists_header h3.add_job_title{ font-size: 14px !important; }\r\n.select_job_list input{ width: 80%; }\r\n.job_listings_all{line-height: 26px; font-size: 14px;}\r\n\r\n\r\n.job_listings_all.offline_job{ line-height: 18px;}\r\n.offline_shadow.profile_info{box-shadow: 0px 1px 2px 1px #ccc; border-radius:  3px;}\r\n\r\n.profile_info .job_listings_info.offline_text{ padding: 15px 10px 40px 10px; }\r\n.profile_info .job_listings_info.offline_text .text{ color: #00000a!important; font-weight: 600; font-size: 14px !important; line-height: 18px; font-family:\"PingFang TC\" ,\"\\5137\\9ED1   Pro\", \"Microsoft JhengHei\", \"\\5FAE\\8EDF\\6B63\\9ED1\\9AD4\", STHeiti,\"Heiti TC Medium\", Apple LiGothic, Helvetica, Helvetica Neue, Arial,\"PMingLiu\", \"\\65B0\\7D30\\660E\\9AD4\"!important;}\r\n.profile_info .job_listings_info.offline_text .text:nth-child(2){ padding-top: 15px; padding-bottom: 15px; }\r\n\r\n.profile_info_content.invite_user .job_listings_all{ line-height: 18px;}\r\n.profile_info_content.invite_user .account_listings_item_content{padding: 15px 10px 40px 10px!important; }\r\n.profile_info_content.invite_user .account_listings_item_content p{ color: #00000a!important;  font-size: 14px!important; line-height: 18px; font-family:\"PingFang TC\" ,\"\\5137\\9ED1   Pro\", \"Microsoft JhengHei\", \"\\5FAE\\8EDF\\6B63\\9ED1\\9AD4\", STHeiti,\"Heiti TC Medium\", Apple LiGothic, Helvetica, Helvetica Neue, Arial,\"PMingLiu\", \"\\65B0\\7D30\\660E\\9AD4\"!important;}\r\n.profile_info_content.invite_user .account_listings_item_content .account_invite_email{width:100% !important; margin:30px 0!important;  padding: 10px 15px 5px 0px!important; color: #838383!important; font-size: 16px!important; line-height: 18px; font-family:\"PingFang TC\" ,\"\\5137\\9ED1   Pro\", \"Microsoft JhengHei\", \"\\5FAE\\8EDF\\6B63\\9ED1\\9AD4\", STHeiti,\"Heiti TC Medium\", Apple LiGothic, Helvetica, Helvetica Neue, Arial,\"PMingLiu\", \"\\65B0\\7D30\\660E\\9AD4\"!important;}\r\n.profile_info_content.invite_user .account_listings_item_content .account_send_invite_btn{ width:93% !important; font-weight: 600!important; margin: 20px 10px!important; font-size: 14px !important; padding: 8px !important; border-radius: 50px!important; font-family:\"PingFang TC\" ,\"\\5137\\9ED1   Pro\", \"Microsoft JhengHei\", \"\\5FAE\\8EDF\\6B63\\9ED1\\9AD4\", STHeiti,\"Heiti TC Medium\", Apple LiGothic, Helvetica, Helvetica Neue, Arial,\"PMingLiu\", \"\\65B0\\7D30\\660E\\9AD4\"!important;}\r\n.profile_info_content.invite_user .account_listings_item_content .account_send_invite_btn:hover{color: #fff!important;background: #f2770d!important;}\r\n\r\n\r\n.job_listings_all.padd{ padding: 10px 15px !important; }\r\n.job_listings_search_jobtitle.{width: 84%;}\r\n.job_listings_search_jobtitle input{ padding: 10px 5px 5px 0!important; width: 87% !important;}\r\n.post_job_entrance{margin-right: 5px;}\r\n.job_lists_head{padding: 5px 0px!important;}\r\n.job_lists_head .select_job_list{padding: 8px 15px!important;}\r\n.select_job_list .icon-arrow_drop_down, .job_listings_search_jobtitle .icon-search{ font-size: 18px!important; }\r\n.hot_job_content{margin-bottom: 15px !important; box-shadow: 0px 1px 2px 1px #ccc; border-radius:  3px;}\r\n.account_invite_entrance{ padding: 5px 5px !important; font-size: 10.9px!important;}\r\n.account_invite_entrance a{font-size: 10.9px!important;}\r\n\r\n.job_listings_item_title{line-height:18px; font-size: 13px; padding-top: 15px !important; padding-bottom: 15px !important; padding-left: 10px !important; padding-right: 10px !important;}\r\n\r\n.account_listings_item_table li:nth-child(1){ font-size: 11px !important; }\r\n.account_listings_item_table li{ padding-top: 10px !important; padding-bottom: 10px !important; padding-left: 10px !important; padding-right: 10px !important; display: block!important;}\r\n.account_listings_item_table li span:first-child{ display: inline-block; width: 70px; vertical-align: top; padding-left: 0;}\r\n.account_listings_item_table li span.name_color{padding-left: 7px;}\r\n.account_listings_item_table li span{ display: inline-block;  width: 70%; vertical-align: middle; padding-left: 80px;}\r\n\r\n.mobile_position_style{position: relative;}\r\n.account_listings_item_table li .mobile_edit_style{position: absolute;top:14px;right: 0;width: 20%;padding-left: 0;}\r\n.icon_job_edit{width:180px;}\r\n.account_listings_item_table .mobile_title_hidden{ display: none !important;}\r\n\r\n.account_info_wrap{ margin-top:5px !important; }\r\n.account_info_fixed{ font-size: 14px!important; width: 100%!important; padding-right: 10px; padding-left: 10px;}\r\n.setting_change ul a{font-size: 14px!important; padding: 18px 15px !important; width:100%; line-height: 16px; text-align: left!important; text-decoration: none; border-top: #dcddec solid 1px; font-weight: 600!important;}\r\n.setting_change ul:last-child a{border-bottom: #dcddec solid 1px;}\r\n.setting_change ul li a.active{border-bottom:0px solid #4e55a0!important; }\r\n.position_change{border-top: 4px solid #DDDEED!important; margin-top: 0px!important;}\r\n\r\n.employer_setting_item_content .no_info_notice{font-size: 13.3px !important;}\r\n.employer_setting_item_content h3{font-size: 14px!important; padding: 22px 15px 10px 15px !important; font-weight: 600!important;}\r\n.employer_setting_item_content .login_account{ margin: 0 !important;}\r\n.employer_setting_item_content a{ margin: 10px 15px 0px 15px !important; font-weight: 600!important;}\r\n.employer_setting_item_content p{ margin: 0px 15px 0px 15px !important; font-weight: 600!important;}\r\n.employer_setting_item_content p, .employer_setting_item_content a{font-size:14px !important;}\r\n.employer_change_email_btn{ width:93% !important; margin: 20px 10px!important; font-size: 14px !important; padding: 8px !important; border-radius: 50px!important;}\r\n.employer_job_lists_content ul li{  padding: 15px 10px !important; display: block!important; float: left; width: 100%;}\r\n.employer_job_lists_content ul li .icon_job_edit{top: 100%!important;right: 0!important; width: 150px!important; padding: 15px!important;}\r\n.employer_job_lists_content ul li .icon_job_edit a li,\r\n.employer_job_lists_content ul li .icon_job_edit li{ padding:8px 5px!important; font-size: 16px!important;}\r\n.employer_job_lists_content ul li p{flex: none!important; display: inline-block; vertical-align: middle; font-size: 14px!important; margin-right: -3px;}\r\n.employer_job_lists_content ul li p:nth-child(1){width: 25%!important;}\r\n.employer_job_lists_content ul li p:nth-child(2){width: 35%!important; padding-left: 5px; padding-right: 5px;}\r\n.employer_job_lists_content ul li p:nth-child(3){width: 30%!important; padding-left: 5px; padding-right: 5px;}\r\n.employer_job_lists_content ul li p:nth-child(4){width: 5%!important;}\r\n.employer_job_lists_content ul li.job_list_title p.job_title{width: 25%;}\r\n\r\n.employer_job_lists_content ul li:first-child{padding: 12px 10px !important;}\r\n.employer_job_lists_content ul li .apply_count{ position: relative; padding-left:0px!important;}\r\n.employer_job_lists_content ul li .apply_count:before{left:-10px; margin-top: 10px!important;}\r\n\r\n.employer_job_lists_content ul li .apply_count.none_apply_count{ position: relative; padding-left:0px!important;}\r\n.employer_job_lists_content ul li .apply_count.none_apply_count:before{left:-10px;}\r\n.employer_job_lists_content ul li i{ margin-right:0!important; display: block; }\r\n\r\n.employer_job_lists_content ul li p span.active_style.status_active{ line-height: 54px; }\r\n.employer_job_lists_content ul li.job_style_edit p:nth-child(1){width: 100%!important;line-height: 18px!important; }\r\n.employer_job_lists_content ul li.job_style_edit a{ display: block; margin-top: 10px; margin-bottom: 50px;}\r\n.employer_job_lists_content ul li.job_style_edit a .add_job_entrance{ margin: 15px!important; padding:10px 15px !important; max-width: 185px; width: 100%; text-align: center;}\r\n.change_email_content{ padding: 0!important; }\r\n.employer_setting_item_content{}\r\n.w_bg .employer_setting_item_content{ background:none!important; padding-bottom: 60px!important;}\r\n.boxshadow{box-shadow: 0px 1px 2px 1px #ccc; border-radius: 3px; background-color: #ffffff; overflow: hidden;}\r\n.employer_setting_item_content .forget_pwd{font-size: 14px !important; padding-bottom: 30px!important;}\r\n.setting_change_email_title{font-size: 14px !important; }\r\n\r\n.employer_setting_item_content .status, \r\n.employer_setting_item_content .skip_title, \r\n.employer_setting_item_content .resetpassword_title, \r\n.employer_setting_item_content .skip_submit, \r\n.employer_setting_item_content .resetpassword_submit, \r\n.employer_setting_item_content .login_submit, \r\n.employer_setting_item_content .signup_submit, \r\n.employer_setting_item_content .login_account input{font-size: 14px!important; font-weight: normal; padding: 22px 15px 8px 15px !important}\r\n\r\n\r\n.employer_setting_item_content  input::-webkit-input-placeholder{font-size: 14px !important;}\r\n.employer_setting_item_content  input::-moz-placeholder{font-size: 14px !important;}\r\n.employer_setting_item_content  input:-ms-input-placeholder{font-size: 14px !important;}\r\n.employer_setting_item_content  input:-moz-placeholder{font-size: 14px !important;}\r\n\r\n\r\n.change_email_content .form-control{ padding: 15px 15px !important; height: auto!important; font-size: 14px !important;}\r\n.change_email_content .login_account .input_wrap{margin:0px auto 0px auto !important;}\r\n.change_email_content.popUp{margin-top: 50px!important; padding: 20px 15px !important; border-radius: 3px;}\r\n.change_email_content.popUp .logo_all_same{margin-bottom:0px !important;}\r\n.change_email_content.popUp .login_account{margin:0px 0!important;}\r\n.change_email_content.popUp .setting_change_email_title{ margin: 0!important; text-align: center!important; padding:15px 0px 5px 0px!important;}\r\n.change_email_content.popUp .login_account .input_wrap .form-control{padding: 20px 0px 10px 0px!important;}\r\n.change_email_content.popUp .login_account .login_submit, \r\n.change_email_content.popUp .login_account .signup_submit{ padding: 10px 10px!important; margin-top: 20px!important;}\r\n.change_email_content.popUp .loginIn .login_title .icon-cancel{top: 18px!important;right: 10px!important;}\r\n.change_email_content.popUp .icon-cancel{font-size: 16px!important; position: absolute; top: 20px; right:10px; font-weight: bold!important; margin-top:0!important; color: #a2a2a3;}\r\n.change_email_content.popUp .change_email_content .form-control{ padding:18px 0px 10px 0px !important;}\r\n.change_email_content.popUp .signup_entrance{margin-top: 20px!important;}\r\n.change_email_content.popUp .forget_pass_title{width: 100%!important; margin-top: 15px; text-align: left!important;}\r\n.employer_profile.popUp .account_info_wrap{ width: auto!important; left: 10px!important; right: 10px!important; padding: 15px!important;}\r\n.employer_profile.popUp .account_info_wrap .account_info{ clear: both; font-size: 16px!important; padding: 15px!important; font-family:\"PingFang TC\" ,\"\\5137\\9ED1   Pro\", \"Microsoft JhengHei\", \"\\5FAE\\8EDF\\6B63\\9ED1\\9AD4\", STHeiti,\"Heiti TC Medium\", Apple LiGothic, Helvetica, Helvetica Neue, Arial,\"PMingLiu\", \"\\65B0\\7D30\\660E\\9AD4\"!important;}\r\n.employer_profile.popUp .back_to_page_style{padding: 10px 10px !important; width: 100%!important; font-weight: 600 !important; font-family:\"PingFang TC\" ,\"\\5137\\9ED1   Pro\", \"Microsoft JhengHei\", \"\\5FAE\\8EDF\\6B63\\9ED1\\9AD4\", STHeiti,\"Heiti TC Medium\", Apple LiGothic, Helvetica, Helvetica Neue, Arial,\"PMingLiu\", \"\\65B0\\7D30\\660E\\9AD4\"!important;}\r\n\r\n.select_job_list.job_listing,.job_listings_search_jobtitle{ display: inline-block; width:100%;border-bottom: 1px solid rgba(90,91,93,0.2);border-right:none!important}\r\n\r\n.job_listings_item_content .pay_methods_title{ padding:15px!important; font-size: 14px!important; color: #838383!important;}\r\n.job_listings_item_content .pay_methods_content > .icon-radio,\r\n.job_listings_item_content .pay_methods_content > .icon-radio-selected,\r\n.job_listings_item_content .pay_methods_content > .cardname{padding: 8px 0!important; line-height: 1; text-align: center; width: 30%!important; font-size: 14px!important; color:#838383!important;}\r\n.job_listings_item_content .pay_methods_content > .icon-radio,\r\n.job_listings_item_content .pay_methods_content > .icon-radio-selected{ width: 20px!important; }\r\n\r\n.employer_setting_item_content.billing_setting_view .job_listings_item_table li{ padding: 15px!important;}\r\n/* .employer_setting_item_content.billing_setting_view .job_listings_item_table li span{ text-align:left!important; } */\r\n\r\n\r\n.select_pay_methods .pay_methods_content.payment-row{ padding:10px 15px 15px 15px !important;}\r\n.select_pay_methods .pay_methods_content.payment-row:last-child{ padding:5px 15px 10px 15px!important;}\r\n\r\n.job_listings_info_content{ box-shadow: 0px 1px 2px 1px #ccc; border-radius:  6px;}\r\n.job_listings_info_content .job_listings_item_content{border-radius: 6px;}\r\n.job_listings_item_content .form_data li{ padding-left: 15px; padding-right: 15px; width: 100%!important;}\r\n.job_listings_item_content .form_data li.acount_cv_code .acount_cv_code_no{ width: 30%!important; display: inline-block; }\r\n.job_listings_item_content .form_data li.acount_cv_code .cvv_pic{ position: relative; top: -3px; display: inline-block; vertical-align: bottom; margin-left: 10px!important;}\r\n.job_listings_item_content .form_data li .input_box.input_spec_box{ width: 60% !important; }\r\n.job_listings_item_content .form_data li.acount_cv_code .data_title,\r\n.job_listings_item_content .form_data li.acount_cv_code .input_box{ width: 100%!important;}\r\n.job_listings_info_content.buy_job_payment .form_data li .data_title{ font-size: 14px!important; color:#838383!important; margin-bottom: 8px;}\r\n.job_listings_info_content.buy_job_payment .form_data li.acount_cv_code #cvv{ margin-top: -5px; }\r\n.job_listings_info_content.buy_job_payment .form_data li .input_box{ font-size: 18px!important; height: 30px!important; font-weight: bold;}\r\n.job_listings_info_content.buy_job_payment .form_data li .input_box .data_input{color:#838383!important;}\r\n.job_listings_info_content.buy_job_payment .form_data li .input_box .data_input::-webkit-input-placeholder{ font-size: 14px!important; color:#323232!important;}\r\n.job_listings_info_content.buy_job_payment .form_data li .input_box .data_input::-moz-placeholder { font-size: 14px!important; color:#323232!important;}\r\n.job_listings_info_content.buy_job_payment .form_data li .input_box .data_input:-ms-input-placeholder { font-size: 14px!important; color:#323232!important;}\r\n.job_listings_info_content.buy_job_payment .form_data li .input_box .data_input:-moz-placeholder { font-size: 14px!important; color:#323232!important;}\r\n\r\n.job_listings_item_content .form_data li .data_title,\r\n.job_listings_item_content .form_data li .input_box{width: 100%!important; text-align: left!important;}\r\n.job_listings_item_content > .buy_btn > .buy_btn_main{ width: 100%!important; }\r\n.job_listings_item_content > .buy_btn > .buy_btn_main button{ width:93% !important; margin: 20px 10px!important; font-size: 14px !important; padding: 8px !important; border-radius: 50px!important;}\r\n.job_listings_item_content > .buy_btn.buybtn{padding:25px 0px!important; display: block;;}\r\n.job_listings_item_content > .buy_btn.buybtn .buy_btn_main button{ padding: 10px 10px !important; margin: 0px 0!important;}\r\n.job_listings_item_content > .buy_btn.buybtn .buy_btn_main:first-child{margin: 0px 0 15px 0!important;}\r\n\r\n.employer_setting_item_content .auto_title{font-size: 14px !important; padding: 10px 15px!important}\r\n.employer_setting_item_content .auto_title i{ padding:0 5px !important;}\r\n\r\n.header_login .dropdown-menu{ left: auto;; right: 0; }\r\n.loginAndSignUp{ padding: 10px  10px  0px  10px !important; box-shadow:none!important; background-position:-6px center;}\r\n.loginAndSignUp .employer_login_right_ad{ background-color: #f4f4f6; padding-bottom: 60px; font-family:\"PingFang TC\" ,\"\\5137\\9ED1   Pro\", \"Microsoft JhengHei\", \"\\5FAE\\8EDF\\6B63\\9ED1\\9AD4\", STHeiti,\"Heiti TC Medium\", Apple LiGothic, Helvetica, Helvetica Neue, Arial,\"PMingLiu\", \"\\65B0\\7D30\\660E\\9AD4\"!important;}\r\n.employer_login_right_ad{padding-right: 40px !important; padding-left: 40px !important; color: #333333!important; background: #FFFFFF; padding-bottom: 10px; margin-right: -10px!important; margin-left: -10px!important;}\r\n.employer_login_right_ad h3{ font-size: 18px!important; font-family:\"PingFang TC\" ,\"\\5137\\9ED1   Pro\", \"Microsoft JhengHei\", \"\\5FAE\\8EDF\\6B63\\9ED1\\9AD4\", STHeiti,\"Heiti TC Medium\", Apple LiGothic, Helvetica, Helvetica Neue, Arial,\"PMingLiu\", \"\\65B0\\7D30\\660E\\9AD4\"!important;}\r\n.employer_login_right_ad h3 span{ font-size: 30px!important; }\r\n.employer_login_right_ad h3 span.none_bold{ font-size: 18px!important; }\r\n.employer_login_right_ad h3 i{font-size: 21px!important; }\r\n.employer_login_right_ad p{padding-right: 20px;}\r\n\r\n.hiring_submit{ background-color: #e96f1b!important; font-size: 16px !important; margin-top: 30px!important; padding: 10px 0 10px 0!important; width: 100%!important; border-radius: 3px!important;}\r\n#login_content{ margin-left: 0 !important; }\r\n#login_content .login_account{ padding:40px 20px 30px 20px !important; margin-bottom: 20px;}\r\n#footer .relate_website ul > li > a{ font-size: 14px!important;}\r\n#footer .about_us > .copyright{margin-left: 0!important; margin-top: 15px; width: 100%;}\r\n#footer .about_us{padding-left: 0 !important; margin-top: 5px!important; padding-right:0px!important;}\r\n.right_footer{ position: absolute; right: 5%; top: 0; padding: 26px 0!important;}\r\n.right_footer:last-child a{ padding-left:15px;}\r\n.left_footer{ padding-bottom: 20px; padding-right:15px!important;}\r\n#footer .relate_website ul{ margin-top: 25px!important; }\r\n\r\n.search{ background: none !important; position: relative;}\r\n.search_main{ padding: 10px!important; }\r\n.search:before{background-color: #445cb3; position: absolute; left: 0; right: 0; content: \"\"; width: 100%; height: 73px;}\r\n.search_hotwords > ul > li a{ color: #445cb3 !important; font-size: 16px!important; font-weight: bold!important; text-decoration: underline !important;}\r\n.search_hotwords > ul > li + li{ margin-left: 20px!important; }\r\n.search_intro{ display: none;}\r\n\r\n.search_employer{ background: none !important; position: relative;}\r\n.search_employer .search_main{ padding: 10px!important; }\r\n.search_employer:before{background-color: #2e344b; position: absolute; left: 0; right: 0; content: \"\"; width: 100%; height: 73px;}\r\n.search_employer .search_hotwords > ul > li a{color: #2e344b!important;}\r\n.search_employer .search_btn > .search_input .glyphicon.glyphicon-search{color: #2e344b!important;}\r\n/*.employer_menu_btn.navbar-toggle .icon-bar{background: #2e344b !important; }*/\r\n\r\n#profile .profile_right_content{ padding-left: 0; padding-right: 0; }\r\n#profile .facebook .fb_iframe_widget span{ width: 300px !important; }\r\n\r\n.faq_sec .about_us_item { margin-top: 40px !important; padding-right: 30px; font-size: 16px!important;}\r\n.faq_sec .about_us_item .title{ font-size: 20px!important; }\r\n.faq_sec .right_content{padding-right: 20px;}\r\n.switch_faq{ margin-top: 15px; }\r\n.switch_faq .switch_btn{ padding: 8px 25px !important; margin-left:15px; font-size: 16px!important;}\r\n.left_count{ padding: 7px 0!important; }\r\n.left_count:before { bottom: -12px; left: 50%;  border: solid transparent; content: \" \";  height: 0; width: 0; position: absolute;\r\n    pointer-events: none;  border-top-color:#4e55a0;  border-width: 6px;  margin-left: -6px;}\r\n\r\n.closeMenu{ position: absolute; display: block; left: 15px; right: 15px; z-index: 9999; padding-top:15px;  }\r\n.closeMenu .closeArrow{ font-size: 16px; float: left; color:#445cb3!important; cursor: pointer; width: 25px; height: 25px; }\r\n.closeMenu .header_lang_main{float: right; color:#445cb3!important;}\r\n.closeMenu .header_lang_main a{color:#445cb3!important; font-size: 16px!important; text-decoration: none;}\r\n\r\n.class_local{ height: auto!important; }\r\n.search_more_left{ padding: 10px!important; border-radius: 5px;} \r\n.more_search_wrap .search_more_left div{ margin-bottom: 10px!important; margin-top: 10px; } \r\n.more_search_wrap .search_more_left div.superior_company_content{margin-top: 10px;  margin-bottom: 0px!important;}\r\n.search_more_left, .search_more_right{ width: 100%!important; }\r\n.open_more_item{ position: absolute; right: 10px; top: 8px; }\r\n.search_more_right{margin-top: 8px!important;}\r\n.search_more_right .search_item{ padding: 15px 15px!important; border-radius: 5px!important; margin-bottom: 8px!important;}\r\n.search_btn .search_item .item_text{ margin-left: 0px!important; max-width: 100%!important; }\r\n.search_btn .search_item.multiple_items .item_text{margin-left: 5px!important;}\r\n.search_item.salary_item .salary_float_right{margin-left: 105px;  width: 60%;}\r\n.search_btn .salary_item .item_text{left: 15px!important;}\r\n.search_btn .search_item .glyphicon-triangle-bottom, .search_btn .search_item .glyphicon-triangle-top{right: 15px!important;}\r\n.job_type_style{ padding-left:0px !important; min-width: 49.5%!important;}\r\n.job_type_style .icon-check_box, .job_type_style .icon-check_box_outline_blank{ position: relative!important; left: auto; }\r\n.search_btn .search_item.multiple_items .job_type_style span{vertical-align: middle !important;}\r\n.search_more_left h5{font-size: 14px!important;}\r\n.hot_tag_style li{font-size: 13px!important; padding: 10px 20px!important; border-radius: 50px!important;}\r\n/* .hot_tag_style li:hover{ background-color: #445cb3!important; color: #FFFFFF!important; } */\r\n\r\n#footer .about_us > .footer-links{position: relative; padding-right: 3%;}\r\n#footer .about_us > .footer-links + .footer-links{padding-right: 3%; padding-left: 3%; position: relative;}\r\n#footer .about_us div.footer-links span.devider{position: absolute; right: -1px; width: auto;}\r\n#footer .relate_website ul > li + li{ margin-left: 4% !important; }\r\n.copyright span{ display: block; width: 100%; }\r\n\r\n.loginAndSignUp .status, \r\n.loginAndSignUp .skip_title, \r\n.loginAndSignUp .resetpassword_title, \r\n.loginAndSignUp .skip_submit, \r\n.loginAndSignUp .resetpassword_submit, \r\n.loginAndSignUp .login_submit, \r\n.loginAndSignUp .signup_submit, \r\n.loginAndSignUp .login_account input{font-size: 16px!important; font-weight: bold;}\r\n.free_trail{ float: none!important; display: block; text-align: right; color: #FFFFFF!important; font-weight: normal!important;}\r\n.change_email_content .skip_account{ padding: 15px; }\r\n.change_email_content .skip_submit{ margin-top: 15px!important; padding: 10px 0px!important; }\r\n\r\n.pagination{ position: relative; float: none; text-align: center; width: 100%; margin:0!important; padding: 15px 0!important; }\r\n.el-pagination{ padding: 0!important; text-align: center;display: flex;align-items: center;justify-content: center;}\r\n.el-pagination button.disabled{color: #323232!important;}\r\n.el-pagination > .btn-prev, .pagination .el-pagination > .btn-next{ margin:0 10px!important; border:none!important; }\r\n.el-pagination > .el-pager > li{margin:10px 5px!important; border-radius: 3px!important;}\r\n\r\n\r\n.job_post_content.job_post_content_padd .input_wrap{ padding-left: 0!important; padding-right: 0!important; margin:15px 0 20px 0!important; }\r\n.job_post_content.job_post_content_padd .input_wrap.marginless{ margin-top: -12px!important; }\r\n.job_post_content.job_post_content_padd .input_wrap .minw12{min-width: 59%!important; font-size: 14px!important;}\r\n.job_post_content.job_post_content_padd .input_wrap .radio{ margin-right: 0!important; }\r\n.job_post_content.job_post_content_padd .input_wrap .textarera_sec{color: #2e344b!important;  font-size: 14px!important;  max-height: 100px; border-radius: 6px!important;}\r\n.job_post_content.job_post_content_padd .employer_profile_drop_down ul{ max-height: 250px !important; height: 100%!important; margin-right: 0!important;}\r\n.job_post_content.job_post_content_padd .employer_profile_drop_down ul li{ margin: 0!important; }\r\n.job_post_content.job_post_content_padd .employer_profile_drop_down ul li span{ padding:10px 15px!important; }\r\n.job_post_content.job_post_content_padd .employer_profile_drop_down ul li span span{ padding:0px 0px!important; }\r\n.job_post_content.job_post_content_padd .input_wrap span.job_discrp{ font-size: 14px!important; color: #2e344b!important; }\r\n.job_post_content.job_post_content_padd .input_wrap input{font-size: 14px!important;}\r\n.job_post_content.job_post_content_padd .input_wrap .to_style{font-size: 14px!important; display: inline-block!important; padding: 0 5px!important;}\r\n.job_post_content.job_post_content_padd .input_wrap .upload_style .icon-attachment{ font-size: 14px!important;  }\r\n.job_post_content.job_post_content_padd .input_wrap .upload_style .icon-attachment::before{color: #2e344b!important;}\r\n.job_post_content.job_post_content_padd .input_wrap .upload_file .upload_style{ padding: 4px 15px!important;  color: #2e344b!important; }\r\n.job_post_content.job_post_content_padd .recruitment_day_wrap{ margin: -20px 0 0 0!important; padding: 10px!important;}\r\n.job_post_content.job_post_content_padd .recruitment_day_wrap .input_wrap{margin:5px 0 5px 0!important;}\r\n.job_post_content.job_post_content_padd .recruitment_day_wrap .input_wrap .remove_padding_bootstrap{font-size: 14px!important; margin-right: 10px; width: 30%;}\r\n/* .job_post_content.job_post_content_padd .recruitment_day_wrap .input_wrap .el-date-editor.el-input{ width: 120px; } */\r\n.walkin_time_style .el-date-editor.el-input{ width: 4rem; }\r\n.job_post_content.job_post_content_padd .recruitment_day_wrap .input_wrap .el-date-editor.el-input .el-input__icon + .el-input__inner{ width: 100%!important; }\r\n.job_post_content.job_post_content_padd .recruitment_day_wrap .input_wrap .job_discrp{ font-size: 14px!important; color: #2e344b!important; }\r\n.job_post_content.job_post_content_padd .recruitment_day_wrap.walk_interview .input_wrap .remove_padding_bootstrap{font-size: 14px!important; margin-right: 10px; width: 30%;}\r\n/* .job_post_content.job_post_content_padd .recruitment_day_wrap.walk_interview .el-date-editor.salary_range_wrap{ width: 65px!important; } */\r\n/* .job_post_content.job_post_content_padd .recruitment_day_wrap.walk_interview .date_picker_width_large .el-date-editor.salary_range_wrap{ width: 120px!important; } */\r\n.job_post_content.job_post_content_padd .icon-arrow_drop_down{ font-size: 24px!important; }\r\n.select_file_mask{ float: none; }\r\n.select_file_mask.salaery_rane_sec{margin-top: 8px;}\r\n.select_file_mask.salaery_rane_sec .salary_range_wrap{ padding: 2px 13px!important;}\r\n.job_post_content.job_post_content_padd .work_years_wrap.work_years_wrap_padd{display: block!important; padding-left: 0!important; padding-right: 0!important; }\r\n.job_post_content.job_post_content_padd .work_years_wrap.work_years_wrap_padd .work_years_of_experience{ display: block; font-size: 14px!important;}\r\n.job_post_content.job_post_content_padd .work_years_wrap.work_years_wrap_padd .work_years{ margin-top: 8px; margin-left:0!important; padding: 2px 13px!important; }\r\n.job_post_content.job_post_content_padd .work_years_wrap.work_years_wrap_padd .work_years input{ text-align: center; max-width: 30px;}\r\n.job_post_content.job_post_content_padd .input_wrap .skills_add{ color: #2e344b!important; font-size: 14px!important;}\r\n.job_post_content.job_post_content_padd .post_job_button{ padding: 25px 15px 35px 15px!important; margin-top: 0!important; margin-bottom:  }\r\n.job_post_content.job_post_content_padd .post_job_button .post_job_submit{padding: 8px 10px !important;border-radius: 50px!important; font-size: 16px!important; width: 100%; font-weight: bold!important}\r\n.job_post_content.job_post_content_padd .skill_item_tags_wrap{ margin-top: 10px!important; margin-right: 0!important;  }\r\n.job_post_content.job_post_content_padd .skill_item_tags_wrap span{ padding:3px 10px!important;  }\r\n.job_post_content.job_post_content_padd .skill_item_tags_wrap span .icon-cancel{ opacity: 100!important; color: #445cb4!important;}\r\n.el-pagination > .btn-prev, .el-pagination > .btn-next{ background:none!important; border:none!important;   }\r\n\r\n.setting_change.drop_down{ position: relative; min-height: 54px; height: 54px;}\r\n.setting_change.drop_down .dropArrow{position: absolute; right:0px; z-index: 999; width: 30px; text-align: center; height: 95%;  cursor: pointer; display: block;}\r\n.setting_change.drop_down .dropArrow i{ font-size: 10px; line-height: 54px; color: #626262!important;}\r\n.setting_change.drop_down ul{ position: absolute; width: 100%; top: 0; background: #FFFFFF; z-index: 9;}\r\n/* .setting_change.drop_down ul li a{ display: none; } */\r\n.setting_change.drop_down ul li a.router-link-exact-active.router-link-active.active{ display: block; }\r\n\r\n.tab_main_position.drop_down{ position: relative; min-height: 54px; padding: 0!important;}\r\n.tab_main_position.drop_down .dropArrow{position: absolute; right:0px; z-index: 999; width: 30px; text-align: center; height: 95%;  cursor: pointer; display: block;}\r\n.tab_main_position.drop_down .dropArrow i{ font-size: 10px; line-height: 54px; color: #626262!important;}\r\n.tab_main_position.drop_down .tab_main{margin-left: 0!important;max-width: 100% !important; float: none !important; padding:15px!important; min-height: 54px; text-align: left!important; text-decoration: none; border-top: #dcddec solid 1px; font-weight: 600!important;}\r\n/* .tab_main_position.drop_down .tab_main:last-child{ border: none; } */\r\n.tab_main_position.drop_down .tab_main.active{ display: block; border-bottom:0px solid #4e55a0;}\r\n.tab_main_position.drop_down .tab_main.tabDeactive{display: block;}\r\n\r\n.dropNav{ position:absolute; top:0; width: 100%; z-index: 9; background-color: #ffffff;}\r\n\r\n.component.rowNone{ margin-left: 0; margin-right: 0; }\r\n.employer_profile_content{ margin: 10px!important;}\r\n.employer_profile_account.add_employer_profile_account{margin:0px!important; display: block!important; padding: 10px 15px!important; }\r\n.employer_profile_content .logo_all_same.employer_profile_title{ margin-left:0!important; padding: 15px!important; font-size: 16px!important; width: 100%!important; margin-bottom: 0!important;}\r\n.employer_profile_content .finish_room2{ width: 100%!important; }\r\n.employer_profile_content .logo_room_add_img{ width: 80px!important; height: 80px!important; }\r\n.employer_profile_content .add_employer_profile_wrap{margin: 0 !important; width: 100%;}\r\n.employer_profile_content .add_employer_profile_wrap .input_wrap input{ padding: 8px 0!important; }\r\n.employer_profile_content .add_employer_profile_wrap .input_wrap:nth-child(1){ margin-top:-28%; padding-left: 30%; }\r\n.employer_profile_content .add_employer_profile_wrap .input_wrap:nth-child(2){ padding-left: 30%; }\r\n.employer_profile_content .add_employer_profile_wrap .input_wrap:nth-child(3){  margin-top:0px; }\r\n.employer_profile_content .add_employer_profile_wrap .input_wrap:nth-child(4){  margin-top:0px; }\r\n.employer_profile_content .add_employer_profile_wrap .input_wrap .employer_profile_drop_down ul{height: 130px!important; max-height: 130px!important;}\r\n.employer_profile_content .add_employer_profile_wrap .input_wrap .employer_profile_drop_down ul li{ padding: 0px 10px!important; }\r\n.employer_profile_content .add_employer_profile_wrap .input_wrap .employer_profile_drop_down ul li span{padding:5px 5px!important;}\r\n.finish_room2.company_pic_border{ border-bottom: 0!important; padding-bottom:0!important;  }\r\n.finish_room2 .company_pic{ width: 48%!important;margin-right: 0px!important; height: 100px!important; }\r\n.finish_room2 .company_pic:nth-child(odd){ margin-right: 10px!important; }\r\n.finish_room2 .company_pic:nth-child(even){ margin-bottom: 10px; }\r\n.finish_room2 .company_pic:nth-child(2n+2){margin-right: 0px!important;}\r\n.finish_room2 .company_pic img{ position: relative!important; max-width: 100%;}\r\n.finish_room2 .icon-cross{font-size: 24px!important; bottom: auto!important; right: -8px!important; top:-8px!important; }\r\n.finish_room2 .icon-cross:before{z-index: 9;  position: relative;}\r\n.finish_room2 .icon-cross:after{ position: absolute; background-color: #FFFFFF; top: 1px; right: 1px; width: 20px; height: 20px; content:\"\"; z-index: 0; border-radius: 100%;}\r\n\r\n.add_employer_profile_wrap .company_image_style .company_image_wrap{ padding: 5px 0!important; }\r\n.select_file_mask .imgwrap .btn.btn-default{ padding: 3px 15px!important; }\r\n.company_image_style .el-date-editor.el-input{line-height: 1;}\r\n.company_image_style .el-input__icon + .el-input__inner{ width: 100px!important; }\r\n.employer_profile_button_fixed{ display: block; width: 86%; }\r\n.right_align{ float: none; margin-right: 0!important; text-align: right;}\r\n.right_align .btn.btn-default.add_employer_save{ width: 100%; max-width: 120px; margin-left: 25px;}\r\n.finish_room2 .add_img_company{ width: 48%!important; }\r\n.finish_room2 .add_img_company .none_pic_display{ width: 100%!important; height: 100px!important;}\r\n\r\n.profile_main.Profile_own .profile_head_height{ padding:5px 15px;}\r\n.profile_main.Profile_own .profile_title_name{ float: none; margin-left: 100px !important; padding-top: 30px!important;}\r\n.profile_main.Profile_own .basic_info_title {font-size: 20px!important;}\r\n.profile_main.Profile_own .basic_info .dot_style{ display: block; }\r\n.profile_main.Profile_own .profile_title_avatar{ margin-top: -70px!important; width: 85px!important; height: 85px!important; margin-left: 10px;}\r\n.profile_title_avatar img{ background-color: #ffffff; border-radius: 100%; box-shadow: 0px 1px 2px 1px #ccc; padding: 5px;}\r\n.profile_main.Profile_own .profile_item_content.company_content_style{ padding-left: 110px; margin-top:-10px!important; margin-bottom: 30px;}\r\n.profile_main.Profile_own .article_h3_title span{font-size: 18px!important; display: block;}\r\n.profile_main.Profile_own .background_upload_after{ padding: 5px 25px!important; }\r\n.profile_main.Profile_own .icon-clip{font-size: 14px!important; margin-right: 5px;}\r\n.profile_main.Profile_own .profile_item_content.profile_register_content{ margin-bottom: 50px; margin-top: 10px; }\r\n.profile_main.Profile_own .company_environmental_photo .carousel-inner{ height: 145px; }\r\n.profile_main.Profile_own .company_environmental_photo .carousel-indicators { top: auto!important; bottom: 15px; left: 45%!important; }\r\n.profile_main.Profile_own .company_environmental_photo .carousel-indicators li{ border: none!important; background-color: #ccc; }\r\n.profile_main.Profile_own .company_environmental_photo .carousel-indicators li.active{ background-color: #f69343!important; }\r\n\r\n#candidatejoblist .job_display .profile_left .job_list_content.margNone{ margin-top: 0!important; }\r\n#candidatejoblist .job_display .profile_left .block{ padding: 15px!important;}\r\n#candidatejoblist .job_display .profile_left .job_list_content .job_list_item{ padding-left: 80px!important; padding-top: 15px; padding-bottom:15px; }\r\n#candidatejoblist .job_display > .profile_left .job_list_content .job_list_item .item_pics{margin-right: 0!important; top: 20px!important; left: 15px!important; max-width: 50px!important; max-height: 50px!important;}\r\n#candidatejoblist .job_display > .profile_left .job_list_content .job_list_item .item_pics .imgBox{width: 55px!important;height: 55px!important;}\r\n#candidatejoblist .item_info_top .top_title > .job_title,\r\n#candidatejoblist .item_info .item_info_top .require_salary,\r\n#candidatejoblist .item_info .item_info_top .require_year{ font-size: 14px!important;line-height: 16px; }\r\n#candidatejoblist .job_list_content .job_list_item .item_info .item_info_top .col-md-6{ padding-left: 0!important; padding-right: 0!important; }\r\n#candidatejoblist .item_info .item_info_bottom .info_skill_item{padding: 1px 10px!important; margin: 2px;border-radius: 6px!important;}\r\n#candidatejoblist .item_info .item_info_bottom .info_skill_item a{color: #3a58a8!important;}\r\n#candidatejoblist .el-pagination{ margin-top: 15px; margin-bottom: 15px;}\r\n\r\n.candidate_header_top.userProfile_sec{ position: relative; padding: 15px!important;}\r\n.candidate_header_top.userProfile_sec .candidate_avatar{ height: 85px!important; width: 85px!important; box-shadow: 0px 1px 2px 1px #545454; left: 15px!important; bottom:-5px!important; border: 3px solid #fff;}\r\n.candidate_header_top.userProfile_sec .candidate_name{margin-left: 100px!important; padding: 30px 0 0 0!important; }\r\n.candidate_header_top.userProfile_sec .candidate_name .is_save > .glyphicon{ font-size: 14px!important; }\r\n.candidate_header_top.userProfile_sec .candidate_name .candidate_current_job{line-height: 15px;}\r\n.candidate_header_top.userProfile_sec .candidate_name .candidate_name_main{font-size: 22px!important;line-height: 22px;}\r\n.candidate_header_bottom.userProfile_sec{padding: 15px 15px 15px 100px!important;}\r\n.candidate_header_bottom.userProfile_sec .candidate_btm_right{ text-align: left!important;}\r\n.candidate_header_bottom.userProfile_sec .good_match{min-width: 150px!important; padding-right: 0px!important; margin-top: 20px; margin-bottom: 10px!important;}\r\n.candidate_header_bottom.userProfile_sec .good_match > .good_match_main > .good_match_main_green{ background-color: #8bc34a!important; }\r\n.candidate_body_content.userProfile_sec .every_item .detail_title{text-align: left!important;}\r\n.cv_box .body_item_btn.have_cv{ display: inline-block!important; min-width: 130px; padding: 8px 50px!important; margin: 25px 0; }\r\n.operate_btn.Op_btns{ padding:5px 15px!important;}\r\n.operate_btn.Op_btns > .btn_box{ display: block; margin-top: 20px; margin-bottom:10px;}\r\n.operate_btn.Op_btns > .btn_box button{ width: 100%!important; margin-top:5px;}\r\n.operate_btn.Op_btns > .btn_box .send_btn{ margin:5px 0 0 0!important;}\r\n\r\n.candidate_body_content.userProfile_sec{ position: relative;}\r\n.candidate_body_content.userProfile_sec .company_info_main .company_left{ width: 30px!important; height: 30px; }\r\n.candidate_body_content.userProfile_sec .company_info_main .jobinfo_header{ width: 100%!important; }\r\n.account_info_wrap {margin-top: 5px !important;width: 90%;left: 5%;}\r\n}\r\n\r\n\r\n@media(max-width:415px) {\r\n#footer .about_us > .footer-links{position: relative; padding-right: 2%;}\r\n#footer .about_us > .footer-links + .footer-links{padding-right: 2%; padding-left: 2%; position: relative;}\r\n#footer .relate_website ul > li + li{ margin-left: 2%!important; }\r\n}\r\n\r\n@media(max-width:480px){\r\n.search_btn{ width: 90%;}\r\n.profile_right_content #banner1 iframe{ width: 100%;}\r\n.account_listings_item_table li:nth-child(1) span{ display: inherit !important; }\r\n#footer .relate_website ul > li + li{margin-left: 1.7% !important;}\r\n}\r\n\r\n\r\n\r\n@media(max-width:375px){\r\n.employer_login_right_ad{  padding-right:20px !important;  padding-left: 20px !important;}\r\n::-webkit-input-placeholder{ font-size: 14px!important;}\r\n::-moz-placeholder { font-size: 14px!important;}\r\n:-ms-input-placeholder { font-size: 14px!important;}\r\n:-moz-placeholder { font-size: 14px!important;}\r\n.loginAndSignUp .status, \r\n.loginAndSignUp .skip_title, \r\n.loginAndSignUp .resetpassword_title, \r\n.loginAndSignUp .skip_submit, \r\n.loginAndSignUp .resetpassword_submit, \r\n.loginAndSignUp .login_submit, \r\n.loginAndSignUp .signup_submit, \r\n.loginAndSignUp .login_account input{font-size:14px!important;}\r\n.remember_account{font-size:14px!important;}\r\n.resetPassword{font-size:12px!important;}\r\n.employer_login_right_ad h3 span {    font-size: 26px !important;}\r\n\r\n.employer_job_lists_content ul li p:first-child{ padding-left: 0!important; }\r\n.employer_job_lists_content ul li p:last-child{text-align: right!important;}\r\n.employer_job_lists_content ul li p span.active_style,.employer_job_lists_content ul li p span.active_style.status_deactive{ font-size: 12px!important; line-height: 54px!important; letter-spacing: -0.7px!important;}\r\n.employer_job_lists_content ul li p:nth-child(2){width: 38%!important;}\r\n.employer_job_lists_content ul li p:nth-child(3){width: 31%!important;}\r\n}\r\n\r\n@media(max-width:360px){\r\n.job_listings_item_title.job_listings_search .icon-radio{ display:none; }\r\n.employer_job_lists_header h3{font-size: 12px !important;}\r\n.employer_job_lists_header h3.add_job_title { font-size: 12px !important;}\r\n.employer_job_lists_header h3.craditNo{ font-size: 12px!important; }\r\n/*.job_listings_all{ font-size: 13px!important; }*/\r\n.employer_setting_item_content.billing_setting_view .job_listings_item_table li{ min-height: 172px;}\r\n.employer_profile_content .logo_room_add_img{ width: 60px!important; height: 60px!important; }\r\n.profile_main.Profile_own .profile_title_avatar{ margin-top: -80px!important; width: 90px!important; height: 90px!important; }\r\n.candidate_header_top.userProfile_sec {padding: 15px 15px 20px 15px !important;}\r\n.candidate_header_top.userProfile_sec .candidate_avatar{bottom: 10px!important;  height: 66px !important; width: 66px !important; left: 10px !important;}\r\n.candidate_header_top.userProfile_sec .candidate_name { margin-left: 70px !important;    padding: 10px 0 0 0 !important;}\r\n.candidate_header_top.userProfile_sec .candidate_name .candidate_name_main {font-size: 18px !important;    line-height: 18px;}\r\n.candidate_header_bottom.userProfile_sec { padding: 15px 15px 15px 80px !important;}\r\n.candidate_header_bottom.userProfile_sec .candidate_btm_left.col-md-6,\r\n.candidate_header_bottom.userProfile_sec .candidate_btm_right.col-md-6{ padding-right: 0; padding-left: 0; }\r\n\r\n\r\n/*.current_position{ display: block;}*/\r\n#footer .relate_website ul > li > a{ font-size: 12px!important;}\r\n/*#footer .about_us div.footer-links{ margin-left: -2px; margin-right: -2px}*/\r\n#footer .about_us div.footer-links:first-child{ margin-right: 0; margin-left: 0; }\r\n#footer .about_us div > a, #footer .about_us{ font-size: 12px!important;}\r\n}  \r\n.notification_wrap .el-radio .el-radio__input{margin-right: 17px;}\r\n@media screen and (width: 320px){\r\n.job_post_content.job_post_content_padd .input_wrap .minw12 {\r\n    min-width: 50%!important;}\r\n}\r\n\r\n#article_pagination .el-pagination>.btn-prev,#article_pagination .el-pagination>.btn-next, #article_pagination .el-pagination>.el-pager>li.number,#article_pagination .el-pagination>.el-pager>li{background: #fff!important;border: solid 1px #d9d9d9!important;}\r\n#article_pagination .el-pagination>.el-pager>li.active {\r\n    background: #4e55a0!important;\r\n    color: #fff;\r\n    border: none!important;\r\n}\r\n\r\n.pagination>li>a, .pagination>li>span {\r\n    padding: 0px 12px;\r\n    margin-left: -1px;\r\n    line-height: 35px ;\r\n    color: #337ab7;\r\n    border:1px solid #d9d9d9;\r\n    min-width: 36px;\r\n    height: 35px;\r\n    line-height: 35px;\r\n    font-size: 19px;\r\n    font-weight: 500;\r\n    color: rgb(51, 51, 51);\r\n    margin: 0px 0.07rem;\r\n    border-radius: 2px;\r\n}\r\n.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover {\r\n    background-color: #4e55a0;\r\n    border-color: #4e55a0;\r\n    border-radius: 2px;\r\n    border: none;\r\n}\r\n.pagination>li:first-child>a, .pagination>li:first-child>span,.pagination>li:last-child>a, .pagination>li:last-child>span {\r\n    border-radius: 2px;\r\n}\r\n#article_pagination >ul .job_tab_item>a,span{vertical-align: top;}\r\n#article_pagination .page-link{display: flex;align-items: center;}\r\n#article_pagination{width: 100%;display: flex;justify-content: center;}\r\n.profile_right span.quote_cn_last{vertical-align: middle !important}\r\n.profile_right span.quote_en_last{vertical-align: baseline !important}\r\n.no_margin_top .el-radio__input{vertical-align: super;}\r\n.vertical_align_middle .to_style{vertical-align: middle;}\r\n\r\n", ""]);
+exports.push([module.i, ".main>.welcome[data-v-f5c40654]{width:200px;height:50px;border-bottom:1px solid #f0f0f0;margin-bottom:20px}.main>.welcome>span[data-v-f5c40654]{font-size:30px;line-height:50px}.main>.main_title[data-v-f5c40654]{width:100%;height:100%;margin-bottom:20px}.main>.main_title>.box[data-v-f5c40654]{width:24%;height:100px;float:left;border-radius:10px;text-align:center;cursor:pointer}.main>.main_title>.box+.box[data-v-f5c40654]{margin-left:10px}.main>.main_title>.box>[class^=el-icon][data-v-f5c40654]{color:#fff;font-size:30px;line-height:80px;transition:all .5s}.main>.main_title>.box>div[data-v-f5c40654]{color:#fff;margin-top:-15px;transition:all .5s}.main>.main_title>.box:hover [class^=el-icon][data-v-f5c40654]{font-size:50px}.main>.main_title>.box:hover div[data-v-f5c40654]{display:none}.main>.main_title>.box1[data-v-f5c40654]{background-color:#5ec55c}.main>.main_title>.box2[data-v-f5c40654]{background-color:#f1b760}.main>.main_title>.box3[data-v-f5c40654]{background-color:#48629e}.main>.main_title>.box4[data-v-f5c40654]{background-color:#f3774a}.main>.carou[data-v-f5c40654]{width:350px;height:300px;position:relative;top:120px}.main>.carou>.carou_left>.block[data-v-f5c40654]{width:350px;height:300px;position:absolute}.main>.carou .el-carousel__item>img[data-v-f5c40654]{width:350px;height:250px}.main>.carou>.carou_right[data-v-f5c40654]{border:1px solid #f0f0f0;position:absolute;left:400px;top:20px;width:400px;padding:10px}.main>.carou>.carou_right>.content>ul>li[data-v-f5c40654]{line-height:30px}.main>.carou>.carou_right>.content>ul>li>.el-icon-arrow-right[data-v-f5c40654]{float:right;line-height:30px;font-size:12px;color:#a9a9a9}.main>.carou>.carou_right>.content>ul>li>a[data-v-f5c40654]{color:#3c3c3c;font-size:14px}.main>.carou>.carou_right>.content>ul>li+li[data-v-f5c40654]{border-top:1px solid #f0f0f0}", ""]);
 
 // exports
 
@@ -35926,22 +35695,6 @@ var Component = __webpack_require__(1)(
   /* cssModules */
   null
 )
-Component.options.__file = "E:\\Linear\\Example_project\\background_frame-master\\background_frame\\node_modules\\vue-quill-editor\\src\\editor.vue"
-if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
-if (Component.options.functional) {console.error("[vue-loader] editor.vue: functional components are not supported with templates, they should use render functions.")}
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-858b020a", Component.options)
-  } else {
-    hotAPI.reload("data-v-858b020a", Component.options)
-  }
-})()}
 
 module.exports = Component.exports
 
@@ -35964,22 +35717,6 @@ var Component = __webpack_require__(1)(
   /* cssModules */
   null
 )
-Component.options.__file = "E:\\Linear\\Example_project\\background_frame-master\\background_frame\\src\\component\\Footer.vue"
-if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
-if (Component.options.functional) {console.error("[vue-loader] Footer.vue: functional components are not supported with templates, they should use render functions.")}
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-336dfa66", Component.options)
-  } else {
-    hotAPI.reload("data-v-336dfa66", Component.options)
-  }
-})()}
 
 module.exports = Component.exports
 
@@ -36002,22 +35739,6 @@ var Component = __webpack_require__(1)(
   /* cssModules */
   null
 )
-Component.options.__file = "E:\\Linear\\Example_project\\background_frame-master\\background_frame\\src\\component\\Header.vue"
-if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
-if (Component.options.functional) {console.error("[vue-loader] Header.vue: functional components are not supported with templates, they should use render functions.")}
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-077b66bf", Component.options)
-  } else {
-    hotAPI.reload("data-v-077b66bf", Component.options)
-  }
-})()}
 
 module.exports = Component.exports
 
@@ -36040,22 +35761,6 @@ var Component = __webpack_require__(1)(
   /* cssModules */
   null
 )
-Component.options.__file = "E:\\Linear\\Example_project\\background_frame-master\\background_frame\\src\\component\\Navrouter.vue"
-if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
-if (Component.options.functional) {console.error("[vue-loader] Navrouter.vue: functional components are not supported with templates, they should use render functions.")}
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-186c486a", Component.options)
-  } else {
-    hotAPI.reload("data-v-186c486a", Component.options)
-  }
-})()}
 
 module.exports = Component.exports
 
@@ -36078,22 +35783,6 @@ var Component = __webpack_require__(1)(
   /* cssModules */
   null
 )
-Component.options.__file = "E:\\Linear\\Example_project\\background_frame-master\\background_frame\\src\\component\\plugin_component\\industry.vue"
-if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
-if (Component.options.functional) {console.error("[vue-loader] industry.vue: functional components are not supported with templates, they should use render functions.")}
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-13ad299a", Component.options)
-  } else {
-    hotAPI.reload("data-v-13ad299a", Component.options)
-  }
-})()}
 
 module.exports = Component.exports
 
@@ -36116,29 +35805,13 @@ var Component = __webpack_require__(1)(
   /* cssModules */
   null
 )
-Component.options.__file = "E:\\Linear\\Example_project\\background_frame-master\\background_frame\\src\\component\\plugin_component\\location.vue"
-if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
-if (Component.options.functional) {console.error("[vue-loader] location.vue: functional components are not supported with templates, they should use render functions.")}
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-5247c3f1", Component.options)
-  } else {
-    hotAPI.reload("data-v-5247c3f1", Component.options)
-  }
-})()}
 
 module.exports = Component.exports
 
 
 /***/ }),
 /* 204 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
@@ -36211,17 +35884,10 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "btn-gplus"
   }, [_vm._v("google plus")])])], 1)])
 },staticRenderFns: []}
-module.exports.render._withStripped = true
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-077b66bf", module.exports)
-  }
-}
 
 /***/ }),
 /* 205 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', [_c('header', {
@@ -36437,17 +36103,10 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }
   })], 1)])])
 },staticRenderFns: []}
-module.exports.render._withStripped = true
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-0e60cc65", module.exports)
-  }
-}
 
 /***/ }),
 /* 206 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', [_c('div', {
@@ -36703,17 +36362,10 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }
   }, [_vm._v("重置")])], 1)], 1)], 1)])
 },staticRenderFns: []}
-module.exports.render._withStripped = true
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-0e6ee3e6", module.exports)
-  }
-}
 
 /***/ }),
 /* 207 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
@@ -36803,17 +36455,10 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }))])])
   }))])])
 },staticRenderFns: []}
-module.exports.render._withStripped = true
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-13ad299a", module.exports)
-  }
-}
 
 /***/ }),
 /* 208 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', [_c('div', {
@@ -37053,17 +36698,10 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }
   }, [_vm._v("重置")])], 1)], 1)], 1)])
 },staticRenderFns: []}
-module.exports.render._withStripped = true
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-176d775d", module.exports)
-  }
-}
 
 /***/ }),
 /* 209 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', [_c('el-row', {
@@ -37185,17 +36823,10 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }
   }, [_vm._v("系统设置")])], 1)], 1)], 1)], 1)], 1)
 },staticRenderFns: []}
-module.exports.render._withStripped = true
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-186c486a", module.exports)
-  }
-}
 
 /***/ }),
 /* 210 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
@@ -37206,17 +36837,10 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "fr"
   }, [_c('span', [_vm._v(_vm._s(_vm.nowTime))])])])
 },staticRenderFns: []}
-module.exports.render._withStripped = true
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-336dfa66", module.exports)
-  }
-}
 
 /***/ }),
 /* 211 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', [_c('header', {
@@ -37352,17 +36976,10 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }
   }, [_vm._v("设置该项可以xxx")])], 1)], 1)], 1)])
 },staticRenderFns: []}
-module.exports.render._withStripped = true
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-3bf7f5c3", module.exports)
-  }
-}
 
 /***/ }),
 /* 212 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', [_c('header', {
@@ -37437,17 +37054,10 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }
   })], 1)], 1)])
 },staticRenderFns: []}
-module.exports.render._withStripped = true
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-45b0a393", module.exports)
-  }
-}
 
 /***/ }),
 /* 213 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
@@ -37544,17 +37154,10 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }))])])
   })], 2)]) : _vm._e()])
 },staticRenderFns: []}
-module.exports.render._withStripped = true
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-5247c3f1", module.exports)
-  }
-}
 
 /***/ }),
 /* 214 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
@@ -37625,17 +37228,10 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }
   })], 1)])], 2)])])
 },staticRenderFns: []}
-module.exports.render._withStripped = true
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-61ed8690", module.exports)
-  }
-}
 
 /***/ }),
 /* 215 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
@@ -37658,17 +37254,10 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "echarts"
   })])
 },staticRenderFns: []}
-module.exports.render._withStripped = true
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-647d9814", module.exports)
-  }
-}
 
 /***/ }),
 /* 216 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
@@ -37691,17 +37280,10 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }
   }, [_vm._v("Random")])])])])
 },staticRenderFns: []}
-module.exports.render._withStripped = true
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-6499c716", module.exports)
-  }
-}
 
 /***/ }),
 /* 217 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
@@ -37774,17 +37356,10 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }
   }, [_vm._v("Tips : 用户名和密码都是admin。")])], 1)], 1)])
 },staticRenderFns: []}
-module.exports.render._withStripped = true
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-74dd7a27", module.exports)
-  }
-}
 
 /***/ }),
 /* 218 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
@@ -37844,17 +37419,10 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "avatar_notice"
   }, [_c('p', [_vm._v("1、可上传jpg, gif, png格式文件.")]), _vm._v(" "), _c('p', [_vm._v("2、图片建议尺寸大于300x150.")]), _vm._v(" "), _c('p', [_vm._v("3、文件大小不能超过2M.")])])
 }]}
-module.exports.render._withStripped = true
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-7e6e8994", module.exports)
-  }
-}
 
 /***/ }),
 /* 219 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
@@ -37905,17 +37473,10 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }
   }, [_vm._v("提交")])], 1)
 },staticRenderFns: []}
-module.exports.render._withStripped = true
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-7ef158cf", module.exports)
-  }
-}
 
 /***/ }),
 /* 220 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
@@ -37924,17 +37485,10 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     ref: "editor"
   })], 2)
 },staticRenderFns: []}
-module.exports.render._withStripped = true
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-858b020a", module.exports)
-  }
-}
 
 /***/ }),
 /* 221 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
@@ -37943,17 +37497,10 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }
   }, [_c('router-view')], 1)
 },staticRenderFns: []}
-module.exports.render._withStripped = true
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-d8544b42", module.exports)
-  }
-}
 
 /***/ }),
 /* 222 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', [_c('header', {
@@ -37974,17 +37521,10 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }
   }, [_c('myfooter')], 1)])
 },staticRenderFns: []}
-module.exports.render._withStripped = true
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-f22182de", module.exports)
-  }
-}
 
 /***/ }),
 /* 223 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
@@ -38061,68 +37601,9 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "welcome"
   }, [_c('span', [_vm._v("Welcome!")])])
 }]}
-module.exports.render._withStripped = true
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-f5c40654", module.exports)
-  }
-}
 
 /***/ }),
 /* 224 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(163);
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var update = __webpack_require__(2)("490ecd8f", content, false);
-// Hot Module Replacement
-if(false) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-077b66bf\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/less-loader/dist/cjs.js!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Header.vue", function() {
-     var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-077b66bf\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/less-loader/dist/cjs.js!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Header.vue");
-     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 225 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(164);
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var update = __webpack_require__(2)("7ef4db78", content, false);
-// Hot Module Replacement
-if(false) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-0e60cc65\",\"scoped\":true,\"hasInlineConfig\":false}!../../../node_modules/less-loader/dist/cjs.js!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Table-1.vue", function() {
-     var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-0e60cc65\",\"scoped\":true,\"hasInlineConfig\":false}!../../../node_modules/less-loader/dist/cjs.js!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Table-1.vue");
-     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 226 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
@@ -38132,23 +37613,10 @@ var content = __webpack_require__(165);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(2)("45781aed", content, false);
-// Hot Module Replacement
-if(false) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-0e6ee3e6\",\"scoped\":true,\"hasInlineConfig\":false}!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Table-2.vue", function() {
-     var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-0e6ee3e6\",\"scoped\":true,\"hasInlineConfig\":false}!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Table-2.vue");
-     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
+var update = __webpack_require__(2)("10381bb0", content, true);
 
 /***/ }),
-/* 227 */
+/* 225 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
@@ -38158,23 +37626,10 @@ var content = __webpack_require__(166);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(2)("0c169fb2", content, false);
-// Hot Module Replacement
-if(false) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-13ad299a\",\"scoped\":true,\"hasInlineConfig\":false}!../../../node_modules/less-loader/dist/cjs.js!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./industry.vue", function() {
-     var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-13ad299a\",\"scoped\":true,\"hasInlineConfig\":false}!../../../node_modules/less-loader/dist/cjs.js!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./industry.vue");
-     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
+var update = __webpack_require__(2)("5b85958b", content, true);
 
 /***/ }),
-/* 228 */
+/* 226 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
@@ -38184,23 +37639,10 @@ var content = __webpack_require__(167);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(2)("d57a7ed8", content, false);
-// Hot Module Replacement
-if(false) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-176d775d\",\"scoped\":true,\"hasInlineConfig\":false}!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Personal.vue", function() {
-     var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-176d775d\",\"scoped\":true,\"hasInlineConfig\":false}!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Personal.vue");
-     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
+var update = __webpack_require__(2)("7db7ae40", content, true);
 
 /***/ }),
-/* 229 */
+/* 227 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
@@ -38210,23 +37652,10 @@ var content = __webpack_require__(168);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(2)("7c093ac2", content, false);
-// Hot Module Replacement
-if(false) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-186c486a\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/less-loader/dist/cjs.js!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Navrouter.vue", function() {
-     var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-186c486a\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/less-loader/dist/cjs.js!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Navrouter.vue");
-     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
+var update = __webpack_require__(2)("7cc5b002", content, true);
 
 /***/ }),
-/* 230 */
+/* 228 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
@@ -38236,23 +37665,10 @@ var content = __webpack_require__(169);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(2)("08881c18", content, false);
-// Hot Module Replacement
-if(false) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-336dfa66\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/less-loader/dist/cjs.js!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Footer.vue", function() {
-     var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-336dfa66\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/less-loader/dist/cjs.js!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Footer.vue");
-     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
+var update = __webpack_require__(2)("64f597a1", content, true);
 
 /***/ }),
-/* 231 */
+/* 229 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
@@ -38262,23 +37678,10 @@ var content = __webpack_require__(170);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(2)("4b97beff", content, false);
-// Hot Module Replacement
-if(false) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-3bf7f5c3\",\"scoped\":false,\"hasInlineConfig\":false}!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Setting.vue", function() {
-     var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-3bf7f5c3\",\"scoped\":false,\"hasInlineConfig\":false}!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Setting.vue");
-     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
+var update = __webpack_require__(2)("61b654de", content, true);
 
 /***/ }),
-/* 232 */
+/* 230 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
@@ -38288,23 +37691,10 @@ var content = __webpack_require__(171);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(2)("7813252b", content, false);
-// Hot Module Replacement
-if(false) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-45b0a393\",\"scoped\":false,\"hasInlineConfig\":false}!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Contact.vue", function() {
-     var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-45b0a393\",\"scoped\":false,\"hasInlineConfig\":false}!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Contact.vue");
-     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
+var update = __webpack_require__(2)("7a357fd6", content, true);
 
 /***/ }),
-/* 233 */
+/* 231 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
@@ -38314,23 +37704,10 @@ var content = __webpack_require__(172);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(2)("4f8271b7", content, false);
-// Hot Module Replacement
-if(false) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-5247c3f1\",\"scoped\":true,\"hasInlineConfig\":false}!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./location.vue", function() {
-     var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-5247c3f1\",\"scoped\":true,\"hasInlineConfig\":false}!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./location.vue");
-     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
+var update = __webpack_require__(2)("1b4a960c", content, true);
 
 /***/ }),
-/* 234 */
+/* 232 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
@@ -38340,23 +37717,10 @@ var content = __webpack_require__(173);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(2)("158a4790", content, false);
-// Hot Module Replacement
-if(false) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-61ed8690\",\"scoped\":true,\"hasInlineConfig\":false}!../../../node_modules/less-loader/dist/cjs.js!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Document.vue", function() {
-     var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-61ed8690\",\"scoped\":true,\"hasInlineConfig\":false}!../../../node_modules/less-loader/dist/cjs.js!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Document.vue");
-     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
+var update = __webpack_require__(2)("47c5fc38", content, true);
 
 /***/ }),
-/* 235 */
+/* 233 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
@@ -38366,23 +37730,10 @@ var content = __webpack_require__(174);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(2)("df9a8db0", content, false);
-// Hot Module Replacement
-if(false) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-647d9814\",\"scoped\":true,\"hasInlineConfig\":false}!../../../node_modules/less-loader/dist/cjs.js!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Chart-2.vue", function() {
-     var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-647d9814\",\"scoped\":true,\"hasInlineConfig\":false}!../../../node_modules/less-loader/dist/cjs.js!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Chart-2.vue");
-     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
+var update = __webpack_require__(2)("1f3548c4", content, true);
 
 /***/ }),
-/* 236 */
+/* 234 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
@@ -38392,23 +37743,10 @@ var content = __webpack_require__(175);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(2)("09971642", content, false);
-// Hot Module Replacement
-if(false) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-6499c716\",\"scoped\":true,\"hasInlineConfig\":false}!../../../node_modules/less-loader/dist/cjs.js!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Chart-1.vue", function() {
-     var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-6499c716\",\"scoped\":true,\"hasInlineConfig\":false}!../../../node_modules/less-loader/dist/cjs.js!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Chart-1.vue");
-     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
+var update = __webpack_require__(2)("69de6046", content, true);
 
 /***/ }),
-/* 237 */
+/* 235 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
@@ -38418,23 +37756,10 @@ var content = __webpack_require__(176);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(2)("00e483fe", content, false);
-// Hot Module Replacement
-if(false) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-74dd7a27\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Login.vue", function() {
-     var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-74dd7a27\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Login.vue");
-     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
+var update = __webpack_require__(2)("6cc3733b", content, true);
 
 /***/ }),
-/* 238 */
+/* 236 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
@@ -38444,23 +37769,10 @@ var content = __webpack_require__(177);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(2)("39f27708", content, false);
-// Hot Module Replacement
-if(false) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-7e6e8994\",\"scoped\":true,\"hasInlineConfig\":false}!../../../node_modules/less-loader/dist/cjs.js!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Avatar.vue", function() {
-     var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-7e6e8994\",\"scoped\":true,\"hasInlineConfig\":false}!../../../node_modules/less-loader/dist/cjs.js!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Avatar.vue");
-     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
+var update = __webpack_require__(2)("5075a21c", content, true);
 
 /***/ }),
-/* 239 */
+/* 237 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
@@ -38470,23 +37782,10 @@ var content = __webpack_require__(178);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(2)("1b1aa6c6", content, false);
-// Hot Module Replacement
-if(false) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-7ef158cf\",\"scoped\":true,\"hasInlineConfig\":false}!../../../node_modules/less-loader/dist/cjs.js!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./AddDocument.vue", function() {
-     var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-7ef158cf\",\"scoped\":true,\"hasInlineConfig\":false}!../../../node_modules/less-loader/dist/cjs.js!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./AddDocument.vue");
-     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
+var update = __webpack_require__(2)("46a939a2", content, true);
 
 /***/ }),
-/* 240 */
+/* 238 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
@@ -38496,23 +37795,10 @@ var content = __webpack_require__(179);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(2)("0dfad1b3", content, false);
-// Hot Module Replacement
-if(false) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("!!../../css-loader/index.js!../../vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-858b020a\",\"scoped\":false,\"hasInlineConfig\":false}!../../vue-loader/lib/selector.js?type=styles&index=0!./editor.vue", function() {
-     var newContent = require("!!../../css-loader/index.js!../../vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-858b020a\",\"scoped\":false,\"hasInlineConfig\":false}!../../vue-loader/lib/selector.js?type=styles&index=0!./editor.vue");
-     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
+var update = __webpack_require__(2)("4d3cfc09", content, true);
 
 /***/ }),
-/* 241 */
+/* 239 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
@@ -38522,23 +37808,10 @@ var content = __webpack_require__(180);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(2)("63503dae", content, false);
-// Hot Module Replacement
-if(false) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-d8544b42\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/less-loader/dist/cjs.js!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./App.vue", function() {
-     var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-d8544b42\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/less-loader/dist/cjs.js!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./App.vue");
-     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
+var update = __webpack_require__(2)("45222530", content, true);
 
 /***/ }),
-/* 242 */
+/* 240 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
@@ -38548,23 +37821,10 @@ var content = __webpack_require__(181);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(2)("2dfe0ced", content, false);
-// Hot Module Replacement
-if(false) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-f22182de\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/less-loader/dist/cjs.js!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Home.vue", function() {
-     var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-f22182de\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/less-loader/dist/cjs.js!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Home.vue");
-     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
+var update = __webpack_require__(2)("426d27cc", content, true);
 
 /***/ }),
-/* 243 */
+/* 241 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
@@ -38574,20 +37834,33 @@ var content = __webpack_require__(182);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(2)("3521af28", content, false);
-// Hot Module Replacement
-if(false) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-f5c40654\",\"scoped\":true,\"hasInlineConfig\":false}!../../../node_modules/less-loader/dist/cjs.js!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Main.vue", function() {
-     var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-f5c40654\",\"scoped\":true,\"hasInlineConfig\":false}!../../../node_modules/less-loader/dist/cjs.js!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Main.vue");
-     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
+var update = __webpack_require__(2)("447ce9a6", content, true);
+
+/***/ }),
+/* 242 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(183);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(2)("01b66f4e", content, true);
+
+/***/ }),
+/* 243 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(184);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(2)("42ab3416", content, true);
 
 /***/ }),
 /* 244 */
