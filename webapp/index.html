@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div class="file_container">
+        <div class="file_dir_title">
+            <h3 class="current_path"></h3>
+        </div>
+        <div class="file_dir_content">
+            <ul class="file_area">
+                <li class="file_item">
+                    <span class="file_item_name"></span>
+                    <span class="file_item_down">
+                        <a href=""></a>
+                    </span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script type="text/template" id="fileTpl">
+        <li class="file_item">
+            <span class="file_item_name" data-dir="{{rawPath}}">{{name.fileName}}</span>
+            {{if name.isFile == true }}
+            <span class="file_item_down">
+                <a href="{{path}}">下载</a>
+            </span>
+            {{ /if }}
+        </li>
+    </script>
+    <script src="./assets/jquery-1.12.2.js"></script>
+    <script src="./assets/template.js"></script>
+    <script>
+        var originPath = "http://localhost:8008";
+        function render(p){
+            $.ajax({
+                url:originPath+"/file",
+                data:{
+                    dir:p
+                },
+                method:"get",
+                success:function(res){
+                    var tpl = "";
+                    $(".file_area").html("");
+                    $(".current_path").html(res.basePath);
+                    res.data.map(function(item,index){
+                        console.log(item);
+                        var obj = {
+                            name:item,
+                            rawPath:res.basePath + "/"+item.fileName,
+                            path:originPath + res.basePath + "/"+item.fileName
+                        }
+                        var t = template("fileTpl",obj);
+                        $(".file_area").append(t);
+                    })
+                }
+            })
+        }
+        render("/");
+
+        $(".file_area").on("click",".file_item_name",function(e){
+            var dir = $(e.currentTarget).data("dir");
+            render(dir);
+        })
+
+    </script>
+
+</body>
+</html>
