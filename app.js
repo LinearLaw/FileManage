@@ -1,14 +1,18 @@
 const express = require("express");
 const app = express();
 
+const os = require("os")
 const fs = require("fs");
 const path = require("path");
+
+const PORT_NUM = 8008;
 
 app.use(express.static("./webapp"));
 app.use(express.static("./FileContainer"));
 
 app.get("/file",(req,res)=>{
     console.log(req.query);
+    console.log(fileCtrl.getLocalIp());
     fileCtrl.getFile(req.query.dir).then((files)=>{
         let arr = [];
         files.map((item,index)=>{
@@ -29,7 +33,7 @@ app.get("/file",(req,res)=>{
             }
         })
         res.send({
-            basePath:req.query.dir,
+            basePath:`${fileCtrl.getLocalIp()}:${PORT_NUM}`,
             data:arr,
             status:"success"
         });
@@ -38,9 +42,6 @@ app.get("/file",(req,res)=>{
 });
 
 const fileCtrl = {
-    getFolder(filePath){
-
-    },
     getFile(filePath){
         return new Promise((resolve,reject)=>{
             fs.readdir(path.resolve(__dirname,'./FileContainer/'+filePath), function(err, files) {
@@ -52,9 +53,20 @@ const fileCtrl = {
                 resolve(files);
             });
         },(err)=>{console.log(err)});
+    },
+    //获取当前局域网IP
+    getLocalIp(){
+        var map = [];  
+        var ifaces = os.networkInterfaces();
+        for (var dev in ifaces) {  
+            if(ifaces[dev][1].address.indexOf('192.168') != -1) {  
+                return ifaces[dev][1].address;  
+            }  
+        }    
+        return map;
     }
 }
 
-app.listen(8008,()=>{
-    console.log("project prot 8008");       
+app.listen(PORT_NUM,()=>{
+    console.log(`project prot ${PORT_NUM}`);       
 })

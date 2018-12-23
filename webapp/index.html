@@ -50,7 +50,7 @@
                         var obj = {
                             name:item,
                             rawPath:res.basePath + "/"+item.fileName,
-                            path:originPath + res.basePath + "/"+item.fileName
+                            path:"http://" + res.basePath + "/"+item.fileName
                         }
                         var t = template("fileTpl",obj);
                         $(".file_area").append(t);
