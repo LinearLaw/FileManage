@@ -25,7 +25,7 @@
             <span class="file_item_name" data-dir="{{rawPath}}">{{name.fileName}}</span>
             {{if name.isFile == true }}
             <span class="file_item_down">
-                <a href="{{path}}">下载</a>
+                <a href="{{path}}" download="{{name.fileName}}" target="_blank">下载</a>
             </span>
             {{ /if }}
         </li>
