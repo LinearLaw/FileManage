@@ -11,8 +11,8 @@ app.use(express.static("./webapp"));
 app.use(express.static("./FileContainer"));
 
 app.get("/file",(req,res)=>{
-    console.log(req.query);
-    console.log(fileCtrl.getLocalIp());
+    // console.log(req.query);
+    // console.log(fileCtrl.getLocalIp());
     fileCtrl.getFile(req.query.dir).then((files)=>{
         let arr = [];
         files.map((item,index)=>{
