@@ -3,11 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+    <style>
+        .cursor_pointer{-webkit-touch-callout: none;-webkit-user-select: none;-khtml-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;cursor:pointer;}
+        .pd_left{padding-left:20px;}
+        .cursor_pointer:hover{color:orangered;}
+        .file_item{font-size:20px;padding:5px 0;}
+        .file_item:hover{background:#e2e2e1;}
+        .file_item_name:before{display:inline-block;width:100px;text-align:left;}
+        .file_is_file:before{content:"【File】";}
+        .file_is_folder:before{content:"【Folder】";}
+        /*.file_is_folder{font-weight:600;}*/
+    </style>
 </head>
 <body>
     <div class="file_container">
         <div class="file_dir_title">
-            <h3 class="current_path"></h3>
+            <h3 class="current_path" data-base=""></h3>
+            <span class="preview_path pd_left cursor_pointer">返回上一级</span>
         </div>
         <div class="file_dir_content">
             <ul class="file_area">
@@ -22,11 +34,13 @@
     </div>
     <script type="text/template" id="fileTpl">
         <li class="file_item">
-            <span class="file_item_name" data-dir="{{rawPath}}">{{name.fileName}}</span>
             {{if name.isFile == true }}
+            <span class="file_item_name file_is_file" data-dir="{{rawPath}}">{{name.fileName}}</span>
             <span class="file_item_down">
                 <a href="{{path}}" download="{{name.fileName}}" target="_blank">下载</a>
             </span>
+            {{else}}
+            <span class="file_item_name file_is_folder link_to_folder cursor_pointer" data-dir="{{rawPath}}">{{name.fileName}}</span>
             {{ /if }}
         </li>
     </script>
@@ -35,22 +49,23 @@
     <script>
         var originPath = "http://localhost:8008";
         function render(p){
+            let sendObj = removeMultiple(p);
             $.ajax({
                 url:originPath+"/file",
                 data:{
-                    dir:p
+                    dir:sendObj.dir
                 },
                 method:"get",
                 success:function(res){
                     var tpl = "";
                     $(".file_area").html("");
-                    $(".current_path").html(res.basePath);
+                    $(".current_path").html(sendObj.url?sendObj.url:"/");
+                    $(".current_path").data("base",res.basePath?res.basePath:"/");
                     res.data.map(function(item,index){
-                        console.log(item);
                         var obj = {
                             name:item,
                             rawPath:res.basePath + "/"+item.fileName,
-                            path:"http://" + res.basePath + "/"+item.fileName
+                            path:"http://" + res.hostName + res.basePath+"/"+item.fileName
                         }
                         var t = template("fileTpl",obj);
                         $(".file_area").append(t);
@@ -60,10 +75,49 @@
         }
         render("/");
 
-        $(".file_area").on("click",".file_item_name",function(e){
+        $("body").on("click",".link_to_folder",function(e){
             var dir = $(e.currentTarget).data("dir");
             render(dir);
+        });
+
+        $(".preview_path").on("click",function(e){
+            let curr = $(".current_path").data("base");
+            let prev = previewDir(curr);
+            render(prev);
         })
+
+        //获取当前url下的上一层url
+        function previewDir(dir){
+            if(!dir || dir == "/"){
+                return "/";
+            }else{
+                let dirNew = dir.substr(dir.length-1,1)=="/"?dir.slice(0,-1):dir;
+                var arr = dirNew.split("/");
+                var pre = "";
+                arr.map(function(item,index){
+                    if(index>=arr.length - 1){
+                        return;
+                    }else{
+                        pre += item + "/";
+                    }
+                });
+                return pre;
+            }
+        }
+        //字符串去重，生成新链接
+        function removeMultiple(str){
+            let arr = str.split("/");
+            let newStr = "";
+            let newUrl = "";
+            let newArr = [];
+            arr.map(function(item,index){
+                if(item){
+                    newStr += "/" + item;
+                    newUrl += `/<span class="link_to_folder cursor_pointer" data-dir="${newStr}">${item}</span>`;
+                }
+            });
+            return {dir:newStr,url:newUrl};
+        }
 
     </script>
 

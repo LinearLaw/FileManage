@@ -66,7 +66,8 @@ app.get("/file",(req,res)=>{
             }
         })
         res.send({
-            basePath:`${TOOLS.getLocalIp()}:${PORT_NUM}`,
+            basePath:`${req.query.dir}`,
+            hostName:`${TOOLS.getLocalIp()}:${PORT_NUM}`,
             data:arr,
             status:"success"
         });
