@@ -1,50 +1,29 @@
 const express = require("express");
 const app = express();
-
-const os = require("os")
 const fs = require("fs");
 const path = require("path");
 
-const PORT_NUM = 8008;
-const TOOLS = {
-    getFile(filePath){
-        return new Promise((resolve,reject)=>{
-            fs.readdir(path.resolve(__dirname,'./FileContainer/'+filePath), function(err, files) {
-                if (err) {
-                    reject(err);
-                    throw err;
-                }
-                // files是一个数组,每个元素是此目录下的文件或文件夹的名称
-                resolve(files);
-            });
-        },(err)=>{console.log(err)});
-    },
-    //获取当前局域网IP
-    getLocalIp(){
-        var map = [];  
-        var ifaces = os.networkInterfaces();
-        for (var dev in ifaces) {  
-            if(ifaces[dev][1].address.indexOf('192.168') != -1) {  
-                return ifaces[dev][1].address;  
-            }  
-        }    
-        return map;
-    },
-    //获取请求来源的IP
-    getReqRemoteIp(req){
-        return req.headers['x-forwarded-for'] ||
-        req.connection.remoteAddress ||
-        req.socket.remoteAddress ||
-        req.connection.socket.remoteAddress;
-    }
-}
+const TOOLS = require("./server/tools.js");
 
 app.use(express.static("./webapp"));
 app.use(express.static("./FileContainer"));
 
+//基础配置
+const PORT_NUM = 8008;
+const CURRENT_IP = TOOLS.getLocalIp();
+
+//注入localhost ip
+let writeDir = `./webapp/assets/base-path.js`;
+let writeStr = `var BASE_PATH = "http://${CURRENT_IP}:${PORT_NUM}";`;
+let writeOptions = {flag:'w',encoding:'utf-8',mode:'0666'};
+fs.writeFile(writeDir,writeStr,writeOptions,(err)=>{
+    if(!err){
+        console.log("文件注入成功");
+    }
+});
+
+//监听请求
 app.get("/file",(req,res)=>{
-    // console.log(req.query);
-    // console.log(TOOLS.getLocalIp());
     console.log(`收到了来自${TOOLS.getReqRemoteIp(req)} ${req.url}的请求`);
     TOOLS.getFile(req.query.dir).then((files)=>{
         let arr = [];
@@ -67,7 +46,7 @@ app.get("/file",(req,res)=>{
         })
         res.send({
             basePath:`${req.query.dir}`,
-            hostName:`${TOOLS.getLocalIp()}:${PORT_NUM}`,
+            hostName:`${CURRENT_IP}:${PORT_NUM}`,
             data:arr,
             status:"success"
         });
@@ -75,8 +54,6 @@ app.get("/file",(req,res)=>{
 
 });
 
-
-
 app.listen(PORT_NUM,()=>{
-    console.log(`project port ${PORT_NUM}`);       
+    console.log(`project port ${PORT_NUM}`);
 })

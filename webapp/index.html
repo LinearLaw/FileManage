@@ -46,8 +46,9 @@
     </script>
     <script src="./assets/jquery-1.12.2.js"></script>
     <script src="./assets/template.js"></script>
+    <script src="./assets/base-path.js"></script>
     <script>
-        var originPath = "http://localhost:8008";
+        var originPath = window.BASE_PATH || "http://localhost:8008";
         function render(p){
             let sendObj = removeMultiple(p);
             $.ajax({
