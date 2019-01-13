@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/LinearLaw/background_frame_static/issues"
   },
-  "homepage": "https://github.com/LinearLaw/background_frame_static#readme"
+  "homepage": "https://github.com/LinearLaw/background_frame_static#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
 }
