@@ -16,7 +16,7 @@ router.get("/file",(req,res)=>{
         TOOLS.getFile(req.query.dir).then((files)=>{
             let arr = [];
             files.map((item,index)=>{
-                let direction = path.resolve(__dirname ,SHARE_DIR + req.query.dir + "/"+item);
+                let direction = path.resolve(__dirname,'../../' ,CONFIG.SHARE_DIR + req.query.dir + "/"+item);
                 let stat = fs.statSync(direction);
                 if(stat.isDirectory()){
                     //是文件
