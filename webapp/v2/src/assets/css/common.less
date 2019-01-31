@@ -1,0 +1,217 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+html,body,#app{
+    width:100%;
+    height:100%;
+}
+ul,li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+}
+img {
+    vertical-align: middle;
+}
+input {
+    border: 0;
+    outline: 0;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {-webkit-appearance: none;}
+input[type="number"]{-moz-appearance:textfield;}
+.clearfix::before,
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* tools style */
+.pointer{
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.tx_r{text-align: right;}
+.tx_l{text-align: left;}
+.tx_c{text-align: center;}
+.tx_b{font-weight:bold;}
+.tx_n{font-weight:500;}
+
+.opacity_0{opacity:0;}
+.opacity_1{opacity:1;}
+.display_none_in_page{
+    position:fixed;
+    top:100%;
+    left:100%;
+    z-index:-1;
+    opacity: 0;
+}
+
+.vertical_m{vertical-align: middle;}
+
+.pr {position: relative;}
+.pa {position: absolute;}
+.fl {float: left;}
+.fr {float: right;}
+
+.font_12{font-size:12px;}
+.font_14{font-size:14px;}
+.font_16{font-size:16px;}
+.font_18{font-size:18px;}
+.font_20{font-size:20px;}
+.font_22{font-size:22px;}
+
+.mg_t10{margin-top:10px;}
+.mg_b10{margin-bottom:10px;}
+.mg_l10{margin-left:10px;}
+.mg_r10{margin-right:10px;}
+.mg_t15{margin-top:15px;}
+
+.pd_t10{padding-top:10px;}
+.pd_b10{padding-bottom:10px;}
+.pd_l10{padding-left:10px;}
+.pd_r10{padding-right:10px;}
+.pad_shrink {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.pad_dwarf {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.w100_h100{
+    width:100%;
+    height:100%;
+}
+
+/* text */
+.text_success{color:#67C23A;}
+.text_warning{color:#E6A23C;}
+.text_danger{color:#F56C6C;}
+.text_info{color:#909399;}
+.text_delete{color:#D0021B;}
+.text_red{color:#FC0808;}
+.text_yellow{color:#EABB23;}
+.text_notice{color:#E8AF36;}
+.text_green{color:#32C5D2;}
+/* button */
+.btn{
+    text-align: center;
+    padding: 6px 12px;
+    outline:0;
+    border:0;
+    font-size:14px;
+    cursor:pointer;
+    vertical-align: middle;
+}
+.btn_primary{
+    background:#5295EA;
+    color:#fff;
+    border-radius: 0;
+    &:active {
+        background-color: #286090;
+    }
+}
+.btn_blue{
+    background:#4A90E2;
+    color:#fff;
+    &:hover,&:focus{
+        background:#4A90E2;
+        color:#fff;
+    }
+    &:active{
+        background:#286090;
+        border-color:#286090;
+        color:#fff;
+    }
+}
+.btn_yellow{
+    background:#EABB23;
+    color:#fff;
+    &:hover,&:focus{
+        background:#EABB23;
+        color:#fff;
+    }
+    &:active{
+        background:#927b32;
+        border-color:#927b32;
+        color:#fff;
+    }
+}
+.btn_green{
+    background:#32C5D2;
+    color:#fff;
+    &:hover,&:focus{
+        background:#32C5D2;
+        color:#fff;
+    }
+    &:active{
+        background:#35838a;
+        border-color:#35838a;
+        color:#fff;
+    }
+}
+.btn_gray{
+    background:#A7AAAE;
+    color:#fff;
+    &:hover,&:focus{
+        background:#A7AAAE;
+        color:#fff;
+    }
+    &:active{
+        background:#656e79;
+        border-color:#656e79;
+        color:#fff;
+    }
+}
+.btn_hollow_green{
+    background:#fff;
+    color:#32C5D2;
+    border:1px solid #32C5D2;
+    &:hover,&:focus{
+        color:#32C5D2;
+        background:#fff;
+    }
+    &:active{
+        background:#32C5D2;
+        color:#fff;
+    }
+}
+
+/* common input style */
+input:disabled,select:disabled{
+    cursor: not-allowed; 
+    background:#F6F8FC;
+    color:#898D9C;
+}
+table.normal_table{
+    border-collapse: collapse;
+    border:1px solid #DEDEDE;
+    color:#4A4A4A;
+    min-width:100%;
+    th,td{
+        min-width:30px;
+        font-weight:500;
+        font-size:14px;
+        padding:10px;
+        border:1px solid #DEDEDE;
+        text-align:center;
+    }
+    th{
+        white-space: nowrap;
+    }
+    td{
+        padding:10px 0;
+    }
+}
