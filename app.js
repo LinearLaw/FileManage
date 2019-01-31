@@ -7,7 +7,7 @@ const ip = require("ip"); //获取ip地址
 
 const TOOLS = require("./server/tools.js");
 
-app.use(express.static("./webapp"));
+app.use(express.static("./webapp_v1"));
 app.use(express.static("./FileContainer"));
 
 // 基础配置
