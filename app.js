@@ -10,11 +10,11 @@ const TOOLS = require("./server/tools.js");
 app.use(express.static("./webapp"));
 app.use(express.static("./FileContainer"));
 
-//基础配置
+// 基础配置
 const PORT_NUM = 8008;
 const CURRENT_IP = ip.address();
 
-//注入localhost ip
+// 注入localhost ip
 let writeDir = `./webapp/assets/base-path.js`;
 let writeStr = `var BASE_PATH = "http://${CURRENT_IP}:${PORT_NUM}";`;
 let writeOptions = {flag:'w',encoding:'utf-8',mode:'0666'};
@@ -24,7 +24,7 @@ fs.writeFile(writeDir,writeStr,writeOptions,(err)=>{
     }
 });
 
-//监听请求
+// 监听请求
 app.get("/file",(req,res)=>{
     console.log(`收到了来自${TOOLS.getReqRemoteIp(req)} ${req.url}的请求`);
     try{

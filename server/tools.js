@@ -15,7 +15,7 @@ module.exports = {
             });
         },(err)=>{console.log(err)});
     },
-    //获取当前局域网IP
+    // 获取当前局域网IP
     getLocalIp(){
         var map = [];  
         var ifaces = os.networkInterfaces();
@@ -26,7 +26,7 @@ module.exports = {
         }    
         return map;
     },
-    //获取当前公网IP
+    // 获取当前局域网IP * 2
     getGlobalIp(){
         let hostName = os.hostname();
         let allLinks = os.networkInterfaces();
