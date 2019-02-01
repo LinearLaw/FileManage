@@ -12,16 +12,18 @@
         <!-- 文件列表 -->
         <div class="file_list">
             <ul>
-                <li class='file_item pointer' v-for="(item,index) in list">
-                    <div v-if="item.name.isFile == true">
-                        <span class="file_item_name file_is_file" :data-dir="item.rawPath">【 File 】{{item.name.fileName}}</span>
-                        <a class='download_btn' :href="item.path" :download="item.name.fileName" target="_blank">
-                            <button>下载</button>
-                        </a>
-                    </div>
-                    <div v-else>
-                        <span class="file_item_name file_is_folder pointer" @click="enterFolder(item.rawPath)" :data-dir="item.rawPath">【 Folder 】{{item.name.fileName}}</span>
-                    </div>
+                <li class='file_item pointer' v-for="(item,index) in list" v-if="item.name.isFile != true">
+                    <span class="file_item_name file_is_folder pointer" @click="enterFolder(item.rawPath)" :data-dir="item.rawPath">
+                        <i class="fa fa-folder-open-o" aria-hidden="true"></i> {{item.name.fileName}}
+                    </span>
+                </li>
+                <li class='file_item pointer' v-for="(item,index) in list" v-if="item.name.isFile == true">
+                    <span class="file_item_name file_is_file" :data-dir="item.rawPath">
+                        <i class="fa fa-file-o" aria-hidden="true"></i> {{item.name.fileName}}
+                    </span>
+                    <a class='download_btn' :href="item.path" :download="item.name.fileName" target="_blank">
+                        <el-button type="primary" round>下载</el-button>
+                    </a>
                 </li>
             </ul>
         </div>
