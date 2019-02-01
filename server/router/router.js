@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 const path = require('path');
+const fs = require('fs');
 
 const chalk = require("chalk");
 const log = console.log;
@@ -17,28 +18,33 @@ router.get("/file",(req,res)=>{
         
         TOOLS.getFile(req.query.dir).then((files)=>{
             let arr = [];
-            files.map((item,index)=>{
-                let direction = path.resolve(__dirname,'../../' ,CONFIG.SHARE_DIR + req.query.dir + "/"+item);
-                
-                let stat = fs.statSync(direction);
-                if(stat.isDirectory()){
-                    //是文件
-                    arr.push({
-                        fileName:item,
-                        isFile:false
-                    })
-                }else{
-                     //是文件夹
-                    arr.push({
-                        fileName:item,
-                        isFile:true
-                    })
-                }
-            })
+            try{
+                files.map((item,index)=>{
+                    let direction = path.resolve(__dirname,'../../' ,CONFIG.SHARE_DIR + req.query.dir + "/"+item);
+                    
+                    let stat = fs.statSync(direction);
+                    if(stat.isDirectory()){
+                        //是文件
+                        arr.push({
+                            fileName:item,
+                            isFile:false
+                        })
+                    }else{
+                         //是文件夹
+                        arr.push({
+                            fileName:item,
+                            isFile:true
+                        })
+                    }
+                })
+            }catch(err){
+                log(chalk.red(err))
+            }
+            
             res.send({
                 basePath:`${req.query.dir}`,
                 hostName:`${CONFIG.BASE_PATH}`,
-                data:arr,
+                list:arr,
                 status:"success"
             });
         });

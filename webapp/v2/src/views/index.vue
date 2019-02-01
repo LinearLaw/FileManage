@@ -1,19 +1,24 @@
 <template>
     <div class="index_page">
+        <!-- 标题路径 -->
         <div class="file_dir">
-            <h3 class="current_path" >{{currentPath.display}}</h3>
+            <h3 class="current_path" >
+                <span v-if="currentPath.display.length>0" v-for="(item,index) in currentPath.display" @click="enterFolderFromTitle(index)">/{{item}}</span>
+                <span v-if="currentPath.display.length<=0">/</span>
+            </h3>
         </div>
+        <!-- 文件列表 -->
         <div class="file_list">
             <ul>
                 <li class='file_item' v-for="(item,index) in list">
-                    <div v-if="name.isFile == true">
-                        <span class="file_item_name file_is_file" :data-dir="item.rawPath">{{item.name.fileName}}</span>
+                    <div v-if="item.name.isFile == true">
+                        <span class="file_item_name file_is_file" :data-dir="item.rawPath">【 File 】{{item.name.fileName}}</span>
                         <span class="file_item_down">
                             <a :href="item.path" :download="item.name.fileName" target="_blank">下载</a>
                         </span>
                     </div>
                     <div v-else>
-                        <span class="file_item_name file_is_folder link_to_folder cursor_pointer" :data-dir="item.rawPath">{{item.name.fileName}}</span>
+                        <span class="file_item_name file_is_folder link_to_folder cursor_pointer" @click="enterFolder(item.rawPath)" :data-dir="item.rawPath">【 Folder 】{{item.name.fileName}}</span>
                         
                     </div>
                 </li>
@@ -32,7 +37,7 @@
             return {
                 dir:'/',
                 currentPath:{
-                    display:'/',
+                    display:[],
                     value:'/'
                 },
                 list:[]
@@ -65,33 +70,49 @@
             removeMultiple(str){
                 let arr = str.split("/");
                 let newStr = "";
-                let newUrl = "";
                 let newArr = [];
                 arr.map(function(item,index){
                     if(item){
                         newStr += "/" + item;
-                        newUrl += `/<span class="link_to_folder cursor_pointer" data-dir="${newStr}">${item}</span>`;
+                        newArr.push(item)
                     }
                 });
-                return {dir:newStr,url:newUrl};
+                return {dir:newStr,url:newArr};
+            },
+            // 点击标题某一项进入指定文件夹
+            enterFolderFromTitle(index){
+                let str = '';
+                this.currentPath.display.map((item,_in)=>{
+                    if(_in>index){
+                        return;
+                    }
+                    str += `/${item}`;
+                });
+                this.dir = str;
+                this.getList();
+            },
+            // 点击文件夹进入文件夹内
+            enterFolder(dir){
+                this.dir = dir;
+                this.getList();
             },
             async getList(){
                 const _this = this;
                 let sendObj = this.removeMultiple(_this.dir);
                 try{
                     let res = await getFileList({ body:{ dir:sendObj.dir } });
-                    this.currentPath.display = sendObj.url?sendObj.url:'/';
-                    this.currentPath.value = res.basePath?res.basePath:'/';
 
-                    let newList = res.data.map((item,index)=>{
+                    this.currentPath.display = sendObj.url;
+                    this.currentPath.value = res.data.basePath?res.data.basePath:'/';
+
+                    let newList = res.data.list.map((item,index)=>{
                         return {
                             name:item,
-                            rawPath:`${res.basePath}/${item.fileName}`,
-                            path:`${res.hostName}${res.basePath}/${item.fileName}`
+                            rawPath:`${res.data.basePath}/${item.fileName}`,
+                            path:`${res.data.hostName}${res.data.basePath}/${item.fileName}`
                         }
                     });
                     this.list = newList;
-                    console.log(this.list);
                 }catch(err){
                     console.log(err);
                 }
