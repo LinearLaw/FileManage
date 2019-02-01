@@ -1,0 +1,1 @@
+module.exports = { BASE_PATH : "http://172.31.7.4:8008" }

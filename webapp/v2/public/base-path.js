@@ -1,1 +1,1 @@
-var BASE_PATH = "http://172.31.7.6:8008";
+var BASE_PATH = "http://172.31.7.4:8008";

@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router();
 
+const path = require('path');
+
 const chalk = require("chalk");
 const log = console.log;
 
@@ -12,11 +14,12 @@ const TOOLS = require("../tools.js");
 // 监听请求
 router.get("/file",(req,res)=>{
     log(chalk.blue(`收到了来自${TOOLS.getReqRemoteIp(req)} ${req.url}的请求`));
-    try{
+        
         TOOLS.getFile(req.query.dir).then((files)=>{
             let arr = [];
             files.map((item,index)=>{
                 let direction = path.resolve(__dirname,'../../' ,CONFIG.SHARE_DIR + req.query.dir + "/"+item);
+                
                 let stat = fs.statSync(direction);
                 if(stat.isDirectory()){
                     //是文件
@@ -39,9 +42,7 @@ router.get("/file",(req,res)=>{
                 status:"success"
             });
         });
-    }catch(err){
-        log(chalk.red(err));
-    }
+    
 });
 
 
