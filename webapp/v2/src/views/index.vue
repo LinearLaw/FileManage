@@ -3,23 +3,24 @@
         <!-- 标题路径 -->
         <div class="file_dir">
             <h3 class="current_path" >
-                <span v-if="currentPath.display.length>0" v-for="(item,index) in currentPath.display" @click="enterFolderFromTitle(index)">/{{item}}</span>
-                <span v-if="currentPath.display.length<=0">/</span>
+                <span class="title_folder pointer" @click="enterFolder('/')">/</span>
+                <span class="title_folder pointer"
+                    v-for="(item,index) in currentPath.display" 
+                    @click="enterFolderFromTitle(index)">/{{item}}</span>
             </h3>
         </div>
         <!-- 文件列表 -->
         <div class="file_list">
             <ul>
-                <li class='file_item' v-for="(item,index) in list">
+                <li class='file_item pointer' v-for="(item,index) in list">
                     <div v-if="item.name.isFile == true">
                         <span class="file_item_name file_is_file" :data-dir="item.rawPath">【 File 】{{item.name.fileName}}</span>
-                        <span class="file_item_down">
-                            <a :href="item.path" :download="item.name.fileName" target="_blank">下载</a>
-                        </span>
+                        <a class='download_btn' :href="item.path" :download="item.name.fileName" target="_blank">
+                            <button>下载</button>
+                        </a>
                     </div>
                     <div v-else>
-                        <span class="file_item_name file_is_folder link_to_folder cursor_pointer" @click="enterFolder(item.rawPath)" :data-dir="item.rawPath">【 Folder 】{{item.name.fileName}}</span>
-                        
+                        <span class="file_item_name file_is_folder pointer" @click="enterFolder(item.rawPath)" :data-dir="item.rawPath">【 Folder 】{{item.name.fileName}}</span>
                     </div>
                 </li>
             </ul>
@@ -126,5 +127,32 @@
 <style lang="less" scoped>
     .index_page{
         padding:15px;
+    }
+
+    .file_dir{
+        padding:5px;
+        border-bottom:1px solid #e2e2e1;
+        .title_folder{
+            padding:5px ;
+            font-size:16px;
+            background:#cecece;
+            border-radius:4px;
+            margin:0 5px;
+        }
+    }
+    .file_list{
+        padding:10px;
+        .file_item{
+            margin:4px 0;
+            padding:4px 0;
+            border-radius:4px;
+            &:hover{
+                background:#e2e2e1;
+                .file_is_folder{
+                    color:red;
+                }
+            }
+            
+        }
     }
 </style>
