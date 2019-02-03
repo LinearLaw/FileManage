@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/LinearLaw/background_frame_static#readme",
   "dependencies": {
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "ip": "^1.1.5"
   }
 }
