@@ -5,7 +5,7 @@ const path = require("path");
 module.exports = {
     getFile(filePath){
         return new Promise((resolve,reject)=>{
-            fs.readdir(path.resolve(__dirname,'../FileContainer/'+filePath), function(err, files) {
+            fs.readdir(filePath, function(err, files) {
                 if (err) {
                     reject(err);
                     throw err;
