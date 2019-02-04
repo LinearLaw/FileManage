@@ -23,5 +23,9 @@
     "chalk": "^2.4.2",
     "express": "^4.16.4",
     "ip": "^1.1.5"
+  },
+  "devDependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "request": "^2.88.0"
   }
 }

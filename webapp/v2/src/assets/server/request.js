@@ -12,22 +12,18 @@ axios.interceptors.response.use((res,req)=>{
     return Promise.reject(err);
 });
 
-let bodyDefault = {
-    body:{},
-    header:{}
-}
 let contentType = {
     "Content-Type":"application/x-www-form-urlencoded; charset=UTF-8"
 }
 export const request = {
-    get:(u,obj=bodyDefault)=>{
-        let header = Object.assign(contentType,obj.header);
-        let sendData = utils.url.objToUrlString(obj.body);
+    get:(u,obj)=>{
+        let header = contentType;
+        let sendData = utils.url.objToUrlString(obj);
         return axios.get(`${u}${sendData}`,{headers:header});
     },
-    post:(u,obj=bodyDefault)=>{
-        let header = Object.assign(contentType,obj.header);
-        let data = Object.assign({},obj.body);
+    post:(u,obj)=>{
+        let header = contentType;
+        let data = Object.assign({},obj);
         return axios({
             url:`${u}`,
             method:"post",

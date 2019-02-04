@@ -18,15 +18,16 @@
                 <el-button type="primary" @click="start">确 定</el-button>
             </span>
         </el-dialog>
+        
         <div class='link_content'>
+            <div class='open_dialog'>
+                <el-button type="primary" @click="open">输入目标地址</el-button>
+            </div>
             <el-collapse v-model="activeNames" @change="handleChange">
-                <el-collapse-item title="反馈 Feedback" name="1">
-                    <div>控制反馈：通过界面样式和交互动效让用户可以清晰的感知自己的操作；</div>
-                    <div>页面反馈：操作后，通过页面元素的变化清晰地展现当前状态。</div>
-                </el-collapse-item>
-                <el-collapse-item title="反馈 Feedback" name="2">
-                    <div>控制反馈：通过界面样式和交互动效让用户可以清晰的感知自己的操作；</div>
-                    <div>页面反馈：操作后，通过页面元素的变化清晰地展现当前状态。</div>
+                <el-collapse-item :title="index+''" v-for='(item,index) in list' :name="index">
+                    <div class='mg_t10 mg_b10' v-for='(_it,_in) in item.img'>
+                        <img :src='_it' />
+                    </div>
                 </el-collapse-item>
             </el-collapse>
         </div>
@@ -34,6 +35,8 @@
 </template>
 
 <script>
+
+import {getImgList,getImgList2} from '@/assets/server/img_service.js'
 export default {
     data:()=>{
         return {
@@ -43,31 +46,76 @@ export default {
                 level1Links:''
             },
             list:[],
-            activeNames: ['1','2']
+            activeNames: ['1'],
+            inter:''  /* 计时器 */
         }
     },
     methods: {
         handleChange(val) {
             console.log(val);
         },
-
+        open(){
+            this.list = [];
+            this.activeNames = [];
+            this.dialog.visible = true;
+        },
         start(){
+            const _this = this;
             this.dialog.visible = false;
             if(this.dialog.linkLevel == '1'){
-                this.level_1();
+                this.list = [{img:[]}];
+                this.level_1(0,_this.dialog.level1Links);
             }else{
                 this.level_2();
             }
         },
-        level_1(){
-
+        async level_1(index,url){
+            const _this = this;
+            let send = { url:url }
+            try{
+                let res = await getImgList(send);
+                this.activeNames = ['1'];
+                this.list[index]['img'] = res.data.img;
+            }catch(err){
+                console.log(err)
+            }
         },
-        level_2(){
-
+        async level_2(){
+            const _this = this;
+            let send = {
+                url:_this.dialog.level1Links
+            }
+            try{
+                let res = await getImgList2(send);
+                this.activeNames = ['1'];
+                this.list = res.data.img.map((item,index)=>{
+                    return {
+                        origin:item,
+                        img:[]
+                    }
+                });
+                this.renderLevel_2();
+                console.log(this.list);
+            }catch(err){
+                console.log(err)
+            }
         },
         renderLevel_2(){
-            
+            const _this = this;
+            this.list.map((item,index)=>{
+                (function(ind,it){
+                    setTimeout(()=>{
+                        _this.level_1(ind,it);
+                    },500)
+                })(index,item.origin)
+            })
         }
     }
 }
 </script>
+
+<style lang='less' scoped>
+    .link_content{
+        padding:10px;
+    }
+</style>

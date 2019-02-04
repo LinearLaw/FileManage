@@ -148,7 +148,7 @@
                 let sendObj = this.removeMultiple(_this.dir);
                 try{
                     this.listLoading = true;
-                    let res = await getFileList({ body:{ dir:sendObj.dir } });
+                    let res = await getFileList({ dir:sendObj.dir });
 
                     this.currentPath.display = sendObj.url;
                     this.currentPath.value = res.data.basePath?res.data.basePath:'/';
