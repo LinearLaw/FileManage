@@ -1,1 +1,0 @@
-cmd /k "supervisor -i ./webapp app.js"

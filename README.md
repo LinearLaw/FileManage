@@ -5,9 +5,31 @@
 
 # 启动服务
 
-    开发环境，启动服务，文件改动自动重启
-        supervisor -i ./webapp app.js
+## 开发环境
     
+    启动后台服务
+        supervisor -i ./webapp app.js
+        
+    启动前台服务
+        node ./app_injection.js
+        
+        cd ./webapp/v2
+
+        npm run serve
+
+
+## 生产环境
+
+    node ./app_injection.js
+
+    cd ./webapp/v2
+
+    npm run build
+
+    cd ../../
+
+    cmd /k "node app.js"
+
     
 
 

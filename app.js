@@ -1,71 +1,35 @@
 const express = require("express");
 const app = express();
+
+const chalk = require("chalk");
+const log = console.log;
+
 const fs = require("fs");
 const path = require("path");
-
 const ip = require("ip"); //获取ip地址
 
-const TOOLS = require("./server/tools.js");
 
+const CONFIG = require('./server/config.js');
+const ROUTER = require('./server/router/router.js');
 
-// 基础配置
-const PORT_NUM = 8008; // 端口号
-const CURRENT_IP = ip.address(); // ip地址
-const STATIC_DIR = `./webapp/v1`; // webapp基础路径
-const SHARE_DIR = `./FileContainer`; // 静态文件资源基础路径
+app.use(express.static(CONFIG.STATIC_DIR));
+app.use(express.static(CONFIG.SHARE_DIR));
 
-const BASE_PATH = `http://${CURRENT_IP}:${PORT_NUM}`;
+app.all("*",function(req,res,next){
+    //设置允许跨域的域名，*代表允许任意域名跨域
+    res.header("Access-Control-Allow-Origin","*");
+    //允许的header类型
+    res.header("Access-Control-Allow-Headers","content-type");
+    //跨域允许的请求方式 
+    res.header("Access-Control-Allow-Methods","DELETE,PUT,POST,GET,OPTIONS");
+    if (req.method.toLowerCase() == 'options')
+        res.send(200);  // 让options尝试请求快速结束
+    else
+        next();
+})
 
-// 注入localhost ip
-let writeDir = `./webapp/v1/assets/base-path.js`;
-let writeStr = `var BASE_PATH = "${BASE_PATH}";`;
-let writeOptions = {flag:'w',encoding:'utf-8',mode:'0666'};
-fs.writeFile(writeDir,writeStr,writeOptions,(err)=>{
-    if(!err){ console.log(`ip地址文件注入成功`); }
-});
+app.use('/',ROUTER);
 
-app.use(express.static(STATIC_DIR));
-app.use(express.static(SHARE_DIR));
-
-// 监听请求
-app.get("/file",(req,res)=>{
-    console.log(`收到了来自${TOOLS.getReqRemoteIp(req)} ${req.url}的请求`);
-    try{
-        TOOLS.getFile(req.query.dir).then((files)=>{
-            let arr = [];
-            files.map((item,index)=>{
-                let direction = path.resolve(__dirname ,SHARE_DIR + req.query.dir + "/"+item);
-                let stat = fs.statSync(direction);
-                if(stat.isDirectory()){
-                    //是文件
-                    arr.push({
-                        fileName:item,
-                        isFile:false
-                    })
-                }else{
-                     //是文件夹
-                    arr.push({
-                        fileName:item,
-                        isFile:true
-                    })
-                }
-            })
-            res.send({
-                basePath:`${req.query.dir}`,
-                hostName:`${BASE_PATH}`,
-                data:arr,
-                status:"success"
-            });
-        });
-    }catch(err){
-        console.log(err);
-    }
-    
-
-});
-
-
-
-app.listen(PORT_NUM,()=>{
-    console.log(`ip：${BASE_PATH}`);
+app.listen(CONFIG.PORT_NUM,()=>{
+    log(chalk.green(`serve start success , ip：${CONFIG.BASE_PATH}`));
 })
