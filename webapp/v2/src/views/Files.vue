@@ -37,25 +37,19 @@
             </ul>
         </div>
 
-        <el-dialog title="复制以下链接，打开迅雷，创建下载任务"
-            :visible.sync="dialog.visible"
-            width="50%">
-            <div class="main_dialog_content">
-                <textarea v-model='dialog.string' type="text" id="allLinks" style="width:100%;height:auto;min-height:150px;padding:10px;"></textarea>
-            </div>
-            <span slot="footer" class="dialog-footer">
-                <el-button type="primary" @click="showDialog(false)">确 定</el-button>
-            </span>
-        </el-dialog>
+        <FileDialog></FileDialog>
     </div>
 </template>
 
 <script>
 
     import {mapState,mapMutations} from 'vuex'
+    import FileDialog from './CommonCpn/FileLinkDialog.vue'
     import {getFileList} from '@/assets/server/file_service.js'
     export default {
         name:"index",
+        components:{ FileDialog },
+
         data:()=>{
             return {
                 dir:'/',

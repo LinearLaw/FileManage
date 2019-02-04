@@ -1,7 +1,7 @@
 <template>
     <div class="menu_left">
         <div class="header_logo">
-            <router-link :to="{'name':'Home'}">
+            <router-link :to="{'name':'Index'}">
                 <img class="header_logo_pic" src="" alt="">
             </router-link>
         </div>
@@ -63,7 +63,7 @@
                             {
                                 name:'图片查看',
                                 icon:'fa fa-picture-o',
-                                link:''
+                                link:'ViewPic'
                             }
                         ]
                     }
