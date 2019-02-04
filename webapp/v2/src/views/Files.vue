@@ -44,24 +44,20 @@
                 <textarea v-model='dialog.string' type="text" id="allLinks" style="width:100%;height:auto;min-height:150px;padding:10px;"></textarea>
             </div>
             <span slot="footer" class="dialog-footer">
-                <el-button type="primary" @click="dialog.visible = false">确 定</el-button>
+                <el-button type="primary" @click="showDialog(false)">确 定</el-button>
             </span>
         </el-dialog>
     </div>
 </template>
 
 <script>
+
+    import {mapState,mapMutations} from 'vuex'
     import {getFileList} from '@/assets/server/file_service.js'
     export default {
         name:"index",
         data:()=>{
             return {
-                dialogVisible:false,
-                dialog:{
-                    visible:false,
-                    string:""
-                },
-
                 dir:'/',
                 currentPath:{
                     display:[],
@@ -74,8 +70,11 @@
         mounted(){
             this.getList();
         },
-
+        computed:{
+            ...mapState('links',['dialog']),
+        },
         methods:{
+            ...mapMutations('links',['showDialog','renderText']),
             // 字符串去重，生成新链接
             removeMultiple(str){
                 let arr = str.split("/");
@@ -99,8 +98,8 @@
                         str = `${str}${item.path}\n`;
                     }
                 });
-                _this.dialog.string = str?str:'当前目录下无可下载文件';
-                _this.dialog.visible = true;
+                this.renderText(`${str?str:'当前目录下无可下载文件'}`);
+                this.showDialog(true);
             },
             // 获取当前url下的上一层url
             previewDir(dir){

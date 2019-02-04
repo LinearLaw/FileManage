@@ -10,8 +10,8 @@
 
 <script>
 
-  import MenuLeft from '@/views/common/MenuLeft.vue'
-  import MenuTop from '@/views/common/MenuTop.vue'
+  import MenuLeft from '@/views/CommonCpn/MenuLeft.vue'
+  import MenuTop from '@/views/CommonCpn/MenuTop.vue'
   export default {
     components:{
       MenuTop,
