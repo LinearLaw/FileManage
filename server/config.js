@@ -6,8 +6,9 @@ const CURRENT_IP = ip.address(); // ip地址
 const LAN_IP = tools.getLocalIp();
 
 const STATIC_DIR = `./webapp/v2/dist`; // webapp基础路径
-const SHARE_DIR = `F:/`; // 静态文件资源基础路径
-const BASE_PATH = `http://${CURRENT_IP}:${PORT_NUM}`;
+const SHARE_DIR = `G:/`; // 静态文件资源基础路径
+const BASE_PATH = `http://${LAN_IP}:${PORT_NUM}`;
+const BASE_PATH_v2 = `http://${CURRENT_IP}:${PORT_NUM}`;
 
 module.exports = {
     PORT_NUM,
@@ -16,4 +17,5 @@ module.exports = {
     STATIC_DIR,
     SHARE_DIR,
     BASE_PATH,
+    BASE_PATH_v2,
 }
