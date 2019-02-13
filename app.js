@@ -31,5 +31,7 @@ app.all("*",function(req,res,next){
 app.use('/',ROUTER);
 
 app.listen(CONFIG.PORT_NUM,()=>{
-    log(chalk.green(`serve start success , ip：${CONFIG.BASE_PATH}`));
+    log(chalk.green(`serve start success`));
+    log(chalk.green(`ip 1：${CONFIG.BASE_PATH}`));
+    log(chalk.green(`ip 2：http://${CONFIG.LAN_IP}:${CONFIG.PORT_NUM}`));
 })
