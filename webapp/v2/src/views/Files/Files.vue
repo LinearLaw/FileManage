@@ -17,19 +17,37 @@
         <div class="mg_t10 file_list" v-loading="listLoading">
             <ul>
                 <!-- 文件夹 -->
-                <li class='file_item pointer' v-for="(item,index) in list" v-if="item.name.isFile != true" @click="enterFolder(item.rawPath)">
+                <li class='file_item pointer' v-for="(item,index) in list" v-if="item.fileInfo.isFile != true" @click="enterFolder(item.rawPath)">
                     <span class="file_item_name file_is_folder pointer"  :data-dir="item.rawPath">
-                        <i class="fa fa-folder-open" aria-hidden="true"></i> {{item.name.fileName}}
+                        <i class="fa fa-folder-open" aria-hidden="true"></i> {{item.fileInfo.fileName}}
                     </span>
                 </li>
                 <!-- 文件 -->
-                <li class='file_item pointer' v-for="(item,index) in list" v-if="item.name.isFile == true">
+                <li class='file_item pointer' v-for="(item,index) in list" v-if="item.fileInfo.isFile == true">
                     <span class="file_item_name file_is_file" :data-dir="item.rawPath">
-                        <i class="fa fa-file" aria-hidden="true"></i> {{item.name.fileName}}
+                        <i class="fa fa-file" aria-hidden="true"></i> {{item.fileInfo.fileName}}
                     </span>
-                    <a class='download_btn' :href="item.path" :download="item.name.fileName" target="_blank">
-                        <el-button type="primary" round>下载</el-button>
-                    </a>
+                    <div class='file_item_right fr'>
+                        <span class='file_item_size'>{{item.fileInfo.size}}</span>
+                        <a class='download_btn' :href="item.path" :download="item.fileInfo.fileName" target="_blank">
+                            <el-button type="primary" round><i class="fa fa-arrow-down" aria-hidden="true"></i></el-button>
+                        </a>
+                        <div class='open_file'>
+                            <el-dropdown trigger="click" @command="handleCommand(index,$event)">
+                                <span class="el-dropdown-link">
+                                    <el-button round>
+                                        <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                                    </el-button>
+                                </span>
+                                <el-dropdown-menu slot="dropdown">
+                                    <!-- <el-dropdown-item command='text'>以文本方式查看</el-dropdown-item> -->
+                                    <el-dropdown-item command='img' v-if='item.fileInfo.isImg == true'>查看图片</el-dropdown-item>
+                                    <!-- <el-dropdown-item command='video'>查看视频</el-dropdown-item> -->
+                                    <!-- <el-dropdown-item command='audio'>查看音频</el-dropdown-item> -->
+                                </el-dropdown-menu>
+                            </el-dropdown>
+                        </div>
+                    </div>
                 </li>
                 <li class="text_info" v-if='list.length<=0'>
                     空文件夹
@@ -37,31 +55,26 @@
             </ul>
         </div>
 
-        <el-dialog title="复制以下链接，打开迅雷，创建下载任务"
-            :visible.sync="dialog.visible"
-            width="50%">
-            <div class="main_dialog_content">
-                <textarea v-model='dialog.string' type="text" id="allLinks" style="width:100%;height:auto;min-height:150px;padding:10px;"></textarea>
-            </div>
-            <span slot="footer" class="dialog-footer">
-                <el-button type="primary" @click="dialog.visible = false">确 定</el-button>
-            </span>
-        </el-dialog>
+        <FileDialog></FileDialog>
+
+        
     </div>
 </template>
 
 <script>
+
+    import {mapState,mapMutations} from 'vuex'
+    import FileDialog from '../CommonCpn/FileLinkDialog.vue'
     import {getFileList} from '@/assets/server/file_service.js'
+
+    import _utils from '@/assets/utils/utils.js';
+
     export default {
         name:"index",
+        components:{ FileDialog },
+
         data:()=>{
             return {
-                dialogVisible:false,
-                dialog:{
-                    visible:false,
-                    string:""
-                },
-
                 dir:'/',
                 currentPath:{
                     display:[],
@@ -69,13 +82,24 @@
                 },
                 list:[],
                 listLoading:false,
+
+                type:{
+                    imgType:['jpg','jpeg','png','gif','bmp']
+
+                }
             }
         },
         mounted(){
+            if(this.$route.query.dir){
+                this.dir = this.$route.query.dir;
+            }
             this.getList();
         },
-
+        computed:{
+            ...mapState('links',['dialog']),
+        },
         methods:{
+            ...mapMutations('links',['showDialog','renderText']),
             // 字符串去重，生成新链接
             removeMultiple(str){
                 let arr = str.split("/");
@@ -99,8 +123,8 @@
                         str = `${str}${item.path}\n`;
                     }
                 });
-                _this.dialog.string = str?str:'当前目录下无可下载文件';
-                _this.dialog.visible = true;
+                this.renderText(`${str?str:'当前目录下无可下载文件'}`);
+                this.showDialog(true);
             },
             // 获取当前url下的上一层url
             previewDir(dir){
@@ -119,6 +143,31 @@
                     });
                     return pre;
                 }
+            },
+            //1、文件下拉菜单分发
+            handleCommand(index,command){
+                console.log(index,command);
+                if(command == 'img'){
+                    this.readPic(index);
+                }
+            },
+            //1.1、查看图片，打开图片窗口
+            readPic(index){
+                let _this = this;
+                let imgArr = [];
+                let initialIndex = 0;
+                this.list.map((_it,_in)=>{
+                    if(_it.fileInfo.isFile == true){
+                        if(_it.fileInfo.isImg == true){
+                            if(_in == index){
+                                initialIndex = imgArr.length;
+                            }
+                            imgArr.push(_it);
+                        }
+                    }
+                });
+                console.log(imgArr);
+                console.log(initialIndex);
             },
 
             // 1、点击标题某一项进入指定文件夹
@@ -155,21 +204,22 @@
                 let sendObj = this.removeMultiple(_this.dir);
                 try{
                     this.listLoading = true;
-                    let res = await getFileList({ body:{ dir:sendObj.dir } });
+                    let res = await getFileList({ dir:sendObj.dir });
 
                     this.currentPath.display = sendObj.url;
                     this.currentPath.value = res.data.basePath?res.data.basePath:'/';
-
+                    let imgArr = [];
                     let newList = res.data.list.map((item,index)=>{
+                        item['isImg'] = _utils.basic.isIndexOfStr(_this.type.imgType,item.type);
                         return {
-                            name:item,
+                            fileInfo:item,
                             rawPath:`${res.data.basePath}/${item.fileName}`,
                             path:`${res.data.hostName}${res.data.basePath}/${item.fileName}`
                         }
                     });
                     this.list = newList;
                     this.listLoading = false;
-
+                    this.$router.push({name:'Index',query:{dir:_this.dir}})
                 }catch(err){
                     console.log(err);
                 }
@@ -218,10 +268,18 @@
             .fa-folder-open{
                 color:#EABB23;
             }
-            .fa-file{
-
+            .file_item_size{
+                font-size:12px;
+                display: inline-block;
+                margin:0 10px;
             }
             
         }
+    }
+    .open_file{
+        width:40px;
+        width:40px;
+        text-align:center;
+        display:inline-block;
     }
 </style>
