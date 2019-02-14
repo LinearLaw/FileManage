@@ -30,32 +30,32 @@
         data(){
             return {
                 menuList:[
-                    {
-                        name:"盘符",
-                        isShow:false,
-                        children:[
-                            {
-                                name:"C:/",
-                                icon:"fa fa-suitcase",
-                                link:"Index"
-                            },
-                            {
-                                name:"D:/",
-                                icon:"fa fa-suitcase",
-                                link:"Index"
-                            },
-                            {
-                                name:"E:/",
-                                icon:"fa fa-suitcase",
-                                link:"Index"
-                            },
-                            {
-                                name:"F:/",
-                                icon:"fa fa-suitcase",
-                                link:"Index"
-                            }
-                        ]
-                    },
+                    // {
+                    //     name:"盘符",
+                    //     isShow:false,
+                    //     children:[
+                    //         {
+                    //             name:"C:/",
+                    //             icon:"fa fa-suitcase",
+                    //             link:"Index"
+                    //         },
+                    //         {
+                    //             name:"D:/",
+                    //             icon:"fa fa-suitcase",
+                    //             link:"Index"
+                    //         },
+                    //         {
+                    //             name:"E:/",
+                    //             icon:"fa fa-suitcase",
+                    //             link:"Index"
+                    //         },
+                    //         {
+                    //             name:"F:/",
+                    //             icon:"fa fa-suitcase",
+                    //             link:"Index"
+                    //         }
+                    //     ]
+                    // },
                     // {
                     //     name:'图片抓取',
                     //     isShow:false,

@@ -90,6 +90,9 @@
             }
         },
         mounted(){
+            if(this.$route.query.dir){
+                this.dir = this.$route.query.dir;
+            }
             this.getList();
         },
         computed:{
@@ -207,7 +210,6 @@
                     this.currentPath.value = res.data.basePath?res.data.basePath:'/';
                     let imgArr = [];
                     let newList = res.data.list.map((item,index)=>{
-
                         item['isImg'] = _utils.basic.isIndexOfStr(_this.type.imgType,item.type);
                         return {
                             fileInfo:item,
@@ -217,7 +219,7 @@
                     });
                     this.list = newList;
                     this.listLoading = false;
-
+                    this.$router.push({name:'Index',query:{dir:_this.dir}})
                 }catch(err){
                     console.log(err);
                 }
