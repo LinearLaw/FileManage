@@ -24,7 +24,7 @@
                 <el-button type="primary" @click="open">输入目标地址</el-button>
             </div>
             <el-collapse v-model="activeNames" @change="handleChange">
-                <el-collapse-item :title="index+''" v-for='(item,index) in list' :name="index">
+                <el-collapse-item :title="index+''" v-for='(item,index) in list' :name="index" :key="index">
                     <div class='mg_t10 mg_b10' v-for='(_it,_in) in item.img'>
                         <img :src='_it' />
                     </div>

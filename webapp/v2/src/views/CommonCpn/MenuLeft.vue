@@ -32,7 +32,7 @@
                 menuList:[
                     {
                         name:"盘符",
-                        isShow:true,
+                        isShow:false,
                         children:[
                             {
                                 name:"C:/",
@@ -56,17 +56,17 @@
                             }
                         ]
                     },
-                    {
-                        name:'图片抓取',
-                        isShow:true,
-                        children:[
-                            {
-                                name:'图片查看',
-                                icon:'fa fa-picture-o',
-                                link:'ViewPic'
-                            }
-                        ]
-                    }
+                    // {
+                    //     name:'图片抓取',
+                    //     isShow:false,
+                    //     children:[
+                    //         {
+                    //             name:'图片查看',
+                    //             icon:'fa fa-picture-o',
+                    //             link:'ViewPic'
+                    //         }
+                    //     ]
+                    // }
                 ]
             }
         },

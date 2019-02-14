@@ -24,16 +24,18 @@ router.get("/file",(req,res)=>{
                 let direction = path.resolve(__dirname,'../../' ,CONFIG.SHARE_DIR + req.query.dir + "/"+item);
                 let stat = fs.statSync(direction);
                 if(stat.isDirectory()){
-                    //是文件
+                    //是文件夹
                     arr.push({
                         fileName:item,
                         isFile:false
                     })
                 }else{
-                     //是文件夹
+                     //是文件
                     arr.push({
                         fileName:item,
-                        isFile:true
+                        type:path.extname(item).replace('.',''),
+                        size:TOOLS.getByte(stat.size),
+                        isFile:true,
                     })
                 }
             }catch(err){

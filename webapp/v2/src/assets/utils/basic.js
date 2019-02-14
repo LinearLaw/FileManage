@@ -50,3 +50,16 @@ export const parseMoney = (s)=>{
     }
     return t.split("").reverse().join("") + "." + e;
 }
+
+//判断传入字符串是否存在于类型数组中
+export const isIndexOfStr = (typeArr,type)=>{
+    let exist = false;
+    type = (type + "").toLowerCase();
+    for(let i = 0; i < typeArr.length; i++){
+        if(typeArr[i] == type){
+            exist = true;
+            return true;
+        }
+    }
+    return exist;
+}

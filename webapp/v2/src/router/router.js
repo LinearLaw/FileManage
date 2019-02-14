@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-import Index from '@/views/Files.vue';
+import Index from '@/views/Files/Files.vue';
 import ViewPic from '@/views/ViewPic/Index.vue'
 
 Vue.use(Router)
