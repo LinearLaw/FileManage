@@ -62,12 +62,11 @@
 </template>
 
 <script>
-
     import {mapState,mapMutations} from 'vuex'
-    import FileDialog from '../CommonCpn/FileLinkDialog.vue'
     import {getFileList} from '@/assets/server/file_service.js'
-
     import _utils from '@/assets/utils/utils.js';
+
+    import FileDialog from '../CommonCpn/FileLinkDialog.vue'
 
     export default {
         name:"index",
@@ -84,8 +83,8 @@
                 listLoading:false,
 
                 type:{
-                    imgType:['jpg','jpeg','png','gif','bmp']
-
+                    imgType:['jpg','jpeg','png','gif','bmp'],
+                    videoType:['mp4','avi','rmvb','3gp','mov','flv'],
                 }
             }
         },
