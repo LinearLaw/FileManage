@@ -36,6 +36,9 @@ module.exports = {
             if(findSignal == true){
                 return;
             }
+            if(item.indexOf('VMware') != -1){
+                return;
+            }
             allLinks[item].map((_it,_in)=>{
                 if(findSignal == true){
                     return;
