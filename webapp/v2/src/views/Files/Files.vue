@@ -57,20 +57,22 @@
 
         <FileDialog></FileDialog>
 
-        
+        <!-- 查看图片 -->
+        <ReadImg v-if='readImg.isShow' @close='readPicClose' :imgList='readImg.arr' :initialIndex='readImg.index'></ReadImg>
     </div>
 </template>
 
 <script>
     import {mapState,mapMutations} from 'vuex'
-    import {getFileList} from '@/assets/server/file_service.js'
+    import {getFileList, getFileContent} from '@/assets/server/file_service.js'
     import _utils from '@/assets/utils/utils.js';
 
     import FileDialog from '../CommonCpn/FileLinkDialog.vue'
+    import ReadImg from './Component/ReadImg.vue'
 
     export default {
         name:"index",
-        components:{ FileDialog },
+        components:{ FileDialog, ReadImg },
 
         data:()=>{
             return {
@@ -85,6 +87,11 @@
                 type:{
                     imgType:['jpg','jpeg','png','gif','bmp'],
                     videoType:['mp4','avi','rmvb','3gp','mov','flv'],
+                },
+                readImg:{
+                    isShow:false,
+                    arr:[],
+                    index:0
                 }
             }
         },
@@ -148,6 +155,8 @@
                 console.log(index,command);
                 if(command == 'img'){
                     this.readPic(index);
+                }else if(command == 'text'){
+                    this.readText(index);
                 }
             },
             //1.1、查看图片，打开图片窗口
@@ -165,8 +174,22 @@
                         }
                     }
                 });
-                console.log(imgArr);
-                console.log(initialIndex);
+                this.readImg.arr = imgArr;
+                this.readImg.index = initialIndex;
+                this.readImg.isShow = true;
+            },
+            readPicClose(){
+                this.readImg.isShow = false;
+            },
+            // 1.2、查看文本
+            async readText(index){
+                const _this = this;
+                try{
+                    let res = await getFileContent({dir:_this.list[index]['rawPath']});
+                    console.log(res);
+                }catch(err){
+                    console.log(err)
+                }
             },
 
             // 1、点击标题某一项进入指定文件夹

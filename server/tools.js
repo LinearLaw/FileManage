@@ -78,5 +78,9 @@ module.exports = {
             return sizestr.substring(0,len) + sizestr.substr(len + 3,2);  
         }  
         return sizestr;
+    },
+    getTime(){
+        let a = new Date();
+        return `${a.toLocaleDateString()} ${a.toLocaleTimeString()}`;
     }
 }
