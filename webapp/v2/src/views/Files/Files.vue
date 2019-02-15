@@ -40,10 +40,11 @@
                                     </el-button>
                                 </span>
                                 <el-dropdown-menu slot="dropdown">
-                                    <el-dropdown-item command='text'>以文本方式查看</el-dropdown-item>
+                                    <el-dropdown-item command='text' v-if='item.fileInfo.isImg != true && item.fileInfo.isVideo != true'>以文本方式查看</el-dropdown-item>
                                     <el-dropdown-item command='img' v-if='item.fileInfo.isImg == true'>查看图片</el-dropdown-item>
-                                    <!-- <el-dropdown-item command='video'>查看视频</el-dropdown-item> -->
+                                    <el-dropdown-item command='video'  v-if='item.fileInfo.isVideo == true'>查看视频</el-dropdown-item>
                                     <!-- <el-dropdown-item command='audio'>查看音频</el-dropdown-item> -->
+                                    <!-- <el-dropdown-item command='pdf'>查看PDF</el-dropdown-item> -->
                                 </el-dropdown-menu>
                             </el-dropdown>
                         </div>
@@ -59,8 +60,10 @@
 
         <!-- 查看图片 -->
         <ReadImg v-if='readImg.isShow' @close='readDialogClose' :imgList='readImg.arr' :initialIndex='readImg.index'></ReadImg>
-    
+        <!-- 查看文本 -->
         <ReadTxt v-if='readTxt.isShow' @close='readDialogClose' :textInfo='readTxt'></ReadTxt>
+        <!-- 查看视频 -->
+        <ReadVideo v-if='readVideoCtrl.isShow' @close='readDialogClose' :videoObj='readVideoCtrl'></ReadVideo>
     </div>
 </template>
 
@@ -72,10 +75,11 @@
     import FileDialog from '../CommonCpn/FileLinkDialog.vue'
     import ReadImg from './Component/ReadImg.vue'
     import ReadTxt from './Component/ReadTxt.vue'
+    import ReadVideo from './Component/ReadVideo.vue'
 
     export default {
         name:"index",
-        components:{ FileDialog, ReadImg, ReadTxt },
+        components:{ FileDialog, ReadImg, ReadTxt, ReadVideo },
 
         data:()=>{
             return {
@@ -102,7 +106,7 @@
                     name:'',
                     dir:''
                 },
-                readVideo:{
+                readVideoCtrl:{
                     isShow:false,
                     src:'',
                     name:''
@@ -153,7 +157,7 @@
             readDialogClose(){
                 this.readImg.isShow = false;
                 this.readTxt.isShow = false;
-                this.readVideo.isShow = false;
+                this.readVideoCtrl.isShow = false;
             },
             // 1.2、查看文本
             async readText(index){
@@ -179,16 +183,15 @@
             },
             // 1.3、查看视频
             readMp4(index){
-                this.readVideo.src = this.list[index]['path'];
-                this.readVideo.name = this.list[index]['fileInfo']['fileName'];
-                this.readVideo.isShow = true;
+                this.readVideoCtrl.src = this.list[index]['path'];
+                this.readVideoCtrl.name = this.list[index]['fileInfo']['fileName'];
+                this.readVideoCtrl.isShow = true;
             },
 
             // 0、打开弹出框，获取所有的文件链接
             getAllFileLinks(){
                 const _this = this;
                 let str = "";
-                
                 _this.list.map((item,index)=>{
                     if(item.fileInfo.isFile == true){
                         str = `${str}${item.path}\n`;
@@ -238,6 +241,7 @@
                     let imgArr = [];
                     let newList = res.data.list.map((item,index)=>{
                         item['isImg'] = _utils.basic.isIndexOfStr(_this.type.imgType,item.type);
+                        item['isVideo'] = _utils.basic.isIndexOfStr(_this.type.videoType,item.type);
                         return {
                             fileInfo:item,
                             rawPath:`${res.data.basePath}/${item.fileName}`,
