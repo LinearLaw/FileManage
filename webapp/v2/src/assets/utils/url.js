@@ -70,7 +70,38 @@ export let url = {
             str = str + item + "=" + obj[item] + "&";
         });
         return str.slice(0, -1);
-    }
+    },
+    // 字符串"/"去重，生成新链接
+    removeMultiple(str){
+        let arr = str.split("/");
+        let newStr = "";
+        let newArr = [];
+        arr.map(function(item,index){
+            if(item){
+                newStr += "/" + item;
+                newArr.push(item)
+            }
+        });
+        return {dir:newStr,url:newArr};
+    },
+    // 获取当前url下的上一层目录
+    previewDir(dir){
+        if(!dir || dir == "/"){
+            return "/";
+        }else{
+            let dirNew = dir.substr(dir.length-1,1)=="/"?dir.slice(0,-1):dir;
+            var arr = dirNew.split("/");
+            var pre = "";
+            arr.map(function(item,index){
+                if(index>=arr.length - 1){
+                    return;
+                }else{
+                    pre += item + "/";
+                }
+            });
+            return pre;
+        }
+    },
 }
 
 

@@ -60,7 +60,7 @@ exports.getContentAsText = (req,res)=>{
         res.send({
             code:-1,
             status:'error',
-            msg:'File size limit no larger than 2MB'
+            msg:'文本查看仅支持最大2MB的文件。'
         });
         return;
     }
