@@ -51,7 +51,7 @@ exports.getFileList = (req,res)=>{
 }
 
 // 限制大小10MB；
-const limitSize = 1024*1024*10;
+const limitSize = 1024*1024*2;
 exports.getContentAsText = (req,res)=>{
     log(chalk.blue(`${TOOLS.getTime()} : ${TOOLS.getReqRemoteIp(req)} ${req.url}`));
     let direction = path.resolve(__dirname , '../../' , CONFIG.SHARE_DIR + req.query.dir);
@@ -60,7 +60,7 @@ exports.getContentAsText = (req,res)=>{
         res.send({
             code:-1,
             status:'error',
-            msg:'File size limit no larger than 10MB'
+            msg:'File size limit no larger than 2MB'
         });
         return;
     }

@@ -1,12 +1,16 @@
 <template>
     <div class='read_text shadow'>
-        <i class="fa fa-times shadow_close pointer" @click='close' aria-hidden="true"></i>
         <div class='text_box'>
             <h3>
-                {{textInfo.name}}
-                <a class='text_download fr pointer' :href='textInfo.path' :download='textInfo.name' target="_blank">
-                    <i class="fa fa-arrow-down " aria-hidden="true"></i>
-                </a>
+                <span class='file_name'>{{textInfo.name}}</span>
+                <div class='operate_line fr'>
+                    <a class='text_download pointer' :href='textInfo.dir' :download='textInfo.name' target="_blank">
+                        <i class="fa fa-arrow-down " aria-hidden="true"></i>
+                    </a>
+                    <span class='text_download'>
+                        <i class="fa fa-times pointer" @click='close' aria-hidden="true"></i>
+                    </span>
+                </div>
             </h3>
             <textarea v-model='textInfo.text' name="" id="" cols="30" rows="10" disabled></textarea>
         </div>
@@ -41,17 +45,32 @@ export default {
         h3{
             color:#fff;
             font-weight:500;
-            padding:5px;
             width:100%;
             position:absolute;
             top:0;
             left:0;
             background:#9e9e9e;
+            .file_name{
+                padding:5px;
+                display:inline-block;
+            }
+        }
+        .operate_line{
+            margin-right:5px;
         }
         .text_download{
-            line-height:25px;
+            line-height:35px;
             padding:0 10px;
-            border-radius:8px;
+            border:1px solid #cecece;
+            color:#fff;
+            &:first-child{ 
+                border-bottom-left-radius: 8px;
+                border-top-left-radius: 8px;
+            }
+            &:last-child{
+                border-bottom-right-radius: 8px;
+                border-top-right-radius: 8px;
+            }
             &:hover{ background:#409EFF; }
             &:active{ background: #409EFF;}
         }

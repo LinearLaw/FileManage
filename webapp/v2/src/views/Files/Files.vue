@@ -35,8 +35,8 @@
                         <div class='open_file'>
                             <el-dropdown trigger="click" @command="handleCommand(index,$event)">
                                 <span class="el-dropdown-link">
-                                    <el-button round>
-                                        <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                                    <el-button round :loading='item.loading'>
+                                        <i class="fa fa-ellipsis-h" v-show='!item.loading' aria-hidden="true"></i>
                                     </el-button>
                                 </span>
                                 <el-dropdown-menu slot="dropdown">
@@ -195,7 +195,10 @@
             async readText(index){
                 const _this = this;
                 try{
+                    this.list[index]['loading'] = true;
                     let res = await getFileContent({dir:_this.list[index]['rawPath']});
+                    this.list[index]['loading'] = false;
+                    
                     if(res.data.code == 200){
                         this.readTxt.text = res.data.content;
                         this.readTxt.isShow = true;
@@ -207,6 +210,7 @@
                 }catch(err){
                     console.log(err);
                     this.$message.error(`${err}`);
+                    this.list[index]['loading'] = false;
                 }
             },
 
@@ -254,14 +258,17 @@
                         return {
                             fileInfo:item,
                             rawPath:`${res.data.basePath}/${item.fileName}`,
-                            path:`${res.data.hostName}${res.data.basePath}/${item.fileName}`
+                            path:`${res.data.hostName}${res.data.basePath}/${item.fileName}`,
+                            loading:false
                         }
                     });
                     this.list = newList;
                     this.listLoading = false;
-                    this.$router.push({name:'Index',query:{dir:_this.dir}})
+                    this.$router.push({name:'Index',query:{dir:_this.dir}});
                 }catch(err){
                     console.log(err);
+                    this.listLoading = false;
+                    this.$message.error(`${err}`);
                 }
             }
         }
