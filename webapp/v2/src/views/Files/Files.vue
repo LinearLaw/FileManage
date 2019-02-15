@@ -40,7 +40,7 @@
                                     </el-button>
                                 </span>
                                 <el-dropdown-menu slot="dropdown">
-                                    <!-- <el-dropdown-item command='text'>以文本方式查看</el-dropdown-item> -->
+                                    <el-dropdown-item command='text'>以文本方式查看</el-dropdown-item>
                                     <el-dropdown-item command='img' v-if='item.fileInfo.isImg == true'>查看图片</el-dropdown-item>
                                     <!-- <el-dropdown-item command='video'>查看视频</el-dropdown-item> -->
                                     <!-- <el-dropdown-item command='audio'>查看音频</el-dropdown-item> -->
@@ -58,7 +58,9 @@
         <FileDialog></FileDialog>
 
         <!-- 查看图片 -->
-        <ReadImg v-if='readImg.isShow' @close='readPicClose' :imgList='readImg.arr' :initialIndex='readImg.index'></ReadImg>
+        <ReadImg v-if='readImg.isShow' @close='readDialogClose' :imgList='readImg.arr' :initialIndex='readImg.index'></ReadImg>
+    
+        <ReadTxt v-if='readTxt.isShow' @close='readDialogClose' :textInfo='readTxt'></ReadTxt>
     </div>
 </template>
 
@@ -69,10 +71,11 @@
 
     import FileDialog from '../CommonCpn/FileLinkDialog.vue'
     import ReadImg from './Component/ReadImg.vue'
+    import ReadTxt from './Component/ReadTxt.vue'
 
     export default {
         name:"index",
-        components:{ FileDialog, ReadImg },
+        components:{ FileDialog, ReadImg, ReadTxt },
 
         data:()=>{
             return {
@@ -92,6 +95,12 @@
                     isShow:false,
                     arr:[],
                     index:0
+                },
+                readTxt:{
+                    isShow:false,
+                    text:'',
+                    name:'',
+                    dir:''
                 }
             }
         },
@@ -178,17 +187,26 @@
                 this.readImg.index = initialIndex;
                 this.readImg.isShow = true;
             },
-            readPicClose(){
+            readDialogClose(){
                 this.readImg.isShow = false;
+                this.readTxt.isShow = false;
             },
             // 1.2、查看文本
             async readText(index){
                 const _this = this;
                 try{
                     let res = await getFileContent({dir:_this.list[index]['rawPath']});
-                    console.log(res);
+                    if(res.data.code == 200){
+                        this.readTxt.text = res.data.content;
+                        this.readTxt.isShow = true;
+                        this.readTxt.name = this.list[index]['fileInfo']['fileName'];
+                        this.readTxt.dir = this.list[index]['path'];
+                    }else{
+                        this.$message.error(`${res.data.msg}`);
+                    }
                 }catch(err){
-                    console.log(err)
+                    console.log(err);
+                    this.$message.error(`${err}`);
                 }
             },
 

@@ -66,11 +66,10 @@ exports.getContentAsText = (req,res)=>{
     }
     try{
         let re = fs.readFileSync(direction,{encoding: 'utf8'});
-        console.log(re);
         res.send({
             code:200,
             status:'success',
-            data:re
+            content:re
         })
     }catch(err){
         res.send({

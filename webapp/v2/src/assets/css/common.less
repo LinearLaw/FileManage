@@ -189,6 +189,24 @@ input[type="number"]{-moz-appearance:textfield;}
     }
 }
 
+.shadow{
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.6);
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:100;
+    .shadow_close{
+        position:absolute;
+        right:30px;
+        top:30px;
+        font-size:30px;
+        color:#fff;
+        z-index: 50;
+    }
+}
+
 /* common input style */
 input:disabled,select:disabled{
     cursor: not-allowed; 
