@@ -7,8 +7,8 @@
                     <a class='text_download pointer' :href='textInfo.dir' :download='textInfo.name' target="_blank">
                         <i class="fa fa-arrow-down " aria-hidden="true"></i>
                     </a>
-                    <span class='text_download'>
-                        <i class="fa fa-times pointer" @click='close' aria-hidden="true"></i>
+                    <span class='text_download pointer' @click='close'>
+                        <i class="fa fa-times" aria-hidden="true"></i>
                     </span>
                 </div>
             </h3>
