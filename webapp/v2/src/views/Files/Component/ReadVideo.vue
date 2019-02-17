@@ -1,9 +1,10 @@
 <template>
     <div class='read_video shadow'>
+        <span class='video_name'>{{videoObj.name}}</span>
         <i class="fa fa-times shadow_close pointer" @click='close' aria-hidden="true"></i>
         <div class='video_main'>
             <video id="videoObj" class="video-js vjs-default-skin" controls preload="auto" poster="">
-                <source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+                <source :src="videoObj.src" type="video/mp4">
             </video>
         </div>
     </div>
@@ -19,7 +20,8 @@ export default {
     data(){
         return {
             videoOptions:{
-                playbackRates: [0.7, 0.9, 1, 1.1, 1.2, 1.3, 1.5, 2]
+                playbackRates: [0.7, 0.9, 1, 1.1, 1.2, 1.3, 1.5, 2],
+                src:''
             },
             player:null,
             keyCtrl:{
@@ -30,7 +32,10 @@ export default {
     },
     mounted(){
         const _this = this;
-        this.player = window.videojs('videoObj',_this.videoOptions);
+        _this.videoOptions.src = _this.videoObj['src'];
+        this.player = window.videojs('videoObj',_this.videoOptions,function onPlayerReady() {
+
+        });
 
         document.onkeydown = function(e) {
             if(_this.keyCtrl.playCtrl == true){
@@ -86,7 +91,14 @@ export default {
 </script>
 <style lang='less'>
     .read_video{
-        padding:30px 100px;
+        padding:50px 100px;
+        position:relative;
+        .video_name{
+            position:absolute;
+            top:10px;
+            left:100px;
+            color:#fff;
+        }
         .video_main{
             width:100%;
             height:100%;
