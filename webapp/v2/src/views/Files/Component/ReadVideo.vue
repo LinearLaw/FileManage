@@ -2,7 +2,7 @@
     <div class='read_video shadow'>
         <span class='video_name'>{{videoObj.name}}</span>
         <i class="fa fa-times shadow_close pointer" @click='close' aria-hidden="true"></i>
-        <div class='video_main'>
+        <div class='video_main' id='videoBox'>
             <video id="videoObj" class="video-js vjs-default-skin" controls preload="auto" poster="">
                 <source :src="videoObj.src" type="video/mp4">
             </video>
@@ -28,37 +28,48 @@ export default {
                 playCtrl:false,
                 interval:3, // 按键左右前进后退单次作用时间间隔，前进x s或后退x s
             },
+            videoTpl:`<video id="videoObj" class="video-js vjs-default-skin" controls preload="auto" poster="">
+                <source src='' type="video/mp4" class='video_source'>
+            </video>`
         }
     },
     mounted(){
         const _this = this;
-        _this.videoOptions.src = _this.videoObj['src'];
-        this.player = window.videojs('videoObj',_this.videoOptions,function onPlayerReady() {
-
-        });
-
-        document.onkeydown = function(e) {
-            if(_this.keyCtrl.playCtrl == true){
-                return;
-            }
-            if(!_this.player){
-                return;
-            }
-            let key = window.event.keyCode;
-            _this.keyCtrl.playCtrl = true;
-            _this.timeoutOffCtrl();
-            if (key == 32) { // 空格键
-                _this.controlPlay();
-            }else if(key == 39){ // 右方向键
-                _this.goOrBack(true);
-            }else if(key == 37){ // 左方向键
-                _this.goOrBack(false);
-            }
-        }
+        this.videoOptions.src = this.videoObj['src'];
+        document.onkeydown = null;
+        this.initPlayer();
     },
     methods:{
         close(){
-            this.$emit('close')
+            this.player && this.player.pause();
+            document.onkeydown = null;
+            this.$emit('close');
+        },
+        initPlayer(){
+            const _this = this;
+            let videoClass = window.videojs.getPlayers()['videoObj'];
+            if(videoClass){ 
+                videoClass.dispose(); // 销毁原有实例
+            }
+            this.player = window.videojs('videoObj',_this.videoOptions);
+            document.onkeydown = function(e) {
+                if(_this.keyCtrl.playCtrl == true){
+                    return;
+                }
+                if(!_this.player){
+                    return;
+                }
+                let key = window.event.keyCode;
+                _this.keyCtrl.playCtrl = true;
+                _this.timeoutOffCtrl();
+                if (key == 32) { // 空格键
+                    _this.controlPlay();
+                }else if(key == 39){ // 右方向键
+                    _this.goOrBack(true);
+                }else if(key == 37){ // 左方向键
+                    _this.goOrBack(false);
+                }
+            }
         },
         controlPlay(){
             if(this.player.paused()){
