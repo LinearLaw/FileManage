@@ -6,6 +6,10 @@
             <video id="videoObj" class="video-js vjs-default-skin" controls preload="auto" poster="">
                 <source :src="videoObj.src" type="video/mp4">
             </video>
+
+            <div class='video_duration'>
+                <div class='video_current' :style='`width:${videoProgress.person * 100}%`'></div>
+            </div>
         </div>
     </div>
 </template>
@@ -30,7 +34,10 @@ export default {
             },
             videoTpl:`<video id="videoObj" class="video-js vjs-default-skin" controls preload="auto" poster="">
                 <source src='' type="video/mp4" class='video_source'>
-            </video>`
+            </video>`,
+            videoProgress:{
+                person:0
+            }
         }
     },
     mounted(){
@@ -52,6 +59,13 @@ export default {
                 videoClass.dispose(); // 销毁原有实例
             }
             this.player = window.videojs('videoObj',_this.videoOptions);
+            this.player.on('timeupdate',()=>{
+                if(!isNaN(_this.player.duration()) || !isNaN(_this.player.currentTime())){
+                    _this.videoProgress.person = _this.player.currentTime() / _this.player.duration();
+                }else{
+                    _this.videoProgress.person = 0;
+                }
+            })
             document.onkeydown = function(e) {
                 if(_this.keyCtrl.playCtrl == true){
                     return;
@@ -130,6 +144,21 @@ export default {
             }
             .vjs-menu-button-popup .vjs-menu .vjs-menu-content{
                 max-height:300px;
+            }
+            .video_duration{
+                position:absolute;
+                top:100%;
+                left:0;
+                width:100%;
+                height:10px;
+                background:#e2e2e1;
+                .video_current{
+                    height:100%;
+                    background:#67C23A;
+                    border-bottom-right-radius:10px;
+                    border-top-right-radius:10px;
+                    transition:all 0.3s;
+                }
             }
         }
     }
