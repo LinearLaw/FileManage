@@ -4,6 +4,7 @@ const app = express();
 const chalk = require("chalk");
 const log = console.log;
 
+const bodyParser = require("body-parser");
 const fs = require("fs");
 const path = require("path");
 const ip = require("ip"); //获取ip地址
@@ -14,6 +15,9 @@ const ROUTER = require('./server/router/router.js');
 
 app.use(express.static(CONFIG.STATIC_DIR));
 app.use(express.static(CONFIG.SHARE_DIR));
+
+app.use(bodyParser.json({limit: '50mb'}));
+app.use(bodyParser.urlencoded({ limit: '50mb',extended: true }));
 
 app.all("*",function(req,res,next){
     //设置允许跨域的域名，*代表允许任意域名跨域
@@ -29,6 +33,13 @@ app.all("*",function(req,res,next){
 })
 
 app.use('/',ROUTER);
+
+// catch 404 and forward to error handler
+app.use(function(req, res, next) {
+    var err = new Error('Not Found');
+    err.status = 404;
+    next(err);
+});
 
 app.listen(CONFIG.PORT_NUM,()=>{
     log(chalk.green(`serve start success`));

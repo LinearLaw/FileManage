@@ -90,13 +90,19 @@ exports.getContentAsBlob = (req,res)=>{
     let stat = fs.statSync(direction);
     fs.exists(direction,function(exist) {
         if(exist){
-            res.set({
-                "Content-type":"application/octet-stream",
-                "Content-Disposition":"attachment;filename="+encodeURI(name),
-                'Content-Length': stat.size
+            log(chalk.blue("Stream start."));
+            let head = {
+                'Content-Length': stat.size,
+                'Content-Type': 'video/mp4'
+            };
+            res.writeHead(200, head);
+            
+            let readStream = fs.createReadStream(direction);
+            readStream.on('close', function() {
+                res.end();
+                log(chalk.blue("Stream finished."));
             });
-            let fReadStream = fs.createReadStream(direction);
-            fReadStream.pipe(res);
+            readStream.pipe(res);
         }else{
             res.set("Content-type","text/html");
             res.send({

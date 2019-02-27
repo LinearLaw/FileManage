@@ -6,7 +6,7 @@
             <video id="videoObj" class="video-js vjs-default-skin" controls preload="auto" poster="">
                 <source :src="videoObj.src" type="video/mp4">
             </video>
-
+            <!-- <div id="videoObj" style="width:100%;height:100%"></div> -->
             <div class='video_duration'>
                 <div class='video_current' :style='`width:${videoProgress.person * 100}%`'></div>
             </div>
@@ -14,6 +14,12 @@
     </div>
 </template>
 <script>
+
+import {getBlobContent} from '@/assets/server/file_service.js'
+import utils from "@/assets/utils/utils.js";
+import config from '@/config/config.js';
+const basePath = config.serverHost;
+
 export default {
     props:{
         videoObj:{
@@ -44,6 +50,9 @@ export default {
         const _this = this;
         this.videoOptions.src = this.videoObj['src'];
         document.onkeydown = null;
+        
+        // this.getVideoBlob();
+        // this.initCKPlayer();
         this.initPlayer();
     },
     methods:{
@@ -52,8 +61,50 @@ export default {
             document.onkeydown = null;
             this.$emit('close');
         },
+        async getVideoBlob(){
+            const _this = this;
+            let o = {
+                dir:_this.videoObj['src'],
+                name:_this.videoObj['name']
+            }
+            let sendData = utils.url.objToUrlString(o);
+            this.videoOptions.src = `${BASE_PATH}/fileAsBlob${sendData}`
+            
+            // try{
+            //     let res = await getBlobContent(o,{responseType:'blob'});
+            //     let blob = res.data;
+            //     this.videoOptions.src = URL.createObjectURL(new Blob([blob]));
+
+            //     // this.initPlayer();
+            // }catch(err){
+            //     console.log(err);
+            //     this.$message.error(`视频加载错误。`);
+            // }
+        },
+        initCKPlayer(){
+            const _this = this;
+            let obj = {
+                container: '#videoObj',  //“#”代表容器的ID，“.”或“”代表容器的class
+                variable: 'player',  //该属性必需设置，值等于下面的new chplayer()的对象
+                flashplayer:false,  //如果强制使用flashplayer则设置成true
+                video:_this.videoOptions.src,  //视频地址
+                loaded:'loadedHandler'
+            }
+            this.player = new ckplayer(obj);
+            let dur = this.player.getMetaDate().duration;
+            function loadedHandler(){   //播放器加载后会调用该函数
+                _this.player.addListener('time', function(time){
+                    if(!isNaN(time) || !isNaN(dur)){
+                        _this.videoProgress.person = time / dur;
+                    }else{
+                        _this.videoProgress.person = 0;
+                    }
+                });
+            }
+        },
         initPlayer(){
             const _this = this;
+            document.onkeydown = null;
             let videoClass = window.videojs.getPlayers()['videoObj'];
             if(videoClass){ 
                 videoClass.dispose(); // 销毁原有实例

@@ -183,6 +183,7 @@
             },
             // 1.3、查看视频
             readMp4(index){
+                const _this = this;
                 this.readVideoCtrl.src = this.list[index]['path'];
                 this.readVideoCtrl.name = this.list[index]['fileInfo']['fileName'];
                 this.readVideoCtrl.isShow = true;

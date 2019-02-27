@@ -16,19 +16,26 @@ let contentType = {
     "Content-Type":"application/x-www-form-urlencoded; charset=UTF-8"
 }
 export const request = {
-    get:(u,obj)=>{
+    get:(u,obj,config={})=>{
         let header = contentType;
         let sendData = utils.url.objToUrlString(obj);
         return axios.get(`${u}${sendData}`,{headers:header});
+        return axios({
+            url:`${u}${sendData}`,
+            method:'get',
+            headers:header,
+            ...config
+        });
     },
-    post:(u,obj)=>{
+    post:(u,obj,config={})=>{
         let header = contentType;
         let data = Object.assign({},obj);
         return axios({
             url:`${u}`,
             method:"post",
             data:qs.stringify(data),
-            headers:header
+            headers:header,
+            ...config
         });
     }
 }
