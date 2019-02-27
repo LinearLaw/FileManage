@@ -50,6 +50,7 @@ exports.getFileList = (req,res)=>{
     });
 }
 
+// 以文本形式读取文件
 // 限制大小10MB；
 const limitSize = 1024*1024*2;
 exports.getContentAsText = (req,res)=>{
@@ -79,5 +80,31 @@ exports.getContentAsText = (req,res)=>{
         });
         return;
     }
+}
 
+// 以二进制流形式读取文件
+exports.getContentAsBlob = (req,res)=>{
+    log(chalk.blue(`${TOOLS.getTime()} : ${TOOLS.getReqRemoteIp(req)} ${req.url}`));
+    let direction = path.resolve(__dirname , '../../' , CONFIG.SHARE_DIR + req.query.dir);
+    let name = req.query.name;
+    let stat = fs.statSync(direction);
+    fs.exists(direction,function(exist) {
+        if(exist){
+            res.set({
+                "Content-type":"application/octet-stream",
+                "Content-Disposition":"attachment;filename="+encodeURI(name),
+                'Content-Length': stat.size
+            });
+            let fReadStream = fs.createReadStream(direction);
+            fReadStream.pipe(res);
+        }else{
+            res.set("Content-type","text/html");
+            res.send({
+                code:-1,
+                status:'error',
+                msg:"file not exist!"
+            });
+            res.end();
+        }
+    });
 }

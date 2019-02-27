@@ -19,6 +19,7 @@ const reptileCtrl = require('../controller/reptileCtrl.js');
 // 获取服务所在文件列表
 router.get("/file",fileCtrl.getFileList);
 router.get("/fileAsText",fileCtrl.getContentAsText);
+router.get("/fileAsBlob",fileCtrl.getContentAsBlob);
 
 
 // 2、爬虫服务
