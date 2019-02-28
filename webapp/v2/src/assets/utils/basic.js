@@ -63,3 +63,18 @@ export const isIndexOfStr = (typeArr,type)=>{
     }
     return exist;
 }
+
+/**
+ * @param {*} obj 去除对象中字符串的空格
+ */
+export const trimValue = (obj)=>{
+    let newObj = {};
+    Object.getOwnPropertyNames(obj).map(function(item, index) {
+        if(typeof obj[item] == 'string'){
+            newObj[item] = obj[item].trim();
+        }else{
+            newObj[item] = obj[item];
+        }
+    });
+    return newObj;
+}
