@@ -11,13 +11,13 @@ const TOOLS = require("../tools.js");
 exports.getFileList = (req,res)=>{
     log(chalk.blue(`${TOOLS.getTime()} : ${TOOLS.getReqRemoteIp(req)} ${req.url}`));
 
-    let reqDir = path.resolve(__dirname,CONFIG.SHARE_DIR + req.query.dir)
+    let reqDir = path.resolve(__dirname,`${CONFIG.SHARE_DIR}${req.query.dir}`)
     TOOLS.getFile(reqDir).then((files)=>{
         let arr = [];
         // try{
         files.map((item,index)=>{
             try{
-                let direction = path.resolve(__dirname,'../../' ,CONFIG.SHARE_DIR + req.query.dir + "/"+item);
+                let direction = path.resolve(__dirname,'../../' ,`${CONFIG.SHARE_DIR}${req.query.dir}/${item}`);
                 let stat = fs.statSync(direction);
                 if(stat.isDirectory()){
                     //是文件夹
@@ -55,7 +55,7 @@ exports.getFileList = (req,res)=>{
 const limitSize = 1024*1024*2;
 exports.getContentAsText = (req,res)=>{
     log(chalk.blue(`${TOOLS.getTime()} : ${TOOLS.getReqRemoteIp(req)} ${req.url}`));
-    let direction = path.resolve(__dirname , '../../' , CONFIG.SHARE_DIR + req.query.dir);
+    let direction = path.resolve(__dirname , '../../' , `${CONFIG.SHARE_DIR}${req.query.dir}`);
     let stat = fs.statSync(direction);
     if(stat.size > limitSize){
         res.send({
@@ -85,7 +85,7 @@ exports.getContentAsText = (req,res)=>{
 // 以二进制流形式读取文件
 exports.getContentAsBlob = (req,res)=>{
     log(chalk.blue(`${TOOLS.getTime()} : ${TOOLS.getReqRemoteIp(req)} ${req.url}`));
-    let direction = path.resolve(__dirname , '../../' , CONFIG.SHARE_DIR + req.query.dir);
+    let direction = path.resolve(__dirname , '../../' , `${CONFIG.SHARE_DIR}${req.query.dir}`);
     let name = req.query.name;
     let stat = fs.statSync(direction);
     fs.exists(direction,function(exist) {
