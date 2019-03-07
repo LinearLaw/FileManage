@@ -47,6 +47,12 @@ exports.getFileList = (req,res)=>{
             status:"success",
             code:200
         });
+    }).catch((err)=>{
+        res.send({
+            status:'error',
+            code:-1,
+            msg:'File not exist or folder unlegal'
+        })
     });
 }
 
@@ -91,11 +97,11 @@ exports.getContentAsBlob = (req,res)=>{
     fs.exists(direction,function(exist) {
         if(exist){
             log(chalk.blue("Stream start."));
-            let head = {
-                'Content-Length': stat.size,
-                'Content-Type': 'video/mp4'
-            };
-            res.writeHead(200, head);
+            // let head = {
+            //     'Content-Length': stat.size,
+            //     'Content-Type': 'video/mp4'
+            // };
+            // res.writeHead(200, head);
             
             let readStream = fs.createReadStream(direction);
             readStream.on('close', function() {

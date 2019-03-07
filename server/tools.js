@@ -8,7 +8,6 @@ module.exports = {
             fs.readdir(filePath, function(err, files) {
                 if (err) {
                     reject(err);
-                    throw err;
                 }
                 // files是一个数组,每个元素是此目录下的文件或文件夹的名称
                 resolve(files);
