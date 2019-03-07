@@ -3,6 +3,8 @@ node_modules/
 dist/
 FileContainer/
 
+package-lock.json
+
 # Node-Proxy/node_modules
 /*/node_modules
 
