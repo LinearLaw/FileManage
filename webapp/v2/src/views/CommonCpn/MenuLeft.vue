@@ -2,7 +2,7 @@
     <div class="menu_left">
         <div class="header_logo">
             <router-link :to="{'name':'Index'}">
-                <img class="header_logo_pic" src="" alt="">
+                <img class="header_logo_pic" src="" alt="LOGO">
             </router-link>
         </div>
         <div class="menu_bar">
