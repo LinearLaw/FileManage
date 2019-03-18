@@ -1,29 +1,21 @@
-# v2
+# 文件管理 v2 版本
 
-## Project setup
-```
-npm install
-```
+    前台，基于vue。
 
-### Compiles and hot-reloads for development
+## 安装项目依赖
+
+    全局安装@vue/cli 
+        npm i @vue/cli -g
+
+    安装项目依赖
+        npm install
+
+### 开发环境启动项目
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+### 编译生产环境包
 ```
 npm run build
 ```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
