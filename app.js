@@ -34,4 +34,6 @@ app.listen(CONFIG.PORT_NUM,()=>{
     log(chalk.green(`serve start success`));
     log(chalk.green(`ip 1：${CONFIG.BASE_PATH}`));
     log(chalk.green(`ip 2：${CONFIG.BASE_PATH_v2}`));
+    log(chalk.green(`static dir 1: ${CONFIG.STATIC_DIR}`))
+    log(chalk.green(`static dir 2: ${CONFIG.SHARE_DIR}`))
 })
